@@ -2,19 +2,16 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
-import Button from '../Button';
 
-const storyProps = {
-  onClick: action('onClick')
-};
+import Button from '../Button';
 
 storiesOf('Buttons', module)
   .add('Primary buttons',
     withInfo(`
       ~~~js
-      <Button {...storyProps}>Primary button</Button>
+      <Button>Primary button</Button>
       ~~~
-      
+
       Use buttons to move though a transaction. Aim to use only one primary button per page.
 
       Primary buttons should be used for the principle call to action
@@ -23,9 +20,9 @@ storiesOf('Buttons', module)
       The example below shows Primary Button component.
     `)(() =>
       <div>
-        <Button {...storyProps}>Primary button</Button>
+        <Button onClick={action('Button clicked')}>Primary button</Button>
         &nbsp;
-        <Button {...storyProps} href="#">Primary link</Button>
+        <Button onClick={action('Button clicked')} href="#">Primary link</Button>
       </div>
     )
   )
@@ -36,9 +33,9 @@ storiesOf('Buttons', module)
       Modify the behavior of the button by changing its property events. The example below shows a Secondary Button component.
     `)(() =>
       <div>
-        <Button {...storyProps} kind="secondary">Secondary button</Button>
+        <Button onClick={action('Button clicked')} kind="secondary">Secondary button</Button>
         &nbsp;
-        <Button {...storyProps} kind="secondary" href="#">Secondary link</Button>
+        <Button onClick={action('Button clicked')} kind="secondary" href="#">Secondary link</Button>
       </div>
     )
   )
@@ -47,9 +44,9 @@ storiesOf('Buttons', module)
       Tertiary buttons are best used for small UI interactions that don't require a strong presence on the page.
     `)(() =>
       <div>
-        <Button {...storyProps} kind="tertiary">Tertiary button</Button>
+        <Button onClick={action('Button clicked')} kind="tertiary">Tertiary button</Button>
         &nbsp;
-        <Button {...storyProps} kind="tertiary" href="#">Tertiary link</Button>
+        <Button onClick={action('Button clicked')} kind="tertiary" href="#">Tertiary link</Button>
       </div>
     )
   )
@@ -59,11 +56,11 @@ storiesOf('Buttons', module)
       commonly found in tables. Small buttons should have three words or less.
     `)(() =>
       <div>
-        <Button {...storyProps} kind="primary" small={true}>Primary button</Button>
+        <Button onClick={action('Button clicked')} kind="primary" small={true}>Primary button</Button>
         &nbsp;
-        <Button {...storyProps} kind="secondary" small={true}>Secondary link</Button>
+        <Button onClick={action('Button clicked')} kind="secondary" small={true}>Secondary link</Button>
         &nbsp;
-        <Button {...storyProps} kind="tertiary" small={true}>Tertiary link</Button>
+        <Button onClick={action('Button clicked')} kind="tertiary" small={true}>Tertiary link</Button>
       </div>
     )
   )
@@ -74,9 +71,9 @@ storiesOf('Buttons', module)
       Launch your service with a "Start now" button.
     `)(() =>
       <div>
-        <Button {...storyProps} kind="start">Start button</Button>
+        <Button onClick={action('Button clicked')} kind="start">Start button</Button>
         &nbsp;
-        <Button {...storyProps} kind="start" href="#">Start link</Button>
+        <Button onClick={action('Button clicked')} kind="start" href="#">Start link</Button>
       </div>
     )
   )

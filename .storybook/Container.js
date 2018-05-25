@@ -6,16 +6,8 @@ export default class Container extends Component {
     const { story } = this.props;
 
     return (
-      <div
-        style={{
-          padding: '3em',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-        }}>
-        <div>
-          {story()}
-        </div>
+      <div>
+        {story()}
       </div>
     );
   }

@@ -10,7 +10,8 @@ const Button = ({
   className,
   kind,
   type,
-  small
+  small,
+  ...other
 }) => {
   const buttonClasses = classNames(className, {
     'button': true,
@@ -26,13 +27,13 @@ const Button = ({
   };
 
   const button = (
-    <button {...commonProps} disabled={disabled} type={type}>
+    <button {...other} {...commonProps} disabled={disabled} type={type}>
       {children}
     </button>
   );
 
   const anchor = (
-    <a {...commonProps} href={href} role="button">
+    <a {...other} {...commonProps} href={href} role="button">
       {children}
     </a>
   );

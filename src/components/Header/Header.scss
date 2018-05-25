@@ -1,0 +1,39 @@
+.header {
+  display: block;
+  background: #00274C;
+  padding: 0.75rem 0;
+}
+
+.header__inner {
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.logo {
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+
+.logo__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.logo__image {
+  max-width: 2.25rem;
+}
+
+.logo__library {
+  margin-left: 0.75rem;
+  border-left: solid 1.1px rgba(255,255,255,0.75);
+  padding-left: 0.6rem;
+  color: rgba(255,255,255,0.75);
+}
+
+.logo__name {
+  margin-left: 0.75rem;
+  border-left: solid 1.1px rgba(255,255,255,0.75);
+  padding-left: 0.6rem;
+}
