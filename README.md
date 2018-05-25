@@ -4,7 +4,7 @@
 
 Use these React components to make your service consistent with other library services. Learn from the research and experience of other teams and avoid repeating work that has already been done.
 
-Make your user interfaces consistent accessible.
+Use these components to make your interfaces consistent and accessible.
 
 [View all the components](https://mlibrary.github.io/umich-lib-components-react/)
 
