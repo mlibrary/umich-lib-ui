@@ -6,7 +6,7 @@ Use these React components to make your service consistent with other library se
 
 Make your user interfaces consistent accessible.
 
-[View all the components](https://github.com/mlibrary/umich-lib-components-react)
+[View all the components](https://mlibrary.github.io/umich-lib-components-react/)
 
 ## Getting started
 
