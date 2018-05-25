@@ -8,6 +8,8 @@ Make your user interfaces consistent accessible.
 
 [View all the components](https://mlibrary.github.io/umich-lib-components-react/)
 
+![Screenshot](storybook_preview.png)
+
 ## Getting started
 
 With npm
