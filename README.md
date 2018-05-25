@@ -6,7 +6,7 @@ Use these React components to make your service consistent with other library se
 
 Make your user interfaces consistent accessible.
 
-[View all the components](https://github.com/mlibrary/umich-lib-components-react).
+[View all the components](https://github.com/mlibrary/umich-lib-components-react)
 
 # Getting started
 
@@ -16,13 +16,13 @@ With npm
 npm install
 ```
 
-To view the Storybook
+To run the Storybook locally
 
 ```
 npm run storybook
 ```
 
-to deploy the storybook
+To deploy the storybook
 
 ```
 npm run deploy-storybook
