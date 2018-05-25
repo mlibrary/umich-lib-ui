@@ -1,8 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './globals/scss/styles.css'
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+const App = () => (
+  <p>University of Michigan Library components built in React</p>
+)
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+)

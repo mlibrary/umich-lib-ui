@@ -1,0 +1,14 @@
+@import 'mixins';
+@import 'vars';
+
+html {
+  @include reset;
+  @include font-family;
+  font-size: $base-font-size;
+  @media (min-width: $small-screens) {
+    font-size: $large-screen-font-size;
+  }
+
+  line-height: 1.5;
+  color: $text-color;
+}
