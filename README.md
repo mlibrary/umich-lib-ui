@@ -8,7 +8,7 @@ Make your user interfaces consistent accessible.
 
 [View all the components](https://github.com/mlibrary/umich-lib-components-react)
 
-# Getting started
+## Getting started
 
 With npm
 
