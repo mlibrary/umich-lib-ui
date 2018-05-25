@@ -11,6 +11,10 @@ const storyProps = {
 storiesOf('Buttons', module)
   .add('Primary buttons',
     withInfo(`
+      ~~~js
+      <Button {...storyProps}>Primary button</Button>
+      ~~~
+      
       Use buttons to move though a transaction. Aim to use only one primary button per page.
 
       Primary buttons should be used for the principle call to action
@@ -18,11 +22,11 @@ storiesOf('Buttons', module)
 
       The example below shows Primary Button component.
     `)(() =>
-      <React.Fragment>
+      <div>
         <Button {...storyProps}>Primary button</Button>
         &nbsp;
         <Button {...storyProps} href="#">Primary link</Button>
-      </React.Fragment>
+      </div>
     )
   )
   .add('Secondary buttons',
@@ -31,22 +35,22 @@ storiesOf('Buttons', module)
 
       Modify the behavior of the button by changing its property events. The example below shows a Secondary Button component.
     `)(() =>
-      <React.Fragment>
+      <div>
         <Button {...storyProps} kind="secondary">Secondary button</Button>
         &nbsp;
         <Button {...storyProps} kind="secondary" href="#">Secondary link</Button>
-      </React.Fragment>
+      </div>
     )
   )
   .add('Tertiary buttons',
     withInfo(`
       Tertiary buttons are best used for small UI interactions that don't require a strong presence on the page.
     `)(() =>
-      <React.Fragment>
+      <div>
         <Button {...storyProps} kind="tertiary">Tertiary button</Button>
         &nbsp;
         <Button {...storyProps} kind="tertiary" href="#">Tertiary link</Button>
-      </React.Fragment>
+      </div>
     )
   )
   .add('Small buttons',
@@ -54,13 +58,13 @@ storiesOf('Buttons', module)
       Small buttons may be used when there is not enough vertical space for a regular sized button. This issue is most
       commonly found in tables. Small buttons should have three words or less.
     `)(() =>
-      <React.Fragment>
-        <Button {...storyProps} kind="primary" small="true">Primary button</Button>
+      <div>
+        <Button {...storyProps} kind="primary" small={true}>Primary button</Button>
         &nbsp;
-        <Button {...storyProps} kind="secondary" small="true">Secondary link</Button>
+        <Button {...storyProps} kind="secondary" small={true}>Secondary link</Button>
         &nbsp;
-        <Button {...storyProps} kind="tertiary" small="true">Tertiary link</Button>
-      </React.Fragment>
+        <Button {...storyProps} kind="tertiary" small={true}>Tertiary link</Button>
+      </div>
     )
   )
   .add('Start buttons',
@@ -69,10 +73,10 @@ storiesOf('Buttons', module)
 
       Launch your service with a "Start now" button.
     `)(() =>
-      <React.Fragment>
+      <div>
         <Button {...storyProps} kind="start">Start button</Button>
         &nbsp;
         <Button {...storyProps} kind="start" href="#">Start link</Button>
-      </React.Fragment>
+      </div>
     )
   )
