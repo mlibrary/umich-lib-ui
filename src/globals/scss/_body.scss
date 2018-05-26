@@ -1,5 +1,7 @@
 @import 'mixins';
 @import 'vars';
+@import 'typography';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700');
 
 html {
   @include reset;

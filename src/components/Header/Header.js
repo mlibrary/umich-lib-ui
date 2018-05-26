@@ -7,17 +7,14 @@ import umich_block_m from './umich_block_m.png'
 
 const Header = ({
   name,
-  baseUrl,
-  children
+  baseUrl
 }) => {
   return (
-    <header class="header">
-      <div class="header__inner">
-        <div class="logo">
-          <a href="/" class="logo__link"><img class="logo__image" src={umich_block_m} alt="University of Michigan" /><span class="logo__library">Library</span><span class="logo__name">{name}</span></a>
+    <header className="header">
+      <div className="header__inner">
+        <div className="logo">
+          <a href="/" className="logo__link"><img className="logo__image" src={umich_block_m} alt="University of Michigan" /><span className="logo__library">Library</span><span className="logo__name">{name}</span></a>
         </div>
-
-        {children}
       </div>
     </header>
   )
