@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { configure, addDecorator } from '@storybook/react';
 import Container from './Container';
 
-// addDecorator(checkA11y);
 addDecorator(story => <Container story={story} />);
 
 function loadStories() {
