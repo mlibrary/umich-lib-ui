@@ -23,21 +23,20 @@ const items = [
   "Gray",
   "Black"
 ]
-/*
+
 storiesOf('Expandable', module)
-  .add('Expandable',
+  .add('Show all',
     withInfo(`
-      Show more
+      Expandable
     `)(() =>
       <Expandable>
         <ul>
-          <ExpandableChildren>
+          <ExpandableChildren show={4}>
             {items.map((item, key) => <li key={key}>{item}</li>)}
           </ExpandableChildren>
         </ul>
 
-        <ExpandableButton kind="tertiary">Show all</ExpandableButton>
+        <ExpandableButton kind="tertiary" />
       </Expandable>
     )
   )
-*/
