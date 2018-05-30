@@ -2,10 +2,20 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
+import { text, boolean, select } from '@storybook/addon-knobs';
 
 import Button from '../Button';
 
 storiesOf('Buttons', module)
+  .add('Button',
+    withInfo(`
+      Configure
+    `)(() =>
+      <Button kind={select('Kind', ['primary', 'secondary', 'tertiary'], 'primary')} disabled={boolean('Disabled', false)} small={boolean('Small', false)} href={text('href', '')}>
+        {text('Text', 'Button text')}
+      </Button>
+    )
+  )
   .add('Primary buttons',
     withInfo(`
       ~~~js
@@ -20,9 +30,9 @@ storiesOf('Buttons', module)
       The example below shows Primary Button component.
     `)(() =>
       <div>
-        <Button onClick={action('Button clicked')}>Primary button</Button>
+        <Button onClick={action('Button clicked')} kind="primary">Primary button</Button>
         &nbsp;
-        <Button onClick={action('Button clicked')} href="#">Primary link</Button>
+        <Button onClick={action('Button clicked')} kind="primary" href="#">Primary link</Button>
       </div>
     )
   )
@@ -56,11 +66,11 @@ storiesOf('Buttons', module)
       commonly found in tables. Small buttons should have three words or less.
     `)(() =>
       <div>
-        <Button onClick={action('Button clicked')} kind="primary" small={true}>Primary button</Button>
+        <Button onClick={action('Button clicked')} kind="primary" small={true}>Primary</Button>
         &nbsp;
-        <Button onClick={action('Button clicked')} kind="secondary" small={true}>Secondary link</Button>
+        <Button onClick={action('Button clicked')} kind="secondary" small={true}>Secondary</Button>
         &nbsp;
-        <Button onClick={action('Button clicked')} kind="tertiary" small={true}>Tertiary link</Button>
+        <Button onClick={action('Button clicked')} kind="tertiary" small={true}>Tertiary</Button>
       </div>
     )
   )
