@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
 import { text, boolean, select } from '@storybook/addon-knobs';
 
-import Expandable, { ExpandableChildren } from '../Expandable';
+import Expandable, { ExpandableChildren, ExpandableButton } from '../Expandable';
 
 const items = [
   "Red",
@@ -23,7 +23,7 @@ const items = [
   "Gray",
   "Black"
 ]
-
+/*
 storiesOf('Expandable', module)
   .add('Expandable',
     withInfo(`
@@ -36,8 +36,8 @@ storiesOf('Expandable', module)
           </ExpandableChildren>
         </ul>
 
-        {/* this.toggleExpanded */}
-        <button onClick={console.log}>Show more</button>
+        <ExpandableButton kind="tertiary">Show all</ExpandableButton>
       </Expandable>
     )
   )
+*/
