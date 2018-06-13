@@ -57,12 +57,13 @@
   }
 }
 
-.button--tertiary {
-  color: $text-secondary-color;
-  text-decoration: underline;
-}
-
 .button--small {
   padding: 0.25rem 0.5rem;
   font-size: 0.85rem;
+}
+
+.button--tertiary {
+  color: $text-secondary-color;
+  text-decoration: underline;
+  padding: 0;
 }

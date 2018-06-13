@@ -18,7 +18,7 @@ With npm
 npm install
 ```
 
-To run the Storybook locally
+To run Storybook locally
 
 ```
 npm run storybook
@@ -28,4 +28,11 @@ To deploy the storybook
 
 ```
 npm run deploy-storybook
+```
+
+To watch and build stylesheets
+
+```
+npm run watch-css
+npm run build-css
 ```
