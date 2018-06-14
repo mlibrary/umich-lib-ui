@@ -47,6 +47,10 @@ class ExpandableChildren extends Component {
   }
 }
 
+const cleanList = (list) => {
+  return list.filter(x => (x ? true : false)).join(' ').trim()
+}
+
 class ExpandableButton extends Component {
   render() {
     return (
@@ -54,9 +58,9 @@ class ExpandableButton extends Component {
         {(context) => (
           <Button {...this.props} onClick={() => context.toggleExpanded()}>
             {context.expanded ? (
-              'Show fewer'
+              cleanList(['Show fewer', this.props.name])
             ) : (
-              'Show all'
+              cleanList(['Show all', this.props.count, this.props.name])
             )}
           </Button>
         )}

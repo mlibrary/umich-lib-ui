@@ -6,7 +6,7 @@ export default class Container extends Component {
     const { story } = this.props;
 
     return (
-      <div>
+      <div style={{ padding: '1rem' }}>
         {story()}
       </div>
     );

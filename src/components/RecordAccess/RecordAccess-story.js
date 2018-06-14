@@ -2,57 +2,40 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
-import { text, boolean, select } from '@storybook/addon-knobs';
+import { text, boolean, number, object } from '@storybook/addon-knobs';
 
 import RecordAccess from '../RecordAccess';
-
-const data = [
-  {
-    heading: 'Online resources',
-    link: {
-      label: 'About location',
-      href: 'http://www.lib.umich.edu/location/buhr-remote-shelving-facility/unit/45'
-    },
-    headings: [
-      'Action',
-      'Description',
-      'Status',
-      'Call Number'
-    ],
-    rows: [
-      [
-        {
-          kind: 'link',
-          link: {
-            label: 'Go to item',
-            href: '/'
-          }
-        },
-        {
-          kind: 'text',
-          value: 'desc placeholder'
-        },
-        {
-          kind: 'icon-with-text',
-          link: {
-            label: '',
-            href: '/'
-          }
-        },
-        {
-          kind: 'text',
-          value: '123'
-        }
-      ]
-    ]
-  }
-]
 
 storiesOf('RecordAccess', module)
   .add('RecordAccess',
     withInfo(`
       Access
     `)(() =>
-      <RecordAccess data={data} />
+      <RecordAccess
+        caption={text('Caption', 'Research Museums Center Birds Division')}
+        headings={['Action', 'Description', 'Status', 'Call Number']}
+        rows={object('Rows', [
+          [
+            { text: 'Get this', href: '#' },
+            { text: 'v.3 2017' },
+            { text: 'On shelf', status: 'success' },
+            { text: 'N/A' }
+          ],
+          [
+            { text: 'Get this', href: '#' },
+            { text: 'v.2 2016' },
+            { text: 'Checked out', status: 'warning' },
+            { text: 'N/A' }
+          ],
+          [
+            { text: 'Get this', href: '#' },
+            { text: 'v.1 2015' },
+            { text: 'Missing', status: 'error' },
+            { text: 'N/A' }
+          ]
+        ])}
+        name={text('Show all name', 'holdings')}
+        count={boolean('Show more count', true)}
+      />
     )
   )

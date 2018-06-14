@@ -5,12 +5,10 @@
   border-spacing: 0;
   width: 100%;
 
-  caption {
-    text-align: left;
-  }
-
   tbody {
-
+    tr:not(:last-child) {
+      border-bottom: solid 1px $color__grey-light-1;
+    }
   }
 
   td,
@@ -25,7 +23,27 @@
 
   thead {
     th {
-
+      font-size: 0.875rem;
+      color: $color__grey-2;
     }
+
+    border-bottom: solid 2px $color__grey-light-1;
   }
+}
+
+.record-access__caption {
+  text-align: left;
+  font-weight: 600;
+}
+
+.record-access__cell--success {
+  color: $color__green-1;
+}
+
+.record-access__cell--warning {
+  color: $color__orange-1;
+}
+
+.record-access__cell--error {
+  color: $color__red-1;
 }
