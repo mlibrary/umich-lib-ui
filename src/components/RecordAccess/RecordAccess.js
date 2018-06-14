@@ -6,16 +6,17 @@ import './RecordAccess.css'
 const RecordAccess = ({
   data
 }) => {
-  console.log('data', data)
   return (
     <React.Fragment>
       {data.map((table, tkey) => (
-        <table key={tkey}>
-          <caption>{table.heading}</caption>
+        <table key={tkey} className="record-access__table">
+          <caption className="record-access__caption">{table.heading}</caption>
 
           <thead>
             <tr>
-              {table.headings.map((heading, hkey) => (<th scope="col" key={hkey}>{heading}</th>))}
+              {table.headings.map((heading, hkey) => (
+                <th scope="col" key={hkey}>{heading}</th>
+              ))}
             </tr>
           </thead>
 
