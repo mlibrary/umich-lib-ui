@@ -5,7 +5,7 @@ import { withInfo } from '@storybook/addon-info';
 import { text, boolean, select } from '@storybook/addon-knobs';
 
 import Navigation from '../Navigation';
-
+/*
 storiesOf('Navigation', module)
   .add('Navigation',
     withInfo(`
@@ -18,3 +18,4 @@ storiesOf('Navigation', module)
       ]} />
     )
   )
+*/
