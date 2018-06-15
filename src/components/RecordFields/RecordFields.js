@@ -4,42 +4,50 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import './RecordFields.css'
 
-const FieldDescription = ({ description }) => {
-
-  if (Array.isArray(description)) {
+const FieldDescriptionItem = ({ desc, renderAnchor }) => {
+  if (desc.href) {
     return (
-      <dd className="record-fields__description">
-        {description.map((desc, i) => (
-          <span key={i} className="record-fields__description-item">{desc}</span>
-        ))}
-      </dd>
+      <a href={desc.href}>{ desc.text }</a>
     )
   }
 
-  return (
-    <dd className="record-fields__description">{description}</dd>
-  )
+  if (desc.to) {
+    return (
+      renderAnchor(desc)
+    )
+  }
+
+  return desc.text
 }
 
-const Field = ({ field }) => {
+const Field = ({ field, renderAnchor }) => {
   const { term, description } = field
 
   return (
     <div className="record-fields__field">
       <dt className="record-fields__term">{term}</dt>
-      <FieldDescription description={description} />
+      <dd className="record-fields__description">
+        {description.map((desc, i) => (
+          <span className="record-fields__description-item" key={i}>
+            <FieldDescriptionItem desc={desc} renderAnchor={renderAnchor} />
+          </span>
+        ))}
+      </dd>
     </div>
   )
 }
 
-const RecordFields= ({ fields }) => (
+const RecordFields= ({ fields, renderAnchor }) => (
   <dl className="record-fields">
-    {fields.map((field, i) => <Field field={field} key={i} />)}
+    {fields.map((field, i) => (
+      <Field field={field} renderAnchor={renderAnchor} key={i} />
+    ))}
   </dl>
 )
 
 RecordFields.propTypes = {
-  fields: PropTypes.array.isRequired
+  fields: PropTypes.array.isRequired,
+  renderAnchor: PropTypes.func
 };
 
 export default RecordFields

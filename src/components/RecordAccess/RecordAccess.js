@@ -5,10 +5,20 @@ import PropTypes from 'prop-types';
 import './RecordAccess.css'
 import Expandable, { ExpandableChildren, ExpandableButton } from '../Expandable'
 
-const Cell = ({ cell }) => {
+
+const Cell = ({
+  cell,
+  renderAnchor
+}) => {
   if (cell.href) {
     return (
       <a href={cell.href}>{cell.text}</a>
+    )
+  }
+
+  if (cell.to) {
+    return (
+      renderAnchor(cell)
     )
   }
 
@@ -49,7 +59,8 @@ class RecordAccess extends React.Component {
       headings,
       rows,
       count,
-      name
+      name,
+      renderAnchor
     } = this.props
 
     return (
@@ -80,7 +91,7 @@ class RecordAccess extends React.Component {
                 {rows.map((row, i) => (
                   <tr key={i}>
                     {row.map((cell, t) => (
-                      <td key={t}><Cell cell={cell} /></td>
+                      <td key={t}><Cell cell={cell} renderAnchor={renderAnchor} /></td>
                     ))}
                   </tr>
                 ))}
@@ -100,7 +111,8 @@ RecordAccess.propTypes = {
   headings: PropTypes.array.isRequired,
   rows: PropTypes.array.isRequired,
   name: PropTypes.string,
-  count: PropTypes.bool
+  count: PropTypes.bool,
+  renderAnchor: PropTypes.func,
 };
 
 export default RecordAccess

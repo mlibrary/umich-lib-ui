@@ -14,28 +14,41 @@ storiesOf('RecordFields', module)
       <RecordFields
         fields={object('Fields', [
           {
-            term: 'Previous Title',
+            term: 'Published',
             description: [
-              'Wing span (Melbourne, Vic.)',
-              'Bird observer (Hawthorn, Vic.)'
+              { text: '2012 - Carlton, Vic. : BirdLife Australia' }
             ]
           },
           {
-            term: 'Published',
-            description: '2012 - Carlton, Vic. : BirdLife Australia'
+            term: 'Contributors',
+            description: [
+              { text: 'BirdLife Australia.', to: '#',  }
+            ]
+          },
+          {
+            term: 'Previous Title',
+            description: [
+              { text: 'Wing span (Melbourne, Vic.)', to: '#' },
+              { text: 'Bird observer (Hawthorn, Vic.)', to: '#' }
+            ]
           },
           {
             term: 'Numbering',
-            description: 'Began with Vol. 1, no. 1 (Mar. 2012).'
+            description: [
+              { text: 'Began with Vol. 1, no. 1 (Mar. 2012).' }
+            ]
           },
           {
             term: 'Source of Description Note',
             description: [
-              'Description based on: Vol. 1, no. 1 (Mar. 2012); title from cover.',
-              'Latest issue consulted: Vol. 1, no. 3 (Sept. 2012).'
+              { text: 'Description based on: Vol. 1, no. 1 (Mar. 2012); title from cover.' },
+              { text: 'Latest issue consulted: Vol. 1, no. 3 (Sept. 2012).' }
             ]
           }
         ])}
+        renderAnchor={(data) => (
+          <a className="rendered-prop-anchor-example" href={data.to}>{data.text}</a>
+        )}
       />
     )
   )
