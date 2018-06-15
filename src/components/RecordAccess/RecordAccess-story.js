@@ -13,13 +13,21 @@ storiesOf('RecordAccess', module)
     `)(() =>
       <RecordAccess
         caption={text('Caption', 'Research Museums Center Birds Division')}
+        location={object('Location', {
+          text: 'About location',
+          href: 'http://www.lib.umich.edu/location/museums-library/unit/31'
+        })}
+        notes={object('notes', [
+          'Library has: 1-6 : 1944-1945',
+          'Note: Vols.1-6 in Buhr'
+        ])}
         headings={['Action', 'Description', 'Status', 'Call Number']}
         rows={object('Rows', [
           [
             { text: 'Go to item', href: '#' },
             { text: 'v.3 2017' },
             { text: 'On shelf', status: 'success' },
-            { text: 'N/A' }
+            { text: 'AP20 .E83' }
           ],
           [
             { text: 'Get this', to: '#' },

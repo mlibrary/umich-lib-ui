@@ -56,6 +56,8 @@ class RecordAccess extends React.Component {
   render() {
     const {
       caption,
+      notes,
+      location,
       headings,
       rows,
       count,
@@ -75,6 +77,12 @@ class RecordAccess extends React.Component {
           <table className="record-access__table">
             <caption id={this.captionId} className="record-access__caption">
               <span className="record-access__caption-text">{caption}</span>
+              {location && (<a href={location.href} className="record-access__caption-location">{location.text}</a>)}
+              {notes && (
+                <React.Fragment>
+                  {notes.map(note => <span className="record-access__caption-note">{note}</span>)}
+                </React.Fragment>
+              )}
               {this.state.tabindex === '0' && <small className="record-access__caption-scroll-text">(scroll to see more)</small>}
             </caption>
 
@@ -108,6 +116,7 @@ class RecordAccess extends React.Component {
 
 RecordAccess.propTypes = {
   caption: PropTypes.string.isRequired,
+  notes: PropTypes.array,
   headings: PropTypes.array.isRequired,
   rows: PropTypes.array.isRequired,
   name: PropTypes.string,

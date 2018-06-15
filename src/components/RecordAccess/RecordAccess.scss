@@ -42,8 +42,14 @@
 
 .record-access__caption-text {
   font-weight: 600;
+  margin-right: 0.5rem;
 }
 
+.record-access__caption-location {
+  font-size: 0.875rem;
+}
+
+.record-access__caption-note,
 .record-access__caption-scroll-text {
   display: block;
   font-size: 0.875rem;
