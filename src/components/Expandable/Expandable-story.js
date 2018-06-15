@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
-import { text, boolean, select } from '@storybook/addon-knobs';
+import { text, number, boolean, select } from '@storybook/addon-knobs';
 
 import Expandable, { ExpandableChildren, ExpandableButton } from '../Expandable';
 
@@ -31,12 +31,18 @@ storiesOf('Expandable', module)
     `)(() =>
       <Expandable>
         <ul>
-          <ExpandableChildren show={4}>
+          <ExpandableChildren
+            show={number('Show initially', 3)}
+          >
             {items.map((item, key) => <li key={key}>{item}</li>)}
           </ExpandableChildren>
         </ul>
 
-        <ExpandableButton kind="tertiary" />
+        <ExpandableButton
+          kind="tertiary"
+          name={text('Show all name', 'colors')}
+          count={number('Show all count', items.length)}
+        />
       </Expandable>
     )
   )
