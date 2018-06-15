@@ -50,3 +50,26 @@
 .record-fields__description-item {
   display: block;
 }
+
+.field-nested {
+
+}
+
+.field-nested__desc {
+  display: inline-block;
+
+  &:not(:last-child)::after {
+    position: relative;
+    /* top: 3pt; Uncomment this to lower the icons as requested in comments*/
+    content: "";
+    display: inline-block;
+    /* By using an em scale, the arrows will size with the font */
+    width: 0.35rem;
+    height: 0.35rem;
+    border-right: 2px solid $color__grey-2;
+    border-top: 2px solid $color__grey-2;
+    transform: rotate(45deg);
+    margin-left: 0.25rem;
+    margin-right: 0.5rem;
+  }
+}

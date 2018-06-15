@@ -44,6 +44,26 @@ storiesOf('RecordFields', module)
               { text: 'Description based on: Vol. 1, no. 1 (Mar. 2012); title from cover.' },
               { text: 'Latest issue consulted: Vol. 1, no. 3 (Sept. 2012).' }
             ]
+          },
+          {
+            term: 'Academic Discipline',
+            description: [
+              [
+                { text: 'Science', to: '#' },
+                { text: 'Biology', to: '#' },
+                { text: 'Zoology', to: '#' },
+              ],
+              [
+                { text: 'Science', to: '#' },
+                { text: 'Biology', to: '#' },
+                { text: 'Ecology and Evolutionary Biology', to: '#' },
+              ],
+              [
+                { text: 'International Studies', to: '#' },
+                { text: 'Asian Studies', to: '#' },
+                { text: 'Pacific/Australia/New Zealand Studies', to: '#' },
+              ]
+            ]
           }
         ])}
         renderAnchor={(data) => (

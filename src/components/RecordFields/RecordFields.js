@@ -4,7 +4,19 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import './RecordFields.css'
 
-const FieldDescriptionItem = ({ desc, renderAnchor }) => {
+const FieldDescription = ({ desc, renderAnchor }) => {
+  if (Array.isArray(desc)) {
+    return (
+      <ol className="field-nested">
+        {desc.map(nestedDesc => (
+          <li className="field-nested__desc">
+            <FieldDescription desc={nestedDesc} renderAnchor={renderAnchor} />
+          </li>
+        ))}
+      </ol>
+    )
+  }
+
   if (desc.href) {
     return (
       <a href={desc.href}>{ desc.text }</a>
@@ -29,7 +41,7 @@ const Field = ({ field, renderAnchor }) => {
       <dd className="record-fields__description">
         {description.map((desc, i) => (
           <span className="record-fields__description-item" key={i}>
-            <FieldDescriptionItem desc={desc} renderAnchor={renderAnchor} />
+            <FieldDescription desc={desc} renderAnchor={renderAnchor} />
           </span>
         ))}
       </dd>
@@ -37,7 +49,7 @@ const Field = ({ field, renderAnchor }) => {
   )
 }
 
-const RecordFields= ({ fields, renderAnchor }) => (
+const RecordFields = ({ fields, renderAnchor }) => (
   <dl className="record-fields">
     {fields.map((field, i) => (
       <Field field={field} renderAnchor={renderAnchor} key={i} />
