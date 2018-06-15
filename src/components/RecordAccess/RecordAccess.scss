@@ -1,5 +1,10 @@
 @import '../../globals/scss/styles.scss';
 
+.record-access__container {
+  overflow-x: auto;
+  overflow-y: visible;
+}
+
 .record-access__table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -33,7 +38,15 @@
 
 .record-access__caption {
   text-align: left;
+}
+
+.record-access__caption-text {
   font-weight: 600;
+}
+
+.record-access__caption-scroll-text {
+  display: block;
+  font-size: 0.875rem;
 }
 
 .record-access__cell--success {

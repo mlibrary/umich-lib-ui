@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom'
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import './RecordAccess.css'
@@ -24,42 +25,74 @@ const Cell = ({ cell }) => {
   )
 }
 
-const RecordAccess = ({
-  caption,
-  headings,
-  rows,
-  count,
-  name
-}) => {
-  return (
-    <Expandable>
-      <table className="record-access__table">
-        <caption className="record-access__caption">{caption}</caption>
+class RecordAccess extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      tabindex: null
+    }
+    this.captionId = 'caption-' + Math.random().toString(36).substr(2, 9);
+    this.containerRef = React.createRef();
+  }
 
-        <thead>
-          <tr>
-            {headings.map((heading, i) => (
-              <th scope="col" key={i}>{heading}</th>
-            ))}
-          </tr>
-        </thead>
+  componentDidMount() {
+    let container = this.containerRef.current
+    let scrollable = container.scrollWidth > container.clientWidth;
+    this.setState({
+      tabindex: scrollable ? '0' : null
+    });
+  }
 
-        <tbody>
-          <ExpandableChildren show={1}>
-            {rows.map((row, i) => (
-              <tr key={i}>
-                {row.map((cell, t) => (
-                  <td key={t}><Cell cell={cell} /></td>
+  render() {
+    const {
+      caption,
+      headings,
+      rows,
+      count,
+      name
+    } = this.props
+
+    return (
+      <div
+        className="record-access__container"
+        tabIndex={this.state.tabindex}
+        aria-labelledby={this.captionId}
+        ref={this.containerRef}
+        role="group"
+      >
+        <Expandable>
+          <table className="record-access__table">
+            <caption id={this.captionId} className="record-access__caption">
+              <span className="record-access__caption-text">{caption}</span>
+              {this.state.tabindex === '0' && <small className="record-access__caption-scroll-text">(scroll to see more)</small>}
+            </caption>
+
+            <thead>
+              <tr>
+                {headings.map((heading, i) => (
+                  <th scope="col" key={i}>{heading}</th>
                 ))}
               </tr>
-            ))}
-          </ExpandableChildren>
-        </tbody>
-      </table>
+            </thead>
 
-      <ExpandableButton kind="tertiary" small={true} count={count ? rows.length : ''} name={name} />
-    </Expandable>
-  )
+            <tbody>
+              <ExpandableChildren show={1}>
+                {rows.map((row, i) => (
+                  <tr key={i}>
+                    {row.map((cell, t) => (
+                      <td key={t}><Cell cell={cell} /></td>
+                    ))}
+                  </tr>
+                ))}
+              </ExpandableChildren>
+            </tbody>
+          </table>
+
+          <ExpandableButton kind="tertiary" small={true} count={count ? rows.length : ''} name={name} />
+        </Expandable>
+      </div>
+    )
+  }
 }
 
 RecordAccess.propTypes = {
@@ -67,7 +100,7 @@ RecordAccess.propTypes = {
   headings: PropTypes.array.isRequired,
   rows: PropTypes.array.isRequired,
   name: PropTypes.string,
-  count: PropTypes.boolean
+  count: PropTypes.bool
 };
 
 export default RecordAccess
