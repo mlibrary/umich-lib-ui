@@ -25,7 +25,7 @@ const items = [
 ]
 
 storiesOf('Expandable', module)
-  .add('Show all',
+  .add('Expandable',
     withInfo(`
       Expandable
     `)(() =>

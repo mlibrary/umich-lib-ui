@@ -7,7 +7,7 @@ import { text, boolean, number, object } from '@storybook/addon-knobs';
 import RecordAccess from '../RecordAccess';
 
 storiesOf('RecordAccess', module)
-  .add('RenderAnchor render prop',
+  .add('RecordAccess',
     withInfo(`
       To handle React Router Links with 'to' without coupling this component to that library.
     `)(() =>
