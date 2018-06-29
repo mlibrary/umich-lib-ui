@@ -21,7 +21,7 @@ storiesOf('RecordAccess', module)
           'Library has: 1-6 : 1944-1945',
           'Note: Vols.1-6 in Buhr'
         ])}
-        headings={['Action', 'Description', 'Status', 'Call Number']}
+        headings={object('headings', ['Action', 'Description', 'Status', 'Call Number'])}
         rows={object('Rows', [
           [
             { text: 'Go to item', href: '#' },

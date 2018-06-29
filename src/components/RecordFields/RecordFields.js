@@ -8,8 +8,8 @@ const FieldDescription = ({ desc, renderAnchor }) => {
   if (Array.isArray(desc)) {
     return (
       <ol className="field-nested">
-        {desc.map(nestedDesc => (
-          <li className="field-nested__desc">
+        {desc.map((nestedDesc, i) => (
+          <li className="field-nested__desc" key={i}>
             <FieldDescription desc={nestedDesc} renderAnchor={renderAnchor} />
           </li>
         ))}
