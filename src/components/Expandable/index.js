@@ -1,2 +1,3 @@
-export default from './Expandable';
-export * from './Expandable';
+export { default } from './Expandable';
+export ExpandableButton from './ExpandableButton';
+export ExpandableChildren from './ExpandableChildren';
