@@ -8,9 +8,15 @@ Use these components to make your interfaces consistent and accessible.
 
 [View all the components](https://mlibrary.github.io/umich-lib-components-react/)
 
+Usage information is available when you click the blue ? icon in the top right corner of the selected component. Also click the 'Knobs' tab to adjust props.
+
 ![Screenshot](storybook_preview.png)
 
-## Getting started
+## Usage
+
+> Coming soon. But first, deployment and release processes in the works...
+
+## Development
 
 With npm
 
@@ -18,7 +24,7 @@ With npm
 npm install
 ```
 
-To run Storybook locally
+We recommend using Storybook for development. To run Storybook locally
 
 ```
 npm run storybook
@@ -36,3 +42,7 @@ To watch and build stylesheets
 npm run watch-css
 npm run build-css
 ```
+
+## Contribution
+
+> Important, but not yet available.
