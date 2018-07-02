@@ -21,7 +21,7 @@
     "prop-types": "^15.6.1",
     "react-scripts": "1.1.4",
     "react-test-renderer": "^16.4.0",
-    "semantic-release": "^15.6.0",
+    "semantic-release": "^15.6.1",
     "travis-deploy-once": "^5.0.1"
   },
   "scripts": {
@@ -50,9 +50,10 @@
     "tag": "latest"
   },
   "release": {
-    "verifyConditions": ["@semantic-release/npm", "@semantic-release/git", "@semantic-release/github"],
-    "prepare": ["@semantic-release/npm"],
-    "publish": ["@semantic-release/npm", "@semantic-release/github"],
-    "npmPublish": true
+    "publish": [
+      "@semantic-release/npm",
+      "@semantic-release/github"
+    ],
+    "branch": "master"
   }
 }
