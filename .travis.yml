@@ -5,6 +5,7 @@ node_js:
   - 6
 
 script:
+  - npm run build-css
   - npm run build
 
 jobs:
