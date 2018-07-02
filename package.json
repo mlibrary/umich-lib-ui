@@ -21,8 +21,7 @@
     "prop-types": "^15.6.1",
     "react-scripts": "1.1.4",
     "react-test-renderer": "^16.4.0",
-    "semantic-release": "^15.6.1",
-    "travis-deploy-once": "^5.0.1"
+    "semantic-release": "^15.6.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -32,7 +31,6 @@
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "deploy-storybook": "storybook-to-ghpages",
-    "travis-deploy-once": "travis-deploy-once",
     "semantic-release": "semantic-release",
     "commit": "git-cz"
   },
