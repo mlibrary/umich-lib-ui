@@ -1,6 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import './RecordAccess.css'
 import Expandable, { ExpandableChildren, ExpandableButton } from '../Expandable'
