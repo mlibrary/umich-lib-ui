@@ -63,4 +63,4 @@ Button.defaultProps = {
   kind: 'primary',
 };
 
-export default Button
+export default Button;

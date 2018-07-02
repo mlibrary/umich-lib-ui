@@ -1,8 +1,18 @@
-export Button from './components/Button'
-export Expandable, {
+import Button from './components/Button'
+import Expandable, {
   ExpandableButton,
   ExpandableChildren
 } from './components/Expandable'
-export Header from './components/Header'
-export RecordAccess from './components/RecordAccess'
-export RecordFields from './components/RecordFields'
+import Header from './components/Header'
+import RecordAccess from './components/RecordAccess'
+import RecordFields from './components/RecordFields'
+
+export {
+  Button,
+  Expandable,
+  ExpandableButton,
+  ExpandableChildren,
+  Header,
+  RecordAccess,
+  RecordFields
+}

@@ -1,1 +1,2 @@
-export default from './RecordAccess.js'
+import RecordAccess from './RecordAccess'
+export default RecordAccess

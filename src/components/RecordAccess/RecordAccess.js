@@ -23,9 +23,10 @@ const Cell = ({
   }
 
   if (cell.status) {
+    // TODO: Add an optional icon.
     return (
       <span className={`record-access__cell--${cell.status}`}>
-        {cell.icon && <Icon name={cell.icon} />}{cell.text}
+        {cell.text}
       </span>
     )
   }

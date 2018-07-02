@@ -1,1 +1,2 @@
-export default from './RecordFields.js'
+import RecordFields from './RecordFields'
+export default RecordFields

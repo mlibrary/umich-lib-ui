@@ -4,7 +4,10 @@ import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
 import { text, number, boolean, select } from '@storybook/addon-knobs';
 
-import Expandable, { ExpandableChildren, ExpandableButton } from '../Expandable';
+import Expandable, {
+  ExpandableChildren,
+  ExpandableButton
+} from '../Expandable';
 
 const items = [
   "Red",
