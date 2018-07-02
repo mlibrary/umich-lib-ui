@@ -8,6 +8,10 @@ script:
   - npm run build-css
   - npm run build
 
+branches:
+  only:
+    - master
+
 jobs:
   include:
     - stage: release
