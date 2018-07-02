@@ -51,7 +51,7 @@ You can request a new feature by submitting an issue to this repo. Proposed feat
 
 1. Fork the project.
 2. Clone forked project.
-3. Once cloned, nce cloned, you will see origin as your default remote, pointing to your personal forked repository. Add a remote named upstream pointing to the main umich-lib-components-react:
+3. Once cloned, you will see origin as your default remote, pointing to your personal forked repository. Add a remote named upstream pointing to the main umich-lib-components-react:
 
 $ git remote add upstream git@github.com:mlibrary/umich-lib-components-react.git
 $ git remote -v
