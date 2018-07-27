@@ -5,7 +5,7 @@
     "email": "earleyj@umich.edu",
     "url": "https://github.com/jonearley"
   },
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "./index.js",
   "keywords": [
     "components",
@@ -22,6 +22,7 @@
   "homepage": "https://mlibrary.github.io/umich-lib-components-react/",
   "dependencies": {
     "react": "^16.3.2",
-    "react-dom": "^16.3.2"
+    "react-dom": "^16.3.2",
+    "classnames": "^2.2.5"
   }
 }
