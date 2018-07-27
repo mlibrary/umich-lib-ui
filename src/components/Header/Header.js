@@ -22,13 +22,6 @@ const NavItem = ({
   }
 }
 
-/*
-  TODO:
-
-  - [ ] Render nav items
-
-*/
-
 const Header = ({
   name,
   baseUrl,

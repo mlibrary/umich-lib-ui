@@ -34,7 +34,8 @@
     "deploy-storybook": "storybook-to-ghpages",
     "commit": "git-cz",
     "travis-deploy-once": "travis-deploy-once",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
