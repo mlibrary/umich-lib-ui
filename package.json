@@ -3,7 +3,8 @@
   "version": "0.0.0-development",
   "dependencies": {
     "react": "^16.3.2",
-    "react-dom": "^16.3.2"
+    "react-dom": "^16.3.2",
+    "classnames": "^2.2.5"
   },
   "author": {
     "name": "Jon Earley",
@@ -21,7 +22,6 @@
   "private": true,
   "devDependencies": {
     "@storybook/addon-actions": "^3.4.5",
-    "classnames": "^2.2.5",
     "autoprefixer": "7.1.6",
     "@storybook/addon-info": "^3.4.5",
     "@storybook/addon-knobs": "^3.4.6",

@@ -23,3 +23,6 @@ yarn-error.log*
 
 // build files
 /src/**/*.css
+
+# published library components
+/lib
