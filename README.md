@@ -13,7 +13,7 @@ Use these React components to make your service consistent with other library se
 ### Getting started
 
 ```
-$ npm install umich-lib-react-components
+$ npm install umich-lib-components-react
 ```
 
 1. These components require `react` and `react-dom` libraries.

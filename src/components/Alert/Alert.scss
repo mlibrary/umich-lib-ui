@@ -18,24 +18,30 @@
 
 .alert-inner {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin: 0 auto;
   align-items: baseline;
 }
 
-.alert-informational {
+.alert--informational {
   color: $color__blue-2;
-  background: $color__blue-3;
-  border-color: $color__blue-1;
+  background: $color__blue-light-3;
+  border-color: $color__blue-light-1;
 }
 
-.alert-warning {
+.alert--success {
+  color: $color__green-1;
+  background: $color__green-3;
+  border-color: $color__green-2;
+}
+
+.alert--warning {
   color: $color__orange-1;
   background: $color__orange-3;
   border-color: $color__orange-2;
 }
 
-.alert-error {
+.alert--error {
   color: $color__red-1;
   background: $color__red-3;
   border-color: $color__red-1;
