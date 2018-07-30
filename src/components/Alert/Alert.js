@@ -20,13 +20,13 @@ class Alert extends React.Component {
       className
     } = this.props
 
-    const alertClasses = classNames(className, {
+    const alertClasses = classNames({
       'alert': true,
       'alert--informational': intent === 'informational',
       'alert--success': intent === 'success',
       'alert--warning': intent === 'warning',
       'alert--error': intent === 'error'
-    });
+    }, className);
 
     if (this.state.open) {
       return (

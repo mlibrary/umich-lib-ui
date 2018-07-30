@@ -24,7 +24,7 @@ const NavItem = ({
 
 const Header = ({
   name,
-  baseUrl,
+  siteUrl,
   nav,
   renderAnchor
 }) => {
@@ -34,7 +34,7 @@ const Header = ({
         <div className="logo">
           <a href="https://umich.edu/" className="logo__blockm"><UMichBlockM className="logo__svg" /></a>
           <a href="https://www.lib.umich.edu/" className="logo__library"><UMichLibrary className="logo__svg" /></a>
-          <a href="/" className="logo__site-name-link">{name}</a>
+          {name && siteUrl && (<a href={siteUrl} className="logo__site-name-link">{name}</a>)}
         </div>
 
         {nav.length && (
@@ -52,13 +52,13 @@ const Header = ({
 }
 
 Header.propTypes = {
-  name: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
+  name: PropTypes.string,
+  siteUrl: PropTypes.string,
   renderAnchor: PropTypes.func
 };
 
 Header.defaultProps = {
-  baseUrl: '/',
+  siteUrl: '/',
 };
 
 export default Header
