@@ -13,14 +13,14 @@ const Button = ({
   small,
   ...other
 }) => {
-  const buttonClasses = classNames(className, {
+  const buttonClasses = classNames({
     'button': true,
     'button--small': small,
     'button--start': kind === 'start',
     'button--primary': kind === 'primary',
     'button--secondary': kind === 'secondary',
     'button--tertiary': kind === 'tertiary',
-  });
+  }, className);
 
   const commonProps = {
     className: buttonClasses,

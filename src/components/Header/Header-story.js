@@ -12,8 +12,8 @@ storiesOf('Headers', module)
       Website header
     `)(() =>
       <Header
-        name={text('Name', 'Site Name')}
-        url={text('URL', '#')}
+        name={text('name', 'Site Name')}
+        siteUrl={text('siteUrl', '#')}
         renderAnchor={(data) => (
           <a className="rendered-prop-anchor-example" href={data.to}>{data.text}</a>
         )}
