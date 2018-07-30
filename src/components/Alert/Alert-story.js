@@ -11,8 +11,8 @@ storiesOf('Alerts', module)
     withInfo(`
       Configure
     `)(() =>
-      <Alert>
-        A message
+      <Alert intent={select('intent', ['informational', 'success', 'warning', 'error', 'none'])}>
+        {text('text', 'This is an Alert message.')}
       </Alert>
     )
   )

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button } from 'umich-lib-components-react'
+import classNames from 'classnames';
 import './Alert.css'
 
 class Alert extends React.Component {
@@ -14,11 +15,22 @@ class Alert extends React.Component {
   }
 
   render() {
-    const { type } = this.props
+    const {
+      intent,
+      className
+    } = this.props
+
+    const alertClasses = classNames(className, {
+      'alert': true,
+      'alert--informational': intent === 'informational',
+      'alert--success': intent === 'success',
+      'alert--warning': intent === 'warning',
+      'alert--error': intent === 'error'
+    });
 
     if (this.state.open) {
       return (
-        <div className={`alert alert-${type}`}>
+        <div className={alertClasses}>
           <div className="alert-inner">
             <p className="alert-message">{this.props.children}</p>
             <Button
@@ -37,16 +49,19 @@ class Alert extends React.Component {
 }
 
 Alert.propTypes = {
-  type: PropTypes.oneOf([
+  intent: PropTypes.oneOf([
     'informational',
     'error',
-    'warning'
+    'warning',
+    'success',
+    'none'
   ]),
-  onCloseButtonClick: PropTypes.func
+  onCloseButtonClick: PropTypes.func,
+  className: PropTypes.string
 };
 
 Alert.defaultProps = {
-  type: 'informational',
+  intent: 'informational',
   onCloseButtonClick: () => {}
 };
 
