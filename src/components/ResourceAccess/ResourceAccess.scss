@@ -1,11 +1,11 @@
 @import '../../globals/scss/styles.scss';
 
-.record-access__container {
+.resource-access__container {
   overflow-x: auto;
   overflow-y: visible;
 }
 
-.record-access__table {
+.resource-access__table {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
@@ -36,33 +36,39 @@
   }
 }
 
-.record-access__caption {
+.resource-access__caption {
   text-align: left;
 }
 
-.record-access__caption-text {
+.resource-access__caption-text {
   font-weight: 600;
   margin-right: 0.5rem;
 }
 
-.record-access__caption-location {
+.resource-access__caption-location {
   font-size: $small-font-size;
 }
 
-.record-access__caption-note,
-.record-access__caption-scroll-text {
+.resource-access__caption-note,
+.resource-access__caption-scroll-text {
   display: block;
   font-size: $small-font-size;
 }
 
-.record-access__cell--success {
+.resource-access__cell {
+  .icon {
+    margin-top: -3px;
+  }
+}
+
+.resource-access__cell--success {
   color: $color__green-1;
 }
 
-.record-access__cell--warning {
+.resource-access__cell--warning {
   color: $color__orange-1;
 }
 
-.record-access__cell--error {
+.resource-access__cell--error {
   color: $color__red-1;
 }
