@@ -9,6 +9,7 @@
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
+  min-width: 30rem;
 
   tbody {
     tr:not(:last-child) {
