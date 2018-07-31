@@ -28,6 +28,10 @@ const Cell = ({
           return (renderAnchor(cell))
         }
 
+        if (cell.html) {
+          return <span className="resource-access__cell-html" dangerouslySetInnerHTML={{ __html: cell.html }} />
+        }
+
         return (<React.Fragment>{cell.text}</React.Fragment>)
       })()}
     </React.Fragment>
@@ -85,16 +89,18 @@ class ResourceAccess extends React.Component {
       >
         <Expandable>
           <table className="resource-access__table">
-            <caption id={this.captionId} className="resource-access__caption">
-              <span className="resource-access__caption-text">{caption}</span>
-              {location && (<a href={location.href} className="resource-access__caption-location">{location.text}</a>)}
-              {notes && (
-                <React.Fragment>
-                  {notes.map(note => <span className="resource-access__caption-note">{note}</span>)}
-                </React.Fragment>
-              )}
-              {this.state.tabindex === '0' && <small className="resource-access__caption-scroll-text">(scroll to see more)</small>}
-            </caption>
+            {caption && (
+              <caption id={this.captionId} className="resource-access__caption">
+                <span className="resource-access__caption-text">{caption}</span>
+                {location && (<a href={location.href} className="resource-access__caption-location">{location.text}</a>)}
+                {notes && (
+                  <React.Fragment>
+                    {notes.map(note => <span className="resource-access__caption-note">{note}</span>)}
+                  </React.Fragment>
+                )}
+                {this.state.tabindex === '0' && <small className="resource-access__caption-scroll-text">(scroll to see more)</small>}
+              </caption>
+            )}
 
             <thead>
               <tr>

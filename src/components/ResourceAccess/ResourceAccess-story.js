@@ -7,7 +7,7 @@ import { text, boolean, number, object } from '@storybook/addon-knobs';
 import ResourceAccess from '../ResourceAccess';
 
 storiesOf('ResourceAccess', module)
-  .add('ResourceAccess',
+  .add('Holdings',
     withInfo(`
       To handle React Router Links with 'to' without coupling this component to that library.
     `)(() =>
@@ -47,6 +47,38 @@ storiesOf('ResourceAccess', module)
         )}
         name={text('Show all name', 'holdings')}
         count={boolean('Show more count', true)}
+      />
+    )
+  )
+  .add('Go to item - Full Text Online',
+    withInfo(`
+      To handle React Router Links with 'to' without coupling this component to that library.
+    `)(() =>
+      <ResourceAccess
+        headings={object('headings', ['Action', 'Description', 'Help'])}
+        rows={object('Rows', [
+          [
+            { text: 'Go to item', href: '#' },
+            { text: 'Full Text Online', intent: 'success', icon: 'check-circle' },
+            { html: 'Full text link not working? <a href="#">Report a problem</a>' }
+          ]
+        ])}
+      />
+    )
+  )
+  .add('Go to item - Citation Only',
+    withInfo(`
+      To handle React Router Links with 'to' without coupling this component to that library.
+    `)(() =>
+      <ResourceAccess
+        headings={object('headings', ['Action', 'Description', 'Help'])}
+        rows={object('Rows', [
+          [
+            { text: 'Go to item', href: '#' },
+            { text: 'Citation', intent: 'warning', icon: 'error' },
+            { html: 'Full text link not working? <a href="#">Report a problem</a>' }
+          ]
+        ])}
       />
     )
   )
