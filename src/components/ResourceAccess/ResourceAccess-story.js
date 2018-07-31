@@ -8,12 +8,10 @@ import ResourceAccess from '../ResourceAccess';
 
 storiesOf('ResourceAccess', module)
   .add('Holdings',
-    withInfo(`
-      To handle React Router Links with 'to' without coupling this component to that library.
-    `)(() =>
+    (() =>
       <ResourceAccess
-        caption={text('Caption', 'Research Museums Center Birds Division')}
-        location={object('Location', {
+        caption={text('caption', 'Research Museums Center Birds Division')}
+        captionLink={object('captionLink', {
           text: 'About location',
           href: 'http://www.lib.umich.edu/location/museums-library/unit/31'
         })}
@@ -22,7 +20,7 @@ storiesOf('ResourceAccess', module)
           'Note: Vols.1-6 in Buhr'
         ])}
         headings={object('headings', ['Action', 'Description', 'Status', 'Call Number'])}
-        rows={object('Rows', [
+        rows={object('rows', [
           [
             { text: 'Go to item', href: '#' },
             { text: 'v.3 2017' },
@@ -45,15 +43,13 @@ storiesOf('ResourceAccess', module)
         renderAnchor={(data) => (
           <a className="rendered-prop-anchor-example" href={data.to}>{data.text}</a>
         )}
-        name={text('Show all name', 'holdings')}
-        count={boolean('Show more count', true)}
+        name={text('name', 'holdings')}
+        count={boolean('count', true)}
       />
     )
   )
-  .add('Go to item - Full Text Online',
-    withInfo(`
-      To handle React Router Links with 'to' without coupling this component to that library.
-    `)(() =>
+  .add('Full Text Online',
+    (() =>
       <ResourceAccess
         headings={object('headings', ['Action', 'Description', 'Help'])}
         rows={object('Rows', [
@@ -66,17 +62,27 @@ storiesOf('ResourceAccess', module)
       />
     )
   )
-  .add('Go to item - Citation Only',
-    withInfo(`
-      To handle React Router Links with 'to' without coupling this component to that library.
-    `)(() =>
+  .add('Citation Only',
+    (() =>
       <ResourceAccess
         headings={object('headings', ['Action', 'Description', 'Help'])}
         rows={object('Rows', [
           [
             { text: 'Go to item', href: '#' },
-            { text: 'Citation', intent: 'warning', icon: 'error' },
+            { text: 'Citation Only', intent: 'warning', icon: 'error' },
             { html: 'Full text link not working? <a href="#">Report a problem</a>' }
+          ]
+        ])}
+      />
+    )
+  )
+  .add('Go to item',
+    (() =>
+      <ResourceAccess
+        headings={object('headings', ['Action'])}
+        rows={object('Rows', [
+          [
+            { text: 'Go to item', href: '#' }
           ]
         ])}
       />

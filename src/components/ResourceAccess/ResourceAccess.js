@@ -71,7 +71,7 @@ class ResourceAccess extends React.Component {
     const {
       caption,
       notes,
-      location,
+      captionLink,
       headings,
       rows,
       count,
@@ -92,10 +92,10 @@ class ResourceAccess extends React.Component {
             {caption && (
               <caption id={this.captionId} className="resource-access__caption">
                 <span className="resource-access__caption-text">{caption}</span>
-                {location && (<a href={location.href} className="resource-access__caption-location">{location.text}</a>)}
+                {captionLink && (<a href={captionLink.href} className="resource-access__caption-link">{captionLink.text}</a>)}
                 {notes && (
                   <React.Fragment>
-                    {notes.map(note => <span className="resource-access__caption-note">{note}</span>)}
+                    {notes.map((note, n) => <span key={n} className="resource-access__caption-note">{note}</span>)}
                   </React.Fragment>
                 )}
                 {this.state.tabindex === '0' && <small className="resource-access__caption-scroll-text">(scroll to see more)</small>}
@@ -133,12 +133,18 @@ class ResourceAccess extends React.Component {
 }
 
 ResourceAccess.propTypes = {
-  caption: PropTypes.string.isRequired,
+  caption: PropTypes.string,
+  captionLink: PropTypes.shape({
+    text: PropTypes.string,
+    href: PropTypes.string
+  }),
   notes: PropTypes.array,
   headings: PropTypes.array.isRequired,
   rows: PropTypes.array.isRequired,
   name: PropTypes.string,
   count: PropTypes.bool,
+
+  /** Links that use 'to' will use this renderAnchor prop. This is useful if you want to use React Router for example. */
   renderAnchor: PropTypes.func,
 };
 
