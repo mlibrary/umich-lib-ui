@@ -7,11 +7,12 @@ import { text, boolean, number, object } from '@storybook/addon-knobs';
 import RecordFields from '../RecordFields';
 
 storiesOf('RecordFields', module)
-  .add('RecordFields',
+  .add('Full',
     withInfo(`
-      RecordFields
+      Full
     `)(() =>
       <RecordFields
+        full={boolean("full", true)}
         fields={object('Fields', [
           {
             term: 'Published',
@@ -63,6 +64,32 @@ storiesOf('RecordFields', module)
                 { text: 'Asian Studies', to: '#' },
                 { text: 'Pacific/Australia/New Zealand Studies', to: '#' },
               ]
+            ]
+          }
+        ])}
+        renderAnchor={(data) => (
+          <a className="rendered-prop-anchor-example" href={data.to}>{data.text}</a>
+        )}
+      />
+    )
+  )
+  .add('Brief',
+    withInfo(`
+      Brief
+    `)(() =>
+      <RecordFields
+        full={boolean("full", false)}
+        fields={object('Fields', [
+          {
+            term: 'Published',
+            description: [
+              { text: '2012 - Carlton, Vic. : BirdLife Australia' }
+            ]
+          },
+          {
+            term: 'Contributors',
+            description: [
+              { text: 'BirdLife Australia.', to: '#',  }
             ]
           }
         ])}

@@ -55,7 +55,7 @@ const RecordFields = ({
 }) => {
   const RecordFieldsClasses = classNames({
     'record-fields': true,
-    'record-fields--full': full
+    'record-fields--full': full ? true : false
   });
 
   return (
