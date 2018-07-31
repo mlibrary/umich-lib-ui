@@ -1,13 +1,11 @@
 @import '../../globals/scss/styles.scss';
 
-.container {
-  max-width: 48rem;
-  margin: 0 auto;
-}
+@mixin record-padding() {
+  padding: 1rem 1.25rem;
 
-.container-for-record-story {
-  background: $color__grey-light-2;
-  padding: 2rem 1.5rem;
+  @media screen and (min-width: $small-screens) {
+    padding: 1.5rem 2rem;
+  }
 }
 
 .record__container {
@@ -15,7 +13,7 @@
 }
 
 .record__metadata-container {
-  padding: 1.5rem 2rem;
+  @include record-padding();
 }
 
 .record__title {
@@ -34,7 +32,25 @@
 }
 
 .record__access-container {
-  padding: 1.5rem 2rem;
+  @include record-padding();
   background: $color__grey-light-3;
   border-bottom: 1px solid $color__grey-light-1;
+}
+
+
+/*
+  Helper story classes
+*/
+
+.container {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.container-for-record-story {
+  background: $color__grey-light-2;
+  padding: 0.5rem;
+
+  padding-top: 1rem;
+  padding-bottom: 4rem;
 }
