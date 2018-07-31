@@ -1,0 +1,40 @@
+@import '../../globals/scss/styles.scss';
+
+.container {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.container-for-record-story {
+  background: $color__grey-light-2;
+  padding: 2rem 1.5rem;
+}
+
+.record__container {
+  background: white;
+}
+
+.record__metadata-container {
+  padding: 1.5rem 2rem;
+}
+
+.record__title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.record__title-link {
+  text-decoration: none;
+  border-bottom: solid 2px rgba($color__blue-3, 0.4);
+
+  &:hover {
+    background: $color__blue-light-1
+  }
+}
+
+.record__access-container {
+  padding: 1.5rem 2rem;
+  background: $color__grey-light-3;
+  border-bottom: 1px solid $color__grey-light-1;
+}

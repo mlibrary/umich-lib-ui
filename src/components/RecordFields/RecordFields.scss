@@ -9,14 +9,6 @@
 }
 
 .record-fields__field {
-  &:nth-child(odd) {
-    background: $color__grey-light-2;
-  }
-
-  &:nth-child(even) {
-    background: $color__grey-light-3;
-  }
-
   @media screen and (min-width: $small-screens) {
     display: table-row;
   }
@@ -25,8 +17,6 @@
 .record-fields__term {
   color: $text-secondary-color;
   font-size: $small-font-size;
-  padding-top: 0.5rem;
-  padding-left: 1rem;
   padding-right: 1rem;
 
   @media screen and (min-width: $small-screens) {
@@ -37,8 +27,6 @@
 }
 
 .record-fields__description {
-  padding-bottom: 0.5rem;
-  padding-left: 1rem;
   padding-right: 1rem;
 
   @media screen and (min-width: $small-screens) {
@@ -49,10 +37,6 @@
 
 .record-fields__description-item {
   display: block;
-}
-
-.field-nested {
-
 }
 
 .field-nested__desc {
@@ -71,5 +55,27 @@
     transform: rotate(45deg);
     margin-left: 0.25rem;
     margin-right: 0.5rem;
+  }
+}
+
+.record-fields--full {
+  .record-fields__field {
+    &:nth-child(odd) {
+      background: $color__grey-light-2;
+    }
+
+    &:nth-child(even) {
+      background: $color__grey-light-3;
+    }
+  }
+
+  .record-fields__term {
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+  }
+
+  .record-fields__description {
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
   }
 }

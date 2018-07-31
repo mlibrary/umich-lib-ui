@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import './RecordFields.css'
 
@@ -47,17 +48,29 @@ const Field = ({ field, renderAnchor }) => {
   )
 }
 
-const RecordFields = ({ fields, renderAnchor }) => (
-  <dl className="record-fields">
-    {fields.map((field, i) => (
-      <Field field={field} renderAnchor={renderAnchor} key={i} />
-    ))}
-  </dl>
-)
+const RecordFields = ({
+  fields,
+  renderAnchor,
+  full
+}) => {
+  const RecordFieldsClasses = classNames({
+    'record-fields': true,
+    'record-fields--full': full
+  });
+
+  return (
+    <dl className={RecordFieldsClasses}>
+      {fields.map((field, i) => (
+        <Field field={field} renderAnchor={renderAnchor} key={i} />
+      ))}
+    </dl>
+  )
+}
 
 RecordFields.propTypes = {
   fields: PropTypes.array.isRequired,
-  renderAnchor: PropTypes.func
+  renderAnchor: PropTypes.func,
+  full: PropTypes.bool
 };
 
 export default RecordFields
