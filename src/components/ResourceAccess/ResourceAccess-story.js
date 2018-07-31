@@ -4,14 +4,14 @@ import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
 import { text, boolean, number, object } from '@storybook/addon-knobs';
 
-import RecordAccess from '../RecordAccess';
+import ResourceAccess from '../ResourceAccess';
 
-storiesOf('RecordAccess', module)
-  .add('RecordAccess',
+storiesOf('ResourceAccess', module)
+  .add('ResourceAccess',
     withInfo(`
       To handle React Router Links with 'to' without coupling this component to that library.
     `)(() =>
-      <RecordAccess
+      <ResourceAccess
         caption={text('Caption', 'Research Museums Center Birds Division')}
         location={object('Location', {
           text: 'About location',
@@ -26,19 +26,19 @@ storiesOf('RecordAccess', module)
           [
             { text: 'Go to item', href: '#' },
             { text: 'v.3 2017' },
-            { text: 'On shelf', status: 'success' },
+            { text: 'On shelf', intent: 'success', icon: 'check-circle' },
             { text: 'AP20 .E83' }
           ],
           [
             { text: 'Get this', to: '#' },
             { text: 'v.2 2016' },
-            { text: 'Checked out', status: 'warning' },
+            { text: 'Checked out', intent: 'warning' },
             { text: 'N/A' }
           ],
           [
             { text: 'Get this', to: '#' },
             { text: 'v.1 2015' },
-            { text: 'Missing', status: 'error' },
+            { text: 'Missing', intent: 'error' },
             { text: 'N/A' }
           ]
         ])}

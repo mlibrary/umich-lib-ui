@@ -1,40 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './RecordAccess.css'
-import Expandable, { ExpandableChildren, ExpandableButton } from '../Expandable'
+import classNames from 'classnames';
+import {
+  Icon,
+  Expandable,
+  ExpandableChildren,
+  ExpandableButton
+} from 'umich-lib-components-react'
+
+import './ResourceAccess.css'
 
 
 const Cell = ({
   cell,
   renderAnchor
 }) => {
-  if (cell.href) {
-    return (
-      <a href={cell.href}>{cell.text}</a>
-    )
-  }
-
-  if (cell.to) {
-    return (
-      renderAnchor(cell)
-    )
-  }
-
-  if (cell.status) {
-    // TODO: Add an optional icon.
-    return (
-      <span className={`record-access__cell--${cell.status}`}>
-        {cell.text}
-      </span>
-    )
-  }
-
   return (
-    <React.Fragment>{cell.text}</React.Fragment>
+    <React.Fragment>
+      {cell.icon && (<Icon icon={cell.icon} className="margin-right-quarter" />)}
+
+      {(() => {
+        if (cell.href) {
+          return (<a href={cell.href}>{cell.text}</a>)
+        }
+
+        if (cell.to) {
+          return (renderAnchor(cell))
+        }
+
+        return (<React.Fragment>{cell.text}</React.Fragment>)
+      })()}
+    </React.Fragment>
   )
 }
 
-class RecordAccess extends React.Component {
+class ResourceAccess extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -52,6 +52,17 @@ class RecordAccess extends React.Component {
     });
   }
 
+  getCellClassNames = (cell) => {
+    const cellClassNames = classNames({
+      'resource-access__cell': true,
+      'resource-access__cell--success': cell.intent === 'success',
+      'resource-access__cell--warning': cell.intent === 'warning',
+      'resource-access__cell--error': cell.intent === 'error',
+    });
+
+    return cellClassNames
+  }
+
   render() {
     const {
       caption,
@@ -66,23 +77,23 @@ class RecordAccess extends React.Component {
 
     return (
       <div
-        className="record-access__container"
+        className="resource-access__container"
         tabIndex={this.state.tabindex}
         aria-labelledby={this.captionId}
         ref={this.containerRef}
         role="group"
       >
         <Expandable>
-          <table className="record-access__table">
-            <caption id={this.captionId} className="record-access__caption">
-              <span className="record-access__caption-text">{caption}</span>
-              {location && (<a href={location.href} className="record-access__caption-location">{location.text}</a>)}
+          <table className="resource-access__table">
+            <caption id={this.captionId} className="resource-access__caption">
+              <span className="resource-access__caption-text">{caption}</span>
+              {location && (<a href={location.href} className="resource-access__caption-location">{location.text}</a>)}
               {notes && (
                 <React.Fragment>
-                  {notes.map(note => <span className="record-access__caption-note">{note}</span>)}
+                  {notes.map(note => <span className="resource-access__caption-note">{note}</span>)}
                 </React.Fragment>
               )}
-              {this.state.tabindex === '0' && <small className="record-access__caption-scroll-text">(scroll to see more)</small>}
+              {this.state.tabindex === '0' && <small className="resource-access__caption-scroll-text">(scroll to see more)</small>}
             </caption>
 
             <thead>
@@ -98,7 +109,9 @@ class RecordAccess extends React.Component {
                 {rows.map((row, i) => (
                   <tr key={i}>
                     {row.map((cell, t) => (
-                      <td key={t}><Cell cell={cell} renderAnchor={renderAnchor} /></td>
+                      <td key={t} className={this.getCellClassNames(cell)}>
+                        <Cell cell={cell} renderAnchor={renderAnchor} />
+                      </td>
                     ))}
                   </tr>
                 ))}
@@ -113,7 +126,7 @@ class RecordAccess extends React.Component {
   }
 }
 
-RecordAccess.propTypes = {
+ResourceAccess.propTypes = {
   caption: PropTypes.string.isRequired,
   notes: PropTypes.array,
   headings: PropTypes.array.isRequired,
@@ -123,4 +136,4 @@ RecordAccess.propTypes = {
   renderAnchor: PropTypes.func,
 };
 
-export default RecordAccess
+export default ResourceAccess
