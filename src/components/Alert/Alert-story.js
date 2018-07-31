@@ -6,13 +6,9 @@ import { text, boolean, select } from '@storybook/addon-knobs';
 
 import Alert from './Alert';
 
-storiesOf('Alerts', module)
-  .add('Alert',
-    withInfo(`
-      Configure
-    `)(() =>
-      <Alert intent={select('intent', ['informational', 'success', 'warning', 'error', 'none'])}>
-        {text('text', 'This is an Alert message.')}
-      </Alert>
-    )
-  )
+storiesOf('Alert', module)
+  .add('Alert', () => (
+    <Alert intent={select('intent', ['informational', 'success', 'warning', 'error', 'none'])}>
+      {text('text', 'This is an Alert message.')}
+    </Alert>
+  ))

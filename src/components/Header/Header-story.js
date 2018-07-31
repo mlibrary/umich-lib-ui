@@ -6,7 +6,7 @@ import { text, object } from '@storybook/addon-knobs';
 
 import Header from './Header';
 
-storiesOf('Headers', module)
+storiesOf('Header', module)
   .add('Header',
     withInfo(`
       Website header
