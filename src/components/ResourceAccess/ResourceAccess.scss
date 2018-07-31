@@ -72,3 +72,11 @@
 .resource-access__cell--error {
   color: $color__red-1;
 }
+
+.resource-access__cell-html {
+  color: $color__grey-2;
+
+  a {
+    color: currentColor;
+  }
+}
