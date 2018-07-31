@@ -32,13 +32,13 @@ storiesOf('ResourceAccess', module)
           [
             { text: 'Get this', to: '#' },
             { text: 'v.2 2016' },
-            { text: 'Checked out', intent: 'warning' },
+            { text: 'Checked out', intent: 'warning', icon: 'warning' },
             { text: 'N/A' }
           ],
           [
             { text: 'Get this', to: '#' },
             { text: 'v.1 2015' },
-            { text: 'Missing', intent: 'error' },
+            { text: 'Missing', intent: 'error', icon: 'error' },
             { text: 'N/A' }
           ]
         ])}

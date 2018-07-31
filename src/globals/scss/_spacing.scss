@@ -25,6 +25,13 @@
 .margin-bottom-two     { margin-bottom: $base-font-size * 2; }
 .margin-bottom-three   { margin-bottom: $base-font-size * 3; }
 
+.margin-left-none    { margin-left: 0; }
+.margin-left-quarter { margin-left: $base-font-size / 4; }
+.margin-left-half    { margin-left: $base-font-size / 2; }
+.margin-left-one     { margin-left: $base-font-size; }
+.margin-left-two     { margin-left: $base-font-size * 2; }
+.margin-left-three   { margin-left: $base-font-size * 3; }
+
 // Top padding
 .padding-top-none    { padding-top: 0; }
 .padding-top-quarter { padding-top: $base-font-size / 4; }
