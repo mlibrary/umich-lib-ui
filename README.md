@@ -26,16 +26,11 @@ We recommend the use of [React Storybook](https://github.com/storybooks/react-st
 1. Start the server:
 
 ```
-$ npm run storybook
+$ npm start
 ```
 
-2. Open the browser to `http://localhost:9000`.
-3. Develop components in `/components`.
-4.  To watch and build stylesheets
-
-```
-$ npm run watch-css
-```
+2. Open the browser to `http://localhost:9001`.
+3. Develop components in `/src/components`.
 
 ## Contribution
 
