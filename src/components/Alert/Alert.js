@@ -17,7 +17,9 @@ class Alert extends React.Component {
   render() {
     const {
       intent,
-      className
+      className,
+      closeable,
+      children
     } = this.props
 
     const alertClasses = classNames({
@@ -32,13 +34,19 @@ class Alert extends React.Component {
       return (
         <div className={alertClasses}>
           <div className="alert-inner">
-            <p className="alert-message">{this.props.children}</p>
-            <Button
-              onClick={this.handleClose}
-              className="alert-dismiss-button"
-              kind="tertiary"
-              small={true}
-              >Close</Button>
+            <p className="alert-message">{children}</p>
+
+            {closeable && (
+              <Button
+                onClick={this.handleClose}
+                className="alert-dismiss-button"
+                kind="tertiary"
+                small={true}
+              >
+                Close
+              </Button>
+            )}
+
           </div>
         </div>
       )
@@ -57,12 +65,14 @@ Alert.propTypes = {
     'none'
   ]),
   onCloseButtonClick: PropTypes.func,
-  className: PropTypes.string
+  className: PropTypes.string,
+  closeable: PropTypes.bool
 };
 
 Alert.defaultProps = {
   intent: 'informational',
-  onCloseButtonClick: () => {}
+  onCloseButtonClick: () => {},
+  closeable: true
 };
 
 export default Alert
