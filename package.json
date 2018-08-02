@@ -2,9 +2,10 @@
   "name": "umich-lib-components-react-build-template",
   "version": "0.0.0-development",
   "dependencies": {
+    "classnames": "^2.2.5",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "classnames": "^2.2.5"
+    "react-live": "^1.11.0"
   },
   "author": {
     "name": "Jon Earley",
@@ -77,11 +78,12 @@
   },
   "scripts": {
     "build": "rm -rf dist && NODE_ENV=production babel src/ --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
-    "start": "npm-run-all --parallel start:storybook watch:sass",
+    "prestart": "npm run gen:docs",
+    "start": "npm-run-all --parallel start:docs gen:docs-watch",
     "test": "node scripts/test.js --env=jsdom",
     "build:css": "node-sass-chokidar src/ -o src/",
     "watch:sass": "npm run build:css && node-sass-chokidar src/ -o src/ --watch --recursive",
-    "start:storybook": "start-storybook -p 9001 -c .storybook",
+    "start:storybook": "npm-run-all --parallel start:storybook watch:sas",
     "deploy:storybook": "storybook-to-ghpages",
     "commit": "git-cz",
     "copy:css": "cpx \"./src/components/**/*.css\" ./lib",
@@ -90,7 +92,11 @@
     "build:copy-files": "node scripts/copyBuildFiles.js",
     "deploy:docs": "npm run deploy:storybook",
     "build:commonjs": "cross-env NODE_ENV=production babel ./src/components --out-dir ./lib --ignore spec.js",
-    "prepublish": "npm run build:lib"
+    "prepublish": "npm run build:lib",
+    "gen:component-data": "node scripts/generateComponentData.js",
+    "gen:docs": "node scripts/generateComponentData.js",
+    "gen:docs-watch": "npm run gen:docs -- --watch",
+    "start:docs": "node scripts/start.js"
   },
   "repository": {
     "type": "git",
