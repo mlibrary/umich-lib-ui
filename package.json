@@ -83,7 +83,7 @@
     "test": "node scripts/test.js --env=jsdom",
     "build:css": "node-sass-chokidar src/ -o src/",
     "watch:sass": "npm run build:css && node-sass-chokidar src/ -o src/ --watch --recursive",
-    "start:storybook": "npm-run-all --parallel start:storybook watch:sas",
+    "start:storybook": "npm-run-all --parallel start:storybook watch:sass",
     "deploy:storybook": "storybook-to-ghpages",
     "commit": "git-cz",
     "copy:css": "cpx \"./src/components/**/*.css\" ./lib",
