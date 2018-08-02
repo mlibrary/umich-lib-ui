@@ -3,22 +3,25 @@ import PropTypes from 'prop-types';
 import Example from './Example';
 import Props from './Props';
 
+import {
+  Heading
+} from 'umich-lib-components-react'
+
 const ComponentPage = ({component}) => {
   const {name, description, props, examples} = component;
 
   return (
     <div className="componentpage">
-      <h2>{name}</h2>
+      <Heading level={1} size="xlarge">{name}</Heading>
       <p>{description}</p>
-
-      <h3>Example{examples.length > 1 && "s"}</h3>
+      
       {
         examples.length > 0 ?
         examples.map(example => <Example key={example.code} name={name} code={example.code} /> ) :
         "No examples exist."
       }
 
-      <h3>Props</h3>
+      <Heading level={2} size="large">Props</Heading>
       {
         props ?
         <Props props={props} /> :

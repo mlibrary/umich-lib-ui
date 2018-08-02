@@ -37,7 +37,7 @@ const Header = ({
           {name && siteUrl && (<a href={siteUrl} className="logo__site-name-link">{name}</a>)}
         </div>
 
-        {nav.length && (
+        {nav && nav.length && (
           <nav className="header__nav">
             <ul className="header__nav-list">
               {nav.map((item, key) => (
@@ -54,7 +54,8 @@ const Header = ({
 Header.propTypes = {
   name: PropTypes.string,
   siteUrl: PropTypes.string,
-  renderAnchor: PropTypes.func
+  renderAnchor: PropTypes.func,
+  nav: PropTypes.array
 };
 
 Header.defaultProps = {

@@ -34,7 +34,7 @@ class Alert extends React.Component {
       return (
         <div className={alertClasses}>
           <div className="alert-inner">
-            <p className="alert-message">{children}</p>
+            <div className="alert-message">{children}</div>
 
             {closeable && (
               <Button

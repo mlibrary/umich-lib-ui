@@ -4,6 +4,7 @@ import ExpandableChildren from './ExpandableChildren';
 
 export default Expandable
 export {
+  Expandable,
   ExpandableButton,
   ExpandableChildren
 }

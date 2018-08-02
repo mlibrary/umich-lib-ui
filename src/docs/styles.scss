@@ -1,0 +1,104 @@
+@import './../globals/scss/styles.scss';
+@import './code-editor.scss';
+
+@mixin codeBox ($label) {
+  position: relative;
+  border: solid 1px $color__grey-3;
+}
+
+.header__inner {
+  max-width: 52rem;
+}
+
+.docs-app {
+  padding: 1rem;
+  max-width: 52rem;
+  margin: 0 auto;
+  
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.docs-nav {
+  grid-column: 1;
+}
+
+.docs-content {
+  width: 100%;
+  grid-column: 2 / 5;
+}
+
+.code {
+  margin: 1rem 0;
+}
+
+.code__editor {
+  @include codeBox('Live Code Editor');
+  
+  background: $color__grey-light-3;
+  
+  &:before {
+    content: 'Live editor';
+    background: inherit;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: none;
+    border-bottom: solid 1px $color__grey-3;
+    border-left: solid 1px $color__grey-3;
+    line-height: 1;
+  }
+}
+
+.prism-code {
+  padding: 1rem;
+  font-size: 0.8rem;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  overflow-x: auto;
+}
+
+.code__preview {
+  @include codeBox('Code Preview')
+  padding: 1rem;
+  border-bottom: none;
+}
+
+.props-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+
+  caption {
+    text-align: left;
+  }
+
+  tbody {
+    display: table-row-group;
+    vertical-align: middle;
+  }
+
+  td,
+  th {
+    border-bottom: solid 1px $color__grey-2;
+    padding: 0.5rem 0;
+    text-align: left;
+
+    &:not(:last-child) {
+      padding-right: 1rem;
+    }
+
+    &.numeric {
+      text-align: right;
+    }
+  }
+
+  thead {
+    th {
+      font-weight: 700;
+    }
+  }
+}
