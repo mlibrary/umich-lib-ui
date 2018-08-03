@@ -16,10 +16,10 @@ class CodeEditor extends React.Component {
   state = {
     showEditor: false
   }
-  
+
   render() {
     const { code, error } = this.props.live
-    
+
     return (
       <div className="code">
         <div className="code__preview">
@@ -45,7 +45,7 @@ const CodeEditorLive = withLive(CodeEditor)
 class Example extends React.Component {
   render() {
     const { code, name } = this.props
-    
+
     return (
       <LiveProvider code={code} scope={{...components, icons}} mountStylesheet={false}>
         <CodeEditorLive />
