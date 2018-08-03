@@ -41,8 +41,6 @@ function generate(paths) {
 function getComponentData(paths, componentName) {
   var content = readFile(path.join(paths.components, componentName, componentName + '.js'));
 
-  console.log('paths.components, componentName', paths.components, componentName)
-
   if (content) {
     var info = parse(content);
     return {
@@ -73,26 +71,20 @@ function getExampleData(examplesPath, componentName) {
   });
 }
 
-function getDocData(docPath, componentName) {
-  var docs = getDocumentationFiles(path.join(docPath, componentName), componentName);
-
-  return docs.map(function(file) {
-    var filePath = path.join(docPath, componentName, file);
-    var content = readFile(filePath);
-
-    return content
-  })
+function getDocData(componentPath, componentName) {
+  var componentDocFile = `${componentName}.md`
+  var docPath = path.join(componentPath, componentName, componentDocFile)
+  
+  if (fs.existsSync(docPath)) {
+    return readFile(docPath)
+  }
+  
+  return undefined
 }
 
 function getExampleFiles(examplesPath, componentName) {
   return fs.readdirSync(examplesPath).filter(function(file) {
     return RegExp('\-example\.js$').test(file)
-  });
-}
-
-function getDocumentationFiles(docsPath, componentName) {
-  return fs.readdirSync(docsPath).filter(function(file) {
-    return file === `${componentName}.md`
   });
 }
 
