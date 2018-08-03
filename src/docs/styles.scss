@@ -64,7 +64,10 @@
 .code__preview {
   @include codeBox('Code Preview')
   padding: 1rem;
-  border-bottom: none;
+  
+  &:not(.code__preview--without-editor) {
+    border-bottom: none;
+  }
 }
 
 .props-table {
@@ -101,4 +104,12 @@
       font-weight: 700;
     }
   }
+}
+
+.lede {
+  font-size: 1.2rem;
+}
+
+.text {
+  max-width: 30em;
 }

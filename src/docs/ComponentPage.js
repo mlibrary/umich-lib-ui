@@ -17,8 +17,6 @@ const ComponentPage = ({component}) => {
   return (
     <div className="componentpage">
       <Heading level={1} size="xlarge">{name}</Heading>
-      {docs && (<MarkdownWithComponents md={docs} />)}
-
       {
         examples.length > 0 ?
         examples.map(example => <Example key={example.code} name={name} code={example.code} /> ) :
@@ -31,6 +29,9 @@ const ComponentPage = ({component}) => {
         <Props props={props} /> :
         "This component accepts no props."
       }
+      
+      <Heading level={2} size="large">Usage</Heading>
+      {docs && (<MarkdownWithComponents md={docs} />)}
     </div>
   )
 };
