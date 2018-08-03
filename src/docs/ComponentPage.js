@@ -3,6 +3,7 @@ import Markdown from 'markdown-to-jsx';
 import PropTypes from 'prop-types';
 import Example from './Example';
 import Props from './Props';
+import MarkdownWithComponents from './MarkdownWithComponents.js'
 
 import {
   Heading,
@@ -12,36 +13,11 @@ import * as components from 'umich-lib-components-react'
 
 const ComponentPage = ({component}) => {
   const {name, description, props, examples, docs} = component;
-
-  /*
-  // TODO: Include all components in Markdown
-  markdownOptions = () => {
-    return components.reduce((acc, comp) => {
-      console.log('comp', Comp)
-
-      return acc
-    }, {})
-  }
-  */
-
+  
   return (
     <div className="componentpage">
       <Heading level={1} size="xlarge">{name}</Heading>
-      <p>{description}</p>
-
-      {docs.map(md => (
-        <Markdown
-          children={md}
-          className="y-spacing"
-          options={{
-            overrides: {
-              'Button': {
-                component: 'Button',
-              },
-            },
-          }}
-        />
-      ))}
+      {docs && (<MarkdownWithComponents md={docs} />)}
 
       {
         examples.length > 0 ?

@@ -44,7 +44,7 @@ const CodeEditorLive = withLive(CodeEditor)
 
 class Example extends React.Component {
   render() {
-    const { code, name } = this.props
+    const { code } = this.props
 
     return (
       <LiveProvider code={code} scope={{...components, icons}} mountStylesheet={false}>
@@ -55,8 +55,7 @@ class Example extends React.Component {
 }
 
 Example.propTypes = {
-  code: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired
+  code: PropTypes.string.isRequired
 }
 
 export default Example
