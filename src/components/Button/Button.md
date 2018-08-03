@@ -4,7 +4,9 @@ Use buttons to move though a transaction, aim to use only one button per page.
 
 Button text should be short and describe the action the button performs.
 
-<Button>Save and continue</Button>
+<Example>
+  <Button>Save and continue</Button>
+</Example>
 
 ## Start now button
 
