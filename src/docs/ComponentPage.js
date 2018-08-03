@@ -8,9 +8,21 @@ import {
   Heading,
   Alert
 } from 'umich-lib-components-react'
+import * as components from 'umich-lib-components-react'
 
 const ComponentPage = ({component}) => {
   const {name, description, props, examples, docs} = component;
+
+  /*
+  // TODO: Include all components in Markdown
+  markdownOptions = () => {
+    return components.reduce((acc, comp) => {
+      console.log('comp', Comp)
+
+      return acc
+    }, {})
+  }
+  */
 
   return (
     <div className="componentpage">
@@ -23,8 +35,8 @@ const ComponentPage = ({component}) => {
           className="y-spacing"
           options={{
             overrides: {
-              Alert: {
-                component: Alert,
+              'Button': {
+                component: 'Button',
               },
             },
           }}
