@@ -76,7 +76,10 @@
 .code__preview {
   @include codeBox('Code Preview')
   padding: 1rem;
-  border-bottom: none;
+
+  &:not(.code__preview--without-editor) {
+    border-bottom: none;
+  }
 }
 
 .props__table {
