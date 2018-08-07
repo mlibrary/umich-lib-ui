@@ -17,7 +17,16 @@ const ComponentPage = ({component}) => {
   return (
     <div className="componentpage">
       <Heading level={1} size="xlarge">{name}</Heading>
+      {
+        description &&
+        (
+          <div className="component__description">
+            <p>{description}</p>
+          </div>
+        )
+      }
 
+      <Heading level={2} size="large">Playground</Heading>
       {
         examples.length > 0 ?
         examples.map(example => <Example key={example.code} name={name} code={example.code} /> ) :

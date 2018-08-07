@@ -3,10 +3,8 @@
   "version": "0.0.0-development",
   "dependencies": {
     "classnames": "^2.2.5",
-    "jsx-to-string": "^1.4.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-element-to-jsx-string": "^14.0.1",
     "react-live": "^1.11.0"
   },
   "author": {
