@@ -8,7 +8,9 @@ import {
 
 const ExampleOverride = ({ children, ...props }) => {
   return (
-    <Example code={`<Button kind="start">Start now</Button>`} />
+    <div className="code__preview code__preview--without-editor">
+      {children}
+    </div>  
   )
 }
 
@@ -17,35 +19,55 @@ const defaultOverrides = {
     component: Heading,
     props: {
       level: 1,
-      size: 'xlarge'
+      size: 'xlarge',
+      className: 'text'
     }
   },
   'h2': {
     component: Heading,
     props: {
-      level: 2,
-      size: 'large'
+      level: 3,
+      size: 'medium',
+      className: 'text'
     }
   },
   'h3': {
     component: Heading,
     props: {
       level: 3,
-      size: 'medium'
+      size: 'medium',
+      className: 'text'
     }
   },
   'h4': {
     component: Heading,
     props: {
       level: 4,
-      size: 'small'
+      size: 'small',
+      className: 'text'
     }
   },
   'h5': {
     component: Heading,
     props: {
       level: 5,
-      size: 'xsmall'
+      size: 'xsmall',
+      className: 'text'
+    }
+  },
+  'p': {
+    props: {
+      className: 'text'
+    }
+  },
+  'ul': {
+    props: {
+      className: 'text'
+    }
+  },
+  'ol': {
+    props: {
+      className: 'text'
     }
   },
   'Example': {
