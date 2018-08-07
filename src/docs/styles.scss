@@ -14,7 +14,7 @@
   padding: 1rem;
   max-width: 52rem;
   margin: 0 auto;
-  
+
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(4, 1fr);
@@ -29,15 +29,21 @@
   grid-column: 2 / 5;
 }
 
+.component__description {
+  & > p {
+    font-size: 1.2rem;
+  }
+}
+
 .code {
   margin: 1rem 0;
 }
 
 .code__editor {
   @include codeBox('Live Code Editor');
-  
+
   background: $color__grey-light-3;
-  
+
   &:before {
     content: 'Live editor';
     background: inherit;
@@ -54,7 +60,8 @@
   }
 }
 
-.prism-code {
+.prism-code,
+.props__prop-shape {
   padding: 1rem;
   font-size: 0.8rem;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
@@ -67,7 +74,7 @@
   border-bottom: none;
 }
 
-.props-table {
+.props__table {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
@@ -100,5 +107,39 @@
     th {
       font-weight: 700;
     }
+  }
+}
+
+.props__prop-name {
+  display: block;
+  font-size: 0.8rem;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+.props__prop-required-tag {
+  border: solid 1px $color__blue-light-1;
+  background: $color__blue-light-2;
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.85rem;
+  color: $color__blue-2;
+  line-height: 1;
+}
+
+.props__prop-type {
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.props__prop-shape {
+  font-size: 0.7rem;
+  border: solid 1px $color__grey-3;
+  background: $color__grey-light-3;
+}
+
+.props__prop-specs {
+  summary {
+    font-size: 0.8rem;
+    cursor: pointer;
   }
 }
