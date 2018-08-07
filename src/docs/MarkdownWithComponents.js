@@ -1,5 +1,4 @@
 import React from 'react';
-import reactElementToJSXString from 'react-element-to-jsx-string';
 import Markdown from 'markdown-to-jsx';
 import Example from './Example';
 import * as components from 'umich-lib-components-react'
@@ -8,9 +7,6 @@ import {
 } from 'umich-lib-components-react'
 
 const ExampleOverride = ({ children, ...props }) => {
-  
-  console.log('ExampleOverride', children, props)
-  
   return (
     <Example code={`<Button kind="start">Start now</Button>`} />
   )
@@ -64,7 +60,9 @@ const markdownOverrides = Object.keys(components).reduce((acc, key) => {
   }
 }, defaultOverrides)
 
-const MarkdownWithComponents = ({ md }) => {  
+const MarkdownWithComponents = ({ md }) => {
+  console.log('md', md)
+
   return (
     <Markdown
       children={md}

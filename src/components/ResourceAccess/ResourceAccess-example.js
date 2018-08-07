@@ -1,5 +1,7 @@
 <ResourceAccess
   caption={"HathiTrust Digital Library"}
+  captionLink={{ text: 'About location', href: '#' }}
+  notes={['Library has: 1-7 : 1979-1986']}
   headings={["Link", "Description", "Source"]}
   rows={[
     [
@@ -19,5 +21,4 @@
     </a>
   )}
   name={"HathiTrust Sources"}
-  count={true}
 />
