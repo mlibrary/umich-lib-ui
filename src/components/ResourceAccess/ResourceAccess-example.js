@@ -16,7 +16,7 @@
     ]
   ]}
   renderAnchor={data => (
-    <a className="rendered-prop-anchor-example" href={data.to}>
+    <a href={data.to}>
       {data.text}
     </a>
   )}

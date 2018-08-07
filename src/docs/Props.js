@@ -10,7 +10,6 @@ import {
 
 
 const Key = ({ propName }) => {
-
   return (
     <React.Fragment>
       <code className="props__prop-name">{propName}</code>
@@ -33,11 +32,26 @@ const PropSpec = ({ value }) => (
   </details>
 )
 
+const Enum = ({ values }) => {
+  if (Array.isArray(values)) {
+    return (
+      <ul className="props__prop-enum">
+        {values.map((value, key) => (
+          <li key={key}>{value.value.replace(/['"]+/g, '')}</li>
+        ))}
+      </ul>
+    )
+  }
+
+  return null
+}
+
 const Description = ({ type, required, description }) => {
   return (
     <div className="y-spacing">
       <Type type={type} />
       <p>{required && (<span className="props__prop-required-tag">required</span>)} {description}</p>
+      <Enum values={type.value} />
       {type.value && (
         <PropSpec value={type.value}/>
       )}
@@ -52,6 +66,7 @@ const Props = ({props}) => {
         <tr>
           <th>Name</th>
           <th>Description</th>
+          <th>Default</th>
         </tr>
       </thead>
       <tbody>
@@ -61,6 +76,7 @@ const Props = ({props}) => {
             <tr key={key}>
               <td><Key propName={key} {...props[key]} /></td>
               <td><Description {...props[key]} /></td>
+              <td>{(props[key].defaultValue && props[key].defaultValue.value) && (props[key].defaultValue.value.replace(/['"]+/g, ''))}</td>
             </tr>
           );
         })

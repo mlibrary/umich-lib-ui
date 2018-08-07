@@ -26,7 +26,7 @@ const ComponentPage = ({component}) => {
         )
       }
 
-      <Heading level={2} size="large">Playground</Heading>
+      <Heading level={2} size="medium">Example</Heading>
       {
         examples.length > 0 ?
         examples.map(example => <Example key={example.code} name={name} code={example.code} /> ) :

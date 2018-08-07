@@ -27,12 +27,17 @@
 .docs-content {
   width: 100%;
   grid-column: 2 / 5;
+  margin-bottom: 2rem;
 }
 
 .component__description {
   & > p {
     font-size: 1.2rem;
   }
+}
+
+.lede {
+  font-size: 1.2rem;
 }
 
 .code {
@@ -141,5 +146,18 @@
   summary {
     font-size: 0.8rem;
     cursor: pointer;
+  }
+}
+
+.props__prop-enum {
+  li {
+    display: inline-block;
+    margin-right: 0.25rem;
+    border: solid 1px $color__grey-light-1;
+    background: $color__grey-light-2;
+    border-radius: 4px;
+    padding: 0.1rem 0.4rem;
+    font-size: 0.75rem;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   }
 }

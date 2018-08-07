@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Navigation = ({components}) => {
+const Navigation = ({ components }) => {
   return (
     <ul className="navigation">
       {components.map(name => {

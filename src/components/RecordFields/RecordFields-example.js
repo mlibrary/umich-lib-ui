@@ -39,11 +39,10 @@
       ]
     }
   ]
-  
+
   return (
     <RecordFields
       fields={fields}
-      full
       renderAnchor={data => (
         <a className="rendered-prop-anchor-example" href={data.to}>
         {data.text}

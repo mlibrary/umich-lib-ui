@@ -48,14 +48,17 @@ const Field = ({ field, renderAnchor }) => {
   )
 }
 
+/**
+  Use to display metadata, often with field values that link out.
+*/
 const RecordFields = ({
   fields,
   renderAnchor,
-  full
+  condensed
 }) => {
   const RecordFieldsClasses = classNames({
     'record-fields': true,
-    'record-fields--full': full ? true : false
+    'record-fields--full': condensed ? false : true
   });
 
   return (
@@ -68,9 +71,15 @@ const RecordFields = ({
 }
 
 RecordFields.propTypes = {
+  /** For more condensed styles */
   fields: PropTypes.array.isRequired,
-  renderAnchor: PropTypes.func,
-  full: PropTypes.bool
+  /** For more condensed styles */
+  condensed: PropTypes.bool,
+  renderAnchor: PropTypes.func
+};
+
+RecordFields.defaultProps = {
+  condensed: false
 };
 
 export default RecordFields

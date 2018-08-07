@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './Button.css'
 
 /**
-  Use buttons to move though a transaction, aim to use only one button per page.
+  Use buttons to move though a transaction, aim to use only one primary button per page.
 */
 const Button = ({
   children,

@@ -1,6 +1,7 @@
 import React from 'react';
 import Navigation from './Navigation';
 import ComponentPage from './ComponentPage';
+import HomePage from './HomePage';
 import componentData from '../../config/componentData';
 import {
   Header,
@@ -24,21 +25,29 @@ export default class Docs extends React.Component {
   }
 
   render() {
-    const {route} = this.state;
-    const component = route ? componentData.filter( component => component.name === route)[0] : componentData[0];
-    
-    console.log('componentData', componentData)
+    const { route } = this.state;
+    const component = route ? componentData.filter(component => component.name === route)[0] : undefined;
 
     return (
       <React.Fragment>
-        <Header name="Design System" nav={[{ text: 'GitHub', href: 'https://github.com/mlibrary/umich-lib-components-react' }]}/>
+        <Header
+          name="Design System"
+          siteUrl="/umich-lib-components-react"
+          nav={[
+            { text: 'GitHub', href: 'https://github.com/mlibrary/umich-lib-components-react' }
+          ]}
+        />
         <div className="docs-app">
           <div className="docs-nav">
             <Heading level={2} size="medium">Patterns</Heading>
             <Navigation components={componentData.map(component => component.name)} />
           </div>
           <main className="docs-content">
-            <ComponentPage component={component} />
+            {component ? (
+              <ComponentPage component={component} />
+            ) : (
+              <HomePage />
+            )}
           </main>
         </div>
       </React.Fragment>

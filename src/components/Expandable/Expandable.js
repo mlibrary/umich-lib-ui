@@ -4,6 +4,9 @@ import './Expandable.css'
 
 const ExpandableContext = React.createContext();
 
+/**
+  Use Expandable to show only the first few items. The remaining will be hidden and can be expanded by the user.
+*/
 class Expandable extends Component {
   state = {
     expanded: false,

@@ -4,6 +4,9 @@ import classNames from 'classnames';
 import './Icon.css'
 import icons from './icons'
 
+/**
+  Use this to render SVG icons.
+*/
 const Icon = ({
   icon,
   size,
@@ -43,8 +46,11 @@ const Icon = ({
 }
 
 Icon.propTypes = {
+  /** Icon name. */
   icon: PropTypes.string.isRequired,
+  /** Size of the icon in pixels. */
   size: PropTypes.number,
+  /** Include a title if this icon requires a text alternative. */
   title: PropTypes.string
 }
 
