@@ -74,11 +74,11 @@ function getExampleData(examplesPath, componentName) {
 function getDocData(componentPath, componentName) {
   var componentDocFile = `${componentName}.md`
   var docPath = path.join(componentPath, componentName, componentDocFile)
-  
+
   if (fs.existsSync(docPath)) {
     return readFile(docPath)
   }
-  
+
   return undefined
 }
 

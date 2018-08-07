@@ -13,11 +13,10 @@ import * as components from 'umich-lib-components-react'
 
 const ComponentPage = ({component}) => {
   const {name, description, props, examples, docs} = component;
-  
+
   return (
     <div className="componentpage">
       <Heading level={1} size="xlarge">{name}</Heading>
-      {docs && (<MarkdownWithComponents md={docs} />)}
 
       {
         examples.length > 0 ?
@@ -31,6 +30,8 @@ const ComponentPage = ({component}) => {
         <Props props={props} /> :
         "This component accepts no props."
       }
+
+      {docs && (<MarkdownWithComponents md={docs} />)}
     </div>
   )
 };

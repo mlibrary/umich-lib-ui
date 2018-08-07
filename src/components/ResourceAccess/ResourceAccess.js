@@ -125,7 +125,7 @@ class ResourceAccess extends React.Component {
             </tbody>
           </table>
 
-          <ExpandableButton kind="tertiary" small={true} count={count ? rows.length : ''} name={name} />
+          <ExpandableButton kind="tertiary" small={true} count={rows.length} name={name} />
         </Expandable>
       </div>
     )
