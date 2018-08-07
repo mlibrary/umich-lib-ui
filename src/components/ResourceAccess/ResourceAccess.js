@@ -141,18 +141,9 @@ ResourceAccess.propTypes = {
   */
   headings: PropTypes.array.isRequired,
   /**
-    Table rows must be an array of arrays. Each inner array represent a row and will contain objects for each cell. A cell object must contain a text key with a string value. If you wish the cell to be linked somewhere then include `to` or an `href` key. See `renderLink` prop to decide between `to` or `href`.
+    Table rows must be an array of arrays. Each inner array represent a row and will contain objects for each cell. A cell object must contain a text key with a string value. If you wish the cell to be linked somewhere then include `to` or an `href` key. See `renderAnchor` prop to decide between `to` or `href`.
   */
-  rows: PropTypes.oneOfType([
-    PropTypes.shape({
-      text: PropTypes.string.isRequired,
-      href: PropTypes.string.isRequired
-    }),
-    PropTypes.shape({
-      text: PropTypes.string.isRequired,
-      to: PropTypes.string.isRequired
-    }),
-  ]).isRequired,
+  rows: PropTypes.array.isRequired,
   /**
     Name used to show all rows.
   */
@@ -173,7 +164,7 @@ ResourceAccess.propTypes = {
   */
   notes: PropTypes.array,
   /** Row cells that use key 'to' instead of 'href' will use this render prop. This is useful if you want to use a routing library such as React Router instead of an HTML anchor. */
-  renderLink: PropTypes.func
+  renderAnchor: PropTypes.func
 };
 
 export default ResourceAccess

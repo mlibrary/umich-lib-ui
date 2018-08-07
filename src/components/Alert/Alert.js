@@ -4,6 +4,9 @@ import { Button } from 'umich-lib-components-react'
 import classNames from 'classnames';
 import './Alert.css'
 
+/**
+  Use Alerts to notify users of important information. 
+*/
 class Alert extends React.Component {
   state = {
     open: true
@@ -58,11 +61,11 @@ class Alert extends React.Component {
 
 Alert.propTypes = {
   intent: PropTypes.oneOf([
-    'informational',
-    'error',
-    'warning',
-    'success',
-    'none'
+    "informational",
+    "error",
+    "warning",
+    "success",
+    "none"
   ]),
   onCloseButtonClick: PropTypes.func,
   className: PropTypes.string,
