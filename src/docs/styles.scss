@@ -6,6 +6,16 @@
   border: solid 1px $color__grey-3;
 }
 
+.alert {
+  padding: 0.75rem 0;
+}
+
+.alert-inner {
+  max-width: 52rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
 .header__inner {
   max-width: 52rem;
 }
@@ -15,9 +25,11 @@
   max-width: 52rem;
   margin: 0 auto;
 
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(4, 1fr);
+  @media screen and (min-width: 36rem) {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .docs-nav {
@@ -38,6 +50,10 @@
 
 .lede {
   font-size: 1.2rem;
+}
+
+.text {
+  max-width: 32em;
 }
 
 .code {
@@ -82,10 +98,16 @@
   }
 }
 
+.props__container {
+  overflow-x: auto;
+  overflow-y: visible;
+}
+
 .props__table {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
+  min-width: 30rem;
 
   caption {
     text-align: left;

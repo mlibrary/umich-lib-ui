@@ -38,6 +38,10 @@
 .logo__svg {
   display: inherit;
   height: 1.7rem;
+
+  @media screen and (min-width: $small-screens) {
+    height: 1.5rem;
+  }
 }
 
 .logo__site-name-link {

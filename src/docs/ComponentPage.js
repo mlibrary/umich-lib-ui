@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Example from './Example';
 import Props from './Props';
 import MarkdownWithComponents from './MarkdownWithComponents.js'
+import componentData from '../../config/componentData';
 
 import {
   Heading,
@@ -11,8 +12,15 @@ import {
 } from 'umich-lib-components-react'
 import * as components from 'umich-lib-components-react'
 
-const ComponentPage = ({component}) => {
-  const {name, description, props, examples, docs} = component;
+const ComponentPage = ({ match }) => {
+  const { componentName } = match.params
+  const component = componentName ? componentData.filter(component => component.name === componentName)[0] : undefined;
+
+  if (!component) {
+    return null
+  }
+
+  const { name, description, props, examples, docs } = component;
 
   return (
     <div className="componentpage">
@@ -43,10 +51,6 @@ const ComponentPage = ({component}) => {
       {docs && (<MarkdownWithComponents md={docs} />)}
     </div>
   )
-};
-
-ComponentPage.propTypes = {
-  component: PropTypes.object.isRequired
 };
 
 export default ComponentPage;

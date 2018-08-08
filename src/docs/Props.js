@@ -61,28 +61,30 @@ const Description = ({ type, required, description }) => {
 
 const Props = ({props}) => {
   return (
-    <table className="props__table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Description</th>
-          <th>Default</th>
-        </tr>
-      </thead>
-      <tbody>
-      {
-        Object.keys(props).map(key => {
-          return (
-            <tr key={key}>
-              <td><Key propName={key} {...props[key]} /></td>
-              <td><Description {...props[key]} /></td>
-              <td>{(props[key].defaultValue && props[key].defaultValue.value) && (props[key].defaultValue.value.replace(/['"]+/g, ''))}</td>
-            </tr>
-          );
-        })
-      }
-      </tbody>
-    </table>
+    <div className="props__container">
+      <table className="props__table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+        {
+          Object.keys(props).map(key => {
+            return (
+              <tr key={key}>
+                <td><Key propName={key} {...props[key]} /></td>
+                <td><Description {...props[key]} /></td>
+                <td>{(props[key].defaultValue && props[key].defaultValue.value) && (props[key].defaultValue.value.replace(/['"]+/g, ''))}</td>
+              </tr>
+            );
+          })
+        }
+        </tbody>
+      </table>
+    </div>
   )
 }
 

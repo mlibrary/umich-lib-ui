@@ -79,7 +79,7 @@
   },
   "scripts": {
     "build:docs": "node scripts/build.js",
-    "start": "npm-run-all --parallel start:docs gen:docs-watch",
+    "start": "npm-run-all --parallel start:docs watch:sass gen:docs-watch",
     "build:css": "node-sass-chokidar src/ -o src/",
     "watch:sass": "npm run build:css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "start:storybook": "npm-run-all --parallel start:storybook watch:sass",
