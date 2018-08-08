@@ -39,9 +39,21 @@ export default class Docs extends React.Component {
             <div className="container">This project is in development and not recommended for production use.</div>
           </Alert>
           <div className="docs-app">
-            <nav className="docs-nav" aria-labelledby="components-nav-heading">
+            <nav className="docs-nav" aria-label="Styles, Components, and Patterns">
+              <Heading level={1} size="medium" id="components-nav-heading">Styles</Heading>
+              <ul>
+                <li>Colors</li>
+                <li>Typography</li>
+                <li>Layout</li>
+              </ul>
               <Heading level={1} size="medium" id="components-nav-heading">Components</Heading>
               <Navigation components={componentData.map(component => component.name)} />
+              <Heading level={1} size="medium" id="components-nav-heading">Patterns</Heading>
+              <ul>
+                <li>Forms</li>
+                <li>Errors & validation</li>
+                <li>Getting feedback</li>
+              </ul>
             </nav>
             <main className="docs-content">
               <Switch>
