@@ -22,7 +22,7 @@ import './styles.css'
 export default class Docs extends React.Component {
   render() {
     return (
-      <Router basename="/umich-lib-components-react">
+      <Router>
         <React.Fragment>
           <Header
             name="Design System"
