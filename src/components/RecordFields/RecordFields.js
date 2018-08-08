@@ -71,7 +71,7 @@ const RecordFields = ({
 }
 
 RecordFields.propTypes = {
-  /** For more condensed styles */
+  /** Each field has a single term and one or many descriptions. Each description contains `text` and an optional `to` or `href` attribute. Nest descriptions for heirarchy. */
   fields: PropTypes.array.isRequired,
   /** For more condensed styles */
   condensed: PropTypes.bool,

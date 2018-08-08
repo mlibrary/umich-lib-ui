@@ -1,5 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {
+  Link
+} from "react-router-dom";
 
 const Navigation = ({ components }) => {
   return (
@@ -7,7 +10,7 @@ const Navigation = ({ components }) => {
       {components.map(name => {
         return (
           <li key={name}>
-            <a href={`#${name}`}>{name}</a>
+            <Link to={`/components/${name}`}>{name}</Link>
           </li>
         )
       })}
