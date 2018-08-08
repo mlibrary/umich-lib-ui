@@ -9,6 +9,7 @@ import Navigation from './Navigation';
 import ComponentPage from './ComponentPage';
 import HomePage from './HomePage';
 import GlossaryPage from './GlossaryPage';
+import PrinciplesPage from './PrinciplesPage';
 import NoMatch from './NoMatch';
 import componentData from '../../config/componentData';
 import {
@@ -28,8 +29,9 @@ export default class Docs extends React.Component {
             name="Design System"
             siteUrl="/umich-lib-components-react"
             nav={[
+              { text: 'Principles', to: '/principles' },
               { text: 'Glossary', to: '/glossary' },
-              { text: 'View on GitHub', href: 'https://github.com/mlibrary/umich-lib-components-react' }
+              { text: 'GitHub', href: 'https://github.com/mlibrary/umich-lib-components-react' }
             ]}
             renderAnchor={data => <Link to={data.to}>{data.text}</Link>}
           />
@@ -44,6 +46,7 @@ export default class Docs extends React.Component {
             <main className="docs-content">
               <Switch>
                 <Route exact path="/" component={HomePage} />
+                <Route exact path="/principles" component={PrinciplesPage} />
                 <Route exact path="/glossary" component={GlossaryPage} />
                 <Route exact path="/components/:componentName" component={ComponentPage} />
                 <Route component={NoMatch} />
