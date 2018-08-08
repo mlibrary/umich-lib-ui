@@ -22,6 +22,9 @@ const NavItem = ({
   }
 }
 
+/**
+  Keep your header as simple as possible. Use a header for critical navigation elements.
+*/
 const Header = ({
   name,
   siteUrl,
@@ -37,7 +40,7 @@ const Header = ({
           {name && siteUrl && (<a href={siteUrl} className="logo__site-name-link">{name}</a>)}
         </div>
 
-        {nav.length && (
+        {nav && nav.length && (
           <nav className="header__nav">
             <ul className="header__nav-list">
               {nav.map((item, key) => (
@@ -52,8 +55,21 @@ const Header = ({
 }
 
 Header.propTypes = {
-  name: PropTypes.string,
-  siteUrl: PropTypes.string,
+  /**
+    Site name
+  */
+  name: PropTypes.string.isRequired,
+  /**
+    The url to go to when a user clicks the site name.
+  */
+  siteUrl: PropTypes.string.isRequired,
+  /**
+    The nav is an array of objects. The objects can have `text` and `href` or `to` attributes.
+  */
+  nav: PropTypes.array,
+  /**
+    A render prop to handle the nav object `to` prop.
+  */
   renderAnchor: PropTypes.func
 };
 

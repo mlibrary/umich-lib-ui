@@ -38,6 +38,9 @@ const Cell = ({
   )
 }
 
+/**
+  Use this component to provide a comprehensive listing of options to access a resource.
+*/
 class ResourceAccess extends React.Component {
   constructor(props) {
     super(props)
@@ -125,7 +128,7 @@ class ResourceAccess extends React.Component {
             </tbody>
           </table>
 
-          <ExpandableButton kind="tertiary" small={true} count={count ? rows.length : ''} name={name} />
+          <ExpandableButton kind="tertiary" small={true} count={rows.length} name={name} />
         </Expandable>
       </div>
     )
@@ -133,19 +136,35 @@ class ResourceAccess extends React.Component {
 }
 
 ResourceAccess.propTypes = {
-  caption: PropTypes.string,
-  captionLink: PropTypes.shape({
-    text: PropTypes.string,
-    href: PropTypes.string
-  }),
-  notes: PropTypes.array,
+  /**
+    Table column headings.
+  */
   headings: PropTypes.array.isRequired,
+  /**
+    Table rows must be an array of arrays. Each inner array represent a row and will contain objects for each cell. A cell object must contain a text key with a string value. If you wish the cell to be linked somewhere then include `to` or an `href` key. See `renderAnchor` prop to decide between `to` or `href`.
+  */
   rows: PropTypes.array.isRequired,
+  /**
+    Name used to show all rows.
+  */
   name: PropTypes.string,
-  count: PropTypes.bool,
-
-  /** Links that use 'to' will use this renderAnchor prop. This is useful if you want to use React Router for example. */
-  renderAnchor: PropTypes.func,
+  /**
+    The displayed table caption. If you do not use this prop, make sure the preceding heading is appropriate.
+  */
+  caption: PropTypes.string,
+  /**
+    Link to more information about the table caption.
+  */
+  captionLink: PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    href: PropTypes.string.isRequired
+  }),
+  /**
+    Notes necessary to understand the resource access options.
+  */
+  notes: PropTypes.array,
+  /** Row cells that use key 'to' instead of 'href' will use this render prop. This is useful if you want to use a routing library such as React Router instead of an HTML anchor. */
+  renderAnchor: PropTypes.func
 };
 
 export default ResourceAccess

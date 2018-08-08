@@ -1,0 +1,198 @@
+@import './../globals/scss/styles.scss';
+@import './code-editor.scss';
+
+@mixin codeBox ($label) {
+  position: relative;
+  border: solid 1px $color__grey-3;
+}
+
+.alert {
+  padding: 0.75rem 0;
+}
+
+.alert-inner {
+  max-width: 52rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.header__inner {
+  max-width: 52rem;
+}
+
+.docs-app {
+  padding: 1rem;
+  max-width: 52rem;
+  margin: 0 auto;
+
+  @media screen and (min-width: 36rem) {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.docs-nav {
+  grid-column: 1;
+}
+
+.docs-content {
+  width: 100%;
+  grid-column: 2 / 5;
+  margin-bottom: 2rem;
+}
+
+.component__description {
+  & > p {
+    font-size: 1.2rem;
+  }
+}
+
+.lede {
+  font-size: 1.2rem;
+}
+
+.text {
+  max-width: 32em;
+}
+
+.code {
+  margin: 1rem 0;
+}
+
+.code__editor {
+  @include codeBox('Live Code Editor');
+
+  background: $color__grey-light-3;
+
+  &:before {
+    content: 'Live editor';
+    background: inherit;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: none;
+    border-bottom: solid 1px $color__grey-3;
+    border-left: solid 1px $color__grey-3;
+    line-height: 1;
+  }
+}
+
+.prism-code,
+.props__prop-shape {
+  padding: 1rem;
+  font-size: 0.8rem;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  overflow-x: auto;
+}
+
+.code__preview {
+  @include codeBox('Code Preview')
+  padding: 1rem;
+
+  &:not(.code__preview--without-editor) {
+    border-bottom: none;
+  }
+}
+
+.props__container {
+  overflow-x: auto;
+  overflow-y: visible;
+}
+
+.props__table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  min-width: 30rem;
+
+  caption {
+    text-align: left;
+  }
+
+  tbody {
+    display: table-row-group;
+    vertical-align: middle;
+  }
+
+  td,
+  th {
+    border-bottom: solid 1px $color__grey-2;
+    padding: 0.5rem 0;
+    text-align: left;
+
+    &:not(:last-child) {
+      padding-right: 1rem;
+    }
+
+    &.numeric {
+      text-align: right;
+    }
+  }
+
+  thead {
+    th {
+      font-weight: 700;
+    }
+  }
+}
+
+.props__prop-name {
+  display: block;
+  font-size: 0.8rem;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+.props__prop-required-tag {
+  border: solid 1px $color__blue-light-1;
+  background: $color__blue-light-2;
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.85rem;
+  color: $color__blue-2;
+  line-height: 1;
+}
+
+.props__prop-type {
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.props__prop-shape {
+  font-size: 0.7rem;
+  border: solid 1px $color__grey-3;
+  background: $color__grey-light-3;
+}
+
+.props__prop-specs {
+  summary {
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+}
+
+.props__prop-enum {
+  li {
+    display: inline-block;
+    margin-right: 0.25rem;
+    border: solid 1px $color__grey-light-1;
+    background: $color__grey-light-2;
+    border-radius: 4px;
+    padding: 0.1rem 0.4rem;
+    font-size: 0.75rem;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+}
+
+.docs-footer {
+  padding: 2rem 0;
+}
+
+.docs-footer__inner-container {
+  padding-bottom: 3rem;
+  max-width: 52rem;
+  margin: 0 auto;
+}
