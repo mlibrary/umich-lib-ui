@@ -36,7 +36,7 @@ export default class Docs extends React.Component {
             renderAnchor={data => <Link to={data.to}>{data.text}</Link>}
           />
           <Alert intent="informational">
-            <div className="container">This project is in experimental development and not recommended for production use.</div>
+            <div className="container">This project is in development and not recommended for production use.</div>
           </Alert>
           <div className="docs-app">
             <nav className="docs-nav" aria-labelledby="components-nav-heading">
