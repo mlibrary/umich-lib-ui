@@ -13,7 +13,7 @@ const GlossaryPage = () => (
     <Heading level={2} size="large">Design System</Heading>
 
     <Heading level={3} size="small">Components</Heading>
-    <p className="text">Tangible building blocks of the interface, such as a button, a heading, or an icon.</p>
+    <p className="text">Re-usable tangible parts of the user interface, such as a button, a heading, or an icon.</p>
 
     <Heading level={3} size="small">Design System</Heading>
     <p className="text">A collection of shared design patterns for teams to build quality consistent interfaces. A bit like a LEGO kit.</p>
@@ -22,10 +22,10 @@ const GlossaryPage = () => (
     <p className="text">A website where design patterns are stored and documented. Creating and maintaining a pattern library such as this one allows the whole team to use the shared design patterns to build products with.</p>
 
     <Heading level={3} size="small">Patterns</Heading>
-    <p className="text">Repeating, reusable parts of the interface that can be applied and repurposed to solve a specific design problem, meet a user need, or evoke an emotion.</p>
+    <p className="text">Repeating, reusable parts of the interface that can be applied and repurposed to solve a specific design problem, meet a user need, or evoke an emotion, such as handling form errors or getting feedback.</p>
 
     <Heading level={3} size="small">Styles</Heading>
-    <p className="text">These are more descriptive and less tangible design patterns, such as iconography styles or colours and typography, typically used to create a certain kind of aesthetic</p>
+    <p className="text">These are more descriptive and less tangible design patterns, such as iconography styles or colours and typography, typically used to create a certain kind of aesthetic to make your service look and feel like a U-M Library website.</p>
 
     <Heading level={2} size="large">Development</Heading>
 
