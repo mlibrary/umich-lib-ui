@@ -26,7 +26,7 @@ const PatternsPage = () => (
 
     <Button href="https://codesandbox.io/s/8z337kk6r9">Launch code editor</Button>
 
-    <Heading level={2} size="large" className="text">Quick start</Heading>
+    <Heading level={2} size="large" className="text">Install</Heading>
 
     <code className="code">npm install umich-lib-components-react</code>
 
