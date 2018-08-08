@@ -51,6 +51,9 @@ const GlossaryPage = () => (
     <Heading level={3} size="small">Merge</Heading>
     <p className="text">While merging can refer to merging between any branches, generally when developers talk about merging they are discussing merging to the master branch.</p>
 
+    <Heading level={3} size="small">Props</Heading>
+    <p className="text">Similar to HTML attributes. React components take inputs (called "props") and return React elements describing what should appear on the screen.</p>
+
     <Heading level={3} size="small">Pull request / PR</Heading>
     <p className="text">Pull requests let you tell others about changes you've pushed to a GitHub repository. Once a pull request is sent, interested parties can review the set of changes, discuss potential modifications, and even push follow-up commits if necessary.</p>
 
