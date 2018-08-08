@@ -16,7 +16,7 @@ const PatternsPage = () => (
 
     <p className="text">Each component has examples to experiment and test. Go even further and launch an online sandbox code editor environment.</p>
 
-    <Button href="">Launch code editor</Button>
+    <Button href="https://codesandbox.io/s/8z337kk6r9">Launch code editor</Button>
   </div>
 )
 
