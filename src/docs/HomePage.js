@@ -6,6 +6,14 @@ import {
   Button
 } from 'umich-lib-components-react'
 
+import {
+  withLive,
+  LiveProvider,
+  LiveEditor,
+  LiveError,
+  LivePreview
+} from 'react-live'
+
 const PatternsPage = () => (
   <div className="y-spacing">
     <Heading level={1} size="xlarge" className="text">Design your service using U-M Library styles, components, and patterns</Heading>
@@ -17,6 +25,12 @@ const PatternsPage = () => (
     <p className="text">Each component has examples to experiment and test. Go even further and launch an online sandbox code editor environment.</p>
 
     <Button href="https://codesandbox.io/s/8z337kk6r9">Launch code editor</Button>
+
+    <Heading level={2} size="large" className="text">Quick start</Heading>
+
+    <code className="code">npm install umich-lib-components-react</code>
+
+    <a href="https://github.com/mlibrary/umich-lib-components-react">View more on GitHub</a>
   </div>
 )
 

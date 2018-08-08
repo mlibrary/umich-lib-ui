@@ -82,11 +82,18 @@
 }
 
 .prism-code,
-.props__prop-shape {
+.props__prop-shape,
+.code {
   padding: 1rem;
   font-size: 0.8rem;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   overflow-x: auto;
+}
+
+.code {
+  display: block;
+  @include codeBox('Code Preview')
+  background: $color__grey-light-3;
 }
 
 .code__preview {
