@@ -50,6 +50,6 @@ npm start
 4. Open the browser to `http://localhost:3000`.
 5. Develop components in `/src/components`.
 
-## Contribution
+## Contributing
 
 [See guidelines for contributing](https://github.com/mlibrary/umich-lib-components-react/blob/master/CONTRIBUTING.md)
