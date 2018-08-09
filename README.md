@@ -25,15 +25,6 @@ import { Button } from 'umich-lib-components-react'
 
 ## ⌨️ Development
 
-```
-npm install umich-lib-components-react
-```
-
-1. These components require `react` and `react-dom` libraries.
-2. Each component includes styles.
-
-## Development
-
 1. Clone the project
 2. Install
 
