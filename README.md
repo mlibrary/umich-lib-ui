@@ -47,8 +47,8 @@ npm install
 npm start
 ```
 
-2. Open the browser to `http://localhost:3000`.
-3. Develop components in `/src/components`.
+4. Open the browser to `http://localhost:3000`.
+5. Develop components in `/src/components`.
 
 ## Contribution
 
