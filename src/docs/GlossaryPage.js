@@ -25,7 +25,7 @@ const GlossaryPage = () => (
     <p className="text">Repeating, reusable parts of the interface that can be applied and repurposed to solve a specific design problem, meet a user need, or evoke an emotion, such as handling form errors or getting feedback.</p>
 
     <Heading level={3} size="small">Styles</Heading>
-    <p className="text">These are more descriptive and less tangible design patterns, such as iconography styles or colours and typography, typically used to create a certain kind of aesthetic to make your service look and feel like a U-M Library website.</p>
+    <p className="text">These are more descriptive and less tangible design patterns, such as iconography styles or colors and typography, typically used to create a certain kind of aesthetic to make your service look and feel like a U-M Library website.</p>
 
     <Heading level={2} size="large">Development</Heading>
 
