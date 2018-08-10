@@ -10,6 +10,7 @@ import ComponentPage from './ComponentPage';
 import HomePage from './HomePage';
 import GlossaryPage from './GlossaryPage';
 import PrinciplesPage from './PrinciplesPage';
+import AccessibilityPage from './AccessibilityPage';
 import NoMatch from './NoMatch';
 import componentData from '../../config/componentData';
 import {
@@ -30,8 +31,8 @@ export default class Docs extends React.Component {
             siteUrl="/umich-lib-components-react"
             nav={[
               { text: 'Principles', to: '/principles' },
-              { text: 'Glossary', to: '/glossary' },
-              { text: 'GitHub', href: 'https://github.com/mlibrary/umich-lib-components-react' }
+              { text: 'Accessibility', to: '/accessibility' },
+              { text: 'Glossary', to: '/glossary' }
             ]}
             renderAnchor={data => <Link to={data.to}>{data.text}</Link>}
           />
@@ -58,6 +59,7 @@ export default class Docs extends React.Component {
             <main className="docs-content">
               <Switch>
                 <Route exact path="/" component={HomePage} />
+                <Route exact path="/accessibility" component={AccessibilityPage} />
                 <Route exact path="/principles" component={PrinciplesPage} />
                 <Route exact path="/glossary" component={GlossaryPage} />
                 <Route exact path="/components/:componentName" component={ComponentPage} />
