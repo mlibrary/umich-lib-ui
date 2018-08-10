@@ -20,7 +20,7 @@ const PrinciplesPage = () => (
 
     <Heading level={2} size="large" className="text">3. Backed by research</Heading>
 
-    <p className="text">There are many challenges to supporting research needs and engaging with the campus — but there are also many solutions. Understanding user needs is central. Our design, development, and content efforts should be based on what real users need — what they need to do, their obstacles, and their context. Decisions must be informed by this research.</p>
+    <p className="text">Understanding user needs is central. Our design, development, and content efforts must be based on what real users need — what they need to do, their obstacles, and their context. Decisions must be informed by this research.</p>
   </div>
 )
 

@@ -30,7 +30,14 @@ const PatternsPage = () => (
 
     <code className="code-block">npm install umich-lib-components-react</code>
 
-    <a href="https://github.com/mlibrary/umich-lib-components-react">View more on GitHub</a>
+    <a href="https://github.com/mlibrary/umich-lib-components-react">View readme on GitHub</a>
+
+    {
+      /**
+        TODO:
+          -- Add previews of the component library used in production projects. Consider in development projects too.
+      */
+    }
   </div>
 )
 
