@@ -1,6 +1,7 @@
 <div className="y-spacing">
   <TextInput
     id="full-name"
+    value="Rambo"
     labelText="Full name"
     type="text"
   />
