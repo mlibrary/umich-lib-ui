@@ -27,7 +27,7 @@
   background: $button-background-color;
   color: white;
   border: 0;
-  border-bottom: darken($button-background-color, 5%);
+  border-bottom: darken($button-background-color, 8%);
   border-bottom-width: 3px;
   border-bottom-style: solid;
 
@@ -37,8 +37,8 @@
 
   &:hover {
     cursor: pointer;
-    background: darken($button-background-color, 5%);
-    border-color: darken($button-background-color, 10%);
+    background: darken($button-background-color, 4%);
+    border-color: darken($button-background-color, 12%);
     color: white;
   }
 }
