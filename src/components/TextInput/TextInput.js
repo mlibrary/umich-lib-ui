@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 
 import './TextInput.css'
 
+/**
+  Use this when you need to let users enter text that's no longer than a single line.
+*/
 const TextInput = ({
   labelText,
   descriptionText,
