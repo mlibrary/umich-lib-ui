@@ -53,3 +53,13 @@
     margin-bottom: 1rem;
   }
 }
+
+.x-spacing {
+  & > *:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+
+.layout-flex {
+  display: flex;
+}

@@ -23,6 +23,9 @@ import './styles.css'
 
 export default class Docs extends React.Component {
   render() {
+
+    console.log('componentData', componentData)
+
     return (
       <Router>
         <React.Fragment>

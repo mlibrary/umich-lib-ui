@@ -37,7 +37,7 @@ const Enum = ({ values }) => {
     return (
       <ul className="props__prop-enum">
         {values.map((value, key) => (
-          <li key={key}>{value.value.replace(/['"]+/g, '')}</li>
+          <li key={key}>{value.value}</li>
         ))}
       </ul>
     )
@@ -49,11 +49,13 @@ const Enum = ({ values }) => {
 const Description = ({ type, required, description }) => {
   return (
     <div className="y-spacing">
-      <Type type={type} />
+      {type && (<Type type={type} />)}
       <p>{required && (<span className="props__prop-required-tag">required</span>)} {description}</p>
-      <Enum values={type.value} />
-      {type.value && (
-        <PropSpec value={type.value}/>
+      {type && type.value && (
+        <React.Fragment>
+          <Enum values={type.value} />
+          <PropSpec value={type.value} />
+        </React.Fragment>
       )}
     </div>
   )
@@ -77,7 +79,7 @@ const Props = ({props}) => {
               <tr key={key}>
                 <td><Key propName={key} {...props[key]} /></td>
                 <td><Description {...props[key]} /></td>
-                <td>{(props[key].defaultValue && props[key].defaultValue.value) && (props[key].defaultValue.value.replace(/['"]+/g, ''))}</td>
+                <td>{(props[key].defaultValue && props[key].defaultValue.value) && (props[key].defaultValue.value)}</td>
               </tr>
             );
           })
