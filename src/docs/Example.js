@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {
   withLive,
   LiveProvider,
@@ -18,7 +17,7 @@ class CodeEditor extends React.Component {
   }
 
   render() {
-    const { code, error } = this.props.live
+    const { error } = this.props.live
 
     return (
       <div className="code">
@@ -52,10 +51,6 @@ class Example extends React.Component {
       </LiveProvider>
     )
   }
-}
-
-Example.propTypes = {
-  code: PropTypes.string.isRequired
 }
 
 export default Example

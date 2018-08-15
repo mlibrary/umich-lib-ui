@@ -1,12 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  withLive,
-  LiveProvider,
-  LiveEditor,
-  LiveError,
-  LivePreview
-} from 'react-live'
 
 
 const Key = ({ propName }) => {

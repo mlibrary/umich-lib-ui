@@ -1,16 +1,12 @@
 import React from 'react';
-import Markdown from 'markdown-to-jsx';
-import PropTypes from 'prop-types';
 import Example from './Example';
 import Props from './Props';
 import MarkdownWithComponents from './MarkdownWithComponents.js'
 import componentData from '../../config/componentData';
 
 import {
-  Heading,
-  Alert
+  Heading
 } from 'umich-lib-components-react'
-import * as components from 'umich-lib-components-react'
 
 const ComponentPage = ({ match }) => {
   const { componentName } = match.params

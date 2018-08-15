@@ -1,6 +1,5 @@
 import React from 'react';
 import Markdown from 'markdown-to-jsx';
-import Example from './Example';
 import * as components from 'umich-lib-components-react'
 import {
   Heading
@@ -10,7 +9,7 @@ const ExampleOverride = ({ children, ...props }) => {
   return (
     <div className="code__preview code__preview--without-editor">
       {children}
-    </div>  
+    </div>
   )
 }
 

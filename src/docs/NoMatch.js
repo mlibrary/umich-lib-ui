@@ -1,11 +1,7 @@
 import React from 'react';
 
 import {
-  Link
-} from 'react-router-dom'
-import {
-  Heading,
-  Button
+  Heading
 } from 'umich-lib-components-react';
 
 const NoMatch = function NoMatch() {
