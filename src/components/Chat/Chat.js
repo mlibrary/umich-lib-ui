@@ -85,7 +85,7 @@ class Chat extends React.Component {
       'chat--fixed': fixed
     })
 
-    if (status) {
+    if (status === 'online') {
       if (fixed) {
         return (
           <div className={chatClassNames}>
