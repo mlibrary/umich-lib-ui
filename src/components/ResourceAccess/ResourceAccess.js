@@ -77,7 +77,6 @@ class ResourceAccess extends React.Component {
       captionLink,
       headings,
       rows,
-      count,
       name,
       renderAnchor
     } = this.props
