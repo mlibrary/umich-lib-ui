@@ -1,5 +1,6 @@
 export { default as Alert } from './Alert'
 export { default as Button } from './Button'
+export { default as Chat } from './Chat'
 export { Expandable, ExpandableButton, ExpandableChildren } from './Expandable'
 export { default as Header } from './Header'
 export { default as Heading } from './Heading'
