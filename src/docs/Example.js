@@ -26,7 +26,7 @@ class CodeEditor extends React.Component {
           <LivePreview />
         </div>
         <div className="code__editor">
-          <LiveEditor />
+          <LiveEditor ignoreTabKey={true} />
         </div>
         {error && (
           <div className="code__error">
