@@ -2,17 +2,8 @@ import React from 'react';
 
 import {
   Heading,
-  Alert,
   Button
 } from 'umich-lib-components-react'
-
-import {
-  withLive,
-  LiveProvider,
-  LiveEditor,
-  LiveError,
-  LivePreview
-} from 'react-live'
 
 const PatternsPage = () => (
   <div className="y-spacing">
