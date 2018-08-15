@@ -1,0 +1,54 @@
+@import '../../globals/scss/styles.scss';
+
+.chat {
+
+}
+
+.chat__button-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat__icon {
+  color: $color__green-2;
+  margin-right: 0.5rem;
+  margin-bottom: -2px;
+}
+
+.chat__expand-icon {
+  margin-left: 1rem;
+}
+
+.chat--fixed {
+  position: fixed;
+  right: 1rem;
+  margin-left: 1rem;
+  bottom: 0;
+  max-width: 22rem;
+
+  background: white;
+  z-index: 100;
+  border-radius: 4px 4px 0 0;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 3px 1px;
+}
+
+.chat__iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  max-height: 25rem;
+  min-height: 24rem;
+}
+
+.chat-fixed__button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.chat-flex-center {
+  display: flex;
+  align-items: center;
+}

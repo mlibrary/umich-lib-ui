@@ -2,6 +2,7 @@
   "name": "umich-lib-components-react-build-template",
   "version": "0.0.0-development",
   "dependencies": {
+    "axios": "^0.18.0",
     "classnames": "^2.2.5",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
