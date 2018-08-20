@@ -2,12 +2,11 @@ import React from 'react'
 import axios from 'axios'
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-
 import {
   Button,
   Icon
 } from 'umich-lib-components-react'
-
+import AskUsSVG from './AskUsSVG'
 import './Chat.css'
 
 /**
@@ -97,7 +96,7 @@ class Chat extends React.Component {
             >
               <span className="chat__button-inner">
                 <span className="chat-flex-center">
-                  <Icon icon="chat-bubble" size={18} className="chat__icon" />
+                  <AskUsSVG className="chat__icon" />
                   <span>Ask a Librarian</span>
                 </span>
                 {open ? (
@@ -120,7 +119,7 @@ class Chat extends React.Component {
             kind="secondary"
           >
             <span className="chat__button-inner">
-              <Icon icon="chat-bubble" size={18} className="chat__icon" />
+              <AskUsSVG className="chat__icon" />
               <span>Ask a Librarian</span>
             </span>
           </Button>
@@ -133,7 +132,7 @@ class Chat extends React.Component {
 }
 
 Chat.propTypes = {
-  /** Fix to the bottom right of the viewport on screen widths of 100px or more. */
+  /** Fix to the bottom right of the viewport on screen widths of 1000px or more. */
   fixed: PropTypes.bool
 }
 

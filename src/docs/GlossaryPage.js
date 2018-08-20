@@ -12,31 +12,31 @@ const GlossaryPage = () => (
 
     <Heading level={2} size="large">Design System</Heading>
 
-    <Heading level={3} size="small">Components</Heading>
-    <p className="text">Re-usable tangible parts of the user interface, such as a button, a heading, or an icon.</p>
-
     <Heading level={3} size="small">Design System</Heading>
     <p className="text">A collection of shared design patterns for teams to build quality consistent interfaces. A bit like a LEGO kit.</p>
 
     <Heading level={3} size="small">Pattern library</Heading>
     <p className="text">A website where design patterns are stored and documented. Creating and maintaining a pattern library such as this one allows the whole team to use the shared design patterns to build products with.</p>
 
-    <Heading level={3} size="small">Patterns</Heading>
-    <p className="text">Repeating, reusable parts of the interface that can be applied and repurposed to solve a specific design problem, meet a user need, or evoke an emotion, such as handling form errors or getting feedback.</p>
-
     <Heading level={3} size="small">Styles</Heading>
     <p className="text">These are more descriptive and less tangible design patterns, such as iconography styles or colors and typography, typically used to create a certain kind of aesthetic to make your service look and feel like a U-M Library website.</p>
+
+    <Heading level={3} size="small">Components</Heading>
+    <p className="text">Re-usable tangible parts of the user interface, such as a button, a heading, or an icon.</p>
+
+    <Heading level={3} size="small">Patterns</Heading>
+    <p className="text">Repeating, reusable parts of the interface that can be applied and repurposed to solve a specific design problem, meet a user need, or evoke an emotion, such as handling form errors or getting feedback.</p>
 
     <Heading level={2} size="large">Development</Heading>
 
     <Heading level={3} size="small">Branch</Heading>
-    <p className="text">A component is a highly loaded term in development, it can mean a React Component and sometimes is used to refer to a piece of functionality/tool.</p>
-
-    <Heading level={3} size="small">Component</Heading>
     <p className="text">A branch starts as a snapshot of the current codebase and then diverges as the developer makes changes.</p>
 
     <p className="text">We create a branch when we start a new piece of work, and only apply it to the main codebase once it is complete.</p>
 
+    <Heading level={3} size="small">Component</Heading>
+    <p className="text">A component is a highly loaded term in development, it can mean a React Component and sometimes is used to refer to a piece of functionality/tool.</p>
+    
     <Heading level={3} size="small">Git</Heading>
     <p className="text">Git is at the core of how we do collaborative development. It's a version control system tool which allows us to work on the same codebases in a safe and fairly easy way.</p>
 
