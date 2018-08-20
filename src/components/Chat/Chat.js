@@ -10,7 +10,7 @@ import AskUsSVG from './AskUsSVG'
 import './Chat.css'
 
 /**
-  Use to provide users access to Ask a Librarian services.
+  Provide users access to Ask a Librarian chat when the service is online.
 */
 class Chat extends React.Component {
   state = {
