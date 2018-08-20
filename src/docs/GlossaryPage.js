@@ -29,19 +29,19 @@ const GlossaryPage = () => (
 
     <Heading level={2} size="large">Development</Heading>
 
+    <Heading level={3} size="small">GitHub</Heading>
+    <p className="text">Github is an all-in-one platform for collaborative development. It hosts our git repos and provides a mechanism for peer review.</p>
+
+    <Heading level={3} size="small">Git</Heading>
+    <p className="text">Git is at the core of how we do collaborative development. It's a version control system tool which allows us to work on the same codebases in a safe and fairly easy way.</p>
+
+    <Heading level={3} size="small">Repo / repository</Heading>
+    <p className="text">A single project in git is called a repository and often abbreviated as repo by developers.</p>
+
     <Heading level={3} size="small">Branch</Heading>
     <p className="text">A branch starts as a snapshot of the current codebase and then diverges as the developer makes changes.</p>
 
     <p className="text">We create a branch when we start a new piece of work, and only apply it to the main codebase once it is complete.</p>
-
-    <Heading level={3} size="small">Component</Heading>
-    <p className="text">A component is a highly loaded term in development, it can mean a React Component and sometimes is used to refer to a piece of functionality/tool.</p>
-    
-    <Heading level={3} size="small">Git</Heading>
-    <p className="text">Git is at the core of how we do collaborative development. It's a version control system tool which allows us to work on the same codebases in a safe and fairly easy way.</p>
-
-    <Heading level={3} size="small">GitHub</Heading>
-    <p className="text">Github is an all-in-one platform for collaborative development. It hosts our git repos and provides a mechanism for peer review.</p>
 
     <Heading level={3} size="small">Master</Heading>
     <p className="text">Development teams use of git works where developers work on topic branchs (generally a copy of the master branch at the time work starts) and only once work has been completed (including testing) the work is applied to master branch.</p>
@@ -51,19 +51,17 @@ const GlossaryPage = () => (
     <Heading level={3} size="small">Merge</Heading>
     <p className="text">While merging can refer to merging between any branches, generally when developers talk about merging they are discussing merging to the master branch.</p>
 
-    <Heading level={3} size="small">Props</Heading>
-    <p className="text">Similar to HTML attributes. React components take inputs (called "props") and return React elements describing what should appear on the screen.</p>
-
     <Heading level={3} size="small">Pull request / PR</Heading>
     <p className="text">Pull requests let you tell others about changes you've pushed to a GitHub repository. Once a pull request is sent, interested parties can review the set of changes, discuss potential modifications, and even push follow-up commits if necessary.</p>
+
+    <Heading level={3} size="small">Component</Heading>
+    <p className="text">A component is a highly loaded term in development, it can mean a React Component and sometimes is used to refer to a piece of functionality/tool.</p>
 
     <Heading level={3} size="small">React</Heading>
     <p className="text">A JavaScript library for building component-based user interfaces. It is used as the foundation to building components for this design system.</p>
 
-    <Heading level={3} size="small">Repo / repository</Heading>
-    <p className="text">A single project in git is called a repository and often abbreviated as repo by developers.</p>
-
-
+    <Heading level={3} size="small">Props</Heading>
+    <p className="text">Similar to HTML attributes. React components take inputs (called "props") and return React elements describing what should appear on the screen.</p>
   </div>
 )
 
