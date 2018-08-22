@@ -1,0 +1,20 @@
+- title: Styles
+  items:
+    - colors
+    - typography
+    - layout
+- title: Components
+  items:
+    - alert
+    - button
+    - chat
+    - expandable
+    - header
+    - heading
+    - icon
+    - text-input
+- title: Patterns
+  items:
+    - forms
+    - errors-and-validation
+    - getting-feedback

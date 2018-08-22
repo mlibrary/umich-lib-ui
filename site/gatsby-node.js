@@ -5,6 +5,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
     const slug = createFilePath({ node, getNode, basePath: `pages` })
+
     createNodeField({
       node,
       name: `slug`,
@@ -18,26 +19,32 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     graphql(`
       {
-        allMarkdownRemark {
+        allSideNavLinksYaml {
           edges {
             node {
-              fields {
-                slug
-              }
+              title
+              items
             }
           }
         }
       }
     `).then(result => {
-      result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-        createPage({
-          path: node.fields.slug,
-          component: path.resolve(`./src/templates/doc.js`),
-          context: {
-            // Data passed to context is available
-            // in page queries as GraphQL variables.
-            slug: node.fields.slug,
-          },
+      if (result.errors) {
+        reject(result.errors)
+      }
+
+      // Create pages for each side nav link.
+      result.data.allSideNavLinksYaml.edges.forEach(({ node }) => {
+        node.items.forEach((itemName) => {
+          const slug = `/${itemName}/`
+
+          createPage({
+            path: slug,
+            component: path.resolve(`./src/templates/doc.js`),
+            context: {
+              slug: slug
+            },
+          })
         })
       })
       resolve()
