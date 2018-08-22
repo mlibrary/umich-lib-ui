@@ -36,9 +36,6 @@ export default class Docs extends React.Component {
             ]}
             renderAnchor={data => <Link to={data.to}>{data.text}</Link>}
           />
-          <Alert intent="informational">
-            <div className="container">This project is in development and not recommended for production use.</div>
-          </Alert>
           <div className="docs-app">
             <nav className="docs-nav" aria-label="Styles, Components, and Patterns">
               <Heading level={1} size="medium" id="components-nav-heading">Styles</Heading>
@@ -57,14 +54,16 @@ export default class Docs extends React.Component {
               </ul>
             </nav>
             <main className="docs-content">
-              <Switch>
-                <Route exact path="/" component={HomePage} />
-                <Route exact path="/accessibility" component={AccessibilityPage} />
-                <Route exact path="/principles" component={PrinciplesPage} />
-                <Route exact path="/glossary" component={GlossaryPage} />
-                <Route exact path="/components/:componentName" component={ComponentPage} />
-                <Route component={NoMatch} />
-              </Switch>
+              <div className="docs-content__inner">
+                <Switch>
+                  <Route exact path="/" component={HomePage} />
+                  <Route exact path="/accessibility" component={AccessibilityPage} />
+                  <Route exact path="/principles" component={PrinciplesPage} />
+                  <Route exact path="/glossary" component={GlossaryPage} />
+                  <Route exact path="/components/:componentName" component={ComponentPage} />
+                  <Route component={NoMatch} />
+                </Switch>
+              </div>
             </main>
           </div>
         </React.Fragment>
