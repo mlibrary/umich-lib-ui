@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "umich-lib-design-system-site",
+  "description": "The documentation website for the University of Michigan Design System.",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Jon Earley <earleyj@umich.edu>",
   "dependencies": {
     "gatsby": "next",
     "gatsby-plugin-manifest": "next",
@@ -12,6 +12,7 @@
     "gatsby-source-filesystem": "^1.5.39",
     "gatsby-transformer-react-docgen": "^1.0.17",
     "gatsby-transformer-remark": "^1.7.44",
+    "gatsby-transformer-yaml": "^1.5.18",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-helmet": "^5.2.0",

@@ -31,7 +31,7 @@ body,
   background: $color__grey-light-3;
   border-right: solid 2px $color__grey-light-1;
   padding-left: 2rem;
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 
 .docs__content {
@@ -45,6 +45,7 @@ body,
   margin-bottom: 4rem;
   margin-left: 2rem;
   margin-right: 2rem;
+  flex-grow: 1;
 }
 
 .lede {
