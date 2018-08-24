@@ -4,20 +4,9 @@ import Layout from "../components/layout"
 import Markdown from "../components/markdown"
 import { Heading } from 'umich-lib-components-react'
 
-const docTemplate = ({ doc }) => {
-  console.log('doc', doc)
-
-  if (!doc) { // temp
-    return (
-      <Layout>
-        <Heading level={1} size="xlarge">No doc found</Heading>
-        <p>Does the markdown file exist?</p>
-      </Layout>
-    )
-  }
-
-  const { htmlAst } = doc.markdownRemark
-  const { title } = doc.markdownRemark.frontmatter
+const docTemplate = ({ data }) => {
+  const { htmlAst } = data.markdownRemark
+  const { title } = data.markdownRemark.frontmatter
 
   return (
     <Layout>
@@ -29,8 +18,8 @@ const docTemplate = ({ doc }) => {
 }
 
 export const query = graphql`
-  query DocBySlug($slug: String!){
-    doc: markdownRemark(fields: { slug: { eq: $slug } }) {
+  query DocByName($name: String!){
+    markdownRemark(fields: { name: { eq: $name } }) {
       htmlAst
       frontmatter {
         title

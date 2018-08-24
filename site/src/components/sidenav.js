@@ -1,16 +1,16 @@
 import React from 'react'
-import { Heading } from 'umich-lib-components-react'
 import { Link } from 'gatsby'
+import { Heading } from 'umich-lib-components-react'
 
-const SideNav = ({ nodes }) => {
+const SideNav = ({ data }) => {
   return (
     <nav className='docs__side-nav'>
-      {nodes.map(({ node }, i) => (
-        <React.Fragment key={i}>
-          <Heading level={2} size="small">{node.title}</Heading>
+      {data.map(section => (
+        <React.Fragment>
+          <Heading size="small" level={2}>{section.title}</Heading>
           <ul>
-            {node.items.map((item, k) => (
-              <li key={k}>{item}</li>
+            {section.items.map(item => (
+              <li><Link to={item.to}>{item.title}</Link></li>
             ))}
           </ul>
         </React.Fragment>

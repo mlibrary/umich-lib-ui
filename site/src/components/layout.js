@@ -6,6 +6,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import { Header } from 'umich-lib-components-react'
 import SideNav from 'sidenav'
 import '../../../src/docs/styles.css'
+import getSideNavData from '../../utils/get-side-nav-data'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -16,11 +17,24 @@ const Layout = ({ children }) => (
             title
           }
         }
-        allSideNavLinksYaml {
+        allSideNavPagesYaml {
           edges {
             node {
-              title
-              items
+              page
+              pages
+            }
+          }
+        }
+        allMarkdownRemark {
+          edges {
+            node {
+              frontmatter {
+                title
+              }
+              fields {
+                name
+              }
+              htmlAst
             }
           }
         }
@@ -39,7 +53,7 @@ const Layout = ({ children }) => (
         </Helmet>
         <Header name="Design System" />
         <div className="docs">
-          <SideNav nodes={data.allSideNavLinksYaml.edges} />
+          <SideNav data={getSideNavData(data)} />
           <div className="docs__content">
             <div className="docs__content-inner y-spacing">
               {children}
