@@ -1,9 +1,11 @@
+- page: principles
+- page: accessibility
+- page: glossaries
 - page: styles
   pages: 
     - colors
     - typography
     - layout
-
 - page: components
   pages:
     - alert
@@ -15,7 +17,6 @@
     - icon
     - text-input
     - patterns
-
 - page: patterns
   pages:
     - forms
