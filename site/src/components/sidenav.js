@@ -5,16 +5,24 @@ import { Heading } from 'umich-lib-components-react'
 const SideNav = ({ data }) => {
   return (
     <nav className='docs__side-nav'>
-      {data.map(section => (
-        <React.Fragment>
-          <Heading size="small" level={2}>{section.title}</Heading>
-          <ul>
-            {section.items.map(item => (
-              <li><Link to={item.to}>{item.title}</Link></li>
-            ))}
-          </ul>
-        </React.Fragment>
-      ))}
+      <ul>
+        {data.map(section => (
+          <li>
+            {section.to ? (
+              <Link to={section.to}>{section.title}</Link>
+            ) : (
+              <Heading size="small" level={2}>{section.title}</Heading>
+            )}
+            {section.items && (
+              <ul>
+                {section.items.map(item => (
+                  <li><Link to={item.to}>{item.title}</Link></li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))}
+      </ul>
     </nav>
   )
 }

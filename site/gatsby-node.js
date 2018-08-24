@@ -71,22 +71,24 @@ exports.createPages = ({ graphql, actions }) => {
             },
           })
 
-          node.pages.forEach(page => {
-            // Does the child pages exist.
-            const remarkEdge = result.data.allMarkdownRemark.edges.find(remarkEdge => {
-              return remarkEdge.node.fields.name === page
-            })
-
-            if (remarkEdge) {
-              createPage({
-                path: `/${node.page}/${page}`,
-                component: path.resolve(`./src/templates/doc.js`),
-                context: {
-                  name: page
-                },
+          if (node.pages) {
+            node.pages.forEach(page => {
+              // Does the child pages exist.
+              const remarkEdge = result.data.allMarkdownRemark.edges.find(remarkEdge => {
+                return remarkEdge.node.fields.name === page
               })
-            }
-          })
+  
+              if (remarkEdge) {
+                createPage({
+                  path: `/${node.page}/${page}`,
+                  component: path.resolve(`./src/templates/doc.js`),
+                  context: {
+                    name: page
+                  },
+                })
+              }
+            })
+          }
         }
       })
       resolve()

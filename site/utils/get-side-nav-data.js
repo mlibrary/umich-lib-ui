@@ -13,25 +13,30 @@ export default (data) => {
     const mdEdgeFound = findMarkdownEdge(allMarkdownRemark, yamlName)
 
     if (mdEdgeFound) {
-      const items = edge.node.pages.reduce((itemsAcc, item) => {
-        const mdEdgeItemFound = findMarkdownEdge(allMarkdownRemark, item)
-        
-        if (mdEdgeItemFound) {
-          itemsAcc = itemsAcc.concat({
-            title: mdEdgeItemFound.node.frontmatter.title,
-            to: `/${yamlName}/${item}/`
-          })
-        }
-
-        return itemsAcc
-      }, [])
-
-      const section = {
-        title: mdEdgeFound.node.frontmatter.title,
-        items: items
+      if (edge.node.pages) {
+        const items = edge.node.pages.reduce((itemsAcc, item) => {
+          const mdEdgeItemFound = findMarkdownEdge(allMarkdownRemark, item)
+          
+          if (mdEdgeItemFound) {
+            itemsAcc = itemsAcc.concat({
+              title: mdEdgeItemFound.node.frontmatter.title,
+              to: `/${yamlName}/${item}/`
+            })
+          }
+  
+          return itemsAcc
+        }, [])
+  
+        acc = acc.concat({
+          title: mdEdgeFound.node.frontmatter.title,
+          items: items
+        })
+      } else {
+        acc = acc.concat({
+          title: mdEdgeFound.node.frontmatter.title,
+          to: `/${yamlName}/`
+        })
       }
-
-      acc = acc.concat(section)
     }
 
     return acc
