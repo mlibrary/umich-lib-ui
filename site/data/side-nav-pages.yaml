@@ -13,10 +13,8 @@
     - chat
     - expandable
     - header
-    - heading
     - icon
     - text-input
-    - patterns
 - page: patterns
   pages:
     - forms
