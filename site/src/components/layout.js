@@ -2,11 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-
-import { Header } from 'umich-lib-components-react'
 import SideNav from 'sidenav'
-import '../../../src/docs/styles.css'
 import getSideNavData from '../../utils/get-side-nav-data'
+import { Header } from 'umich-lib-components-react'
+import '../../../src/docs/styles.css'
 
 const Layout = ({ children }) => (
   <StaticQuery

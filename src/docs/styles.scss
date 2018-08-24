@@ -31,7 +31,7 @@ body,
   background: $color__grey-light-3;
   border-right: solid 2px $color__grey-light-1;
   padding-left: 2rem;
-  padding-top: 1rem;
+  padding-top: 2rem;
 }
 
 .docs__content {
@@ -65,6 +65,7 @@ body,
 
   background: $color__grey-light-3;
 
+  /*
   &:before {
     content: 'Live editor';
     background: inherit;
@@ -79,6 +80,7 @@ body,
     border-left: solid 1px $color__grey-3;
     line-height: 1;
   }
+  */
 }
 
 .prism-code,

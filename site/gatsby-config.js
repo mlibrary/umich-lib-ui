@@ -33,7 +33,7 @@ module.exports = {
       options: {
         plugins: [
           `gatsby-remark-autolink-headers`,
-          `gatsby-remark-live-code'`
+          `gatsby-remark-live-code`
         ],
       },
     }
