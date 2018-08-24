@@ -26,3 +26,6 @@ yarn-error.log*
 
 # published library components
 /lib
+
+# component data
+/config/componentData.js
