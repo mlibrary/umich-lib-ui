@@ -1,26 +1,23 @@
-# gatsby-starter-default
-The default Gatsby starter.
+# Documentation Site
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
+## Docs
 
-## Install
+All of the docs live in the `docs` in the root of this repository. They are in Markdown and they should include the following frontmatter at the top of each file that specifies the title for the page.
+
+```md
+---
+title: "Some Title"
+---
+```
+
+## Development
 
 Make sure that you have the Gatsby CLI program installed:
 ```sh
 npm install --global gatsby-cli
 ```
 
-And run from your CLI:
+Then run from this `site` directory:
 ```sh
-gatsby new gatsby-example-site
-```
-
-Then you can run it by:
-```sh
-cd gatsby-example-site
 gatsby develop
 ```
-
-## Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
