@@ -3,6 +3,7 @@ module.exports = {
     title: 'Design System | University of Michigan Library',
   },
   plugins: [
+    `gatsby-transformer-react-docgen`,
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-offline',
     {
