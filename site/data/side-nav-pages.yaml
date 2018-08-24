@@ -1,10 +1,11 @@
-- title: Styles
-  items:
+- page: styles
+  pages: 
     - colors
     - typography
     - layout
-- title: Components
-  items:
+
+- page: components
+  pages:
     - alert
     - button
     - chat
@@ -13,8 +14,10 @@
     - heading
     - icon
     - text-input
-- title: Patterns
-  items:
+    - patterns
+
+- page: patterns
+  pages:
     - forms
     - errors-and-validation
     - getting-feedback
