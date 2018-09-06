@@ -6,7 +6,7 @@ import SideNav from 'sidenav'
 import getSideNavData from '../../utils/get-side-nav-data'
 import { Header } from 'umich-lib-components-react'
 
-import "../styles/main.scss"
+import "../scss/init.scss"
 
 const Layout = ({ children }) => (
   <StaticQuery

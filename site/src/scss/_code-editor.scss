@@ -167,3 +167,31 @@ pre > code.highlight {
   background: -webkit-linear-gradient(left, rgba(107, 115, 148, 0.2) 70%, rgba(107, 115, 148, 0));
   background: linear-gradient(to right, rgba(107, 115, 148, 0.2) 70%, rgba(107, 115, 148, 0));
 }
+
+.code__editor {
+  background: $color__grey-light-3;
+  border: solid 1px $color__grey-3;
+}
+
+.prism-code,
+.code-block {
+  padding: 1rem;
+  font-size: 0.8rem;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  overflow-x: auto;
+}
+
+.code-block {
+  display: block;
+  background: $color__grey-light-3;
+  border: solid 1px $color__grey-3;
+}
+
+.code__preview {
+  padding: 1rem;
+  border: solid 1px $color__grey-3;
+
+  &:not(.code__preview--without-editor) {
+    border-bottom: none;
+  }
+}
