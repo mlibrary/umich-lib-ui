@@ -3,9 +3,9 @@ module.exports = {
     title: 'Design System | University of Michigan Library',
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-offline',
-    `gatsby-transformer-json`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-offline`,
     {
       resolve: 'gatsby-source-filesystem',
       options: {

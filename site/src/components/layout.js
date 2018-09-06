@@ -5,7 +5,8 @@ import { StaticQuery, graphql } from 'gatsby'
 import SideNav from 'sidenav'
 import getSideNavData from '../../utils/get-side-nav-data'
 import { Header } from 'umich-lib-components-react'
-import '../../../src/docs/styles.css'
+
+import "../styles/main.scss"
 
 const Layout = ({ children }) => (
   <StaticQuery
