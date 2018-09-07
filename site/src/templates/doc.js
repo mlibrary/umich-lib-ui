@@ -12,13 +12,17 @@ const docTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <div className="x-spacing doc-header">
-        <Heading level={1} size="xlarge">{title}</Heading>
+      <article>
+        <header className="doc-header">
+          <Heading level={1} size="xlarge">{title}</Heading>
 
-        <a href={`https://github.com/mlibrary/umich-lib-components-react/edit/master/docs/${name}.md`}>Edit this page</a>
-      </div>
+          <a href={`https://github.com/mlibrary/umich-lib-components-react/edit/master/docs/${name}.md`}>Edit this page</a>
+        </header>
 
-      <Markdown htmlAst={htmlAst} />
+        <div className="y-spacing">
+          <Markdown htmlAst={htmlAst} />
+        </div>
+      </article>
     </Layout>
   )
 }
