@@ -30,7 +30,10 @@ const renderAst = new rehypeReact({
     h5: Heading5,
     h6: Heading6,
     p: ({children}) => <p className="text">{children}</p>,
-    'live-code': LiveCode
+    'live-code': LiveCode,
+    code: ({ children })  => <code className="code">{children}</code>,
+    ul: ({ children }) => <ul className="list list--bullet">{children}</ul>,
+    ol: ({ children }) => <ol className="list list--number">{children}</ol>
   },
 
   // A workaround to replace the container div created by rehype-react with a React fragment.
