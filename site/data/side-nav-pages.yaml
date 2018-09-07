@@ -1,0 +1,25 @@
+- page: principles
+- page: accessibility
+- page: glossaries
+- page: styles
+  pages: 
+    - colors
+    - typography
+    - layout
+    - iconography
+- page: components
+  pages:
+    - alert
+    - button
+    - chat
+    - expandable
+    - header
+    - icon
+    - text-input
+    - resource-access
+    - record-fields
+- page: patterns
+  pages:
+    - forms
+    - errors-and-validation
+    - getting-feedback

@@ -1,0 +1,52 @@
+.docs {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(4,1fr);
+  max-width: 52rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+
+.header__inner,
+.alert-inner {
+  max-width: 52rem;
+}
+
+.docs__side-nav {
+  grid-column: 1;
+  margin-top: 3rem;
+
+  & > ul {
+    position: sticky;
+    top: 2rem;
+  }
+}
+
+.docs__content {
+  grid-column: 2/5;
+}
+
+.docs__content-inner {
+  
+}
+
+.text {
+  max-width: 32rem;
+}
+
+.code {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 0.8rem;
+  background: rgba($color__u-m-yellow, .2);
+  display: inline-block;
+  padding: 0 0.25rem;
+}
+
+.doc-header {
+  display: flex;
+  align-items: baseline;
+  align-content: space-between;
+  margin-bottom: 0;
+  justify-content: space-between;
+}
