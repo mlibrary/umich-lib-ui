@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import SideNav from 'sidenav'
 import getSideNavData from '../../utils/get-side-nav-data'
-import { Header } from 'umich-lib-components-react'
+import { Header, Alert } from 'umich-lib-components-react'
 
 import "../scss/init.scss"
 
@@ -52,6 +52,7 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <Header name="Design System" />
+        <Alert>This project is in development and not recommended for production use.</Alert>
         <div className="docs">
           <SideNav data={getSideNavData(data)} />
           <div className="docs__content">

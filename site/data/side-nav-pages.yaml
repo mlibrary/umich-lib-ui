@@ -6,6 +6,7 @@
     - colors
     - typography
     - layout
+    - iconography
 - page: components
   pages:
     - alert
