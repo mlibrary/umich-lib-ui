@@ -7,6 +7,7 @@ import {
   LivePreview
 } from 'react-live'
 
+import icons from 'umich-lib-components-react/Icon/icons'
 import * as components from 'umich-lib-components-react'
 import { Alert } from 'umich-lib-components-react'
 
@@ -19,7 +20,7 @@ class CodeEditor extends React.Component {
     const { error } = this.props.live
 
     return (
-      <div className="code">
+      <React.Fragment>
         <div className="code__preview">
           <LivePreview />
         </div>
@@ -33,7 +34,7 @@ class CodeEditor extends React.Component {
             </Alert>
           </div>
         )}
-      </div>
+      </React.Fragment>
     )
   }
 }
@@ -45,7 +46,7 @@ class LiveCode extends React.Component {
     const { code } = this.props
 
     return (
-      <LiveProvider code={code} scope={{...components}} mountStylesheet={false}>
+      <LiveProvider code={code} scope={{...components, icons}} mountStylesheet={false}>
         <CodeEditorLive />
       </LiveProvider>
     )
