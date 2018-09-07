@@ -4,6 +4,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "classnames": "^2.2.5",
+    "gatsby-plugin-sass": "^1.0.26",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-live": "^1.11.0"
