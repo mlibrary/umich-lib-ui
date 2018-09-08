@@ -56,27 +56,14 @@ const Layout = ({ children }) => (
           <Header name="Design System" />
           <Alert>This project is in development and not recommended for production use.</Alert>
         </div>
-        <WindowSize>
-          {(size) => (
-            <React.Fragment>
-              {(() => {
-                const largeScreen = size.width > 620 ? true : false
-                const cn = largeScreen ? "docs docs--large-screens" : "docs"
-
-                return (
-                  <div className={cn}>
-                    <SideNav data={getSideNavData(data)} largeScreen={largeScreen} />
-                    <div className="docs__content">
-                      <div className="docs__content-inner y-spacing">
-                        {children}
-                      </div>
-                    </div>
-                  </div>
-                )
-              })()}
-            </React.Fragment> 
-           )}
-        </WindowSize>
+        <div className="docs docs--large-screens">
+          <SideNav data={getSideNavData(data)} />
+          <div className="docs__content">
+            <div className="docs__content-inner y-spacing">
+              {children}
+            </div>
+          </div>
+        </div>
       </>
     )}
   />
