@@ -169,8 +169,8 @@ pre > code.highlight {
 }
 
 .code__editor {
-  background: $color__grey-light-3;
-  border: solid 1px $color__grey-3;
+  background: #FAFAFA;
+  border: solid 1px #CCC;
 }
 
 .prism-code,
@@ -183,13 +183,13 @@ pre > code.highlight {
 
 .code-block {
   display: block;
-  background: $color__grey-light-3;
-  border: solid 1px $color__grey-3;
+  background: #FAFAFA;
+  border: solid 1px #CCC;
 }
 
 .code__preview {
   padding: 1rem;
-  border: solid 1px $color__grey-3;
+  border: solid 1px #CCC;
 
   &:not(.code__preview--without-editor) {
     border-bottom: none;

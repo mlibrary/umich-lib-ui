@@ -7,9 +7,8 @@ import {
   LivePreview
 } from 'react-live'
 
-import icons from 'umich-lib-components-react/Icon/icons'
 import * as components from 'umich-lib-components-react'
-import { Alert } from 'umich-lib-components-react'
+import { icons, Alert } from 'umich-lib-components-react'
 
 class CodeEditor extends React.Component {
   state = {

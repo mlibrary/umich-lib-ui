@@ -15,13 +15,15 @@ const docTemplate = ({ data }) => {
       <article>
         <header className="doc-header">
           <Heading level={1} size="xlarge">{title}</Heading>
-
-          <a href={`https://github.com/mlibrary/umich-lib-components-react/edit/master/docs/${name}.md`}>Edit this page</a>
         </header>
 
         <div className="y-spacing">
           <Markdown htmlAst={htmlAst} />
         </div>
+
+        <footer className="doc-footer">
+          <a href={`https://github.com/mlibrary/umich-lib-components-react/edit/master/docs/${name}.md`}>Edit on Github</a>
+        </footer>
       </article>
     </Layout>
   )
