@@ -22,7 +22,7 @@ export default () => {
 
         <Heading level={2} size="large" className="text">Install</Heading>
 
-        <code className="code-block">npm install umich-lib-components-react</code>
+        <code className="code-block">npm install umich-lib-components-react --save</code>
 
         <a href="https://github.com/mlibrary/umich-lib-components-react">View readme on GitHub</a>
 

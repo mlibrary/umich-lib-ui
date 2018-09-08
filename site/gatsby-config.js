@@ -10,14 +10,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'docs',
-        path: `${__dirname}/../docs`
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'umich-lib-components-react',
-        path: `${__dirname}/../src/components`
+        path: `${__dirname}/docs`
       }
     },
     `gatsby-transformer-yaml`,
