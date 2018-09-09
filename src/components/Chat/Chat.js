@@ -24,7 +24,7 @@ class Chat extends React.Component {
 
       Note: This check is on initial load. It won't adjust as viewport is resized.
     */
-    if (window) {
+    if (typeof window !== 'undefined') {
       const frameWidth = window.innerWidth;
 
       if (frameWidth < 1000) {
