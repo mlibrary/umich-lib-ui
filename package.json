@@ -4,10 +4,8 @@
   "dependencies": {
     "axios": "^0.18.0",
     "classnames": "^2.2.5",
-    "gatsby-plugin-sass": "^1.0.26",
     "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "react-live": "^1.11.0"
+    "react-dom": "^16.3.2"
   },
   "author": {
     "name": "Jon Earley",
@@ -85,7 +83,7 @@
     "start": "npm-run-all --parallel start:docs watch:sass gen:docs-watch",
     "build:css": "node-sass-chokidar src/ -o src/",
     "watch:sass": "npm run build:css && node-sass-chokidar src/ -o src/ --watch --recursive",
-    "start:storybook": "npm-run-all --parallel start:storybook watch:sass",
+    "start:storybook": "npm-run-all --parallel start:storybook",
     "deploy:storybook": "storybook-to-ghpages",
     "copy:css": "cpx \"./src/components/**/*.css\" ./lib",
     "prebuild:lib": "rimraf lib",

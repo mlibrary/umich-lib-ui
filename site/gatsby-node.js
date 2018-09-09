@@ -98,7 +98,7 @@ exports.createPages = ({ graphql, actions }) => {
 
 
 // Use this for development umich-lib-components-react.
-/*
+
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
@@ -108,5 +108,5 @@ exports.onCreateWebpackConfig = ({ actions }) => {
     },
   })
 }
-*/
+
 
