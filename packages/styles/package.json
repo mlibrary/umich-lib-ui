@@ -4,5 +4,8 @@
   "module": "src/index.js",
   "files": [
     "src"
-  ]
+  ],
+  "dependencies": {
+    "emotion": "^9.2.8"
+  }
 }
