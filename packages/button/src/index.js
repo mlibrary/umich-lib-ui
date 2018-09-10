@@ -1,7 +1,37 @@
 import React from 'react';
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
-//import './Button.css'
+import { css } from 'emotion';
+import {
+  color__blue_2,
+  color__blue_3
+} from '@umich-lib-ui/styles'
+
+const baseButtonCSS = css({
+  display: 'inline-block',
+  padding: '0.5rem 1rem',
+  borderRadius: '4px',
+  fontSize: '1rem',
+  cursor: 'pointer'
+})
+
+const primaryButtonCSS = css(
+  baseButtonCSS,
+  {
+    background: color__blue_3,
+    color: 'white',
+    borderBottom: color__blue_2,
+    borderBottomWidth: '3px',
+    borderBottomStyle: 'solid'
+  }
+)
+
+const startButtonCSS = css(
+  baseButtonCSS,
+  primaryButtonCSS,
+  {
+    fontSize: '1.25rem'
+  },
+)
 
 /**
  * Use buttons to move though a transaction, aim to use only one primary button per page.
@@ -16,27 +46,27 @@ const Button = ({
   small,
   ...other
 }) => {
+  /*
   const buttonClasses = classNames({
-    'button': true,
+    [buttonBaseClass]: true,
     'button--small': small,
     'button--start': kind === 'start',
     'button--primary': kind === 'primary',
     'button--secondary': kind === 'secondary',
     'button--tertiary': kind === 'tertiary',
   }, className);
+  */
 
-  const commonProps = {
-    className: buttonClasses,
-  };
+  const buttonClassName = `${startButtonCSS}`
 
   const button = (
-    <button {...other} {...commonProps} disabled={disabled} type={type}>
+    <button {...other} className={buttonClassName} disabled={disabled} type={type}>
       {children}
     </button>
   );
 
   const anchor = (
-    <a {...other} {...commonProps} href={href} role="button">
+    <a {...other} href={href} role="button">
       {children}
     </a>
   );

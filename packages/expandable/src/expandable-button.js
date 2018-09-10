@@ -15,13 +15,13 @@ class ExpandableButton extends Component {
     }
 
     return (
-      <button {...this.props} onClick={() => context.toggleExpanded()}>
+      <Button {...this.props} onClick={() => context.toggleExpanded()}>
         {context.expanded ? (
           cleanList(['Show fewer', this.props.name])
         ) : (
           cleanList(['Show all', this.props.count, this.props.name])
         )}
-      </button>
+      </Button>
     )
   }
 }
