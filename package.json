@@ -1,17 +1,23 @@
 {
   "name": "umich-lib-ui",
   "scripts": {
-    "start": "start-storybook -p 9001 -c .storybook"
+    "start": "start-storybook -p 9001 -c .storybook",
+    "bootstrap": "lerna bootstrap --hoist",
+    "build": "lerna run build --parallel"
   },
   "version": "0.0.0",
-  "devDependencies": {
+  "dependencies": {
     "@storybook/react": "^3.4.10",
     "babel-core": "^6.26.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "lerna": "^3.3.0"
-  },
-  "dependencies": {
+    "lerna": "^3.3.0",
     "react": "^16.5.0",
     "react-dom": "^16.5.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-react": "^7.0.0"
   }
 }
