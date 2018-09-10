@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import './Button.css'
+//import './Button.css'
 
 /**
  * Use buttons to move though a transaction, aim to use only one primary button per page.
