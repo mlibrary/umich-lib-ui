@@ -1,9 +1,12 @@
 {
-  "name": "@umich-lib-ui/button",
+  "name": "@umich-lib/expandable",
   "version": "0.0.0",
   "module": "es/index.js",
   "scripts": {
     "build": "node ../../shared/build-package"
+  },
+  "dependencies": {
+    "@umich-lib-ui/button": "0.0.0"
   },
   "peerDependencies": {
     "react": "^16.4.0",
