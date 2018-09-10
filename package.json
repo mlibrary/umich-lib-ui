@@ -1,5 +1,5 @@
 {
-  "name": "mlib-ui",
+  "name": "umich-lib-ui",
   "scripts": {
     "start": "start-storybook -p 9001 -c .storybook"
   },
