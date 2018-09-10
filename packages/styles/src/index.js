@@ -1,4 +1,10 @@
 /*
+  Global styles
+*/
+
+import './styles.css'
+
+/*
   Brand colors
 */
 
@@ -66,3 +72,10 @@ export const color__teal_3 = '#FFEEDD'
 */
 
 export const color__purple_1 = '#4c2c92'
+
+/*
+  Font sizes
+*/
+
+export const default_font_size = '1rem'
+export const small_font_size = '0.875rem'
