@@ -14,7 +14,8 @@ const baseButtonCSS = css(
     borderRadius: '4px',
     fontSize: '1rem',
     cursor: 'pointer',
-    border: 'none'
+    border: 'none',
+    background: 'none'
   }
 )
 

@@ -5,7 +5,7 @@ import {
   ExpandableButton
 } from "../src/index";
 
-export let name = "Basic";
+export let name = "basic";
 
 const colors = [ "Red", "Orange", "Yellow", "Green", "Cyan", "Blue", "Indigo", "Violet", "Purple", "Magenta", "Pink", "Brown", "White", "Gray", "Black"]
 
