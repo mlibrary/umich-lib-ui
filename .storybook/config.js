@@ -6,6 +6,8 @@ import {
   storiesOf
 } from "@storybook/react";
 
+import './styles.css'
+
 let getPackageName = filePath =>
   path
     .dirname(filePath)
