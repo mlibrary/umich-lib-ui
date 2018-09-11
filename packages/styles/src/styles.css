@@ -1,118 +1,14 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+/*
+  Font
 */
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-*:focus {
-  outline: 3px solid #FFCB05;
-  outline-offset: 0;
-  transition: outline 0.05s ease-out;
-}
-
-/* Reset `button` and button-style `input` default styles */
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
-button {
-  background: none;
-  border: 0;
-  color: inherit;
-  /* cursor: default; */
-  font: inherit;
-  line-height: normal;
-  overflow: visible;
-  padding: 0;
-  -webkit-appearance: button; /* for input */
-  -webkit-user-select: none; /* for button */
-     -moz-user-select: none;
-      -ms-user-select: none;
-}
-input::-moz-focus-inner,
-button::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
 
 /*
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  Spacing helpers
 */
-
-/*
-  Spacing
-*/
-
 .y-spacing > *:not(:last-child) {
   margin-bottom: 1rem;
 }
-
 .x-spacing > *:not(:last-child) {
   margin-right: 1rem;
-}
-
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
-
-html,
-body {
-  font-family: 'Source Sans Pro', system-ui, sans-serif;
-  font-size: 16px;
-  line-height: 1.4;
-  color: #262626;
-}
-
-@media (min-width: 42rem) {
-  html,
-  body {
-    font-size: 19px;
-  }
 }

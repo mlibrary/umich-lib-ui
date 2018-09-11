@@ -2,28 +2,28 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css, cx } from 'emotion';
 import {
-  color__grey_1,
-  color__grey_2,
-  color__blue_2,
-  color__blue_3,
-  small_font_size
+  base,
+  colors
 } from '@umich-lib-ui/styles'
 
-const baseButtonCSS = css({
-  display: 'inline-block',
-  padding: '0.5rem 1rem',
-  borderRadius: '4px',
-  fontSize: '1rem',
-  cursor: 'pointer',
-  border: 'none'
-})
+const baseButtonCSS = css(
+  base,
+  {
+    display: 'inline-block',
+    padding: '0.5rem 1rem',
+    borderRadius: '4px',
+    fontSize: '1rem',
+    cursor: 'pointer',
+    border: 'none'
+  }
+)
 
 const primaryButtonCSS = css(
   baseButtonCSS,
   {
-    background: color__blue_3,
+    background: colors.blue[500],
     color: 'white',
-    borderBottom: color__blue_2,
+    borderBottom: colors.blue[600],
     borderBottomWidth: '3px',
     borderBottomStyle: 'solid'
   }
@@ -33,8 +33,8 @@ const secondaryButtonCSS = css(
   baseButtonCSS,
   {
     background: 'transparent',
-    color: color__grey_1,
-    border: color__grey_2,
+    color: colors.grey[700],
+    border: colors.grey[600],
     borderWidth: '1px',
     borderStyle: 'solid'
   }
@@ -44,7 +44,7 @@ const tertiaryButtonCSS = css(
   baseButtonCSS,
   {
     textDecoration: 'underline',
-    color: 'color__blue_2',
+    color: colors.grey[700],
     padding: '0',
   }
 )
@@ -59,7 +59,7 @@ const startButtonCSS = css(
 )
 
 const smallButtonCSS = css({
-  fontSize: small_font_size,
+  fontSize: '0.875rem',
   padding: '0.25rem 0.5rem'
 })
 
