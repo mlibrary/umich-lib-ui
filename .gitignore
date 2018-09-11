@@ -1,7 +1,6 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
-/node_modules
+node_modules
 .DS_Store
 package-lock.json
 lerna-debug.log
-/packages/*/es

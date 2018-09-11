@@ -5,5 +5,13 @@
   "plugins": [
     "transform-class-properties",
     "transform-object-rest-spread"
-  ]
+  ],
+  "env": {
+    "production": {
+      "plugins": [["emotion", { "sourceMap": false }]]
+    },
+    "development": {
+      "plugins": [["emotion", { "sourceMap": true, "autoLabel": true }]]
+    }
+  }
 }
