@@ -98,15 +98,26 @@ exports.createPages = ({ graphql, actions }) => {
 
 
 // Use this for development umich-lib-components-react.
-
+/*
+  TODO
+  - Automate tjese imports in development mode.
+*/
+/*
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
       alias: {
-        'umich-lib-components-react': path.resolve(__dirname, '../src/components/')
+        '@umich-lib-ui/alert': path.resolve(__dirname, '../packages/alert/'),
+        '@umich-lib-ui/button': path.resolve(__dirname, '../packages/button/'),
+        '@umich-lib-ui/chat': path.resolve(__dirname, '../packages/chat/'),
+        '@umich-lib-ui/expandable': path.resolve(__dirname, '../packages/expandable/'),
+        '@umich-lib-ui/header': path.resolve(__dirname, '../packages/header/'),
+        '@umich-lib-ui/heading': path.resolve(__dirname, '../packages/heading/'),
+        '@umich-lib-ui/icon': path.resolve(__dirname, '../packages/icon/'),
+        '@umich-lib-ui/resource-access': path.resolve(__dirname, '../packages/resource-access/')
       }
     },
   })
 }
-
+*/
 
