@@ -4,9 +4,9 @@ import Icon, { icons } from "../src/index";
 export let name = "all";
 
 export let Example = () => (
-  <ul className="margin-left-one margin-top-one">
+  <ul className="y-spacing">
     {Object.keys(icons).map(i => (
-      <li className="margin-bottom-half"><Icon icon={i} size={24} className="margin-right-half"/>{i}</li>
+      <li><Icon icon={i} size={24} />{i}</li>
     ))}
   </ul>
 )

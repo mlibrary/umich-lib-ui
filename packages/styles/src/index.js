@@ -1,5 +1,9 @@
 import './styles.css'
 
+/*
+  Inspired by GitHub color system
+  https://styleguide.github.com/primer/support/color-system/
+*/
 export const colors = {
   brand: {
     maze: '#FFCB05',
@@ -22,14 +26,27 @@ export const colors = {
     '200': '#F2F9FF'
   },
   green: {
-    
+    '600': '#057C42',
+    '500': '#05A657',
+    '400': '#E2F4EB'
   },
-  organge: {
-
+  orange: {
+    '600': '#AA5600',
+    '500': '#E77504',
+    '400': '#FFEEDD'
   },
   red: {
-
+    '600': '#C53B26',
+    '500': '#ED5D47',
+    '400': '#FFEAE7'
   }
+}
+
+export const intent_colors = {
+  informational: colors.blue[600],
+  success: colors.green[600],
+  warning: colors.orange[600],
+  error: colors.red[600]
 }
 
 /*
