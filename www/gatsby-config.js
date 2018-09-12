@@ -30,6 +30,9 @@ module.exports = {
         ],
       },
     },
+    /*
+    // This doesn't work for some reason...
+    // https://github.com/gatsbyjs/gatsby/issues/7543
     `gatsby-transformer-react-docgen`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -38,5 +41,6 @@ module.exports = {
         path: `${__dirname}/../packages`
       },
     },
+    */
   ],
 }

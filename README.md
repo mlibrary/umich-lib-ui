@@ -40,16 +40,6 @@ npm run develop # starts the the storybook development environment
 
 Anytime you add a new component you will need to run `npm run bootstrap` again.
 
-## `www` scripts
-
-This website uses Gatsby v2.
-
-```
-npm start        # starts the website
-npm deploy       # deploys the site to now
-```
-
-
 ## Contributing
 
 [See guidelines for contributing](https://github.com/mlibrary/umich-lib-components-react/blob/master/CONTRIBUTING.md)
