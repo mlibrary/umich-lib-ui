@@ -41,11 +41,11 @@ Opens up Storybook at `http://localhost:9001`
 
 Anytime you add a new component you will need to run `npm run bootstrap` again.
 
-## `www` directory / doc site
+## `www` / doc site
 
 Built with [Gatsby v2](https://www.gatsbyjs.org/) for a fast website.
 
-See the `www` README.
+See the README in `www` directory.
 
 ## Help / Questions
 
