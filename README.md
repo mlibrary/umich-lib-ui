@@ -1,8 +1,10 @@
+> This project is in early development and is not recommended for production use.
+
 # University of Michigan Library UI
 
 A collection of shared design styles, components, and patterns for teams to build quality consistent interfaces. A bit like a LEGO kit.
 
-[View the documentation site](https://umich-lib-design-system-site-ckqhzlnybg.now.sh/)
+[View the documentation site](https://umich-lib-design-system-pmmhthnypk.now.sh/)
 
 ## Getting started
 
