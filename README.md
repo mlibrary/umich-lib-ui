@@ -1,4 +1,4 @@
-> 🚧 This project is in early development and is not recommended for production use.
+> 🚧 This project is in development and is not recommended for production use. 🚧
 
 # University of Michigan Library Design System
 
