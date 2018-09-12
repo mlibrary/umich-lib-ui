@@ -15,13 +15,7 @@ export default () => {
 
         <p className="text">Each component has examples to experiment and test. Go even further and launch an online sandbox code editor environment.</p>
 
-        <Button href="https://codesandbox.io/s/8z337kk6r9">Launch code editor</Button>
-
-        <Heading level={2} size="large" className="text">Install</Heading>
-
-        <code className="code-block">npm install umich-lib-components-react --save</code>
-
-        <a href="https://github.com/mlibrary/umich-lib-components-react">View readme on GitHub</a>
+        <Button href="https://codesandbox.io/s/8z337kk6r9">Launch online code editor</Button>
 
         {
           /**

@@ -7,9 +7,36 @@ import getSideNavData from '../../utils/get-side-nav-data'
 import Header from '../../../packages/header'
 import Alert from '../../../packages/alert'
 import {
-  SITE_WIDTH
+  SITE_WIDTH,
+  MEDIA_QUERIES
 } from '../../../packages/styles'
 import "../scss/init.scss"
+import styled from 'react-emotion'
+
+const DocContainer = styled('div')({
+  maxWidth: SITE_WIDTH,
+  margin: '2rem auto',
+  padding: '1rem',
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    display: 'grid',
+    gridColumnGap: '1rem',
+    gridTemplateColumns: '12rem auto'
+  }
+})
+
+const DocSide = styled('div')({
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    gridColumnStart: '1',
+    gridColumnEnd: '1'
+  }
+})
+
+const DocMain = styled('div')({
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    gridColumnStart: '2',
+    gridColumnEnd: '2'
+  }
+})
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -54,22 +81,16 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <div className="docs-header-container">
-          <Header name="Design System" />
-          <Alert intent="informational">This project is in development and not recommended for production use.</Alert>
-        </div>
-        <div style={{
-          width: SITE_WIDTH,
-          margin: '0 auto',
-          padding: '0 1rem'
-        }} className="docs--large-screens">
-          <SideNav data={getSideNavData(data)} />
-          <div className="docs__content">
-            <div className="docs__content-inner y-spacing">
-              {children}
-            </div>
-          </div>
-        </div>
+        <Header name="Design System" />
+        <Alert intent="informational">This project is in development and not recommended for production use.</Alert>
+        <DocContainer>
+          <DocSide>
+            <SideNav data={getSideNavData(data)} />
+          </DocSide>
+          <DocMain>
+            {children}
+          </DocMain>
+        </DocContainer>
       </>
     )}
   />
