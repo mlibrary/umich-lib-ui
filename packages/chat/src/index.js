@@ -93,7 +93,7 @@ class Chat extends React.Component {
     if (window) {
       const frameWidth = window.innerWidth;
 
-      if (frameWidth < 1000) {
+      if (frameWidth < 960) {
         return false
       }
     }
@@ -146,8 +146,6 @@ class Chat extends React.Component {
     const { status, open } = this.state
     const fixed = this.isFixed()
 
-    const chatClassNames = 'chat'
-
     if (status === 'online') {
       if (fixed) {
         return (
@@ -177,7 +175,6 @@ class Chat extends React.Component {
       } else {
         return (
           <Button
-            className={chatClassNames}
             onClick={this.handleClick}
             kind="secondary"
           >
