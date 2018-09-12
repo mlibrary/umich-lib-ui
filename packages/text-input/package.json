@@ -1,0 +1,16 @@
+{
+  "name": "@umich-lib-ui/text-input",
+  "version": "0.0.0",
+  "module": "src/index.js",
+  "dependencies": {
+    "@umich-lib-ui/styles": "^0.0.0",
+    "emotion": "^9.2.8"
+  },
+  "peerDependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  },
+  "files": [
+    "src"
+  ]
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { Heading } from 'umich-lib-components-react'
+import Heading from '../../../packages/heading'
 
 const SideNav = ({ data }) => {
   return (
