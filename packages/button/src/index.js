@@ -35,7 +35,7 @@ const secondaryButtonCSS = css(
   {
     background: 'transparent',
     color: colors.grey[700],
-    border: colors.grey[600],
+    borderColor: colors.grey[600],
     borderWidth: '1px',
     borderStyle: 'solid'
   }

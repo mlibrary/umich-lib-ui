@@ -1,9 +1,6 @@
 import React from 'react'
-import {
-  Heading,
-  Button
-} from 'umich-lib-components-react'
-
+import Button from '../../../packages/button'
+import Heading from '../../../packages/heading'
 import Layout from '../components/layout'
 
 export default () => {

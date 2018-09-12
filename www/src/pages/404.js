@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 
-import { Heading } from 'umich-lib-components-react'
+import Heading from '../../../packages/heading'
 
 const NotFoundPage = () => (
   <Layout>

@@ -7,8 +7,37 @@ import {
   LivePreview
 } from 'react-live'
 
-import * as components from 'umich-lib-components-react'
-import { icons, Alert } from 'umich-lib-components-react'
+
+import Alert from '../../../packages/alert'
+import Button from '../../../packages/button'
+import Chat from '../../../packages/chat'
+import {
+  Expandable,
+  ExpandableChildren,
+  ExpandableButton
+} from '../../../packages/expandable'
+import Header from '../../../packages/header'
+import Heading from '../../../packages/heading'
+import Icon, { icons } from '../../../packages/icon'
+import ResourceAccess from '../../../packages/resource-access'
+import RecordFields from '../../../packages/record-fields'
+import TextInput from '../../../packages/text-input'
+
+const scope = {
+  Alert,
+  Button,
+  Chat,
+  Expandable,
+  ExpandableChildren,
+  ExpandableButton,
+  Header,
+  Heading,
+  Icon,
+  icons,
+  ResourceAccess,
+  RecordFields,
+  TextInput
+}
 
 class CodeEditor extends React.Component {
   state = {
@@ -45,7 +74,7 @@ class LiveCode extends React.Component {
     const { code } = this.props
 
     return (
-      <LiveProvider code={code} scope={{...components, icons}} mountStylesheet={false}>
+      <LiveProvider code={code} scope={{...scope}} mountStylesheet={false}>
         <CodeEditorLive />
       </LiveProvider>
     )

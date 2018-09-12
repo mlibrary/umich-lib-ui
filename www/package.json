@@ -1,7 +1,7 @@
 {
   "name": "umich-lib-design-system-site",
   "description": "The documentation website for the University of Michigan Design System.",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "author": "Jon Earley <earleyj@umich.edu>",
   "dependencies": {
     "@reach/window-size": "^0.1.1",
@@ -23,8 +23,7 @@
     "react-helmet": "^5.2.0",
     "react-live": "^1.11.0",
     "rehype-react": "^3.0.3",
-    "serve": "^10.0.0",
-    "umich-lib-components-react": "0.6.1"
+    "serve": "^10.0.0"
   },
   "keywords": [
     "gatsby"

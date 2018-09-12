@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Markdown from "../components/markdown"
-import { Heading } from 'umich-lib-components-react'
+import Heading from '../../../packages/heading'
 
 
 const docTemplate = ({ data }) => {

@@ -1,6 +1,6 @@
 import React from "react"
 import rehypeReact from "rehype-react"
-import { Heading } from 'umich-lib-components-react'
+import Heading from '../../../packages/heading'
 import LiveCode from './livecode'
 /**
   Headings

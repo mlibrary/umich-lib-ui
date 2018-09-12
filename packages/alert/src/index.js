@@ -12,10 +12,7 @@ const cssAlert = css({
 })
 
 const cssAlertInner = css({
-  display: 'flex',
-  justifyContent: 'space-between',
   margin: '0 auto',
-  alignItems: 'baseline',
   padding: '0 1rem',
   fontSize: '0.875rem'
 })

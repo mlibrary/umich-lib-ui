@@ -4,8 +4,8 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import SideNav from 'sidenav'
 import getSideNavData from '../../utils/get-side-nav-data'
-import { Header, Alert } from 'umich-lib-components-react'
-import WindowSize from "@reach/window-size";
+import Header from '../../../packages/header'
+import Alert from '../../../packages/alert'
 
 import "../scss/init.scss"
 
@@ -54,7 +54,7 @@ const Layout = ({ children }) => (
         </Helmet>
         <div className="docs-header-container">
           <Header name="Design System" />
-          <Alert>This project is in development and not recommended for production use.</Alert>
+          <Alert intent="informational">This project is in development and not recommended for production use.</Alert>
         </div>
         <div className="docs docs--large-screens">
           <SideNav data={getSideNavData(data)} />
