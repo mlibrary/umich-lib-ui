@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from 'emotion';
-import { colors } from '@umich-lib-ui/styles'
+import {
+  colors,
+  SITE_WIDTH
+} from '@umich-lib-ui/styles'
 
 
 const cssAlert = css({
@@ -14,7 +17,8 @@ const cssAlert = css({
 const cssAlertInner = css({
   margin: '0 auto',
   padding: '0 1rem',
-  fontSize: '0.875rem'
+  fontSize: '0.875rem',
+  maxWidth: SITE_WIDTH
 })
 
 const alertIntentColors = {

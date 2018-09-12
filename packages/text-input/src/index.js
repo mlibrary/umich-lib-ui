@@ -1,5 +1,59 @@
 import React from 'react'
 import PropTypes from 'prop-types';
+import styled from 'react-emotion';
+import { colors, base } from '@umich-lib-ui/styles'
+
+const StyledFormItem = styled('div')(
+  {
+    width: '100%'
+  },
+  ({ invalid }) => ({
+    borderLeft: invalid && `solid 4px ${colors.red[600]}`,
+    paddingLeft: invalid && '1rem'
+  })
+)
+
+const StyledLabel = styled('label')({
+  base,
+  display: 'block',
+  marginBottom: '0.5rem'
+})
+
+const StyledFormItemDescription = styled('span')(
+  {
+    display: 'block',
+    color: colors.grey[600]
+  }
+)
+
+const StyledInput = styled('input')(
+  base,
+  {
+    fontSize: '1rem',
+    color: colors.grey[700],
+    margin: '0',
+    padding: '0',
+    border: 'solid 1px rgba(0,0,0,0.5)',
+    boxShadow: 'inset 0 1px 4px rgba(0,0,0,0.1)',
+    borderRadius: '4px',
+    padding: '0.5rem 0.75rem',
+    width: '100%',
+    appearance: 'textfield',
+    fontFamily: 'inherit'
+  },
+  ({ invalid }) => ({
+    borderColor: invalid && colors.red[600],
+    borderWidth: invalid && '2px'
+  })
+)
+
+const StyledFormItemErrorMessage = styled('p')(
+  {
+    marginTop: '0.5rem',
+    color: colors.red[600],
+    fontWeight: '600'
+  }
+)
 
 /**
   Use this when you need to let users enter text that's no longer than a single line.
@@ -35,60 +89,49 @@ const TextInput = ({
   };
 
   const errorId = id + '-error-msg';
-  
-  const textInputClasses = 'input text-input';
-  
-  /*
-  const labelClasses = classNames('label', {
-    'visually-hidden': hideLabel,
-  });
-
-
-  const formItemClasses = classNames('form-item', {
-    'form-item--error': invalid
-  })
-  */
 
   const description = descriptionText ? (
-    <span className="text-input__description">
+    <StyledFormItemDescription>
       {descriptionText}
-    </span>
+    </StyledFormItemDescription>
   ) : null;
 
   // TODO: add hidden style
   const label = labelText ? (
-    <label htmlFor={id}>
-      <span className="label-text">{labelText}</span>
+    <StyledLabel htmlFor={id}>
+      <span>{labelText}</span>
       {description}
-    </label>
+    </StyledLabel>
   ) : null;
 
   const error = invalid ? (
-    <p className="form-item__error-message" id={errorId}>
+    <StyledFormItemErrorMessage id={errorId}>
       {invalidText}
-    </p>
+    </StyledFormItemErrorMessage>
   ) : null;
 
   const input = invalid ? (
-    <input
+    <StyledInput
       {...other}
       {...textInputProps}
+      invalid
       data-invalid
       aria-invalid
       aria-describedby={errorId}
-      className={textInputClasses}
     />
   ) : (
-    <input {...other} {...textInputProps} className={textInputClasses} />
+    <StyledInput
+      {...other}
+      {...textInputProps}
+    />
   );
 
-  // TODO: formItemClasses
   return (
-    <div>
+    <StyledFormItem invalid={invalid}>
       {label}
       {input}
       {error}
-    </div>
+    </StyledFormItem>
   );
 }
 

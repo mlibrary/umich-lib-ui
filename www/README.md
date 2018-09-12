@@ -43,7 +43,10 @@ npm run stage
 ```
 
 ```sh
-# TODO: Use the latest deploy to production `design-system.lib.umich.edu`
+# TODO: Use the latest staging and move it to production `design-system.lib.umich.edu`
 npm run deploy
 ```
 
+## Why CSS-in-JS with [Emotion](https://emotion.sh/)?
+
+To be written...
