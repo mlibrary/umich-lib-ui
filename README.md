@@ -10,7 +10,6 @@ Run these commands before doing anything else.
 git clone git@github.com:mlibrary/umich-lib-ui.git
 cd umich-lib-components-react
 npm install
-npm run bootstrap
 ```
 
 ## ⌨️ Development
@@ -24,14 +23,21 @@ npm run bootstrap
 
 ### 2. Start the development environment
 
+Starts the the storybook development environment. 
+```sh
+npm run develop
+```
 Opens up Storybook at `http://localhost:9001`
-```
-npm run develop # starts the the storybook development environment
-```
 
 ### 3. Develop components in `/packages/`.
 
 Anytime you add a new component you will need to run `npm run bootstrap` again.
+
+## Help / Questions
+
+Open an issue.
+
+More to be written...
 
 ## Contributing
 
