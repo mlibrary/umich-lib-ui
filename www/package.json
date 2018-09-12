@@ -29,9 +29,9 @@
   ],
   "license": "MIT",
   "scripts": {
-    "develop": "gatsby develop NODE_ENV=development",
+    "develop": "NODE_ENV=development gatsby develop",
     "build": "gatsby build",
-    "stage": "now public --name umich-lib-design-system",
+    "stage": "now public --name umich-lib-design-system --public",
     "deploy": "echo \"Error: no deployment process yet.\" && exit 1"
   },
   "repository": {
