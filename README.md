@@ -1,7 +1,3 @@
-# U-M Library components built with React
-
-A collection of React components for the [University of Michigan Library Design System](https://mlibrary.github.io/umich-lib-components-react/).
-
 ## Getting started
 
 This project uses:
