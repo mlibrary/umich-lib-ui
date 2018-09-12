@@ -3,7 +3,10 @@ import axios from 'axios'
 import PropTypes from 'prop-types';
 import Button from '@umich-lib-ui/button'
 import Icon from '@umich-lib-ui/icon'
-import { css, cx, base } from 'emotion';
+import { css } from 'emotion';
+import {
+  BREAKPOINTS
+} from '@umich-lib-ui/styles'
 
 const AskUsSVG = ({ className }) => (
   <svg className={className} width="282.682" height="130.146" viewBox="0 0 282.682 130.146" className={className}>
@@ -35,7 +38,6 @@ const cssChatFixed = css`
 `
 
 const cssChatButtonFixed = css(
-  base,
   {
     borderRadius: '4px 4px 0 0',
     padding: '0.5rem 1rem',
@@ -93,7 +95,7 @@ class Chat extends React.Component {
     if (typeof window !== `undefined`) {
       const frameWidth = window.innerWidth;
 
-      if (frameWidth < 960) {
+      if (frameWidth < BREAKPOINTS.LARGESCREEN) {
         return false
       }
     }

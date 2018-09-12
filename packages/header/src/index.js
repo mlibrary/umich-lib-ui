@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from 'emotion'
-import { base, colors } from '@umich-lib-ui/styles'
+import {
+  base,
+  colors,
+  SITE_WIDTH
+} from '@umich-lib-ui/styles'
 
 
 const cssHeader = css(
@@ -19,7 +23,7 @@ const cssHeaderInner = css({
   alignItems: 'center',
   margin: '0 auto',
   padding: '0 1rem',
-  maxWidth: '74rem'
+  maxWidth: SITE_WIDTH
 })
 
 const cssLogo = css({

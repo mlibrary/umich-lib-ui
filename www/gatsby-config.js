@@ -29,6 +29,14 @@ module.exports = {
           `gatsby-remark-live-code`
         ],
       },
-    }
+    },
+    `gatsby-transformer-react-docgen`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'data',
+        path: `${__dirname}/../packages`
+      },
+    },
   ],
 }

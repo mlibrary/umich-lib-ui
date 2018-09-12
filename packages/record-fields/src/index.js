@@ -1,5 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'react-emotion';
+import {
+  MEDIA_QUERIES
+} from '@umich-lib-ui/styles'
+
+const StyledDL = styled('dl')({
+  width: '100%',
+  [MEDIA_QUERIES.SMALLSCREEN]: {
+
+  }
+})
 
 const FieldDescription = ({ desc, renderAnchor }) => {
   if (Array.isArray(desc)) {

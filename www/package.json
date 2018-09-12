@@ -1,5 +1,5 @@
 {
-  "name": "umich-lib-design-system-site",
+  "name": "umich-lib-design-system",
   "description": "The documentation website for the University of Michigan Design System.",
   "version": "0.0.0",
   "author": "Jon Earley <earleyj@umich.edu>",
@@ -14,25 +14,24 @@
     "gatsby-plugin-sass": "next",
     "gatsby-remark-autolink-headers": "next",
     "gatsby-source-filesystem": "next",
+    "gatsby-transformer-react-docgen": "^2.1.1-rc.5",
     "gatsby-transformer-remark": "^1.7.44",
     "gatsby-transformer-yaml": "next",
     "node-sass": "^4.9.3",
     "react": "^16.5.0",
-    "react-docgen": "^2.21.0",
     "react-dom": "^16.5.0",
     "react-helmet": "^5.2.0",
     "react-live": "^1.11.0",
-    "rehype-react": "^3.0.3",
-    "serve": "^10.0.0"
+    "rehype-react": "^3.0.3"
   },
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
   "scripts": {
-    "develop": "gatsby develop",
+    "develop": "gatsby develop NODE_ENV=development",
     "build": "gatsby build",
-    "stage": "now public",
+    "stage": "now public --name umich-lib-design-system",
     "deploy": "echo \"Error: no deployment process yet.\" && exit 1"
   },
   "repository": {

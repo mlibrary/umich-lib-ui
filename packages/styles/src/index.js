@@ -1,5 +1,11 @@
 import './styles.css'
 
+export const SITE_WIDTH = '960px';
+/*
+  Notes:
+  - Maybe this should be called constants?
+*/
+
 /*
   Inspired by GitHub color system
   https://styleguide.github.com/primer/support/color-system/
@@ -59,3 +65,13 @@ export const base = {
   fontFamily: `'Source Sans Pro', 'system-ui', 'sans-serif'`,
   lineHeight: '1.4'
 }
+
+export const BREAKPOINTS = {
+  SMALLSCREEN: '320px',
+  LARGESCREEN: '641px',
+};
+
+export const MEDIA_QUERIES = {
+  LARGESCREEN: `@media only screen and (min-width: ${BREAKPOINTS.LARGESCREEN})`,
+  PRINT: '@media print',
+};

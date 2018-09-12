@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import Icon from '@umich-lib-ui/icon'
-import Button from '@umich-lib-ui/button'
 import {
   Expandable,
   ExpandableChildren,

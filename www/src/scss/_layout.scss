@@ -6,7 +6,6 @@ html {
 }
 
 .docs {
-  max-width: 52rem;
   padding: 0 1rem;
   margin: 0 auto;
   margin-bottom: 4rem;
@@ -18,11 +17,6 @@ html {
 
 .docs--large-screens {
   display: flex;
-}
-
-body .header__inner,
-.alert-inner {
-  max-width: 52rem;
 }
 
 .docs__side-nav {
@@ -84,4 +78,25 @@ body .header__inner,
   margin-top: 2rem;
   padding-top: 1rem;
   border-top: solid 1px #CCC;
+}
+
+.layout-flex {
+  display: flex;
+}
+
+.y-spacing > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.x-spacing > *:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.visually-hidden {
+  /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
 }

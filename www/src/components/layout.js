@@ -6,7 +6,9 @@ import SideNav from 'sidenav'
 import getSideNavData from '../../utils/get-side-nav-data'
 import Header from '../../../packages/header'
 import Alert from '../../../packages/alert'
-
+import {
+  SITE_WIDTH
+} from '../../../packages/styles'
 import "../scss/init.scss"
 
 const Layout = ({ children }) => (
@@ -56,7 +58,11 @@ const Layout = ({ children }) => (
           <Header name="Design System" />
           <Alert intent="informational">This project is in development and not recommended for production use.</Alert>
         </div>
-        <div className="docs docs--large-screens">
+        <div style={{
+          width: SITE_WIDTH,
+          margin: '0 auto',
+          padding: '0 1rem'
+        }} className="docs--large-screens">
           <SideNav data={getSideNavData(data)} />
           <div className="docs__content">
             <div className="docs__content-inner y-spacing">
