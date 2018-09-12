@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import icons from './icons'
 import { css } from 'emotion'
 
-const cssIcon = css({
+const cssIconBase = css({
   fill: 'currentColor'
 })
 
@@ -13,7 +13,8 @@ const cssIcon = css({
 const Icon = ({
   icon,
   size,
-  title
+  title,
+  className
 }) => {
   if (!icons.hasOwnProperty(icon)) {
     console.warn(`[Icon] "${icon}" is not a valid icon name.`)
@@ -32,7 +33,7 @@ const Icon = ({
       width={`${size}px`}
       height={`${size}px`}
       viewBox="0 0 48 48"
-      className={cssIcon}
+      className={css`${cssIconBase} ${className}`}
     >
       {title && <title>{title}</title>}
       <path

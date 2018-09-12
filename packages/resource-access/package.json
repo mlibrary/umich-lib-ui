@@ -1,9 +1,12 @@
 {
-  "name": "@umich-lib-ui/expandable",
+  "name": "@umich-lib-ui/resource-access",
   "version": "0.0.0",
   "module": "src/index.js",
   "dependencies": {
-    "@umich-lib-ui/button": "0.0.0",
+    "@umich-lib-ui/styles": "^0.0.0",
+    "@umich-lib-ui/button": "^0.0.0",
+    "@umich-lib-ui/expandable": "^0.0.0",
+    "@umich-lib-ui/icon": "^0.0.0",
     "emotion": "^9.2.8"
   },
   "peerDependencies": {
