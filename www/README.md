@@ -12,6 +12,8 @@ title: "Some Title"
 
 ## Development
 
+## www / the design system site
+
 Make sure that you have the Gatsby CLI program installed:
 ```sh
 npm install --global gatsby-cli
@@ -21,3 +23,4 @@ Then run from this `site` directory:
 ```sh
 gatsby develop
 ```
+
