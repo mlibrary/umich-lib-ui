@@ -2,44 +2,57 @@
 
 A collection of React components for the [University of Michigan Library Design System](https://mlibrary.github.io/umich-lib-components-react/).
 
-## 🚀 Quick start
+## Getting started
 
-This quick start assumes you are familiar with [React](https://reactjs.org/), [NPM](http://npmjs.org/), and already have a React project ready for this library.
+This project uses:
+- [Lerna](https://lernajs.io/) to manage multiple packages/libraries.
+- [Storybook](https://storybook.js.org/) for a development environment.
+- [Gatsby v2](https://www.gatsbyjs.org/) for a fast website.
 
-If you're new to all of this consider starting a React project with [Create React App](https://github.com/facebook/create-react-app).
-
-### Install
-
-Add the library to your project.
-
-```sh
-# install and save as a dependency
-npm install umich-lib-components-react --save
+Run these commands before doing anything else.
 ```
-
-Import and use a component.
-
-```
-import { Button } from 'umich-lib-components-react'
+git clone git@github.com:mlibrary/umich-lib-components-react.git
+cd umich-lib-components-react
+npm install
+npm run bootstrap
 ```
 
 ## ⌨️ Development
 
-1. Clone the project
-2. Install
-
-```sh
+1. clone the project and get setup
+```
+git clone git@github.com:mlibrary/umich-lib-components-react.git
+cd umich-lib-components-react
 npm install
+```
+
+2. Boostrap Lerna
+
+All dependencies get linked for cross-component development
+```sh
+npm run bootstrap
 ```
 
 3. Start the development environment
 
-```sh
-npm start
+Opens up Storybook at `http://localhost:9001`
+```
+npm run develop # starts the the storybook development environment
 ```
 
-4. Open the browser to `http://localhost:3000`.
-5. Develop components in `/src/components`.
+5. Develop components in `/packages/`.
+
+Anytime you add a new component you will need to run `npm run bootstrap` again.
+
+## `www` scripts
+
+This website uses Gatsby v2.
+
+```
+npm start        # starts the website
+npm deploy       # deploys the site to now
+```
+
 
 ## Contributing
 
