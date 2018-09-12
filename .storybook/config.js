@@ -1,14 +1,33 @@
-import React, { Component } from 'react';
-import { configure, addDecorator } from '@storybook/react';
-import { withKnobs } from '@storybook/addon-knobs';
-import Container from './Container';
+import React from "react";
+import path from "path";
+import {
+  configure,
+  getStorybook,
+  storiesOf
+} from "@storybook/react";
 
-addDecorator(story => <Container story={story} />);
-addDecorator(withKnobs);
+import './styles.css'
 
-function loadStories() {
-  const req = require.context('../src/components', true, /\-story\.js$/);
-  req.keys().forEach(filename => req(filename));
-}
+let getPackageName = filePath =>
+  path
+    .dirname(filePath)
+    .split(path.sep)
+    .reverse()[1];
 
-configure(loadStories, module);
+configure(() => {
+  // Import all examples from packages.
+  const req = require.context(
+    "../packages",
+    true,
+    /^((?!node_modules).)*\.example\.js$/
+  );
+
+  req.keys().forEach(pathToExample => {
+    const { name, Example } = req(pathToExample);
+    storiesOf(getPackageName(pathToExample), module).add(name, () => (
+      <Example />
+    ));
+  });
+}, module);
+
+export { getStorybook };

@@ -1,0 +1,102 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.docs {
+  padding: 0 1rem;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+
+html {
+  min-width: 32rem;
+}
+
+.docs--large-screens {
+  display: flex;
+}
+
+.docs__side-nav {
+  margin-top: 1rem;
+  flex: 0 0 10rem;
+  margin-right: 2rem;
+}
+
+.docs__side-nav-details {
+  margin-top: 1rem;
+}
+
+.docs__side-nav--large-screens {
+  margin-top: 2rem;
+
+  & > ul {
+    position: sticky;
+    top: 0;
+    padding-right: 2rem;
+    padding: 2rem 0;
+    border-right: solid 1px #CCC;
+
+    a {
+      text-decoration: none;
+    }
+
+    .side-nav-item--active {
+      font-weight: 600;
+    }
+  }
+}
+
+.docs__content {
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.docs__content-inner {
+  
+}
+
+.text {
+  max-width: 32rem;
+}
+
+.code {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 0.8rem;
+  background: rgba(#FFCB05, .2);
+  display: inline-block;
+  padding: 0 0.25rem;
+}
+
+.doc-header {
+  margin-bottom: 0;
+}
+
+.doc-footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: solid 1px #CCC;
+}
+
+.layout-flex {
+  display: flex;
+}
+
+.y-spacing > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.x-spacing > *:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.visually-hidden {
+  /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
