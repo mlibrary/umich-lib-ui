@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { css, cx } from 'emotion'
-import { base } from '@umich-lib-ui/styles'
+import { base, colors } from '@umich-lib-ui/styles'
 
 const cssHeadingBase = css(base, {
   display: 'block',
   fontWeight: '700',
-  lineHeight: '1.25'
+  lineHeight: '1.25',
+  color: colors.grey[700]
 })
 
 const cssHeadingSize = {
@@ -22,17 +23,17 @@ const cssHeadingSize = {
   },
   'medium': {
     marginBottom: '0.83333em',
-    marginTop: '1.875rem',
+    marginTop: '1.875em',
     fontSize: '1.2rem'
   },
   'large': {
     marginBottom: '0.555em',
-    marginTop: '1.25rem',
+    marginTop: '1.25em',
     fontSize: '1.5rem'
   },
   'xlarge': {
     marginBottom: '0.625em',
-    marginTop: '1.25rem',
+    marginTop: '1.25em',
     fontSize: '2.4rem'
   }
 }
