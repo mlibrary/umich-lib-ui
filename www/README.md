@@ -1,8 +1,10 @@
 # Documentation Site
 
-## Docs
+This site uses [Gatsby](https://www.gatsbyjs.org/).
 
-All of the docs live in the `docs` directory. They are in Markdown and they should include the following frontmatter at the top of each file that specifies the title for the page.
+## Writing / Editing
+
+All of the docs live in the `docs` directory. They are in markdown.
 
 ```md
 ---
@@ -12,13 +14,36 @@ title: "Some Title"
 
 ## Development
 
-Make sure that you have the Gatsby CLI program installed:
+Before doing anything, run from the `www` directory:
+
 ```sh
-npm install --global gatsby-cli
+npm install
 ```
 
-Then run from this `www` directory:
+Then run:
+
 ```sh
-gatsby develop
+npm run develop
+```
+
+This will open up the gatsby development site at `localhost:8000`.
+
+## Build and deployment
+
+```sh
+# Build the production site to `public/`
+npm run build
+```
+
+Deploy the built 'public' site with [now.sh](https://zeit.co/now). You'll get a shareable link of your build.
+
+```sh
+# Deploy the built 'public' site with now.sh
+npm run stage
+```
+
+```sh
+# TODO: Use the latest deploy to production `design-system.lib.umich.edu`
+npm run deploy
 ```
 
