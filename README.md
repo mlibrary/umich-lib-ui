@@ -7,7 +7,7 @@ This project uses:
 
 Run these commands before doing anything else.
 ```
-git clone git@github.com:mlibrary/umich-lib-components-react.git
+git clone git@github.com:mlibrary/umich-lib-ui.git
 cd umich-lib-components-react
 npm install
 npm run bootstrap
@@ -15,28 +15,21 @@ npm run bootstrap
 
 ## ⌨️ Development
 
-### 1. clone the project and get setup
-```
-git clone git@github.com:mlibrary/umich-lib-components-react.git
-cd umich-lib-components-react
-npm install
-```
-
-### 2. Boostrap Lerna
+### 1. Boostrap Lerna
 
 All dependencies get linked for cross-component development
 ```sh
 npm run bootstrap
 ```
 
-### 3. Start the development environment
+### 2. Start the development environment
 
 Opens up Storybook at `http://localhost:9001`
 ```
 npm run develop # starts the the storybook development environment
 ```
 
-### 4. Develop components in `/packages/`.
+### 3. Develop components in `/packages/`.
 
 Anytime you add a new component you will need to run `npm run bootstrap` again.
 
