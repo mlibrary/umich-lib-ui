@@ -57,7 +57,3 @@ npm run stage
 # TODO: Use the latest staging and move it to production `design-system.lib.umich.edu`
 npm run deploy
 ```
-
-## Why CSS-in-JS with [Emotion](https://emotion.sh/)?
-
-See [A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660)
