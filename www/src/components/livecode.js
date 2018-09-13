@@ -6,7 +6,7 @@ import {
   LiveError,
   LivePreview
 } from 'react-live'
-
+import styled from 'react-emotion'
 
 import Alert from '../../../packages/alert'
 import Button from '../../../packages/button'
@@ -22,6 +22,9 @@ import Icon, { icons } from '../../../packages/icon'
 import ResourceAccess from '../../../packages/resource-access'
 import RecordFields from '../../../packages/record-fields'
 import TextInput from '../../../packages/text-input'
+import {
+  colors
+} from '../../../packages/styles'
 
 const scope = {
   Alert,
@@ -39,6 +42,11 @@ const scope = {
   TextInput
 }
 
+const StyledCodePreview = styled('div')({
+  border: `solid 1px ${colors.grey[500]}`,
+  marginBottom: '-1px'
+})
+
 class CodeEditor extends React.Component {
   state = {
     showEditor: false
@@ -49,18 +57,16 @@ class CodeEditor extends React.Component {
 
     return (
       <React.Fragment>
-        <div className="code__preview">
-          <LivePreview />
-        </div>
+        <StyledCodePreview>
+          <LivePreview style={{ padding: '1rem' }} />
+        </StyledCodePreview>
         <div className="code__editor">
           <LiveEditor ignoreTabKey={true} />
         </div>
         {error && (
-          <div className="code__error">
-            <Alert intent="error" closeable={false}>
-              <LiveError />
-            </Alert>
-          </div>
+          <Alert intent="error">
+            <LiveError />
+          </Alert>
         )}
       </React.Fragment>
     )

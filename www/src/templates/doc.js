@@ -3,6 +3,20 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Markdown from "../components/markdown"
 import Heading from '../../../packages/heading'
+import {
+  colors
+} from '../../../packages/styles'
+import styled from 'react-emotion'
+
+const StyledHeading = styled(Heading)({
+  marginTop: '0'
+})
+
+const StyledFooter = styled('footer')({
+  marginTop: '2rem',
+  paddingTop: '1rem',
+  borderTop: `solid 1px ${colors.grey[500]}`
+})
 
 const docTemplate = ({ data }) => {
   const { htmlAst } = data.markdownRemark
@@ -13,16 +27,16 @@ const docTemplate = ({ data }) => {
     <Layout>
       <article>
         <header>
-          <Heading level={1} size="xlarge">{title}</Heading>
+          <StyledHeading level={1} size="xlarge">{title}</StyledHeading>
         </header>
 
         <div className="y-spacing">
           <Markdown htmlAst={htmlAst} />
         </div>
 
-        <footer className="doc-footer">
-          <a href={`https://github.com/mlibrary/umich-lib-components-react/edit/master/docs/${name}.md`}>Edit this page</a>
-        </footer>
+        <StyledFooter>
+          <a href={`https://github.com/mlibrary/umich-lib-components-react/edit/master/www/docs/${name}.md`}>Edit this page on Github</a>
+        </StyledFooter>
       </article>
     </Layout>
   )
