@@ -4,7 +4,6 @@ import Layout from "../components/layout"
 import Markdown from "../components/markdown"
 import Heading from '../../../packages/heading'
 
-
 const docTemplate = ({ data }) => {
   const { htmlAst } = data.markdownRemark
   const { title } = data.markdownRemark.frontmatter
@@ -13,7 +12,7 @@ const docTemplate = ({ data }) => {
   return (
     <Layout>
       <article>
-        <header className="doc-header">
+        <header>
           <Heading level={1} size="xlarge">{title}</Heading>
         </header>
 
@@ -22,7 +21,7 @@ const docTemplate = ({ data }) => {
         </div>
 
         <footer className="doc-footer">
-          <a href={`https://github.com/mlibrary/umich-lib-components-react/edit/master/docs/${name}.md`}>Edit on Github</a>
+          <a href={`https://github.com/mlibrary/umich-lib-components-react/edit/master/docs/${name}.md`}>Edit this page</a>
         </footer>
       </article>
     </Layout>
