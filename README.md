@@ -53,6 +53,10 @@ Open an issue.
 
 More to be written...
 
+## Why CSS-in-JS with [Emotion](https://emotion.sh/)?
+
+See [A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660)
+
 ## Contributing
 
 [See guidelines for contributing](https://github.com/mlibrary/umich-lib-components-react/blob/master/CONTRIBUTING.md)
