@@ -15,8 +15,8 @@ This project uses:
 
 Run these commands before doing anything else.
 ```
-git clone git@github.com:mlibrary/umich-lib-ui.git
-cd umich-lib-components-react
+git clone https://github.com/mlibrary/umich-lib-ui.git
+cd umich-lib-ui
 npm install
 ```
 
