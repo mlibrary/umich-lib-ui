@@ -28,6 +28,7 @@ Use to render a react element and provide a live code editor.
 Before doing anything, run from the `www` directory:
 
 ```sh
+cd www
 npm install
 ```
 
