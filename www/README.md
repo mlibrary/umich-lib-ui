@@ -12,6 +12,16 @@ title: "Some Title"
 ---
 ```
 
+## Code blocks
+
+Use to render a react element and provide a live code editor.
+
+\`\`\`jsx
+// @live
+
+<Button>Submit</Button>
+\`\`\`
+
 ## Development
 
 Before doing anything, run from the `www` directory:
