@@ -1,58 +1,84 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from 'emotion'
+import styled from 'react-emotion'
 import {
   base,
   colors,
-  SITE_WIDTH
+  SITE_WIDTH,
+  MEDIA_QUERIES
 } from '@umich-lib-ui/styles'
 
 
-const cssHeader = css(
-  base,
-  {
-    display: 'block',
-    background: colors.brand.blue,
-    padding: '1rem 0'
-  }
-)
-
-const cssHeaderInner = css({
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  margin: '0 auto',
-  padding: '0 1rem',
-  maxWidth: SITE_WIDTH
+const StyledHeader = styled('header')({
+  display: 'block',
+  background: colors.brand.blue,
+  padding: '1rem 0'
 })
 
-const cssLogo = css({
-  display: 'flex',
+const StyledHeaderInner = styled('div')({
+  margin: '0 auto',
+  padding: '0 1rem',
+  maxWidth: SITE_WIDTH,
+  '> *:not(:last-child)': {
+    marginBottom: '1rem'
+  },
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    '> *:not(:last-child)': {
+      marginBottom: '0'
+    }
+  }
+})
+
+const StyledNav = styled('nav')({
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    marginLeft: '1rem'
+  }
+})
+
+const StyledLogoNameContainer = styled('div')({
   fontSize: '1.4rem',
   lineHeight: '1',
-  alignItems: 'center',
-  marginRight: '1rem'
+  marginRight: '1rem',
+  '> *:not(:last-child)': {
+    marginBottom: '0.5rem'
+  },
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    display: 'flex',
+    alignItems: 'center',
+    '> *:not(:last-child)': {
+      marginBottom: '0'
+    }
+  }
+})
+
+const StyledLogoContainer = styled('div')({
+  display: 'flex',
+  alignItems: 'center'
+})
+
+const StyledNameContainer = styled('div')({
+  display: 'block'
 })
 
 const cssLogoLibrary = css({
   marginLeft: '0.5rem',
   paddingLeft: '0.5rem',
-  borderLeft: 'solid 1px white'
+  borderLeft: 'solid 1px white',
+  marginRight: '0.5rem'
 })
 
 const cssLogoSVG = css({
   display: 'inherit',
-  height: '1.7rem'
+  height: '1.6rem',
 })
 
 const cssLogoSiteNameLink = css({
-  marginLeft: '0.5rem',
   color: 'white',
   textDecoration: 'none'
-})
-
-const cssNav = css({
-  marginLeft: '1rem'
 })
 
 const cssNavList = css({
@@ -127,25 +153,31 @@ const Header = ({
   renderAnchor
 }) => {
   return (
-    <header className={cssHeader}>
-      <div className={cssHeaderInner}>
-        <div className={cssLogo}>
-          <a href="https://umich.edu/"><UMichBlockM className="logo__svg" /></a>
-          <a href="https://www.lib.umich.edu/" className={cssLogoLibrary}><UMichLibrary className="logo__svg" /></a>
-          {name && siteUrl && (<a href={siteUrl} className={cssLogoSiteNameLink}>{name}</a>)}
-        </div>
+    <StyledHeader>
+      <StyledHeaderInner>
+        <StyledLogoNameContainer>
+          <StyledLogoContainer>
+            <a href="https://umich.edu/"><UMichBlockM className="logo__svg" /></a>
+            <a href="https://www.lib.umich.edu/" className={cssLogoLibrary}><UMichLibrary className="logo__svg" /></a>
+          </StyledLogoContainer>
+          {name && siteUrl && (
+            <StyledNameContainer>
+              <a href={siteUrl} className={cssLogoSiteNameLink}>{name}</a>
+            </StyledNameContainer>
+          )}
+        </StyledLogoNameContainer>
 
         {nav && nav.length && (
-          <nav className={cssNav}>
+          <StyledNav>
             <ul className={cssNavList}>
               {nav.map((item, key) => (
                 <li key={key} className={cssNavListItem}><NavItem item={item} renderAnchor={renderAnchor} /></li>
               ))}
             </ul>
-          </nav>
+          </StyledNav>
         )}
-      </div>
-    </header>
+      </StyledHeaderInner>
+    </StyledHeader>
   )
 }
 
