@@ -17,9 +17,11 @@ title: "Some Title"
 Use to render a react element and provide a live code editor.
 
 ```jsx
+``````jsx
 // @live
 
 <Button>Submit</Button>
+``````
 ```
 
 ## Development
