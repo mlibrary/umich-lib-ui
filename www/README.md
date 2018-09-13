@@ -60,4 +60,4 @@ npm run deploy
 
 ## Why CSS-in-JS with [Emotion](https://emotion.sh/)?
 
-To be written...
+See [A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660)
