@@ -24,7 +24,7 @@ npm install
 
 ### 1. Boostrap Lerna
 
-All dependencies get linked for cross-component development
+All dependencies get linked for cross-component and package development
 ```sh
 npm run bootstrap
 ```
