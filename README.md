@@ -15,8 +15,8 @@ This project uses:
 
 Run these commands before doing anything else.
 ```
-git clone git@github.com:mlibrary/umich-lib-ui.git
-cd umich-lib-components-react
+git clone https://github.com/mlibrary/umich-lib-ui.git
+cd umich-lib-ui
 npm install
 ```
 
@@ -24,7 +24,7 @@ npm install
 
 ### 1. Boostrap Lerna
 
-All dependencies get linked for cross-component development
+All dependencies get linked for cross-component and package development
 ```sh
 npm run bootstrap
 ```
@@ -52,6 +52,10 @@ See the README in `www` directory.
 Open an issue.
 
 More to be written...
+
+## Why CSS-in-JS with [Emotion](https://emotion.sh/)?
+
+See [A Unified Styling Language](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660)
 
 ## Contributing
 

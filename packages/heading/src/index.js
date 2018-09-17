@@ -45,12 +45,13 @@ const Heading = ({
   children,
   size,
   level,
+  className,
   ...other
 }) => {
   const HeadingTag = `h${level}`
 
   return (
-    <HeadingTag className={cx(cssHeadingBase, css(cssHeadingSize[size]))}>{children}</HeadingTag>
+    <HeadingTag className={cx(cssHeadingBase, css(cssHeadingSize[size]), className)}>{children}</HeadingTag>
   )
 }
 

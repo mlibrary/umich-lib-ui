@@ -5,9 +5,10 @@ export let name = "basic";
 
 export let Example = () => (
   <Pagination
-    start={1}
-    end={10}
     page={1}
     total={1230}
+    onNextPage={console.log}
+    onPreviousPage={console.log}
+    onPageChange={console.log}
   />
 )
