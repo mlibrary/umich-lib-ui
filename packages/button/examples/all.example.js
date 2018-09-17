@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../src/index";
 
-export let name = "All";
+export let name = "all";
 
 export let Example = () => (
   <ul className="y-spacing">

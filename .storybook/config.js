@@ -6,7 +6,7 @@ import {
   storiesOf
 } from "@storybook/react";
 
-import './styles.css'
+import './styles.css';
 
 let getPackageName = filePath =>
   path
@@ -25,7 +25,9 @@ configure(() => {
   req.keys().forEach(pathToExample => {
     const { name, Example } = req(pathToExample);
     storiesOf(getPackageName(pathToExample), module).add(name, () => (
-      <Example />
+      <div style={{ margin: '1rem' }}>
+        <Example />
+      </div>
     ));
   });
 }, module);
