@@ -12,10 +12,10 @@ You can request a new feature by submitting an issue to this repo. Proposed feat
 
 1. Fork the project.
 2. Clone forked project.
-3. Once cloned, you will see origin as your default remote, pointing to your personal forked repository. Add a remote named upstream pointing to the main umich-lib-components-react:
+3. Once cloned, you will see origin as your default remote, pointing to your personal forked repository. Add a remote named upstream pointing to the main umich-lib-ui:
 
 ```sh
-git remote add upstream git@github.com:mlibrary/umich-lib-components-react.git
+git remote add upstream git@github.com:mlibrary/umich-lib-ui.git
 git remote -v
 ```
 
@@ -50,7 +50,7 @@ git checkout -b { YOUR_BRANCH_NAME } master
 git push origin { YOUR_BRANCH_NAME }
 ```
 
-6. In Github, navigate to mlibrary/umich-lib-components-react and click the button that reads "Compare & pull request".
+6. In Github, navigate to mlibrary/umich-lib-ui and click the button that reads "Compare & pull request".
 
 7. Write a title and description, then click "Create pull request". See [How to write the perfect pull request](https://blog.github.com/2015-01-21-how-to-write-the-perfect-pull-request/) for mroe details on writing good PRs.
 
