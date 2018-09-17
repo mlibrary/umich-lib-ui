@@ -28,7 +28,12 @@ npm run develop
 
 This will open up the gatsby development site at `localhost:8000`.
 
-## Build and deployment
+## Build, staging, and deployment
+
+```sh
+# Will start the gatsby development site
+npm run develop
+```
 
 ```sh
 # Build the production site to `public/`

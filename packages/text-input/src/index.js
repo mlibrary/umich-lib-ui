@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { colors, base } from '@umich-lib-ui/styles'
+import Input from '@umich-lib-ui/input'
+
 
 const StyledFormItem = styled('div')(
   {
@@ -16,7 +18,8 @@ const StyledFormItem = styled('div')(
 const StyledLabel = styled('label')({
   base,
   display: 'block',
-  marginBottom: '0.5rem'
+  marginBottom: '0.5rem',
+  boxSizing: 'border-box'
 })
 
 const StyledFormItemDescription = styled('span')(
@@ -39,7 +42,8 @@ const StyledInput = styled('input')(
     padding: '0.5rem 0.75rem',
     width: '100%',
     appearance: 'textfield',
-    fontFamily: 'inherit'
+    fontFamily: 'inherit',
+    boxSizing: 'border-box'
   },
   ({ invalid }) => ({
     borderColor: invalid && colors.red[600],
@@ -111,7 +115,7 @@ const TextInput = ({
   ) : null;
 
   const input = invalid ? (
-    <StyledInput
+    <Input
       {...other}
       {...textInputProps}
       invalid
@@ -120,7 +124,7 @@ const TextInput = ({
       aria-describedby={errorId}
     />
   ) : (
-    <StyledInput
+    <Input
       {...other}
       {...textInputProps}
     />

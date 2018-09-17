@@ -15,7 +15,8 @@ const baseButtonCSS = css(
     fontSize: '1rem',
     cursor: 'pointer',
     border: 'none',
-    background: 'none'
+    background: 'none',
+    fontFamily: 'inherit'
   }
 )
 
