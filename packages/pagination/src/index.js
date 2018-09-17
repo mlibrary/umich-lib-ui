@@ -3,28 +3,35 @@ import Button from '@umich-lib-ui/button'
 import Input from '@umich-lib-ui/input'
 import Icon from '@umich-lib-ui/icon'
 import styled from 'react-emotion';
+import {
+  MEDIA_QUERIES
+} from '@umich-lib-ui/styles'
 
 const PaginationContainer = styled('div')({
-  display: 'flex',
-  alignItems: 'baseline',
-  fontSize: '0.875rem'
+  display: 'block',
+  fontSize: '0.875rem',
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    display: 'flex',
+    alignItems: 'center'
+  }
 })
 
 const PageInputContainer = styled('div')({
-  display: 'flex',
-  alignItems: 'baseline',
+  margin: '0.5rem 0',
   'input': {
     margin: '0 0.5rem',
-    width: '3rem',
+    width: '2.5rem',
     textAlign: 'center',
-    padding: '0.2rem',
-    height: '100%'
+    padding: '0.15rem',
+  },
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    display: 'flex',
+    alignItems: 'baseline',
+    margin: '0'
   }
 })
 
 const Pagination = ({
-  start,
-  end,
   page,
   total,
   onPageChange,

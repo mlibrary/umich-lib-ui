@@ -4,7 +4,8 @@
     "develop": "start-storybook -p 9001 -c .storybook",
     "build:storybook": "build-storybook -c .storybook -o dist",
     "build:packages": "lerna run build",
-    "bootstrap": "lerna bootstrap --hoist"
+    "bootstrap": "lerna bootstrap --hoist",
+    "publish:canary": "lerna publish -c"
   },
   "version": "0.0.0",
   "dependencies": {

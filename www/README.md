@@ -12,11 +12,23 @@ title: "Some Title"
 ---
 ```
 
+## Code blocks
+
+Use to render a react element and provide a live code editor.
+
+```jsx
+// @live
+<Button>Submit</Button>
+```
+
+> Include codeblock triple back ticks, but wasn't sure how to write it here with GitHub MD parser. View raw.
+
 ## Development
 
 Before doing anything, run from the `www` directory:
 
 ```sh
+cd www
 npm install
 ```
 
@@ -51,7 +63,3 @@ npm run stage
 # TODO: Use the latest staging and move it to production `design-system.lib.umich.edu`
 npm run deploy
 ```
-
-## Why CSS-in-JS with [Emotion](https://emotion.sh/)?
-
-To be written...

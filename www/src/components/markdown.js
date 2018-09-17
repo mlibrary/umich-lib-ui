@@ -2,6 +2,24 @@ import React from "react"
 import rehypeReact from "rehype-react"
 import Heading from '../../../packages/heading'
 import LiveCode from './livecode'
+import { css } from 'emotion'
+import styled from 'react-emotion'
+import { colors } from '../../../packages/styles'
+
+const cssText = css({
+  maxWidth: '32em'
+})
+
+const StyledCode = styled('code')({
+  display: 'inline-block',
+  background: `${colors.brand.maze}`,
+  backgroundColor: `hsla(48,100%,51%,0.3)`,
+  padding: '0 0.25em',
+  fontFamily: `Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace`,
+  fontSize: '80%',
+  borderRadius: '3px'
+})
+
 /**
   Headings
 */
@@ -29,9 +47,9 @@ const renderAst = new rehypeReact({
     h4: Heading4,
     h5: Heading5,
     h6: Heading6,
-    p: ({children}) => <p className="text">{children}</p>,
+    p: ({children}) => <p className={cssText}>{children}</p>,
     'live-code': LiveCode,
-    code: ({ children })  => <code className="code">{children}</code>,
+    code: ({ children })  => <StyledCode>{children}</StyledCode>,
     ul: ({ children }) => <ul className="list list--bullet">{children}</ul>,
     ol: ({ children }) => <ol className="list list--number">{children}</ol>
   },
