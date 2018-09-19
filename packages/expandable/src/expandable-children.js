@@ -14,7 +14,7 @@ class ExpandableChildren extends Component {
   render() {
     const { context, children } = this.props;
     const show = this.props.show || 3
-
+    
     return (
       <React.Fragment>
         {context.expanded ? (

@@ -1,12 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Heading from '../../../packages/heading'
-import { colors, MEDIA_QUERIES } from '../../../packages/styles'
 import styled from 'react-emotion'
-import { css } from 'emotion'
 
 const SectionNav = styled('nav')({
-  gridArea: 'side'
+  gridArea: 'side',
+  marginTop: '1rem'
 })
 
 const SideNav = ({ data }) => {

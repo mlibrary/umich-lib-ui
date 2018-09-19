@@ -16,9 +16,10 @@ import styled from 'react-emotion'
 const DocContainer = styled('div')({
   maxWidth: SITE_WIDTH,
   margin: '0 auto',
+  padding: '0 1rem',
   [MEDIA_QUERIES.LARGESCREEN]: {
     display: 'grid',
-    gridColumnGap: '1rem',
+    gridColumnGap: '2rem',
     gridTemplateColumns: '14rem auto',
     gridTemplateRows: 'auto',
     gridTemplateAreas: `
