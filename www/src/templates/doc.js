@@ -25,7 +25,7 @@ const docTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <article>
+      <article style={{ marginTop: '2rem' }}>
         <header>
           <StyledHeading level={1} size="xlarge">{title}</StyledHeading>
         </header>
