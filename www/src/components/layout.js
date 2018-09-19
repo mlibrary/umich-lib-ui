@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import SideNav from 'sidenav'
+import SideNav from './sidenav'
 import getSideNavData from '../../utils/get-side-nav-data'
 import Header from '../../../packages/header'
 import Alert from '../../../packages/alert'
@@ -15,26 +15,23 @@ import styled from 'react-emotion'
 
 const DocContainer = styled('div')({
   maxWidth: SITE_WIDTH,
-  margin: '2rem auto',
-  padding: '1rem',
+  margin: '0 auto',
   [MEDIA_QUERIES.LARGESCREEN]: {
     display: 'grid',
     gridColumnGap: '1rem',
-    gridTemplateColumns: '12rem auto'
-  }
-})
-
-const DocSide = styled('div')({
-  [MEDIA_QUERIES.LARGESCREEN]: {
-    gridColumnStart: '1',
-    gridColumnEnd: '1'
+    gridTemplateColumns: '14rem auto',
+    gridTemplateRows: 'auto',
+    gridTemplateAreas: `
+      "nav nav"
+      "side main"
+    `
   }
 })
 
 const DocMain = styled('div')({
   [MEDIA_QUERIES.LARGESCREEN]: {
-    gridColumnStart: '2',
-    gridColumnEnd: '2'
+    gridArea: 'main',
+    justifySelf: 'stretch'
   }
 })
 
@@ -84,9 +81,7 @@ const Layout = ({ children }) => (
         <Header name="Design System" />
         <Alert intent="informational">This project is in development and not recommended for production use.</Alert>
         <DocContainer>
-          <DocSide>
-            <SideNav data={getSideNavData(data)} />
-          </DocSide>
+          <SideNav data={getSideNavData(data)} />
           <DocMain>
             {children}
           </DocMain>

@@ -6,7 +6,9 @@ import {
   storiesOf
 } from "@storybook/react";
 
-import './styles.css'
+// This should probably go so that we can see components used without any other styling.
+// CSS reset and whatnot
+//import './styles.css'
 
 let getPackageName = filePath =>
   path

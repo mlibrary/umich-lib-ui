@@ -29,6 +29,7 @@ export default (data) => {
   
         acc = acc.concat({
           title: mdEdgeFound.node.frontmatter.title,
+          to: `/${yamlName}/`,
           items: items
         })
       } else {
