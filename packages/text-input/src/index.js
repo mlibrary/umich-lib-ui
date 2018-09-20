@@ -4,10 +4,10 @@ import styled from 'react-emotion';
 import { colors, base } from '@umich-lib-ui/styles'
 import Input from '@umich-lib-ui/input'
 
-
 const StyledFormItem = styled('div')(
   {
-    width: '100%'
+    width: '100%',
+    boxSizing: 'border-box'
   },
   ({ invalid }) => ({
     borderLeft: invalid && `solid 4px ${colors.red[600]}`,
