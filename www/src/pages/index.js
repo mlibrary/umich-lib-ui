@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from '../../../packages/button'
 import Heading from '../../../packages/heading'
+import Alert from '../../../packages/alert'
 import Layout from '../components/layout'
 
 export default () => {
@@ -16,13 +17,6 @@ export default () => {
         <p className="text">Each component has examples to experiment and test. Go even further and launch an online sandbox code editor environment.</p>
 
         <Button href="https://codesandbox.io/s/8z337kk6r9">Launch online code editor</Button>
-
-        {
-          /**
-            TODO:
-              -- Add previews of the component library used in production projects. Consider in development projects too.
-          */
-        }
       </div>
     </Layout>
   )

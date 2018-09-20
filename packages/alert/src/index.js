@@ -3,14 +3,13 @@ import PropTypes from 'prop-types';
 import { css } from 'emotion';
 import {
   colors,
-  SITE_WIDTH,
-  MEDIA_QUERIES
+  SITE_WIDTH
 } from '@umich-lib-ui/styles'
 
 
 const cssAlert = css({
   margin: '0',
-  padding: '0.75rem 0',
+  padding: '0.5rem 0',
   borderBottom: `solid 1px ${colors.grey[500]}`,
   background: colors.grey[200]
 })
