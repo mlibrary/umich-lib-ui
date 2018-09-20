@@ -31,8 +31,7 @@
   "license": "MIT",
   "scripts": {
     "develop": "NODE_ENV=development gatsby develop",
-    "build": "gatsby build",
-    "stage": "now public --name umich-lib-ui --public",
+    "stage": "gatsby build && now public --name umich-lib-ui --public",
     "deploy": "gatsby build && gh-pages -d public"
   },
   "repository": {

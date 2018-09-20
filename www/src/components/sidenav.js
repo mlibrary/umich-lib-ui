@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'react-emotion'
 import Icon from '../../../packages/icon'
+import { css } from 'emotion'
 import {
   RESET_BUTTON,
   colors,
@@ -23,19 +24,21 @@ const SectionNav = styled('nav')({
 })
 
 const StyledList = styled('ul')({
-  padding: '1rem',
+  margin: '2rem 0',
   [MEDIA_QUERIES.LARGESCREEN]: {
-    padding: '2rem',
-    top: '0',
+    top: '1rem',
     position: 'sticky'
   }
 })
 
 const cssNavListItem = {
   display: 'block',
-  padding: '0.25rem 0',
+  padding: '0.25rem 1rem',
   ['&:hover']: {
     textDecoration: 'underline'
+  },
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    padding: '0.25rem 2rem'
   }
 }
 
@@ -69,6 +72,10 @@ const StyledInnerButton = styled('span')({
   alignItems: 'center'
 })
 
+const cssActiveLink = css({
+  fontWeight: '600',
+})
+
 class NavSection extends React.Component {
   state = {
     expanded: false
@@ -97,7 +104,7 @@ class NavSection extends React.Component {
           <ul>
             {items.map((item, i) => (
               <StyledNavListItem key={i}>
-                <Link to={item.to}>{item.title}</Link>
+                <Link to={item.to} activeClassName={cssActiveLink}>{item.title}</Link>
               </StyledNavListItem>
             ))}
           </ul>
@@ -116,7 +123,7 @@ const SideNav = ({ data }) => {
             {section.items ? (
               <NavSection key={s} title={section.title} items={section.items} />
             ) : (
-              <Link to={section.to}>{section.title}</Link>
+              <Link to={section.to} activeClassName={cssActiveLink}>{section.title}</Link>
             )}
           </StyledNavListItem>
         ))}

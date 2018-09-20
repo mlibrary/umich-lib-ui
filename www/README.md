@@ -48,18 +48,11 @@ npm run develop
 ```
 
 ```sh
-# Build the production site to `public/`
-npm run build
-```
-
-Deploy the built 'public' site with [now.sh](https://zeit.co/now). You'll get a shareable link of your build.
-
-```sh
-# Deploy the built 'public' site with now.sh
+# Deploy the built 'public' site with now.sh. You'll get a shareable link of your build.
 npm run stage
 ```
 
 ```sh
-# TODO: Use the latest staging and move it to production `design-system.lib.umich.edu`
+# Deploys to production (GitHUb Pages) at `design-system.lib.umich.edu`
 npm run deploy
 ```

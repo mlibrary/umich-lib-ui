@@ -29,8 +29,7 @@ const StyledHeaderInner = styled('div')({
     alignItems: 'center',
     '> *:not(:last-child)': {
       marginBottom: '0'
-    },
-    padding: '0 2rem',
+    }
   }
 })
 

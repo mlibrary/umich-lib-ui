@@ -95,7 +95,7 @@ const Layout = ({ children }) => (
         <DocContainer>
           <StyledHeaderContainer>
             <Header name="Design System" />
-            <Alert intent="informational">This project is in development and not recommended for production use.</Alert>
+            <Alert intent="warning">This project is in development and not recommended for production use.</Alert>
           </StyledHeaderContainer>
           <DocMain>
             <DocMainContent>
