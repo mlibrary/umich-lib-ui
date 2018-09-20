@@ -4,7 +4,7 @@
 
 A collection of shared design styles, components, and patterns for teams to build quality consistent interfaces. A bit like a LEGO kit.
 
-[View the documentation site](https://umich-lib-design-system-pmmhthnypk.now.sh/)
+[View the documentation site](https://design-system.lib.umich.edu/)
 
 ## Getting started
 
