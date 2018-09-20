@@ -1,6 +1,6 @@
 import './styles.css'
 
-export const SITE_WIDTH = '960px';
+export const SITE_WIDTH = 'auto';
 /*
   Notes:
   - Maybe this should be called constants?
@@ -105,3 +105,8 @@ export const RESET_BUTTON = {
     padding: 'none'
   }
 }
+
+/*
+  TODO
+  - Add gutter config system for viewport padding
+*/

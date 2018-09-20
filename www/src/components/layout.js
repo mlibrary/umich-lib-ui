@@ -11,19 +11,20 @@ import {
   MEDIA_QUERIES
 } from '../../../packages/styles'
 import "../scss/init.scss"
+import { css } from 'emotion'
 import styled from 'react-emotion'
 
 const DocContainer = styled('div')({
   maxWidth: SITE_WIDTH,
   margin: '0 auto',
-  padding: '0 1rem',
   [MEDIA_QUERIES.LARGESCREEN]: {
     display: 'grid',
-    gridColumnGap: '3rem',
-    gridTemplateColumns: '12rem auto',
-    gridTemplateRows: 'auto',
+    height: '100vh',
+    width: '100vw',
+    gridTemplateColumns: '16rem auto',
+    gridTemplateRows: 'max-content',
     gridTemplateAreas: `
-      "nav nav"
+      "header header"
       "side main"
     `
   }
@@ -34,6 +35,15 @@ const DocMain = styled('div')({
     gridArea: 'main',
     justifySelf: 'stretch'
   }
+})
+
+const DocMainContent = styled('div')({
+  maxWidth: '38rem',
+  margin: '0 auto'
+})
+
+const StyledHeaderContainer = styled('div')({
+  gridArea: 'header'
 })
 
 const Layout = ({ children }) => (
@@ -79,12 +89,16 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <Header name="Design System" />
-        <Alert intent="informational">This project is in development and not recommended for production use.</Alert>
         <DocContainer>
+          <StyledHeaderContainer>
+            <Header name="Design System" />
+            <Alert intent="informational">This project is in development and not recommended for production use.</Alert>
+          </StyledHeaderContainer>
           <SideNav data={getSideNavData(data)} />
           <DocMain>
-            {children}
+            <DocMainContent>
+              {children}
+            </DocMainContent>
           </DocMain>
         </DocContainer>
       </>

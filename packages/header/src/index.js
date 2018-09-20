@@ -29,7 +29,8 @@ const StyledHeaderInner = styled('div')({
     alignItems: 'center',
     '> *:not(:last-child)': {
       marginBottom: '0'
-    }
+    },
+    padding: '0 2rem',
   }
 })
 
@@ -150,10 +151,11 @@ const Header = ({
   name,
   siteUrl,
   nav,
-  renderAnchor
+  renderAnchor,
+  className
 }) => {
   return (
-    <StyledHeader>
+    <StyledHeader className={className}>
       <StyledHeaderInner>
         <StyledLogoNameContainer>
           <StyledLogoContainer>
