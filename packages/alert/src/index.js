@@ -19,10 +19,7 @@ const cssAlertInner = css({
   margin: '0 auto',
   padding: '0 1rem',
   fontSize: '0.875rem',
-  maxWidth: SITE_WIDTH,
-  [MEDIA_QUERIES.LARGESCREEN]: {
-    padding: '0 2rem'
-  }
+  maxWidth: SITE_WIDTH
 })
 
 const alertIntentColors = {
