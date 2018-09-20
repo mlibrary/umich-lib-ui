@@ -1,7 +1,6 @@
 import React from 'react'
 import Button from '../../../packages/button'
 import Heading from '../../../packages/heading'
-import Alert from '../../../packages/alert'
 import Layout from '../components/layout'
 
 export default () => {

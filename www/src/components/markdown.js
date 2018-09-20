@@ -40,7 +40,6 @@ const Heading6 = ({ children, ...other }) => (
 )
 
 const renderAst = new rehypeReact({
-  createElement: React.createElement,
   components: {
     h2: Heading2,
     h3: Heading3,
