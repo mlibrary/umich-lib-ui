@@ -4,7 +4,8 @@ import Layout from "../components/layout"
 import Markdown from "../components/markdown"
 import Heading from '../../../packages/heading'
 import {
-  colors
+  colors,
+  MEDIA_QUERIES
 } from '../../../packages/styles'
 import styled from 'react-emotion'
 
@@ -18,6 +19,13 @@ const StyledFooter = styled('footer')({
   borderTop: `solid 1px ${colors.grey[500]}`
 })
 
+const StyledArticle = styled('article')({
+  padding: '2rem 1rem',
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    padding: '2rem'
+  }
+})
+
 const docTemplate = ({ data }) => {
   const { htmlAst } = data.markdownRemark
   const { title } = data.markdownRemark.frontmatter
@@ -25,7 +33,7 @@ const docTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <article style={{ marginTop: '2rem' }}>
+      <StyledArticle>
         <header>
           <StyledHeading level={1} size="xlarge">{title}</StyledHeading>
         </header>
@@ -37,7 +45,7 @@ const docTemplate = ({ data }) => {
         <StyledFooter>
           <a href={`https://github.com/mlibrary/umich-lib-components-react/edit/master/www/docs/${name}.md`}>Edit this page on Github</a>
         </StyledFooter>
-      </article>
+      </StyledArticle>
     </Layout>
   )
 }

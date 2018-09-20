@@ -3,19 +3,29 @@ import { Link } from 'gatsby'
 import styled from 'react-emotion'
 import Icon from '../../../packages/icon'
 import {
-  RESET_BUTTON
+  RESET_BUTTON,
+  colors,
+  MEDIA_QUERIES
 } from '../../../packages/styles'
 
 const SectionNav = styled('nav')({
-  gridArea: 'side',
-  marginTop: '2rem',
+  gridArea: 'footer',
   'a': {
     textDecoration: 'none'
-  }
+  },
+  background: `${colors.grey[200]}`,
+  borderBottom: `solid 1px ${colors.grey[500]}`,
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    gridArea: 'side',
+    borderRight: `solid 1px ${colors.grey[500]}`,
+  },
 })
 
 const StyledList = styled('ul')({
-  marginBottom: '2rem'
+  padding: '1rem',
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    padding: '1rem 2rem'
+  }
 })
 
 const cssNavListItem = {
@@ -56,10 +66,6 @@ const StyledInnerButton = styled('span')({
   alignItems: 'center'
 })
 
-const NestedList = styled('ul')({
-  marginBottom: '3rem'
-})
-
 class NavSection extends React.Component {
   state = {
     expanded: false
@@ -85,13 +91,13 @@ class NavSection extends React.Component {
           </StyledInnerButton>
         </StyledButton>
         {expanded && (
-          <NestedList>
+          <ul>
             {items.map((item, i) => (
               <StyledNavListItem key={i}>
                 <Link to={item.to}>{item.title}</Link>
               </StyledNavListItem>
             ))}
-          </NestedList>
+          </ul>
         )}
       </React.Fragment>
     )
@@ -100,21 +106,19 @@ class NavSection extends React.Component {
 
 const SideNav = ({ data }) => {
   return (
-    <React.Fragment>
-      <SectionNav>
-        <StyledList>
-          {data.map((section, s) => (
-            <StyledNavListItem key={s}>
-              {section.items ? (
-                <NavSection key={s} title={section.title} items={section.items} />
-              ) : (
-                <Link to={section.to}>{section.title}</Link>
-              )}
-            </StyledNavListItem>
-          ))}
-        </StyledList>
-      </SectionNav>
-    </React.Fragment>
+    <SectionNav>
+      <StyledList>
+        {data.map((section, s) => (
+          <StyledNavListItem key={s}>
+            {section.items ? (
+              <NavSection key={s} title={section.title} items={section.items} />
+            ) : (
+              <Link to={section.to}>{section.title}</Link>
+            )}
+          </StyledNavListItem>
+        ))}
+      </StyledList>
+    </SectionNav>
   )
 }
 

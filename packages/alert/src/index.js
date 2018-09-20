@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { css } from 'emotion';
 import {
   colors,
-  SITE_WIDTH
+  SITE_WIDTH,
+  MEDIA_QUERIES
 } from '@umich-lib-ui/styles'
 
 
@@ -18,7 +19,10 @@ const cssAlertInner = css({
   margin: '0 auto',
   padding: '0 1rem',
   fontSize: '0.875rem',
-  maxWidth: SITE_WIDTH
+  maxWidth: SITE_WIDTH,
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    padding: '0 2rem'
+  }
 })
 
 const alertIntentColors = {
