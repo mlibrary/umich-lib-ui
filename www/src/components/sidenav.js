@@ -25,7 +25,9 @@ const SectionNav = styled('nav')({
 const StyledList = styled('ul')({
   padding: '1rem',
   [MEDIA_QUERIES.LARGESCREEN]: {
-    padding: '2rem'
+    padding: '2rem',
+    top: '0',
+    position: 'sticky'
   }
 })
 
