@@ -42,6 +42,10 @@ const scope = {
   TextInput
 }
 
+const StyledCodeContainer = styled('div')({
+  margin: '0 calc(-1rem + -1px)'
+})
+
 const StyledCodePreview = styled('div')({
   border: `solid 1px ${colors.grey[500]}`,
   marginBottom: '-1px'
@@ -56,7 +60,7 @@ class CodeEditor extends React.Component {
     const { error } = this.props.live
 
     return (
-      <React.Fragment>
+      <StyledCodeContainer>
         <StyledCodePreview>
           <LivePreview style={{ padding: '1rem' }} />
         </StyledCodePreview>
@@ -68,7 +72,7 @@ class CodeEditor extends React.Component {
             <LiveError />
           </Alert>
         )}
-      </React.Fragment>
+      </StyledCodeContainer>
     )
   }
 }

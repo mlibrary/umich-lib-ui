@@ -17,6 +17,7 @@ const SectionNav = styled('nav')({
   borderTop: `solid 1px ${colors.grey[500]}`,
   [MEDIA_QUERIES.LARGESCREEN]: {
     gridArea: 'side',
+    borderTop: 'none',
     borderRight: `solid 1px ${colors.grey[500]}`,
   },
 })
