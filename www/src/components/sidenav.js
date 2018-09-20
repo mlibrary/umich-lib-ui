@@ -76,18 +76,25 @@ const cssActiveLink = css({
   fontWeight: '600',
 })
 
-class NavSection extends React.Component {
-  componentDidMount() {
-    
-  }
+const windowGlobal = typeof window !== 'undefined' && window
 
+class NavSection extends React.Component {
+  state = {}
+  
   isExpanded = (key) => {
-    return localStorage.getItem(key) == 'true' ? true : false
+    if (windowGlobal) {
+      return localStorage.getItem(key) == 'true' ? true : false
+    }
+
+    return this.state[key]
   }
 
   updateState = (key, value) => {
-    this.setState({ key: value })
-    localStorage.setItem(key, value)
+    this.setState({ [key]: value })
+
+    if (windowGlobal) {
+      localStorage.setItem(key, value)
+    }
   }
 
   getKey = (title) => {
