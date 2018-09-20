@@ -11,7 +11,6 @@ import {
   MEDIA_QUERIES
 } from '../../../packages/styles'
 import "../scss/init.scss"
-import { css } from 'emotion'
 import styled from 'react-emotion'
 
 const DocContainer = styled('div')({
@@ -39,7 +38,11 @@ const DocMain = styled('div')({
 
 const DocMainContent = styled('div')({
   maxWidth: '38rem',
-  margin: '0 auto'
+  margin: '0 auto',
+  padding: '2rem 1rem',
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    padding: '2rem'
+  }
 })
 
 const StyledHeaderContainer = styled('div')({
@@ -94,12 +97,12 @@ const Layout = ({ children }) => (
             <Header name="Design System" />
             <Alert intent="informational">This project is in development and not recommended for production use.</Alert>
           </StyledHeaderContainer>
-          <SideNav data={getSideNavData(data)} />
           <DocMain>
             <DocMainContent>
               {children}
             </DocMainContent>
           </DocMain>
+          <SideNav data={getSideNavData(data)} />
         </DocContainer>
       </>
     )}
