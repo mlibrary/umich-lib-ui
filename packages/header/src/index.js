@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { css } from 'emotion'
 import styled from 'react-emotion'
 import {
-  base,
   colors,
   SITE_WIDTH,
   MEDIA_QUERIES

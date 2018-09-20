@@ -34,7 +34,7 @@ const StyledList = styled('ul')({
 const cssNavListItem = {
   display: 'block',
   padding: '0.25rem 1rem',
-  ['&:hover']: {
+  '&:hover': {
     textDecoration: 'underline'
   },
   [MEDIA_QUERIES.LARGESCREEN]: {
@@ -44,8 +44,8 @@ const cssNavListItem = {
 
 const StyledNavListItem = styled('li')({
   lineHeight: '1.5',
-  ['a']: cssNavListItem,
-  ['button']: cssNavListItem
+  'a': cssNavListItem,
+  'button': cssNavListItem
 })
 
 const BasicButton = ({ className, children, ...other }) => (

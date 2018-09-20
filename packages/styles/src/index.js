@@ -93,14 +93,14 @@ export const RESET_BUTTON = {
   linHeight: 'normal',
 
   /* Corrects font smoothing for webkit */
-  ['-webkit-font-smoothing']: 'inherit',
-  ['-moz-osx-font-smoothing']: 'inherit',
+  '-webkit-font-smoothing': 'inherit',
+  '-moz-osx-font-smoothing': 'inherit',
 
   /* Corrects inability to style clickable `input` types in iOS */
-  ['-webkit-appearance']: 'none',
+  '-webkit-appearance': 'none',
 
   /* Remove excess padding and border in Firefox 4+ */
-  ['&::-moz-focus-inner']: {
+  '&::-moz-focus-inner': {
     border: 'none',
     padding: 'none'
   }
