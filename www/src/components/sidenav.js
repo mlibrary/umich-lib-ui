@@ -77,18 +77,32 @@ const cssActiveLink = css({
 })
 
 class NavSection extends React.Component {
-  state = {
-    expanded: false
+  componentDidMount() {
+    
+  }
+
+  isExpanded = (key) => {
+    return localStorage.getItem(key) == 'true' ? true : false
+  }
+
+  updateState = (key, value) => {
+    this.setState({ key: value })
+    localStorage.setItem(key, value)
+  }
+
+  getKey = (title) => {
+    return `openSection#${title}`
   }
 
   render() {
     const { title, items } = this.props
-    const { expanded } = this.state
+    const key = this.getKey(title)
+    const expanded = this.isExpanded(key)
 
     return (
       <React.Fragment>
         <StyledButton
-          onClick={() => this.setState({ expanded: !expanded })}
+          onClick={() => this.updateState(key, !expanded)}
           aria-expanded={expanded}
         >
           <StyledInnerButton>
