@@ -19,8 +19,8 @@ const DocContainer = styled('div')({
   padding: '0 1rem',
   [MEDIA_QUERIES.LARGESCREEN]: {
     display: 'grid',
-    gridColumnGap: '2rem',
-    gridTemplateColumns: '14rem auto',
+    gridColumnGap: '3rem',
+    gridTemplateColumns: '12rem auto',
     gridTemplateRows: 'auto',
     gridTemplateAreas: `
       "nav nav"

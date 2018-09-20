@@ -1,7 +1,6 @@
-- page: get-started
-  pages:
-    - prototyping
-    - production
+- page: principles
+- page: accessibility
+- page: glossaries
 - page: styles
   pages: 
     - colors
@@ -24,10 +23,3 @@
     - forms
     - errors-and-validation
     - getting-feedback
-- page: community
-  pages:
-    - backlog
-    - propose-a-component-or-pattern
-    - develop-a-component-or-pattern
-    - contribution-criteria
-    - design-system-team
