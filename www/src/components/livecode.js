@@ -7,7 +7,7 @@ import {
   LivePreview
 } from 'react-live'
 import styled from 'react-emotion'
-
+import Component from "@reach/component-component";
 import Alert from '../../../packages/alert'
 import Button from '../../../packages/button'
 import Chat from '../../../packages/chat'
@@ -30,6 +30,7 @@ const scope = {
   Alert,
   Button,
   Chat,
+  Component,
   Expandable,
   ExpandableChildren,
   ExpandableButton,
@@ -39,7 +40,7 @@ const scope = {
   icons,
   ResourceAccess,
   RecordFields,
-  TextInput
+  TextInput,
 }
 
 const StyledCodeContainer = styled('div')({

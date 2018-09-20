@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from 'emotion';
+import ReachAlert from '@reach/alert';
 import {
   colors,
   SITE_WIDTH
@@ -51,15 +52,17 @@ class Alert extends React.Component {
   render() {
     const {
       intent,
-      children
+      children,
+      className,
+      ...other
     } = this.props
 
     return (
-      <div className={css`${cssAlert} ${alertIntentColors[intent]}`}>
+      <ReachAlert className={css`${className} ${cssAlert} ${alertIntentColors[intent]}`} {...other}>
         <div className={cssAlertInner}>
           {children}
         </div>
-      </div>
+      </ReachAlert>
     )
   }
 }

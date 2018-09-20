@@ -3,6 +3,7 @@
   "version": "0.1.0-alpha.1",
   "module": "src/index.js",
   "dependencies": {
+    "@reach/alert": "^0.1.1",
     "@umich-lib-ui/styles": "^0.1.0-alpha.1",
     "emotion": "^9.2.8"
   },
