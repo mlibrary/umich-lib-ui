@@ -14,7 +14,7 @@ const SectionNav = styled('nav')({
     textDecoration: 'none'
   },
   background: `${colors.grey[200]}`,
-  borderBottom: `solid 1px ${colors.grey[500]}`,
+  borderTop: `solid 1px ${colors.grey[500]}`,
   [MEDIA_QUERIES.LARGESCREEN]: {
     gridArea: 'side',
     borderRight: `solid 1px ${colors.grey[500]}`,
@@ -24,7 +24,7 @@ const SectionNav = styled('nav')({
 const StyledList = styled('ul')({
   padding: '1rem',
   [MEDIA_QUERIES.LARGESCREEN]: {
-    padding: '1rem 2rem'
+    padding: '2rem'
   }
 })
 
