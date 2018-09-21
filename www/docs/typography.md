@@ -2,6 +2,8 @@
 title: "Typography"
 ---
 
+More to be written.
+
 ## Headings
 
 Use headings consistently to create a clear content hierarchy.
