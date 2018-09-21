@@ -18,7 +18,7 @@
     "gatsby-plugin-sass": "next",
     "gatsby-remark-autolink-headers": "next",
     "gatsby-source-filesystem": "next",
-    "gatsby-transformer-react-docgen": "^2.1.1-rc.5",
+    "gatsby-transformer-react-docgen": "^2.1.1",
     "gatsby-transformer-remark": "^1.7.44",
     "gatsby-transformer-yaml": "next",
     "node-sass": "^4.9.3",

@@ -31,6 +31,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-emotion`
+    
     /*
     // This doesn't work for some reason...
     // https://github.com/gatsbyjs/gatsby/issues/7543
