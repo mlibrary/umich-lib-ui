@@ -37,15 +37,17 @@ Use this component to provide a comprehensive listing of options to access a res
 />
 ```
 
-## Headings
+## ResourceAccess Props
+
+### Headings
 
 Use `headings` for table column headings.
 
-## Rows
+### Rows
 
 Table rows must be an array of arrays. Each inner array represent a row and will contain objects for each cell. A cell object must contain a text key with a string value. If you wish the cell to be linked somewhere then include `to` or an `href` key. See `renderAnchor` prop to decide between `to` or `href`.
 
-### HTML
+#### HTML
 
 If necessary, use html to control what goes into the row cell.
 
@@ -63,22 +65,22 @@ If necessary, use html to control what goes into the row cell.
 />
 ```
 
-## Name
+### Name
 
 The `name` is used to show all rows.
 
-## Caption
+### Caption
 
 The displayed table `caption`. If you do not use this prop, make sure the preceding heading is appropriate.
 
-## Caption link
+### Caption link
 
 Link to more information about the table caption with `captionLink`.
 
-## Notes
+### Notes
 
 Notes necessary to understand the resource access options with `notes`.
 
-## Render anchor
+### Render anchor
 
 Use `renderAnchor` with row cells that use key 'to' instead of 'href' will use this render prop. This is useful if you want to use a routing library such as React Router instead of an HTML anchor.

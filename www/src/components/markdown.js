@@ -39,6 +39,22 @@ const Heading6 = ({ children, ...other }) => (
   <Heading level={6} size="xsmall" {...other}>{children}</Heading>
 )
 
+const StyledUL = styled('ul')({
+  listStyle: 'disc',
+  marginLeft: '1.5rem',
+  'li': {
+    marginBottom: '0.5rem'
+  }
+})
+
+const StyledOL = styled('ol')({
+  listStyle: 'decimal',
+  marginLeft: '1.5rem',
+  'li': {
+    marginBottom: '0.5rem'
+  }
+})
+
 const renderAst = new rehypeReact({
   components: {
     h2: Heading2,
@@ -49,8 +65,8 @@ const renderAst = new rehypeReact({
     p: ({children}) => <p className={cssText}>{children}</p>,
     'live-code': LiveCode,
     code: ({ children })  => <StyledCode>{children}</StyledCode>,
-    ul: ({ children }) => <ul className="list list--bullet">{children}</ul>,
-    ol: ({ children }) => <ol className="list list--number">{children}</ol>
+    ul: ({ children }) => <StyledUL>{children}</StyledUL>,
+    ol: ({ children }) => <StyledOL>{children}</StyledOL>
   },
 
   // A workaround to replace the container div created by rehype-react with a React fragment.

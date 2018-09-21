@@ -4,37 +4,40 @@ title: "Button"
 
 Use buttons to move though a transaction, aim to use only one button per page.
 
-## Button text
-Button text should be short and describe the action the button performs.
-
 ```jsx
 // @live
 <Button>Search</Button>
 ```
 
-## Start now button
-Launch your service with a Start now button.
+## Installation
+
+```
+npm install @umich-lib-ui/button
+```
+
+And then import the components you need:
+
+```
+import Alert from "@umich-lib-ui/button"
+```
+
+## Button props
+
+### children
+Button text should be short and describe the action the button performs.
+
+
+### kind
 
 ```jsx
 // @live
-<Button kind="start">Start now</Button>
+<ul className="y-spacing">
+  <li><Button kind="start">Start now</Button></li>
+  <li><Button kind="secondary">Save</Button></li>
+  <li><Button kind="tertiary">Show more</Button></li>
+</ul>
 ```
-
-## Secondary button
-
-```jsx
-// @live
-<Button kind="secondary">Save</Button>
-```
-
-## Tertiary button
-
-```jsx
-// @live
-<Button kind="tertiary">Show more</Button>
-```
-
-## Small buttons
+### small
 
 ```jsx
 // @live
@@ -46,7 +49,7 @@ Launch your service with a Start now button.
 </ul>
 ```
 
-## Buttons that link
+### href
 
 ```jsx
 // @live
@@ -58,7 +61,9 @@ Launch your service with a Start now button.
 </ul>
 ```
 
-## Button alignment
+## Usage
+
+### Button alignment
 Align the primary action button to the left edge of your form, in the user’s line of sight.
 
 ```jsx
@@ -69,7 +74,7 @@ Align the primary action button to the left edge of your form, in the user’s l
 </div>
 ```
 
-## Disabled buttons
+### Disabled buttons
 - don’t disable buttons, unless there’s a good reason to
 - if you have to disable buttons, make sure they look like you can’t click them (use 50% opacity)
 - an example of a useful disabled option is a calendar with greyed out days where no bookings are available
