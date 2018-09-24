@@ -12,6 +12,7 @@ import {
 } from '../../../packages/styles'
 import "../scss/init.scss"
 import styled from 'react-emotion'
+import favicon from '../../static/favicon.ico'
 
 const DocContainer = styled('div')({
   maxWidth: SITE_WIDTH,
@@ -86,8 +87,17 @@ const Layout = ({ children }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            {
+              name: 'description',
+              content: 'Design your service using U-M Library styles, components, and patterns.'
+            }
+          ]}
+          link={[
+            {
+              rel: 'shortcut icon',
+              type: 'image/png',
+              href: `${favicon}`
+            }
           ]}
         >
           <html lang="en" />
