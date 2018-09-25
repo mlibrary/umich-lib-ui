@@ -1,7 +1,7 @@
 {
   "name": "@umich-lib-ui/alert",
   "version": "0.1.0-alpha.3+0b47701",
-  "module": "src/index.js",
+  "module": "lib/index.js",
   "dependencies": {
     "@reach/alert": "^0.1.1",
     "@umich-lib-ui/styles": "^0.1.0-alpha.3+0b47701",
@@ -12,7 +12,7 @@
     "react-dom": "^16.4.0"
   },
   "files": [
-    "src"
+    "lib"
   ],
   "publishConfig": {
     "access": "public"
