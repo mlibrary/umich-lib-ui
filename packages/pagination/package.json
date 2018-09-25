@@ -1,13 +1,13 @@
 {
   "name": "@umich-lib-ui/pagination",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0-alpha.2",
   "module": "src/index.js",
   "private": true,
   "dependencies": {
-    "@umich-lib-ui/button": "^0.1.0-alpha.1",
-    "@umich-lib-ui/icon": "^0.1.0-alpha.1",
-    "@umich-lib-ui/input": "^0.1.0-alpha.1",
-    "@umich-lib-ui/styles": "^0.1.0-alpha.1",
+    "@umich-lib-ui/button": "^0.1.0-alpha.2",
+    "@umich-lib-ui/icon": "^0.1.0-alpha.2",
+    "@umich-lib-ui/input": "^0.1.0-alpha.2",
+    "@umich-lib-ui/styles": "^0.1.0-alpha.2",
     "emotion": "^9.2.8"
   },
   "peerDependencies": {
