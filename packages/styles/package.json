@@ -8,5 +8,8 @@
   "dependencies": {
     "emotion": "^9.2.8"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "gitHead": "d81338ed4266667153dfdc5d414d6fc02a20f129"
 }

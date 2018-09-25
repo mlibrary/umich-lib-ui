@@ -13,5 +13,8 @@
   "files": [
     "src"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "gitHead": "d81338ed4266667153dfdc5d414d6fc02a20f129"
 }
