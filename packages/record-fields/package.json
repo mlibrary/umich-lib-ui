@@ -1,9 +1,9 @@
 {
   "name": "@umich-lib-ui/record-fields",
-  "version": "0.1.0-alpha.0+d81338e",
+  "version": "0.1.0-alpha.3+0b47701",
   "module": "src/index.js",
   "dependencies": {
-    "@umich-lib-ui/styles": "^0.1.0-alpha.0+d81338e",
+    "@umich-lib-ui/styles": "^0.1.0-alpha.3+0b47701",
     "emotion": "^9.2.8"
   },
   "peerDependencies": {
@@ -16,5 +16,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "d81338ed4266667153dfdc5d414d6fc02a20f129"
+  "gitHead": "0b477015f6e03133a9e0aa3b7106184fd24de9b5"
 }
