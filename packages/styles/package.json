@@ -1,6 +1,6 @@
 {
   "name": "@umich-lib-ui/styles",
-  "version": "0.1.0-alpha.2",
+  "version": "0.1.0-alpha.0+d81338e",
   "module": "src/index.js",
   "files": [
     "src"
@@ -8,5 +8,5 @@
   "dependencies": {
     "emotion": "^9.2.8"
   },
-  "gitHead": "f9bcd6a880d3d1d7fc2eee7d3c37c21864d4cc75"
+  "gitHead": "d81338ed4266667153dfdc5d414d6fc02a20f129"
 }
