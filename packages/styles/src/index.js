@@ -1,4 +1,20 @@
-import './styles.css'
+import { injectGlobal } from 'emotion'
+
+injectGlobal`
+/*
+Font family
+*/
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700');
+/*
+Spacing helpers
+*/
+.y-spacing > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.x-spacing > *:not(:last-child) {
+  margin-right: 1rem;
+}
+`
 
 export const SITE_WIDTH = 'auto';
 /*
