@@ -1,7 +1,7 @@
 {
   "name": "@umich-lib-ui/heading",
   "version": "0.1.0-alpha.3+0b47701",
-  "module": "src/index.js",
+  "module": "lib/index.js",
   "dependencies": {
     "@umich-lib-ui/styles": "^0.1.0-alpha.3+0b47701",
     "emotion": "^9.2.8"
@@ -11,7 +11,7 @@
     "react-dom": "^16.4.0"
   },
   "files": [
-    "src"
+    "lib"
   ],
   "publishConfig": {
     "access": "public"

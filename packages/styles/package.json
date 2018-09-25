@@ -1,9 +1,9 @@
 {
   "name": "@umich-lib-ui/styles",
   "version": "0.1.0-alpha.3+0b47701",
-  "module": "src/index.js",
+  "module": "lib/index.js",
   "files": [
-    "src"
+    "lib"
   ],
   "dependencies": {
     "emotion": "^9.2.8"
