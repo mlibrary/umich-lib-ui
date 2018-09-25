@@ -2,7 +2,6 @@
   "name": "@umich-lib-ui/pagination",
   "version": "0.1.0-alpha.2",
   "module": "src/index.js",
-  "private": true,
   "dependencies": {
     "@umich-lib-ui/button": "^0.1.0-alpha.2",
     "@umich-lib-ui/icon": "^0.1.0-alpha.2",
