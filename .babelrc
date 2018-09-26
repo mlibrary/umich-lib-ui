@@ -1,0 +1,11 @@
+{
+  "presets": [
+    "@babel/preset-react",
+    "@babel/preset-env"
+  ],
+  "plugins": [
+    "emotion",
+    "transform-class-properties",
+    "transform-object-rest-spread"
+  ]
+}

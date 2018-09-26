@@ -3,9 +3,12 @@
   "scripts": {
     "develop": "start-storybook -p 9001 -c .storybook",
     "build:storybook": "build-storybook -c .storybook -o dist",
-    "build:packages": "lerna run build",
+    "build": "lerna exec --parallel -- babel src -d lib --config-file ../../.babelrc",
+    "build:watch": "lerna exec --parallel -- babel src -d lib --config-file ../../.babelrc -w",
     "bootstrap": "lerna bootstrap --hoist",
-    "publish:canary": "lerna publish -c"
+    "publish:next": "lerna publish --npm-tag next",
+    "publish:canary": "lerna publish --canary --yes",
+    "publish": "lerna publish"
   },
   "version": "0.0.0",
   "dependencies": {
@@ -18,6 +21,7 @@
   "devDependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "babel-core": "^6.26.3",
     "babel-plugin-emotion": "^9.2.8",
@@ -25,5 +29,8 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.15",
     "lerna": "^3.3.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

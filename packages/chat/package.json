@@ -1,11 +1,11 @@
 {
   "name": "@umich-lib-ui/chat",
-  "version": "0.1.0-alpha.2",
-  "module": "src/index.js",
+  "version": "0.1.0-alpha.9",
+  "module": "lib/index.js",
   "dependencies": {
-    "@umich-lib-ui/button": "^0.1.0-alpha.2",
-    "@umich-lib-ui/icon": "^0.1.0-alpha.2",
-    "@umich-lib-ui/styles": "^0.1.0-alpha.2",
+    "@umich-lib-ui/button": "^0.1.0-alpha.9",
+    "@umich-lib-ui/icon": "^0.1.0-alpha.9",
+    "@umich-lib-ui/styles": "^0.1.0-alpha.9",
     "axios": "^0.18.0",
     "emotion": "^9.2.8"
   },
@@ -14,6 +14,10 @@
     "react-dom": "^16.4.0"
   },
   "files": [
-    "src"
-  ]
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "d0d1ed6c81cb4c2cdc4fbcf367b994cb372df67c"
 }

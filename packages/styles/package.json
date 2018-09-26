@@ -1,11 +1,15 @@
 {
   "name": "@umich-lib-ui/styles",
-  "version": "0.1.0-alpha.2",
-  "module": "src/index.js",
+  "version": "0.1.0-alpha.9",
+  "module": "lib/index.js",
   "files": [
-    "src"
+    "lib"
   ],
   "dependencies": {
     "emotion": "^9.2.8"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "d0d1ed6c81cb4c2cdc4fbcf367b994cb372df67c"
 }
