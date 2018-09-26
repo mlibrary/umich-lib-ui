@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { colors, base } from '@umich-lib-ui/styles'
 import Input from '@umich-lib-ui/input'
+import VisuallyHidden from "@reach/visually-hidden";
 
 const StyledFormItem = styled('div')(
   {
@@ -110,7 +111,10 @@ const TextInput = ({
 
   return (
     <StyledFormItem invalid={invalid}>
-      {label}
+      {hideLabel ?
+        (<VisuallyHidden>{label}</VisuallyHidden>) :
+        (<React.Fragment>{label}</React.Fragment>)
+      }
       {input}
       {error}
     </StyledFormItem>
