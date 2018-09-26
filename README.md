@@ -1,5 +1,3 @@
-> 🚧 This project is in development and is not recommended for production use. 🚧
-
 # University of Michigan Library Design System
 
 A collection of shared design styles, components, and patterns for teams to build quality consistent interfaces. A bit like a LEGO kit.
@@ -47,11 +45,53 @@ Built with [Gatsby v2](https://www.gatsbyjs.org/) for a fast website.
 
 See the README in `www` directory.
 
-## Help / Questions
+## 📦 Publishing
 
-Open an issue.
+❗ An NPM account with the [umich-lib-ui organization](https://www.npmjs.com/org/umich-lib-ui) is required to publish. Only core-contributors are able to publish versions. Contact the core team to get help setting this up.
 
-More to be written...
+### Before anything else
+
+Create a build to be published
+
+```
+npm run build
+```
+
+Make sure you're logged into the NPM registry.
+
+```
+npm login
+```
+
+### Publish options
+
+#### 1. Canary
+
+To publish a quick canary version
+
+```
+npm run publish:canary
+```
+
+#### 2. Next
+
+To publish a next version.
+
+```
+npm run publish:next
+```
+
+#### 3. Publish
+
+To publish an official version and follow [Lerna publish prompts](https://github.com/lerna/lerna/tree/master/commands/publish).
+
+```
+npm run publish
+```
+
+## 🆘 Help / Questions
+
+Open a GitHub issue.
 
 ## Why CSS-in-JS with [Emotion](https://emotion.sh/)?
 
