@@ -1,6 +1,6 @@
 {
   "name": "@umich-lib-ui/styles",
-  "version": "0.1.0-alpha.3+0b47701",
+  "version": "0.1.0-alpha.7+7527fa3",
   "module": "lib/index.js",
   "files": [
     "lib"
@@ -11,5 +11,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "0b477015f6e03133a9e0aa3b7106184fd24de9b5"
+  "gitHead": "7527fa3ce453d7adaf0d71a15e140f640e64f0a4"
 }
