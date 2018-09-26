@@ -6,7 +6,7 @@
     "build": "lerna exec --parallel -- babel src -d lib --config-file ../../.babelrc",
     "build:watch": "lerna exec --parallel -- babel src -d lib --config-file ../../.babelrc -w",
     "bootstrap": "lerna bootstrap --hoist",
-    "publish:canary": "lerna publish -c"
+    "publish:next": "lerna publish --npm-tag next"
   },
   "version": "0.0.0",
   "dependencies": {
