@@ -6,4 +6,5 @@ package-lock.json
 lerna-debug.log
 *.tgz
 /packages/*/es
-/packages/*/libnode_modules/
+/packages/*/node_modules
+/packages/*/lib
