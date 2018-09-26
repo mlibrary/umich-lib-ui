@@ -1,5 +1,3 @@
-> 🚧 This project is in development and is not recommended for production use. 🚧
-
 # University of Michigan Library Design System
 
 A collection of shared design styles, components, and patterns for teams to build quality consistent interfaces. A bit like a LEGO kit.
@@ -47,7 +45,7 @@ Built with [Gatsby v2](https://www.gatsbyjs.org/) for a fast website.
 
 See the README in `www` directory.
 
-## Publishing
+## 📦 Publishing
 
 ❗ An NPM account with the [umich-lib-ui organization](https://www.npmjs.com/org/umich-lib-ui) is required to publish. Only core-contributors are able to publish versions. Contact the core team to get help setting this up.
 
@@ -65,7 +63,7 @@ Make sure you're logged into the NPM registry.
 npm login
 ```
 
-### 📦 Publish options
+### Publish options
 
 #### 1. Canary
 
