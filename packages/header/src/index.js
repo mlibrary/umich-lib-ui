@@ -154,7 +154,7 @@ const Header = ({
 }) => {
   return (
     <StyledHeader className={className}>
-      <StyledHeaderInner>
+      <StyledHeaderInner data-inner-container>
         <StyledLogoNameContainer>
           <StyledLogoContainer>
             <a href="https://umich.edu/"><UMichBlockM className="logo__svg" /></a>

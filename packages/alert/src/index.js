@@ -59,7 +59,7 @@ class Alert extends React.Component {
 
     return (
       <ReachAlert className={css`${className} ${cssAlert} ${alertIntentColors[intent]}`} {...other}>
-        <div className={cssAlertInner}>
+        <div className={cssAlertInner} data-inner-container>
           {children}
         </div>
       </ReachAlert>

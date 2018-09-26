@@ -1,16 +1,99 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'react-emotion'
+import {
+  MEDIA_QUERIES,
+  colors
+} from '@umich-lib-ui/styles'
+
+const StyledDL = styled('dl')({
+  width: '100%',
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    display: 'table'
+  },
+  'dt': {
+    color: colors.grey[600],
+    fontSize: '0.875rem',
+    padding: '0.5rem 1rem 0 1rem',
+    [MEDIA_QUERIES.LARGESCREEN]: {
+      padding: '0.5rem 1rem',
+      fontSize: '1rem',
+      display: 'table-cell',
+      width: '12rem'
+    }
+  },
+  'dd': {
+    marginInlineStart: '0',
+    padding: '0 1rem 0.5rem 1rem',
+    [MEDIA_QUERIES.LARGESCREEN]: {
+      padding: '0.5rem 1rem',
+      display: 'table-cell'
+    }
+  }
+})
+
+const StyledField = styled('div')(
+  {
+    paddingRight: '1rem',
+    [MEDIA_QUERIES.LARGESCREEN]: {
+      display: 'table-row'
+    }
+  },
+  props => !props.condensed && {
+    '&:nth-child(odd)': {
+      background: colors.grey[200],
+    },
+    '&:nth-child(even)': {
+      background: colors.grey[300]
+    },
+  },
+  props => props.condensed && {
+    'dt': {
+      paddingTop: '0',
+      paddingLeft: '0'
+    },
+    'dd': {
+      paddingRight: '0',
+      paddingTop: '0',
+      paddingLeft: '0'
+    }
+  }
+)
+
+const StyledNestedField = styled('ol')({
+  margin: '0',
+  padding: '0',
+  listStyle: 'none',
+  'li': {
+    display: 'inline-block',
+    '&:not(:first-child)::before': {
+      position: 'relative',
+      /* top: 3pt; Uncomment this to lower the icons as requested in comments*/
+      content: '""',
+      display: 'inline-block',
+      /* By using an em scale, the arrows will size with the font */
+      width: '0.35rem',
+      height: '0.35rem',
+      borderRight: '2px solid',
+      borderTop: '2px solid',
+      borderColor: colors.grey[600],
+      transform: 'rotate(45deg)',
+      marginLeft: '0.25rem',
+      marginRight: '0.5rem'
+    }
+  }
+})
 
 const FieldDescription = ({ desc, renderAnchor }) => {
   if (Array.isArray(desc)) {
     return (
-      <ol className="field-nested">
+      <StyledNestedField>
         {desc.map((nestedDesc, i) => (
           <li className="field-nested__desc" key={i}>
             <FieldDescription desc={nestedDesc} renderAnchor={renderAnchor} />
           </li>
         ))}
-      </ol>
+      </StyledNestedField>
     )
   }
 
@@ -29,20 +112,24 @@ const FieldDescription = ({ desc, renderAnchor }) => {
   return desc.text
 }
 
-const Field = ({ field, renderAnchor }) => {
+const Field = ({
+  field,
+  renderAnchor,
+  condensed
+}) => {
   const { term, description } = field
 
   return (
-    <div className="record-fields__field">
-      <dt className="record-fields__term">{term}</dt>
-      <dd className="record-fields__description">
+    <StyledField condensed={condensed}>
+      <dt>{term}</dt>
+      <dd>
         {description.map((desc, i) => (
           <span className="record-fields__description-item" key={i}>
             <FieldDescription desc={desc} renderAnchor={renderAnchor} />
           </span>
         ))}
       </dd>
-    </div>
+    </StyledField>
   )
 }
 
@@ -54,19 +141,17 @@ const RecordFields = ({
   renderAnchor,
   condensed
 }) => {
-  /*
-  const RecordFieldsClasses = classNames({
-    'record-fields': true,
-    'record-fields--full': condensed ? false : true
-  });
-  */
-
   return (
-    <dl className="record-fields">
+    <StyledDL>
       {fields.map((field, i) => (
-        <Field field={field} renderAnchor={renderAnchor} key={i} />
+        <Field
+          field={field}
+          condensed={condensed}
+          renderAnchor={renderAnchor}
+          key={i}
+        />
       ))}
-    </dl>
+    </StyledDL>
   )
 }
 

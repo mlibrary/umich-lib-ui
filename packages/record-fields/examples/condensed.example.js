@@ -1,7 +1,7 @@
 import React from "react";
 import RecordFields from "../src/index";
 
-export let name = "basic";
+export let name = "condensed";
 
 const fields = [
   {
@@ -47,6 +47,7 @@ const fields = [
 export let Example = () => (
   <RecordFields
     fields={fields}
+    condensed
     renderAnchor={data => (
       <a className="rendered-prop-anchor-example" href={data.to}>
       {data.text}
