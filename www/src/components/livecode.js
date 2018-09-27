@@ -19,8 +19,10 @@ import {
 import Header from '../../../packages/header'
 import Heading from '../../../packages/heading'
 import Icon, { icons } from '../../../packages/icon'
+import List from '../../../packages/list'
 import ResourceAccess from '../../../packages/resource-access'
 import RecordFields from '../../../packages/record-fields'
+import Text from '../../../packages/text'
 import TextInput from '../../../packages/text-input'
 import {
   colors
@@ -38,9 +40,12 @@ const scope = {
   Heading,
   Icon,
   icons,
+  List,
   ResourceAccess,
   RecordFields,
+  Text,
   TextInput,
+  colors
 }
 
 const StyledCodeContainer = styled('div')({
@@ -48,7 +53,7 @@ const StyledCodeContainer = styled('div')({
 })
 
 const StyledCodePreview = styled('div')({
-  border: `solid 1px ${colors.grey[500]}`,
+  border: `solid 1px ${colors.grey[400]}`,
   marginBottom: '-1px'
 })
 

@@ -5,6 +5,11 @@ import LiveCode from './livecode'
 import { css } from 'emotion'
 import styled from 'react-emotion'
 import { colors } from '../../../packages/styles'
+import ColorPalette from './color-palette'
+import ResearchInsight from './research-insight'
+import Text from '../../../packages/text'
+import List from '../../../packages/list'
+import Iconography from './iconography'
 
 const cssText = css({
   maxWidth: '32em'
@@ -39,22 +44,6 @@ const Heading6 = ({ children, ...other }) => (
   <Heading level={6} size="xsmall" {...other}>{children}</Heading>
 )
 
-const StyledUL = styled('ul')({
-  listStyle: 'disc',
-  marginLeft: '1.5rem',
-  'li': {
-    marginBottom: '0.5rem'
-  }
-})
-
-const StyledOL = styled('ol')({
-  listStyle: 'decimal',
-  marginLeft: '1.5rem',
-  'li': {
-    marginBottom: '0.5rem'
-  }
-})
-
 const renderAst = new rehypeReact({
   components: {
     h2: Heading2,
@@ -62,11 +51,17 @@ const renderAst = new rehypeReact({
     h4: Heading4,
     h5: Heading5,
     h6: Heading6,
+    a: ({children, ...other}) => <a className={cssText} {...other}>{children}</a>,
     p: ({children}) => <p className={cssText}>{children}</p>,
+    strong: ({children}) => <strong style={{ fontWeight: '600' }}>{children}</strong>,
     'live-code': LiveCode,
     code: ({ children })  => <StyledCode>{children}</StyledCode>,
-    ul: ({ children }) => <StyledUL>{children}</StyledUL>,
-    ol: ({ children }) => <StyledOL>{children}</StyledOL>
+    ul: ({ children }) => <List type="bulleted">{children}</List>,
+    ol: ({ children }) => <List type="numbered">{children}</List>,
+    'color-palette': ColorPalette,
+    'research-insight': ResearchInsight,
+    'text': Text,
+    'iconography': Iconography
   },
 
   // A workaround to replace the container div created by rehype-react with a React fragment.

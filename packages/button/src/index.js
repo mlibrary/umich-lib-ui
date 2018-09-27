@@ -48,8 +48,8 @@ const createButtonStyles = (props) => {
       styles = {
         ...styles,
         background: 'transparent',
-        color: colors.grey[700],
-        borderColor: colors.grey[600],
+        color: colors.grey[600],
+        borderColor: colors.grey[500],
         borderWidth: '1px',
         borderStyle: 'solid'
       }
@@ -58,7 +58,7 @@ const createButtonStyles = (props) => {
       styles = {
         ...styles,
         textDecoration: 'underline',
-        color: colors.grey[700],
+        color: colors.grey[600],
         padding: '0'
       }
       break;

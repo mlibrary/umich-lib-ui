@@ -6,16 +6,7 @@ Use this to render SVG icons.
 
 ```jsx
 // @live
-<div className="y-spacing">
-  <ul className="y-spacing">
-    {Object.keys(icons).map((i, k) => (
-      <li key={k}>
-        <Icon icon={i} className="margin-right-half"/>
-        {i}
-      </li>
-    ))}
-  </ul>
-</div>
+<Icon icon="check-circle" />
 ```
 
 ## Size

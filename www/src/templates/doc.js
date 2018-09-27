@@ -9,9 +9,7 @@ import {
 import styled from 'react-emotion'
 
 const StyledFooter = styled('footer')({
-  marginTop: '2rem',
-  paddingTop: '1rem',
-  borderTop: `solid 1px ${colors.grey[500]}`
+  margin: '2rem 0'
 })
 
 const docTemplate = ({ data }) => {

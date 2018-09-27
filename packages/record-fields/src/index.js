@@ -41,21 +41,23 @@ const StyledField = styled('div')(
   },
   props => !props.condensed && {
     '&:nth-child(odd)': {
-      background: colors.grey[200],
+      background: colors.grey[100],
     },
     '&:nth-child(even)': {
-      background: colors.grey[300]
+      background: colors.grey[200]
     },
   },
   props => props.condensed && {
     'dt': {
       paddingTop: '0',
-      paddingLeft: '0'
+      paddingLeft: '0',
+      paddingBottom: '0.25rem'
     },
     'dd': {
       paddingRight: '0',
       paddingTop: '0',
-      paddingLeft: '0'
+      paddingLeft: '0',
+      paddingBottom: '0.25rem'
     }
   }
 )

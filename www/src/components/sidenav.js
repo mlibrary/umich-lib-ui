@@ -14,12 +14,12 @@ const SectionNav = styled('nav')({
   'a': {
     textDecoration: 'none'
   },
-  background: `${colors.grey[200]}`,
-  borderTop: `solid 1px ${colors.grey[500]}`,
+  background: `${colors.grey[100]}`,
+  borderTop: `solid 1px ${colors.grey[400]}`,
   [MEDIA_QUERIES.LARGESCREEN]: {
     gridArea: 'side',
     borderTop: 'none',
-    borderRight: `solid 1px ${colors.grey[500]}`,
+    borderRight: `solid 1px ${colors.grey[400]}`,
   },
 })
 
