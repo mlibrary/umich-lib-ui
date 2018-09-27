@@ -12,14 +12,25 @@ import List from '../../../packages/list'
 import Iconography from './iconography'
 import { Link } from 'gatsby'
 
+const StyledPre = styled('pre')({
+  display: 'block',
+  background: colors.grey[100],
+  border: `solid 1px ${colors.grey[400]}`,
+  padding: '1rem',
+  margin: '0 -1rem',
+  'code': {
+    background: 'none',
+    padding: '0'
+  }
+})
+
 const StyledCode = styled('code')({
   display: 'inline-block',
-  background: `${colors.brand.maize}`,
-  backgroundColor: `hsla(48,100%,51%,0.3)`,
-  padding: '0 0.25em',
+  background: colors.grey[200],
+  borderRadius: '3px',
+  padding: '0 0.25rem',
   fontFamily: `Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace`,
   fontSize: '80%',
-  borderRadius: '3px'
 })
 
 /**
@@ -55,6 +66,7 @@ const renderAst = new rehypeReact({
     code: ({ children })  => <StyledCode>{children}</StyledCode>,
     ul: ({ children }) => <List type="bulleted">{children}</List>,
     ol: ({ children }) => <List type="numbered">{children}</List>,
+    pre: StyledPre,
     'color-palette': ColorPalette,
     'research-insight': ResearchInsight,
     'text': Text,

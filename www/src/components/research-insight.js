@@ -5,7 +5,7 @@ export default ({ children }) => (
   <p
     style={{
       borderLeft: 'solid 4px',
-      borderColor: colors.blue[600],
+      borderLeftColor: colors.blue[600],
       padding: '0.5rem 1rem',
       margin: '1rem -1rem',
       background: colors.blue[300]
