@@ -75,8 +75,7 @@ const StyledInnerButton = styled('span')({
 const cssActiveLink = css({
   fontWeight: '600',
   borderLeft: `solid 3px ${colors.blue[500]}`,
-  borderBottom: `solid 1px ${colors.blue[400]}`,
-  background: colors.blue[300]
+  background: colors.grey[200]
 })
 
 const windowGlobal = typeof window !== 'undefined' && window
