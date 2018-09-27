@@ -17,7 +17,7 @@ const cssText = css({
 
 const StyledCode = styled('code')({
   display: 'inline-block',
-  background: `${colors.brand.maze}`,
+  background: `${colors.brand.maize}`,
   backgroundColor: `hsla(48,100%,51%,0.3)`,
   padding: '0 0.25em',
   fontFamily: `Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace`,
