@@ -55,10 +55,10 @@ const BasicButton = ({ className, children, ...other }) => (
 const StyledButton = styled(BasicButton)(
   RESET_BUTTON,
   {
+    margin: '1rem 0',
     display: 'block',
     width: '100%',
-    cursor: 'pointer',
-    marginTop: '1rem'
+    cursor: 'pointer'
   }
 )
 
@@ -74,6 +74,9 @@ const StyledInnerButton = styled('span')({
 
 const cssActiveLink = css({
   fontWeight: '600',
+  borderLeft: `solid 3px ${colors.blue[500]}`,
+  borderBottom: `solid 1px ${colors.blue[400]}`,
+  background: colors.blue[300]
 })
 
 const windowGlobal = typeof window !== 'undefined' && window
@@ -122,7 +125,7 @@ class NavSection extends React.Component {
           </StyledInnerButton>
         </StyledButton>
         {expanded && (
-          <ul>
+          <ul style={{ marginTop: '-1rem', marginBottom: '1rem' }}>
             {items.map((item, i) => (
               <StyledNavListItem key={i}>
                 <Link to={item.to} activeClassName={cssActiveLink}>{item.title}</Link>

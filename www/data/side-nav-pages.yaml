@@ -1,6 +1,8 @@
 - page: principles
 - page: accessibility
 - page: glossaries
+- page: get-started
+- page: contribute
 - page: styles
   pages: 
     - colors
@@ -23,3 +25,4 @@
     - forms
     - errors-and-validation
     - getting-feedback
+- page: design-system-team
