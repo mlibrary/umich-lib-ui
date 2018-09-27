@@ -28,7 +28,7 @@ export const SITE_WIDTH = 'auto';
 */
 export const colors = {
   brand: {
-    maze: '#FFCB05',
+    maize: '#FFCB05',
     blue: '#00274C'
   },
   grey: {
