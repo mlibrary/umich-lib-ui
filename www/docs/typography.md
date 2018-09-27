@@ -6,7 +6,7 @@ Use typography to create clear hierarchies and to make text content easy to scan
 
 ## Font
 
-The design system use the open-sourced typeface [Source Sans Pro](https://fonts.google.com/specimen/Source+Sans+Pro).
+The design system uses the open-sourced typeface [Source Sans Pro](https://fonts.google.com/specimen/Source+Sans+Pro).
 
 ## Headings
 

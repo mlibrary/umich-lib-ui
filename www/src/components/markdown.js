@@ -10,10 +10,7 @@ import ResearchInsight from './research-insight'
 import Text from '../../../packages/text'
 import List from '../../../packages/list'
 import Iconography from './iconography'
-
-const cssText = css({
-  maxWidth: '32em'
-})
+import { Link } from 'gatsby'
 
 const StyledCode = styled('code')({
   display: 'inline-block',
@@ -51,8 +48,8 @@ const renderAst = new rehypeReact({
     h4: Heading4,
     h5: Heading5,
     h6: Heading6,
-    a: ({children, ...other}) => <a className={cssText} {...other}>{children}</a>,
-    p: ({children}) => <p className={cssText}>{children}</p>,
+    a: ({children, ...other}) => <a {...other}>{children}</a>,
+    p: ({children}) => <Text>{children}</Text>,
     strong: ({children}) => <strong style={{ fontWeight: '600' }}>{children}</strong>,
     'live-code': LiveCode,
     code: ({ children })  => <StyledCode>{children}</StyledCode>,
@@ -61,7 +58,8 @@ const renderAst = new rehypeReact({
     'color-palette': ColorPalette,
     'research-insight': ResearchInsight,
     'text': Text,
-    'iconography': Iconography
+    'iconography': Iconography,
+    'gatsby-link': ({ to, children }) => <Link to={to}>{children}</Link>
   },
 
   // A workaround to replace the container div created by rehype-react with a React fragment.

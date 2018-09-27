@@ -4,7 +4,9 @@ title: Colors
 
 ## Color palette
 
-<color-palette></color-palette>
+<div>
+  <color-palette></color-palette>
+</div>
 
 ## How to use colors
 
@@ -21,7 +23,7 @@ title: Colors
 
 ```
 
-## Installation
+## Install styles to access colors
 
 ```
 npm install @umich-lib-ui/styles --save

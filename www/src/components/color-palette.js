@@ -6,8 +6,9 @@ const ColorPalette = ({ palette }) => (
   <section>
     <Heading level={3} size="medium">{palette}</Heading>
     <ol>
-      {Object.keys(colors[palette]).map(shade => (
+      {Object.keys(colors[palette]).map((shade, s) => (
         <li
+          key={s}
           style={{
             background: colors[palette][shade],
             padding: '0.5rem 1rem',
@@ -27,8 +28,8 @@ const ColorPalette = ({ palette }) => (
 
 export default () => (
   <article>
-    {Object.keys(colors).map(palette => (
-      <ColorPalette palette={palette} />
+    {Object.keys(colors).map((palette, p) => (
+      <ColorPalette palette={palette} key={p} />
     ))}
   </article>
 )

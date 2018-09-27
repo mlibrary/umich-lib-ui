@@ -1,6 +1,5 @@
 import React from 'react'
 import { colors } from '../../../packages/styles';
-import Heading from '../../../packages/heading'
 import Icon, { icons } from '../../../packages/icon'
 
 export default () => (

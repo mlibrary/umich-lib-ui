@@ -61,11 +61,11 @@ Use to display metadata, often with field values that link out.
 }
 ```
 
-## Fields
+## RecordFields props
 
-`fields`
+### fields
 
-Each field has a single `term` and one or many descriptions. Each `description` contains `text` and an optional `to` or `href` attribute. Nest descriptions for heirarchy.
+Each field in `fields` has a single `term` and one or many descriptions. Each `description` contains `text` and an optional `to` or `href` attribute. Nest descriptions for heirarchy.
 
 ```jsx
 // @live
@@ -90,14 +90,50 @@ Each field has a single `term` and one or many descriptions. Each `description` 
 />
 ```
 
-## Condensed
+### condensed
 
-`condensed`
+use `condensed` more condensed styles. Will remove the horizontal zebra styling and extra spacing.
 
-For more condensed styles.
+```jsx
+// @live
 
-## RenderAnchor
+<RecordFields
+  condensed
+  fields={[
+    {
+      term: "Source of Description Note",
+      description: [
+        { text: "Description based on: Vol. 1, no. 1 (Mar. 2012); title from cover." },
+        { text: "Latest issue consulted: Vol. 1, no. 3 (Sept. 2012)." }
+      ]
+    },
+    {
+      term: "Previous Title",
+      description: [
+        { text: "Wing span (Melbourne, Vic.)", href: "#" },
+        { text: "Bird observer (Hawthorn, Vic.)", href: "#" }
+      ]
+    }
+  ]}
+/>
+```
 
-`renderAnchor`
+## renderAnchor
 
-Use to render your own anchor that will be used by descriptions that have `to` attributes.
+Use `renderAnchor` to render your own anchor that will be used by descriptions that have `to` attributes.
+
+```jsx
+// @live
+
+<RecordFields
+  fields={[
+    {
+      term: "Main Author",
+      description: [
+        { text: "Menaboni, Athos, 1895-", to: "?filter.author=Menaboni%2C+Athos%2C+1895" }
+      ]
+    }
+  ]}
+  renderAnchor={data => (<a href={data.to}>{data.text}</a>)}
+/>
+```

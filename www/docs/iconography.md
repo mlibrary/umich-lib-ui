@@ -6,6 +6,8 @@ Use SVG icons based from the [Material UI icon set](https://www.materialui.co/ic
 
 ## Available icons
 
-<iconography></iconography>
+<div>
+  <iconography></iconography>
+</div>
 
-See the [Icon component](/components/icon) for how to use an icon.
+See the <gatsby-link to="/components/icon">Icon component</gatsby-link> for how to use an icon.
