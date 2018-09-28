@@ -30,11 +30,14 @@ Adjust the pixel `size`. The default size is 16px.
 
 ## Color
 
-An icon will inherit the color of the parent element.
+An icon inherits color.
 
 ```jsx
 // @live
 <p style={{ color: colors.green[600] }}>
-  <Icon icon="check-circle" size={24} /> Okay!
+  <Icon icon="check-circle" /> Yes!
+  <span
+    style={{ color: colors.red[600] }}
+  ><Icon icon="error" /> No!</span>
 </p>
 ```
