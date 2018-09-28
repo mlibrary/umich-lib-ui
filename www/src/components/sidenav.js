@@ -24,11 +24,7 @@ const SectionNav = styled('nav')({
 })
 
 const StyledList = styled('ul')({
-  margin: '2rem 0',
-  [MEDIA_QUERIES.LARGESCREEN]: {
-    top: '1rem',
-    position: 'sticky'
-  }
+  margin: '2rem 0'
 })
 
 const cssNavListItem = {
@@ -84,8 +80,6 @@ class NavSection extends React.Component {
   state = {}
   
   isExpanded = (key) => {
-    console.log('is expanded', key)
-
     if (this.state[key] === undefined) {
       return true
     }
