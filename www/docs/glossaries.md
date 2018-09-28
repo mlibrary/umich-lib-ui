@@ -10,10 +10,6 @@ What are we talking about here?
 
 A collection of shared design patterns for teams to build quality consistent interfaces. A bit like a LEGO kit.
 
-### Pattern library
-
-A website where design patterns are stored and documented. Creating and maintaining a pattern library such as this one allows the whole team to use the shared design patterns to build products with.
-
 ### Styles
 
 These are more descriptive and less tangible design patterns, such as iconography styles or colors and typography, typically used to create a certain kind of aesthetic to make your service look and feel like a U-M Library website.

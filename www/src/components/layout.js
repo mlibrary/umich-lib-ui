@@ -104,7 +104,6 @@ const Layout = ({ children }) => (
         </Helmet>
         <DocContainer>
           <StyledHeaderContainer>
-            <Alert intent="warning">This project is in development and not recommended for production use.</Alert>
             <Header name="Design System" />
           </StyledHeaderContainer>
           <DocMain>
