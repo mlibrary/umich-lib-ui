@@ -33,7 +33,7 @@ Use this component to provide a comprehensive listing of options to access a res
       {data.text}
     </a>
   )}
-  name={"Holdings"}
+  name={"holdings"}
 />
 ```
 
@@ -41,7 +41,7 @@ Use this component to provide a comprehensive listing of options to access a res
 
 ### Headings
 
-Use `headings` for table column headings.
+Use `headings` for table column headings. Headers should never be empty.
 
 ### Rows
 
@@ -54,12 +54,12 @@ If necessary, use html to control what goes into the row cell.
 ```jsx
 // @live
 <ResourceAccess
-  headings={["Action", "Status"]}
+  headings={["Action", "Status", "Found a problem?"]}
   rows={[
     [
       { text: "Go to article", href: "https://search.lib.umich.edu/catalog/record/012977832/get-this/39015072357000" },
       { text: "Full text online", icon: "check-circle", intent: "success" },
-      { html: "Found a problem? <a href='/'>Let our link fixers know</a>." }
+      { text: "Let our link fixers know", href:"#" }
     ]
   ]}
 />
