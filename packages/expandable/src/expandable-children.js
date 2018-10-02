@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { ExpandableContext } from './expandable'
 
 class ExpandableChildren extends Component {
-  componentDidUpdate() {
+  componentDidMount() {
     const { context, children } = this.props;
     const show = this.props.show || 3
 
