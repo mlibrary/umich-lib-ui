@@ -23,6 +23,10 @@ title: Colors
 
 ```
 
+## Intent
+
+<color-intent></color-intent>
+
 ## Install styles to access colors
 
 ```

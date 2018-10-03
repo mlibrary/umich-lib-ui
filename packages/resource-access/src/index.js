@@ -62,6 +62,7 @@ const TableStyled = styled('table')({
   borderSpacing: '0',
   width: '100%',
   minWidth: '30rem',
+  tableLayout: 'fixed',
   'tbody': {
     'tr:not(:last-child)': {
       borderBottom: `solid 1px ${colors.grey[400]}`
@@ -154,7 +155,7 @@ class ResourceAccess extends React.Component {
               </tr>
               {rows.length > 6 && (
                 <tr>
-                  <td colspan={`${headings.length}`}>
+                  <td colSpan={`${headings.length}`}>
                     <ExpandableButton kind="secondary" small count={rows.length} name={name} />
                   </td>
                 </tr>
@@ -175,7 +176,7 @@ class ResourceAccess extends React.Component {
                   <React.Fragment>
                     {rows.length > 1 && (context.expanded || rows.length <= 6) ? (
                       <tr>
-                        <td colspan={`${headings.length}`}>
+                        <td colSpan={`${headings.length}`}>
                           <ExpandableButton kind="secondary" small count={rows.length} name={name} />
                         </td>
                       </tr>
