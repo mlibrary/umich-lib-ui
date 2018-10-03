@@ -43,111 +43,6 @@ Use this component to provide a comprehensive listing of options to access a res
 
 Use `headings` for table column headings. Headers should never be empty.
 
-### Rows
-
-Table rows must be an array of arrays. Each inner array represent a row and will contain objects for each cell. A cell object must contain a text key with a string value. If you wish the cell to be linked then include `to` or an `href` key. See `renderAnchor` prop to decide between `to` or `href`.
-
-#### Link cell
-
-```jsx
-// @live
-<ResourceAccess
-  headings={["Action"]}
-  rows={[
-  [
-    {
-      text: 'Get this',
-      href: '#'
-    }
-  ]
-]}
-/>
-```
-
-#### Text cell
-
-```jsx
-// @live
-<ResourceAccess
-  headings={["Action", "Call number"]}
-  rows={[
-  [
-    {
-      text: 'Go to article',
-      href: '#'
-    },
-    {
-      text: 'Q1 .S394'
-    }
-  ]
-]}
-/>
-```
-
-#### Color a cell
-
-Use `intent` to apply a related color. See <gatsby-link to="/styles/colors#intent">intent colors</gatsby-link> for all options.
-
-```jsx
-// @live
-<ResourceAccess
-  headings={["Action", "Status"]}
-  rows={[
-    [
-      {
-        text: 'Go to article',
-        href: '#'
-      },
-      {
-        text: 'Full text online',
-        intent: 'success'
-      }
-    ]
-  ]}
-/>
-```
-
-#### Add an icon to a cell
-
-Use an icon name from <gatsby-link to="/styles/iconography#available-icons">available icons</gatsby-link>.
-
-```jsx
-// @live
-<ResourceAccess
-  headings={["Action", "Status"]}
-  rows={[
-    [
-      {
-        text: 'Go to article',
-        href: '#'
-      },
-      {
-        text: 'Missing',
-        intent: 'warning',
-        icon: 'warning'
-      }
-    ]
-  ]}
-/>
-```
-
-#### HTML cell
-
-
-```jsx
-// @live
-<ResourceAccess
-  headings={["Action", "Status", "Improving access"]}
-  rows={[
-    [
-      { text: "Go to article", href: "https://search.lib.umich.edu/catalog/record/012977832/get-this/39015072357000" },
-      { text: "Full text online", icon: "check-circle", intent: "success" },
-      { html: `Found a problem? <a href="">Let our link fixers know</a>` }
-    ]
-  ]}
-/>
-```
-
 ### Name
 
 The `name` is used to show all rows.
@@ -174,10 +69,7 @@ Row cell links that use `to` and render with `renderAnchor`. This is useful if y
   headings={["Action"]}
   rows={[
     [
-      {
-        text: 'Go to item',
-        to: '/record/1'
-      }
+      { text: 'Go to item', to: '/record/1' }
     ]
   ]}
   renderAnchor={data => (
@@ -185,5 +77,88 @@ Row cell links that use `to` and render with `renderAnchor`. This is useful if y
       {data.text}
     </a>
   )}
+/>
+```
+
+### Rows
+
+Table rows must be an array of arrays. Each inner array represent a row and will contain objects for each cell. A cell object must contain a text key with a string value. If you wish the cell to be linked then include `to` or an `href` key. See `renderAnchor` prop to decide between `to` or `href`.
+
+#### Link cell
+
+```jsx
+// @live
+<ResourceAccess
+  headings={["Action"]}
+  rows={[
+    [
+      { text: 'Get this', href: '#' }
+    ]
+  ]}
+/>
+```
+
+#### Text cell
+
+```jsx
+// @live
+<ResourceAccess
+  headings={["Action", "Call number"]}
+  rows={[
+    [
+      { text: 'Go to article', href: '#' },
+      { text: 'Q1 .S394' }
+    ]
+  ]}
+/>
+```
+
+#### Cell color
+
+Use `intent` to apply a related color. See <gatsby-link to="/styles/colors#intent">intent colors</gatsby-link> for all options.
+
+```jsx
+// @live
+<ResourceAccess
+  headings={["Action", "Status"]}
+  rows={[
+    [
+      { text: 'Go to article', href: '#' },
+      { text: 'Full text online', intent: 'success' }
+    ]
+  ]}
+/>
+```
+
+#### Cell icon
+
+Use an icon name from <gatsby-link to="/styles/iconography#available-icons">available icons</gatsby-link>.
+
+```jsx
+// @live
+<ResourceAccess
+  headings={["Action", "Status"]}
+  rows={[
+    [
+      { text: 'Go to article', href: '#' },
+      { text: 'Missing', intent: 'warning', icon: 'warning' }
+    ]
+  ]}
+/>
+```
+
+#### Cell HTML
+
+```jsx
+// @live
+<ResourceAccess
+  headings={["Action", "Status", "Improving access"]}
+  rows={[
+    [
+      { text: "Go to article", href: "https://search.lib.umich.edu/catalog/record/012977832/get-this/39015072357000" },
+      { text: "Full text online", icon: "check-circle", intent: "success" },
+      { html: `Found a problem? <a href="">Let our link fixers know</a>` }
+    ]
+  ]}
 />
 ```
