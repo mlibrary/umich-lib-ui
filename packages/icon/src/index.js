@@ -14,7 +14,8 @@ const Icon = ({
   icon,
   size,
   title,
-  className
+  className,
+  ...other
 }) => {
   if (!icons.hasOwnProperty(icon)) {
     console.warn(`[Icon] "${icon}" is not a valid icon name.`)
@@ -34,6 +35,7 @@ const Icon = ({
       height={`${size}px`}
       viewBox="0 0 48 48"
       className={css`${cssIconBase} ${className}`}
+      {...other}
     >
       {title && <title>{title}</title>}
       <path

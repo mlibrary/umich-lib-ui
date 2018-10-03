@@ -16,9 +16,9 @@ This team is under the [Web Presence Steering Committee](https://staff.lib.umich
 
 ## Members of the team
 
-- Jon Earley
-- Heidi Burkhardt
 - Bridget Burke
+- Heidi Burkhardt
+- Jon Earley
 
 ## Contact us
 

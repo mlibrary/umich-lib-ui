@@ -6,6 +6,7 @@ import { css } from 'emotion'
 import styled from 'react-emotion'
 import { colors } from '../../../packages/styles'
 import ColorPalette from './color-palette'
+import ColorIntent from './color-intent'
 import ResearchInsight from './research-insight'
 import Text from '../../../packages/text'
 import List from '../../../packages/list'
@@ -71,7 +72,8 @@ const renderAst = new rehypeReact({
     'research-insight': ResearchInsight,
     'text': Text,
     'iconography': Iconography,
-    'gatsby-link': ({ to, children }) => <Link to={to}>{children}</Link>
+    'gatsby-link': ({ to, children }) => <Link to={to}>{children}</Link>,
+    'color-intent': ColorIntent
   },
 
   // A workaround to replace the container div created by rehype-react with a React fragment.

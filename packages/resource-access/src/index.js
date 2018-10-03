@@ -3,18 +3,50 @@ import PropTypes from 'prop-types'
 import Icon from '@umich-lib-ui/icon'
 import {
   Expandable,
+  ExpandableProvider,
   ExpandableChildren,
   ExpandableButton
 } from '@umich-lib-ui/expandable'
-import { css } from 'emotion'
+import styled from 'react-emotion'
 import {
   colors,
-  intent_colors
+  intent_colors,
+  MEDIA_QUERIES
 } from '@umich-lib-ui/styles'
 
-const cssTableContainer = css({
+const FigureStyled = styled('figure')({
   overflowX: 'auto',
-  overflowY: 'visible'
+  overflowY: 'visible',
+  margin: 0,
+  padding: 0,
+  'tr:not(:last-child)': {
+    borderBottom: `solid 1px ${colors.grey[400]}`
+  }
+})
+
+const FigCaptionStyled = styled('figcaption')({
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    display: 'flex',
+    alignItems: 'baseline',
+    flexWrap: 'wrap'
+  }
+})
+
+const FigCaptionContentStyled = styled('div')({
+
+})
+
+const NotesListStyled = styled('ul')({
+  fontSize: '0.875rem',
+  margin: 0,
+  padding: 0,
+  listStyle: 'none'
+})
+
+const StyledTH = styled('th')({
+  fontSize: '0.875rem',
+  color: colors.grey[600],
+  borderBottom: `solid 2px ${colors.grey[400]}`
 })
 
 const td_and_th = {
@@ -25,48 +57,19 @@ const td_and_th = {
   }
 }
 
-const cssTable = css({
+const TableStyled = styled('table')({
   borderCollapse: 'collapse',
   borderSpacing: '0',
   width: '100%',
   minWidth: '30rem',
+  tableLayout: 'fixed',
   'tbody': {
     'tr:not(:last-child)': {
       borderBottom: `solid 1px ${colors.grey[400]}`
     }
   },
   'td': td_and_th,
-  'th': td_and_th,
-  'thead': {
-    'th': {
-      fontSize: '0.875rem',
-      color: colors.grey[600]
-    },
-    borderBottom: `solid 2px ${colors.grey[400]}`
-  }
-})
-
-const cssCaptionText = css({
-  fontWeight: '600',
-  marginRight: '0.5rem'
-})
-
-const cssCaption = css({
-  textAlign: 'left'
-})
-
-const cssCaptionLink = css({
-  fontSize: '0.875rem'
-})
-
-const cssCaptionNote = css({
-  display: 'block',
-  fontSize: '0.875rem'
-})
-
-const cssCellIcon = css({
-  marginRight: '0.25rem',
-  marginTop: '-3px'
+  'th': td_and_th
 })
 
 const Cell = ({
@@ -75,7 +78,7 @@ const Cell = ({
 }) => {
   return (
     <React.Fragment>
-      {cell.icon && (<Icon icon={cell.icon} className={cssCellIcon} />)}
+      {cell.icon && (<Icon icon={cell.icon} style={{ marginRight: '0.25rem' }} />)}
 
       {(() => {
         if (cell.href) {
@@ -85,7 +88,7 @@ const Cell = ({
           return (renderAnchor(cell))
         }
         if (cell.html) {
-          return <span className="resource-access__cell-html" dangerouslySetInnerHTML={{ __html: cell.html }} />
+          return <span dangerouslySetInnerHTML={{ __html: cell.html }} />
         }
         return (<React.Fragment>{cell.text}</React.Fragment>)
       })()}
@@ -99,19 +102,8 @@ const Cell = ({
 class ResourceAccess extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      tabindex: null
-    }
     this.captionId = 'caption-' + Math.random().toString(36).substr(2, 9);
-    this.containerRef = React.createRef();
-  }
-
-  componentDidMount() {
-    let container = this.containerRef.current
-    let scrollable = container.scrollWidth > container.clientWidth;
-    this.setState({
-      tabindex: scrollable ? '0' : null
-    });
+    this.summaryId = 'summary-' + Math.random().toString(36).substr(2, 9);
   }
 
   render() {
@@ -126,56 +118,76 @@ class ResourceAccess extends React.Component {
     } = this.props
 
     return (
-      <div
-        className={cssTableContainer}
-        tabIndex={this.state.tabindex}
-        aria-labelledby={this.captionId}
-        ref={this.containerRef}
-        role="group"
-      >
+      <FigureStyled>
         <Expandable>
-          <table className={cssTable}>
+          <FigCaptionStyled>
             {caption && (
-              <caption id={this.captionId} className={cssCaption}>
-                <span className={cssCaptionText}>{caption}</span>
-                {captionLink && (<a href={captionLink.href} className={cssCaptionLink}>{captionLink.text}</a>)}
-                {notes && (
-                  <React.Fragment>
-                    {notes.map((note, n) => <span key={n} className={cssCaptionNote}>{note}</span>)}
-                  </React.Fragment>
+              <FigCaptionContentStyled className="x-spacing">
+                <span style={{ fontWeight: '600' }}>{caption}</span>
+                {captionLink && (
+                  <a href={captionLink.href} style={{
+                    fontSize: '0.875rem'
+                  }}>{captionLink.text}</a>
                 )}
-                {this.state.tabindex === '0' && <small className={cssCaptionNote}>(scroll to see more)</small>}
-              </caption>
+                {notes && (
+                  <NotesListStyled>
+                    {notes.map((note, n) => <li key={n}>{note}</li>)}
+                  </NotesListStyled>
+                )}
+              </FigCaptionContentStyled>
             )}
-
+          </FigCaptionStyled>
+          <TableStyled>
             <thead>
               <tr>
                 {headings.map((heading, i) => (
-                  <th scope="col" key={i}>{heading}</th>
+                  <StyledTH scope="col" key={i}>{heading}</StyledTH>
                 ))}
               </tr>
             </thead>
-
             <tbody>
-              <ExpandableChildren show={1}>
-                {rows.map((row, i) => (
+              <tr>
+                {rows[0].map((cell, t) => (
+                  <td key={t} style={{ color: `${intent_colors[cell.intent]}`}}>
+                    <Cell cell={cell} renderAnchor={renderAnchor} />
+                  </td>
+                ))}
+              </tr>
+              {rows.length > 6 && (
+                <tr>
+                  <td colSpan={`${headings.length}`}>
+                    <ExpandableButton kind="secondary" small count={rows.length} name={name} />
+                  </td>
+                </tr>
+              )}
+              <ExpandableChildren show={0}>
+                {rows.slice(1).map((row, i) => (
                   <tr key={i}>
                     {row.map((cell, t) => (
-                      <td key={t} className={css`
-                        color: ${intent_colors[cell.intent]}
-                      `}>
+                      <td key={t} style={{ color: `${intent_colors[cell.intent]}`}}>
                         <Cell cell={cell} renderAnchor={renderAnchor} />
                       </td>
                     ))}
                   </tr>
                 ))}
               </ExpandableChildren>
+              <ExpandableProvider>
+                {context =>
+                  <React.Fragment>
+                    {rows.length > 1 && (context.expanded || rows.length <= 6) ? (
+                      <tr>
+                        <td colSpan={`${headings.length}`}>
+                          <ExpandableButton kind="secondary" small count={rows.length} name={name} />
+                        </td>
+                      </tr>
+                    ) : null}
+                  </React.Fragment>
+                }
+              </ExpandableProvider>
             </tbody>
-          </table>
-
-          <ExpandableButton kind="secondary" small count={rows.length} name={name} />
+          </TableStyled>
         </Expandable>
-      </div>
+      </FigureStyled>
     )
   }
 }
