@@ -117,9 +117,9 @@ class NavSection extends React.Component {
           <StyledInnerButton>
             <StyledButtonHeading>{title}</StyledButtonHeading>
             {expanded ? (
-              <Icon icon="expand-up" size={32} />
+              <Icon icon="expand_less" size={32} />
             ) : (
-              <Icon icon="expand-down" size={32} />
+              <Icon icon="expand_more" size={32} />
             )}
           </StyledInnerButton>
         </StyledButton>

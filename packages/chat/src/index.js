@@ -164,9 +164,9 @@ class Chat extends React.Component {
                   <span>Ask a Librarian</span>
                 </span>
                 {open ? (
-                  <Icon icon="expand-down" size={28} className={cssChatExpandIcon} />
+                  <Icon icon="expand_more" size={28} className={cssChatExpandIcon} />
                 ) : (
-                  <Icon icon="expand-up" size={28} className={cssChatExpandIcon} />
+                  <Icon icon="show_less" size={28} className={cssChatExpandIcon} />
                 )}
               </span>
             </button>
