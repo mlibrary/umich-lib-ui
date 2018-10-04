@@ -43,6 +43,43 @@ Use this component to provide a comprehensive listing of options to access a res
 
 Use `headings` for table column headings. Headers should never be empty.
 
+### Name
+
+The `name` is used to show all rows.
+
+### Caption
+
+The displayed table `caption`. If you do not use this prop, make sure the preceding heading is appropriate.
+
+### Caption link
+
+Link to more information about the table caption with `captionLink`.
+
+### Notes
+
+Notes necessary to understand the resource access options with `notes`.
+
+### Render anchor
+
+Row cell links that use `to` and render with `renderAnchor`. This is useful if you want to use a routing library instead of an HTML anchor.
+
+```jsx
+// @live
+<ResourceAccess
+  headings={["Action"]}
+  rows={[
+    [
+      { text: 'Go to item', to: '/record/1' }
+    ]
+  ]}
+  renderAnchor={data => (
+    <a href={data.to}>
+      {data.text}
+    </a>
+  )}
+/>
+```
+
 ### Rows
 
 Table rows must be an array of arrays. Each inner array represent a row and will contain objects for each cell. A cell object must contain a text key with a string value. If you wish the cell to be linked then include `to` or an `href` key. See `renderAnchor` prop to decide between `to` or `href`.
@@ -54,13 +91,10 @@ Table rows must be an array of arrays. Each inner array represent a row and will
 <ResourceAccess
   headings={["Action"]}
   rows={[
-  [
-    {
-      text: 'Get this',
-      href: '#'
-    }
-  ]
-]}
+    [
+      { text: 'Get this', href: '#' }
+    ]
+  ]}
 />
 ```
 
@@ -71,20 +105,15 @@ Table rows must be an array of arrays. Each inner array represent a row and will
 <ResourceAccess
   headings={["Action", "Call number"]}
   rows={[
-  [
-    {
-      text: 'Go to article',
-      href: '#'
-    },
-    {
-      text: 'Q1 .S394'
-    }
-  ]
-]}
+    [
+      { text: 'Go to article', href: '#' },
+      { text: 'Q1 .S394' }
+    ]
+  ]}
 />
 ```
 
-#### Color a cell
+#### Cell color
 
 Use `intent` to apply a related color. See <gatsby-link to="/styles/colors#intent">intent colors</gatsby-link> for all options.
 
@@ -94,20 +123,14 @@ Use `intent` to apply a related color. See <gatsby-link to="/styles/colors#inten
   headings={["Action", "Status"]}
   rows={[
     [
-      {
-        text: 'Go to article',
-        href: '#'
-      },
-      {
-        text: 'Full text online',
-        intent: 'success'
-      }
+      { text: 'Go to article', href: '#' },
+      { text: 'Full text online', intent: 'success' }
     ]
   ]}
 />
 ```
 
-#### Add an icon to a cell
+#### Cell icon
 
 Use an icon name from <gatsby-link to="/styles/iconography#available-icons">available icons</gatsby-link>.
 
@@ -117,22 +140,14 @@ Use an icon name from <gatsby-link to="/styles/iconography#available-icons">avai
   headings={["Action", "Status"]}
   rows={[
     [
-      {
-        text: 'Go to article',
-        href: '#'
-      },
-      {
-        text: 'Missing',
-        intent: 'warning',
-        icon: 'warning'
-      }
+      { text: 'Go to article', href: '#' },
+      { text: 'Missing', intent: 'warning', icon: 'warning' }
     ]
   ]}
 />
 ```
 
-#### HTML cell
-
+#### Cell HTML
 
 ```jsx
 // @live
@@ -146,6 +161,7 @@ Use an icon name from <gatsby-link to="/styles/iconography#available-icons">avai
     ]
   ]}
 />
+<<<<<<< HEAD
 ```
 
 ### Name
@@ -186,4 +202,6 @@ Row cell links that use `to` and render with `renderAnchor`. This is useful if y
     </a>
   )}
 />
+=======
+>>>>>>> 4951b51ec8239afacb5fc7e99a8be88324eb0c0f
 ```
