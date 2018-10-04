@@ -161,7 +161,6 @@ Use an icon name from <gatsby-link to="/styles/iconography#available-icons">avai
     ]
   ]}
 />
-<<<<<<< HEAD
 ```
 
 ### Name
@@ -202,6 +201,4 @@ Row cell links that use `to` and render with `renderAnchor`. This is useful if y
     </a>
   )}
 />
-=======
->>>>>>> 4951b51ec8239afacb5fc7e99a8be88324eb0c0f
 ```
