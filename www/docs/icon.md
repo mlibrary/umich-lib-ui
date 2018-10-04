@@ -6,7 +6,7 @@ Use this to render SVG icons.
 
 ```jsx
 // @live
-<Icon icon="check-circle" />
+<Icon icon="check_circle" />
 ```
 
 ## Size
@@ -17,7 +17,7 @@ Adjust the pixel `size`. The default size is 16px.
 // @live
 <ul className="y-spacing">
   <li>
-    <Icon icon="check-circle" size={24} />
+    <Icon icon="check_circle" size={24} />
   </li>
   <li>
     <Icon icon="warning" size={32} />
@@ -35,7 +35,7 @@ An icon inherits color.
 ```jsx
 // @live
 <p style={{ color: colors.green[600] }}>
-  <Icon icon="check-circle" /> Yes!
+  <Icon icon="check_circle" /> Yes!
   <span
     style={{ color: colors.red[600] }}
   ><Icon icon="error" /> No!</span>

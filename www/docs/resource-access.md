@@ -15,7 +15,7 @@ Use this component to provide a comprehensive listing of options to access a res
     [
       { text: "Get this", href: "https://search.lib.umich.edu/catalog/record/012977832/get-this/39015072357000" },
       { text: "v.1 2012" },
-      { text: "On shelf", intent: 'success', icon: 'check-circle' }
+      { text: "On shelf", intent: 'success', icon: 'check_circle' }
     ],
     [
       { text: "Get this", href: "https://search.lib.umich.edu/catalog/record/012977832/get-this/39015072357000" },
@@ -141,7 +141,7 @@ Use an icon name from <gatsby-link to="/styles/iconography#available-icons">avai
   rows={[
     [
       { text: "Go to article", href: "https://search.lib.umich.edu/catalog/record/012977832/get-this/39015072357000" },
-      { text: "Full text online", icon: "check-circle", intent: "success" },
+      { text: "Full text online", icon: "check_circle", intent: "success" },
       { html: `Found a problem? <a href="">Let our link fixers know</a>` }
     ]
   ]}
@@ -162,7 +162,7 @@ Link to more information about the table caption with `captionLink`.
 
 ### Notes
 
-Notes necessary to understand the resource access options with `notes`.
+Additional lines of text necessary to understand the resource access options.
 
 ### Render anchor
 

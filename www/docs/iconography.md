@@ -2,7 +2,7 @@
 title: Iconography
 ---
 
-Use SVG icons based from the [Material UI icon set](https://www.materialui.co/icons). In some cases we create custom icons.
+We use SVG icons from the [Material UI icon set](https://material.io/tools/icons/) with a 24px viewbox.
 
 ## Available icons
 
@@ -11,3 +11,4 @@ Use SVG icons based from the [Material UI icon set](https://www.materialui.co/ic
 </div>
 
 See the <gatsby-link to="/components/icon">Icon component</gatsby-link> for how to use an icon.
+

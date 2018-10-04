@@ -13,7 +13,7 @@ export let Example = () => (
       [
         { text: "Get this", href: "https://search.lib.umich.edu/catalog/record/012977832/get-this/39015072357000" },
         { text: "v.1 2012" },
-        { text: "On shelf", intent: 'success', icon: 'check-circle' }
+        { text: "On shelf", intent: 'success', icon: 'check_circle' }
       ],
       [
         { text: "Get this", href: "https://search.lib.umich.edu/catalog/record/012977832/get-this/39015072357000" },
@@ -28,7 +28,7 @@ export let Example = () => (
       [
         { text: "Get this", href: "https://search.lib.umich.edu/catalog/record/012977832/get-this/39015072357000" },
         { text: "v.1 2012" },
-        { text: "On shelf", intent: 'success', icon: 'check-circle' }
+        { text: "On shelf", intent: 'success', icon: 'check_circle' }
       ],
       [
         { text: "Get this", href: "https://search.lib.umich.edu/catalog/record/012977832/get-this/39015072357000" },
@@ -43,7 +43,7 @@ export let Example = () => (
       [
         { text: "Get this", href: "https://search.lib.umich.edu/catalog/record/012977832/get-this/39015072357000" },
         { text: "v.1 2012" },
-        { text: "On shelf", intent: 'success', icon: 'check-circle' }
+        { text: "On shelf", intent: 'success', icon: 'check_circle' }
       ],
       [
         { text: "Get this", href: "https://search.lib.umich.edu/catalog/record/012977832/get-this/39015072357000" },
@@ -58,7 +58,7 @@ export let Example = () => (
       [
         { text: "Get this", href: "https://search.lib.umich.edu/catalog/record/012977832/get-this/39015072357000" },
         { text: "v.1 2012" },
-        { text: "On shelf", intent: 'success', icon: 'check-circle' }
+        { text: "On shelf", intent: 'success', icon: 'check_circle' }
       ],
       [
         { text: "Get this", href: "https://search.lib.umich.edu/catalog/record/012977832/get-this/39015072357000" },

@@ -33,7 +33,7 @@ const Icon = ({
       style={styles.svg}
       width={`${size}px`}
       height={`${size}px`}
-      viewBox="0 0 48 48"
+      viewBox="0 0 24 24"
       className={css`${cssIconBase} ${className}`}
       {...other}
     >

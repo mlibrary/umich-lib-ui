@@ -13,10 +13,9 @@ export default () => (
         key={k}
         style={{
           flex: '1 1 10rem',
-          maxWidth: '9rem',
+          maxWidth: '10rem',
           height: '6rem',
           marginRight: '1rem',
-          marginBottom: '1rem'
         }}
       >
         <div style={{
