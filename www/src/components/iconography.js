@@ -20,7 +20,7 @@ export default () => (
       >
         <div style={{
           display: 'flex',
-          padding: '1rem',
+          padding: '0.75rem',
           background: colors.grey[200],
           alignItems: 'center',
           justifyContent: 'center'
