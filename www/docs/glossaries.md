@@ -1,12 +1,12 @@
 ---
-title: Glossaries
+title: Glossary
 ---
 
 What are we talking about here?
 
-## Design System
+## Design System terms
 
-### Design System
+### Design System 
 
 A collection of shared design patterns for teams to build quality consistent interfaces. A bit like a LEGO kit.
 
@@ -22,7 +22,7 @@ Re-usable tangible parts of the user interface, such as a button, a heading, or 
 
 Repeating, reusable parts of the interface that can be applied and repurposed to solve a specific design problem, meet a user need, or evoke an emotion, such as handling form errors or getting feedback.
 
-## Development
+## Development terms
 
 ### GitHub
 Github is an all-in-one platform for collaborative development. It hosts our git repos and provides a mechanism for peer review.
@@ -32,6 +32,9 @@ Git is at the core of how we do collaborative development. It's a version contro
 
 ### Repo / repository
 A single project in git is called a repository and often abbreviated as repo by developers.
+
+### Fork / forking
+A copy of a repository. Forking allows you to freely experiment with changes without affecting the original project. Forks are also commonly used to propose changes to someone else's project.
 
 ### Branch
 A branch starts as a snapshot of the current codebase and then diverges as the developer makes changes.
