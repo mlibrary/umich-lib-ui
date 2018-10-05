@@ -14,6 +14,10 @@ There is evidence that it would be useful for many teams or services. Evidence c
 
 It does not replicate something already in the Design System. If it’s intended to replace an existing style, component, or pattern, there is evidence to show that it’s better than the existing version.
 
+## Propose modifications to an existing style, component, or pattern
+
+This process is TBD. 
+
 ## Propose a style, component, or pattern
 
 ### 1. Check the backlog
