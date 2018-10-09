@@ -18,6 +18,7 @@
     - expandable
     - header
     - icon
+    - dialog
     - text-input
     - resource-access
     - record-fields
