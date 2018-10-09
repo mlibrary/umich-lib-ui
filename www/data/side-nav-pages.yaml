@@ -1,7 +1,8 @@
 - page: principles
 - page: accessibility
-- page: glossaries
-- page: get-started
+- page: glossary
+- page: right-for-me
+- page: get-setup
 - page: contribute
 - page: styles
   pages: 
