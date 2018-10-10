@@ -110,7 +110,7 @@ const UMichBlockM = () => (
 
 const UMichLibrary = () => (
   <svg viewBox="0 0 715 144" className={cssLogoSVG}>
-    <title>University of Michigan Library</title>
+    <title>Library</title>
     <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g transform="translate(-281.000000, 0.000000)" fill="#FFFFFF">
         <polyline points="281.497 144 281.497 0.202 299.817 0.202 299.817 128.067 352.598 128.067 352.598 144 281.497 144"></polyline>

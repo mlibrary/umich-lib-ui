@@ -6,7 +6,6 @@ import SideNav from './sidenav'
 import getSideNavData from '../../utils/get-side-nav-data'
 import Header from '../../../packages/header'
 import Alert from '../../../packages/alert'
-import Icon from '../../../packages/icon'
 import {
   SITE_WIDTH,
   MEDIA_QUERIES
@@ -104,16 +103,16 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <DocContainer>
-          <StyledHeaderContainer>
+          <StyledHeaderContainer role="banner">
             <Header name="Design System" />
             <Alert intent="informational">This project is in development and not recommended for production use. Stay tuned for a beta release.</Alert>
           </StyledHeaderContainer>
+          <SideNav data={getSideNavData(data)} />
           <DocMain>
             <DocMainContent>
               {children}
             </DocMainContent>
           </DocMain>
-          <SideNav data={getSideNavData(data)} />
         </DocContainer>
       </>
     )}

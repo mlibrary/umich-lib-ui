@@ -124,9 +124,9 @@ class NavSection extends React.Component {
           </StyledInnerButton>
         </StyledButton>
         {expanded && (
-          <ul style={{ marginTop: '-1rem', marginBottom: '1rem' }}>
+          <ul style={{ marginTop: '-1rem', marginBottom: '1rem' }} role="menu">
             {items.map((item, i) => (
-              <StyledNavListItem key={i}>
+              <StyledNavListItem key={i} role="menuitem">
                 <Link to={item.to} activeClassName={cssActiveLink}>{item.title}</Link>
               </StyledNavListItem>
             ))}
@@ -139,12 +139,12 @@ class NavSection extends React.Component {
 
 const SideNav = ({ data }) => {
   return (
-    <SectionNav>
-      <StyledList>
+    <SectionNav role="navigation" aria-label="side bar">
+      <StyledList role="menu" tabindex="0">
         {data.map((section, s) => (
-          <StyledNavListItem key={s}>
+          <StyledNavListItem key={s} role="menuitem">
             {section.items ? (
-              <NavSection key={s} title={section.title} items={section.items} />
+              <NavSection key={s} title={section.title} items={section.items}  />
             ) : (
               <Link to={section.to} activeClassName={cssActiveLink}>{section.title}</Link>
             )}
