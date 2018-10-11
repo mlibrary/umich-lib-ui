@@ -58,7 +58,7 @@ const StyledButton = styled(BasicButton)(
   }
 )
 
-const StyledButtonHeading = styled('h2')({
+const StyledButtonText = styled('span')({
   fontWeight: '700'
 })
 
@@ -115,7 +115,7 @@ class NavSection extends React.Component {
           aria-expanded={expanded}
         >
           <StyledInnerButton>
-            <StyledButtonHeading>{title}</StyledButtonHeading>
+            <StyledButtonText>{title}</StyledButtonText>
             {expanded ? (
               <Icon icon="expand_less" size={32} />
             ) : (
