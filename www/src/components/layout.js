@@ -107,9 +107,9 @@ const Layout = ({ children }) => (
             <Header name="Design System" />
             <Alert intent="informational">This project is in development and not recommended for production use. Stay tuned for a beta release.</Alert>
           </StyledHeaderContainer>
+          <SideNav data={getSideNavData(data)} />
           <DocMain>
             <DocMainContent>
-              hello
               {children}
             </DocMainContent>
           </DocMain>
