@@ -22,6 +22,7 @@
     - text-input
     - resource-access
     - record-fields
+    - tabs
 - page: patterns
   pages:
     - forms

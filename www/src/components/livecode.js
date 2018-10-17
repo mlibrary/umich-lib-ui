@@ -22,6 +22,12 @@ import Icon, { icons } from '../../../packages/icon'
 import List from '../../../packages/list'
 import ResourceAccess from '../../../packages/resource-access'
 import RecordFields from '../../../packages/record-fields'
+import {
+  Tabbed,
+  Tabs,
+  Tab,
+  TabPanel
+} from '../../../packages/tabs'
 import Text from '../../../packages/text'
 import TextInput from '../../../packages/text-input'
 import {
@@ -45,7 +51,11 @@ const scope = {
   RecordFields,
   Text,
   TextInput,
-  colors
+  colors,
+  Tabbed,
+  Tabs,
+  Tab,
+  TabPanel
 }
 
 const StyledCodeContainer = styled('div')({
