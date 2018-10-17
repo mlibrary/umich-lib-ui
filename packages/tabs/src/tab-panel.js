@@ -7,7 +7,8 @@ class TabPanel extends React.Component {
     const {
       children,
       id,
-      selectedTab
+      selectedTab,
+      ...other
     } = this.props;
     const hidden = !(selectedTab && selectedTab.slice(1) === id)
 
@@ -21,6 +22,7 @@ class TabPanel extends React.Component {
         role="tabpanel"
         aria-labeledby={`tab-to-#${id}`}
         hidden={hidden}
+        {...other}
       >
         {children}
       </section>

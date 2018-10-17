@@ -68,7 +68,8 @@ class Tabs extends React.Component {
     const {
       children,
       selectedTab,
-      setTabbedState
+      setTabbedState,
+      ...other
     } = this.props
 
     const tabElements = React.Children.map(children, (child) => {
@@ -82,6 +83,7 @@ class Tabs extends React.Component {
     return (
       <ul
         role="tablist"
+        {...other}
       >
         {tabElements}
       </ul>
