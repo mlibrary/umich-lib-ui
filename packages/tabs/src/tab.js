@@ -16,7 +16,7 @@ class Tab extends React.Component {
       to,
       handleTabClick,
       handleTabKeyDown,
-      ...other
+      className
     } = this.props
 
     return (
@@ -37,7 +37,7 @@ class Tab extends React.Component {
           onKeyDown={(e) => {
             handleTabKeyDown(e)
           }}
-          {...other}
+          className={className}
         >
           {children}
         </a>
