@@ -146,44 +146,60 @@ class ResourceAccess extends React.Component {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                {rows[0].map((cell, t) => (
-                  <td key={t} style={{ color: `${intent_colors[cell.intent]}`}}>
-                    <Cell cell={cell} renderAnchor={renderAnchor} />
-                  </td>
-                ))}
-              </tr>
-              {rows.length > 6 && (
-                <tr>
-                  <td colSpan={`${headings.length}`}>
-                    <ExpandableButton kind="secondary" small count={rows.length} name={name} />
-                  </td>
-                </tr>
-              )}
-              <ExpandableChildren show={0}>
-                {rows.slice(1).map((row, i) => (
-                  <tr key={i}>
-                    {row.map((cell, t) => (
+              {rows.length === 2 ? (
+                <React.Fragment>
+                  {rows.map((row, i) => (
+                    <tr key={i}>
+                      {row.map((cell, t) => (
+                        <td key={t} style={{ color: `${intent_colors[cell.intent]}`}}>
+                          <Cell cell={cell} renderAnchor={renderAnchor} />
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </React.Fragment>
+              ) : (
+                <React.Fragment>
+                  <tr>
+                    {rows[0].map((cell, t) => (
                       <td key={t} style={{ color: `${intent_colors[cell.intent]}`}}>
                         <Cell cell={cell} renderAnchor={renderAnchor} />
                       </td>
                     ))}
                   </tr>
-                ))}
-              </ExpandableChildren>
-              <ExpandableProvider>
-                {context =>
-                  <React.Fragment>
-                    {rows.length > 1 && (context.expanded || rows.length <= 6) ? (
-                      <tr>
-                        <td colSpan={`${headings.length}`}>
-                          <ExpandableButton kind="secondary" small count={rows.length} name={name} />
-                        </td>
+                  {rows.length > 6 && (
+                    <tr>
+                      <td colSpan={`${headings.length}`}>
+                        <ExpandableButton kind="secondary" small count={rows.length} name={name} />
+                      </td>
+                    </tr>
+                  )}
+                  <ExpandableChildren show={0}>
+                    {rows.slice(1).map((row, i) => (
+                      <tr key={i}>
+                        {row.map((cell, t) => (
+                          <td key={t} style={{ color: `${intent_colors[cell.intent]}`}}>
+                            <Cell cell={cell} renderAnchor={renderAnchor} />
+                          </td>
+                        ))}
                       </tr>
-                    ) : null}
-                  </React.Fragment>
-                }
-              </ExpandableProvider>
+                    ))}
+                  </ExpandableChildren>
+                  <ExpandableProvider>
+                    {context =>
+                      <React.Fragment>
+                        {rows.length > 1 && (context.expanded || rows.length <= 6) ? (
+                          <tr>
+                            <td colSpan={`${headings.length}`}>
+                              <ExpandableButton kind="secondary" small count={rows.length} name={name} />
+                            </td>
+                          </tr>
+                        ) : null}
+                      </React.Fragment>
+                    }
+                  </ExpandableProvider>
+                </React.Fragment>
+              )}
             </tbody>
           </TableStyled>
         </Expandable>

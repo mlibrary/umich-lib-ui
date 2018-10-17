@@ -1,0 +1,19 @@
+{
+  "name": "@umich-lib-ui/tabs",
+  "version": "0.1.0-alpha.11",
+  "module": "lib/index.js",
+  "dependencies": {
+    "@umich-lib-ui/styles": "^0.1.0-alpha.11",
+    "emotion": "^9.2.8"
+  },
+  "peerDependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
