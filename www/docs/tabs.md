@@ -7,7 +7,7 @@ Use to display one panel of content at a time. Each tab panel has an associated 
 ```jsx
 // @live
 
-<Tabbed id="tab-example">
+<Tabbed>
   <Tabs>
     <Tab to="#section1">Section 1</Tab>
     <Tab to="#section2">Section 2</Tab>
@@ -26,14 +26,25 @@ Use to display one panel of content at a time. Each tab panel has an associated 
 </Tabbed>
 ```
 
+## Installation
+
+```sh
+npm install @umich-lib-ui/tabs --save
+```
+
+```js
+import {
+  Tabbed,
+  Tabs,
+  Tab,
+  TabPanel
+} from '@umich-lib-ui/tabs'
+```
+
 ## Styling
 
 `Tabs`, `Tab`, and `TabPanel` components by default do not have styles. They do accept `className` props.
 
 ## Props
 
-`Tab` takes a `to` prop that is link to the `id` in `TabPabel`.
-
-## Further reading
-
-- https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel
+The `Tab` `to` prop links to the `TabPanel` `id`. Be sure those match and are unique.
