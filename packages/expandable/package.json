@@ -1,9 +1,9 @@
 {
   "name": "@umich-lib-ui/expandable",
-  "version": "0.1.0-alpha.13",
+  "version": "0.1.0-alpha.14",
   "module": "lib/index.js",
   "dependencies": {
-    "@umich-lib-ui/button": "^0.1.0-alpha.13",
+    "@umich-lib-ui/button": "^0.1.0-alpha.14",
     "emotion": "^9.2.8"
   },
   "peerDependencies": {
