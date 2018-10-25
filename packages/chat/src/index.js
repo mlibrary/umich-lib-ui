@@ -44,7 +44,8 @@ const cssChatButtonFixed = css(
     width: '100%',
     fontSize: '1rem',
     border: 'none',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    background: 'white'
   }
 )
 
@@ -88,7 +89,7 @@ class Chat extends React.Component {
   isFixed = () => {
     /**
       Prevents the chat widget from being fixed on small screens. It's better
-      to have af new window opens up to use the chat widget.
+      to have a new window opens up to use the chat widget.
 
       Note: This check is on initial load. It won't adjust as viewport is resized.
     */

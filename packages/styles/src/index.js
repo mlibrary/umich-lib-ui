@@ -83,12 +83,12 @@ export const base = {
 }
 
 export const BREAKPOINTS = {
-  SMALLSCREEN: '320px',
-  LARGESCREEN: '641px',
+  SMALLSCREEN: 320,
+  LARGESCREEN: 641,
 };
 
 export const MEDIA_QUERIES = {
-  LARGESCREEN: `@media only screen and (min-width: ${BREAKPOINTS.LARGESCREEN})`,
+  LARGESCREEN: `@media only screen and (min-width: ${BREAKPOINTS.LARGESCREEN}px)`,
   PRINT: '@media print',
 };
 
