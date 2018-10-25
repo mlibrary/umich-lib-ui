@@ -1,11 +1,11 @@
 {
   "name": "@umich-lib-ui/chat",
-  "version": "0.1.0-alpha.14",
+  "version": "0.1.0-alpha.15",
   "module": "lib/index.js",
   "dependencies": {
-    "@umich-lib-ui/button": "^0.1.0-alpha.14",
-    "@umich-lib-ui/icon": "^0.1.0-alpha.14",
-    "@umich-lib-ui/styles": "^0.1.0-alpha.14",
+    "@umich-lib-ui/button": "^0.1.0-alpha.15",
+    "@umich-lib-ui/icon": "^0.1.0-alpha.15",
+    "@umich-lib-ui/styles": "^0.1.0-alpha.15",
     "axios": "^0.18.0",
     "emotion": "^9.2.8"
   },
