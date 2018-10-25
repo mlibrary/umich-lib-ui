@@ -52,6 +52,7 @@ const StyledTH = styled('th')({
 const td_and_th = {
   padding: '0.5rem 0',
   textAlign: 'left',
+  verticalAlign: 'top',
   '&:not(:last-child)': {
     paddingRight: '1rem'
   }
@@ -71,6 +72,41 @@ const TableStyled = styled('table')({
   'td': td_and_th,
   'th': td_and_th
 })
+
+class TrimString extends React.Component {
+  state = {
+    expanded: false,
+    trimTextAt: 240
+  }
+
+  render() {
+    const { text } = this.props
+    const { trimTextAt } = this.state
+
+    if (text <= trimTextAt) {
+      return (
+        <React.Fragment>{text}</React.Fragment>
+      )
+    }
+
+    const isExpanded = this.state.expanded
+    return (
+      <React.Fragment>
+        {isExpanded ? (
+          <React.Fragment>
+            {text}
+            <Button kind="tertiary" aria-expanded={isExpanded}>Show less</Button>
+          </React.Fragment>
+        ) : (
+          <React.Fragment>
+            {text.substr(0, trimTextAt)}
+            <Button kind="tertiary" aria-expanded={isExpanded}>Show all</Button>
+          </React.Fragment>
+        )}
+      </React.Fragment>
+    )
+  }
+} 
 
 const Cell = ({
   cell,
