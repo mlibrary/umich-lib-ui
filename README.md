@@ -27,7 +27,13 @@ All dependencies get linked for cross-component and package development
 npm run bootstrap
 ```
 
-### 2. Start the development environment
+### 2. Watch packages and build
+
+```sh
+npm run build:watch
+```
+
+### 3. Start the development environment
 
 Starts the the storybook development environment. 
 ```sh
@@ -35,7 +41,7 @@ npm run develop
 ```
 Opens up Storybook at `http://localhost:9001`
 
-### 3. Develop components in `/packages/`.
+### 4. Develop components in `/packages/`.
 
 Anytime you add a new component you will need to run `npm run bootstrap` again.
 
