@@ -13,6 +13,7 @@ import {
   intent_colors,
   MEDIA_QUERIES
 } from '@umich-lib-ui/styles'
+import Button from '@umich-lib-ui/button'
 
 const FigureStyled = styled('figure')({
   overflowX: 'auto',
@@ -52,6 +53,7 @@ const StyledTH = styled('th')({
 const td_and_th = {
   padding: '0.5rem 0',
   textAlign: 'left',
+  verticalAlign: 'top',
   '&:not(:last-child)': {
     paddingRight: '1rem'
   }
@@ -72,13 +74,57 @@ const TableStyled = styled('table')({
   'th': td_and_th
 })
 
+class TrimCellText extends React.Component {
+  state = {
+    expanded: false,
+    trimTextAt: 120
+  }
+
+  render() {
+    const { text } = this.props
+    const { trimTextAt } = this.state
+
+    // When text doens't need to be trimmed.
+    // Only trimming past trim text at, so user don't show all
+    // for just a few more chars.
+    if (text.length <= trimTextAt + 60) {
+      return (
+        <React.Fragment>{text}</React.Fragment>
+      )
+    }
+
+    // When text is longer than the trim text at length.
+    const isExpanded = this.state.expanded
+    const buttonText = isExpanded ? "Show less" : "Show more"
+    const displayText = isExpanded ? text : `${text.substr(0, trimTextAt)}...`
+    return (
+      <React.Fragment>
+        <span style={{ paddingRight: '0.25rem' }}>{displayText}</span>
+        <Button
+          kind="tertiary"
+          small
+          aria-expanded={isExpanded}
+          onClick={() => this.setState({ expanded: !isExpanded })}
+        >{buttonText}</Button>
+      </React.Fragment>
+    )
+  }
+} 
+
 const Cell = ({
   cell,
   renderAnchor
 }) => {
   return (
     <React.Fragment>
-      {cell.icon && (<Icon icon={cell.icon} style={{ marginRight: '0.25rem' }} />)}
+      {cell.icon && (
+        <Icon
+          icon={cell.icon}
+          style={{
+            marginRight: '0.25rem',
+            marginBottom: '-2px'
+          }}
+        />)}
 
       {(() => {
         if (cell.href) {
@@ -90,7 +136,7 @@ const Cell = ({
         if (cell.html) {
           return <span dangerouslySetInnerHTML={{ __html: cell.html }} />
         }
-        return (<React.Fragment>{cell.text}</React.Fragment>)
+        return (<TrimCellText text={cell.text} />)
       })()}
     </React.Fragment>
   )
