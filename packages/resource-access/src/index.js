@@ -117,7 +117,14 @@ const Cell = ({
 }) => {
   return (
     <React.Fragment>
-      {cell.icon && (<Icon icon={cell.icon} style={{ marginRight: '0.25rem' }} />)}
+      {cell.icon && (
+        <Icon
+          icon={cell.icon}
+          style={{
+            marginRight: '0.25rem',
+            marginBottom: '-2px'
+          }}
+        />)}
 
       {(() => {
         if (cell.href) {
