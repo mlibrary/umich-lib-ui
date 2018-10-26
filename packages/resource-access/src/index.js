@@ -13,6 +13,7 @@ import {
   intent_colors,
   MEDIA_QUERIES
 } from '@umich-lib-ui/styles'
+import Button from '@umich-lib-ui/button'
 
 const FigureStyled = styled('figure')({
   overflowX: 'auto',
@@ -73,36 +74,38 @@ const TableStyled = styled('table')({
   'th': td_and_th
 })
 
-class TrimString extends React.Component {
+class TrimCellText extends React.Component {
   state = {
     expanded: false,
-    trimTextAt: 240
+    trimTextAt: 120
   }
 
   render() {
     const { text } = this.props
     const { trimTextAt } = this.state
 
-    if (text <= trimTextAt) {
+    // When text doens't need to be trimmed.
+    // Only trimming past trim text at, so user don't show all
+    // for just a few more chars.
+    if (text.length <= trimTextAt + 60) {
       return (
         <React.Fragment>{text}</React.Fragment>
       )
     }
 
+    // When text is longer than the trim text at length.
     const isExpanded = this.state.expanded
+    const buttonText = isExpanded ? "Show less" : "Show more"
+    const displayText = isExpanded ? text : `${text.substr(0, trimTextAt)}...`
     return (
       <React.Fragment>
-        {isExpanded ? (
-          <React.Fragment>
-            {text}
-            <Button kind="tertiary" aria-expanded={isExpanded}>Show less</Button>
-          </React.Fragment>
-        ) : (
-          <React.Fragment>
-            {text.substr(0, trimTextAt)}
-            <Button kind="tertiary" aria-expanded={isExpanded}>Show all</Button>
-          </React.Fragment>
-        )}
+        <span style={{ paddingRight: '0.25rem' }}>{displayText}</span>
+        <Button
+          kind="tertiary"
+          small
+          aria-expanded={isExpanded}
+          onClick={() => this.setState({ expanded: !isExpanded })}
+        >{buttonText}</Button>
       </React.Fragment>
     )
   }
@@ -126,7 +129,7 @@ const Cell = ({
         if (cell.html) {
           return <span dangerouslySetInnerHTML={{ __html: cell.html }} />
         }
-        return (<React.Fragment>{cell.text}</React.Fragment>)
+        return (<TrimCellText text={cell.text} />)
       })()}
     </React.Fragment>
   )
