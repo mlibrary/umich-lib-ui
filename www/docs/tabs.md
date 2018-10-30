@@ -26,21 +26,6 @@ Use to display one panel of content at a time. Each tab panel has an associated 
 </Tabbed>
 ```
 
-## Installation
-
-```sh
-npm install @umich-lib-ui/tabs --save
-```
-
-```js
-import {
-  Tabbed,
-  Tabs,
-  Tab,
-  TabPanel
-} from '@umich-lib-ui/tabs'
-```
-
 ## Styling
 
 `Tabs`, `Tab`, and `TabPanel` components by default do not have styles. They do accept `className` props.

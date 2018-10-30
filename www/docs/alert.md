@@ -39,35 +39,42 @@ Use Alerts to notify users of important information.
 </Component>
 ```
 
+<accessibility-insight>
 The Alert component will announce to assistive technologies whatever you render to the screen.
-
-## Installation
-
-```
-npm install @umich-lib-ui/alert
-```
-
-And then import the components you need:
-
-```
-import Alert from "@umich-lib-ui/alert"
-```
+</accessibility-insight>
 
 ## Alert props
 
 ### intent
 
-Will style the component appropriatly.
+Use `intent` to style the component appropriatly for the use case.
+
+#### `informational`
 
 ```jsx
 // @live
-<div className="y-spacing">
-  <Alert intent="warning">Don't do it!</Alert>
-  <Alert intent="success">You did it!</Alert>
-  <Alert intent="error">It's too late.</Alert>
-  <Alert intent="informational">Hello there.</Alert>
-  <Alert intent="none">We're not sure.</Alert>
-</div>
+<Alert intent="informational">Hello there.</Alert>
+```
+
+#### `warning`
+
+```jsx
+// @live
+<Alert intent="warning">Don't do it!</Alert>
+```
+
+#### `error`
+
+```jsx
+// @live
+<Alert intent="error">It's too late.</Alert>
+```
+
+#### `success`
+
+```jsx
+// @live
+<Alert intent="success">You did it!</Alert>
 ```
 
 ### children

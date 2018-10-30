@@ -7,17 +7,18 @@ import {
 } from '@umich-lib-ui/styles'
 
 const createButtonStyles = (props) => {
-  const { kind, small } = props
+  const { kind, small, disabled } = props
   let styles = {
     display: 'inline-block',
     padding: '0.5rem 1rem',
     borderRadius: '4px',
     fontSize: '1rem',
-    cursor: 'pointer',
+    cursor: disabled ? 'not-allowed' : 'pointer',
     border: 'none',
     background: 'none',
     fontFamily: 'inherit',
-    textDecoration: 'none'
+    textDecoration: 'none',
+    opacity: disabled ? '0.6' : ''
   }
 
   switch (kind) {
@@ -30,8 +31,8 @@ const createButtonStyles = (props) => {
         borderBottomWidth: '3px',
         borderBottomStyle: 'solid',
         padding: '0.5rem 1.15rem',
+        fontSize: '1.25rem',
         fontWeight: '600',
-        fontSize: '1.25rem'
       }
       break;
     case 'primary':
@@ -41,7 +42,8 @@ const createButtonStyles = (props) => {
         color: 'white',
         borderBottom: colors.blue[600],
         borderBottomWidth: '3px',
-        borderBottomStyle: 'solid'
+        borderBottomStyle: 'solid',
+        fontWeight: '600',
       }
       break;
     case 'secondary':
@@ -54,13 +56,7 @@ const createButtonStyles = (props) => {
         borderStyle: 'solid'
       }
       break;
-    case 'tertiary':
-      styles = {
-        ...styles,
-        textDecoration: 'underline',
-        color: colors.grey[600],
-        padding: '0'
-      }
+    default:
       break;
   }
 
@@ -68,7 +64,7 @@ const createButtonStyles = (props) => {
     styles = {
       ...styles,
       fontSize: '0.875rem',
-      padding: kind === "tertiary" ? '0' : '0.25rem 0.5rem'
+      padding: '0.25rem 0.5rem'
     }
   }
 
@@ -122,7 +118,6 @@ Button.propTypes = {
     'start',
     'primary',
     'secondary',
-    'tertiary',
   ]).isRequired,
   href: PropTypes.string,
   type: PropTypes.oneOf(['button', 'reset', 'submit']),

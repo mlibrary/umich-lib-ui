@@ -8,6 +8,7 @@ import { colors } from '../../../packages/styles'
 import ColorPalette from './color-palette'
 import ColorIntent from './color-intent'
 import ResearchInsight from './research-insight'
+import AccessibilityInsight from './accessibility-insight'
 import Text from '../../../packages/text'
 import List from '../../../packages/list'
 import Iconography from './iconography'
@@ -70,6 +71,7 @@ const renderAst = new rehypeReact({
     pre: StyledPre,
     'color-palette': ColorPalette,
     'research-insight': ResearchInsight,
+    'accessibility-insight': AccessibilityInsight,
     'text': Text,
     'iconography': Iconography,
     'gatsby-link': ({ to, children }) => <Link to={to}>{children}</Link>,
