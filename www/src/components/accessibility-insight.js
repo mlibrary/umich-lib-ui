@@ -10,5 +10,5 @@ export default ({ children }) => (
       margin: '1rem -1rem',
       background: colors.green[400]
     }}
-  ><b style={{ fontWeight: '700' }}>⌨️ Accessibility insight:</b> {children}</p>
+  ><b style={{ fontWeight: '700' }}>⌨️ Accessibility:</b> {children}</p>
 )
