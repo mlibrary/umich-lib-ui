@@ -3,7 +3,7 @@ import axios from 'axios'
 import PropTypes from 'prop-types';
 import Button from '@umich-lib-ui/button'
 import Icon from '@umich-lib-ui/icon'
-import { css } from 'emotion';
+import styled from 'react-emotion';
 import {
   BREAKPOINTS
 } from '@umich-lib-ui/styles'
@@ -25,58 +25,53 @@ const AskUsSVG = ({ className }) => (
   </svg>
 )
 
-const cssChatFixed = css`
-  position: fixed;
-  right: 1rem;
-  margin-left: 1rem;
-  bottom: 0;
-  max-width: 22rem;
-  background: white;
-  z-index: 100;
-  border-radius: 4px 4px 0 0;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 3px 1px;
-`
-
-const cssChatButtonFixed = css(
-  {
-    borderRadius: '4px 4px 0 0',
-    padding: '0.5rem 1rem',
-    width: '100%',
-    fontSize: '1rem',
-    border: 'none',
-    cursor: 'pointer',
-    background: 'white'
-  }
-)
-
-const cssChatIframe = css`
-  width: 100%;
-  height: 100%;
-  border: none;
-  max-height: 25rem;
-  min-height: 24rem;
-`
-
-const cssChatButtonInner = css({
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center'
-})
-
-const cssChatIcon = css({
+const StyledAskUsSVG = styled(AskUsSVG)({
   width: '2.5rem',
   height: '1.5rem',
   marginRight: '0.5rem'
 })
 
-const cssChatExpandIcon = css({
-  marginLeft: '1.5rem'
+const ChatFixedContainer = styled('buttton')({
+  position: 'fixed',
+  right: '1rem',
+  marginLeft: '1rem',
+  bottom: '0',
+  maxWidth: '22rem',
+  background: 'white',
+  zIndex: '100',
+  borderRadius: '4px 4px 0 0',
+  boxShadow: 'rgba(0, 0, 0, 0.4) 0px 0px 3px 1px'
 })
 
-const cssChatFlexCenter = css`
-  display: flex;
-  align-items: center;
-`
+const ChatFixedButton = styled('button')({
+  borderRadius: '4px 4px 0 0',
+  padding: '0.5rem 1rem',
+  width: '100%',
+  fontSize: '1rem',
+  border: 'none',
+  cursor: 'pointer',
+  background: 'white'
+})
+
+const ChatFixedButtonInnerContainer = styled('span')({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between'
+})
+
+const ChatIframe = styled('iframe')({
+  width: '100%',
+  height: '100%',
+  border: 'none',
+  maxHeight: '25rem',
+  minHeight: '24rem'
+})
+
+const ChatButtonContentContainer = styled('span')({
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center'
+})
 
 /**
   Provide users access to Ask a Librarian chat when the service is online.
@@ -145,52 +140,49 @@ class Chat extends React.Component {
     }
   }
 
+  renderButton = () => {
+    return (
+      <ChatButtonContentContainer className="x-spacing">
+        <StyledAskUsSVG />
+        <span>Ask a Librarian</span>
+      </ChatButtonContentContainer>
+    )
+  }
+
   render() {
-    const { status, open } = this.state
+    const { open } = this.state
     const fixed = this.isFixed()
 
-    if (status === 'online') {
-      if (fixed) {
-        return (
-          <div className={cssChatFixed}>
-            <button
-              className={cssChatButtonFixed}
-              onClick={this.handleClick}
-              kind="secondary"
-              aria-expanded={open}
-            >
-              <span className={cssChatButtonInner}>
-                <span className={cssChatFlexCenter}>
-                  <AskUsSVG className={cssChatIcon} />
-                  <span>Ask a Librarian</span>
-                </span>
-                {open ? (
-                  <Icon icon="expand_more" size={28} className={cssChatExpandIcon} />
-                ) : (
-                  <Icon icon="expand_less" size={28} className={cssChatExpandIcon} />
-                )}
-              </span>
-            </button>
-
-            <iframe hidden={!open} src="https://libraryh3lp.com/chat/umlibraryaskalibrarian@chat.libraryh3lp.com?skin=27279" className={cssChatIframe} title="Chat with Ask a Librarian"></iframe>
-          </div>
-        )
-      } else {
-        return (
-          <Button
-            onClick={this.handleClick}
-            kind="secondary"
-          >
-            <span className={cssChatButtonInner}>
-              <AskUsSVG className={cssChatIcon} />
-              <span>Ask a Librarian</span>
-            </span>
-          </Button>
-        )
-      }
+    if (fixed) {
+      return (
+        <ChatFixedContainer>
+          <ChatFixedButton onClick={this.handleClick}>
+            <ChatFixedButtonInnerContainer className="x-spacing">
+              {this.renderButton()}
+              {open ? (
+                <Icon icon="expand_more" size={28} />
+              ) : (
+                <Icon icon="expand_less" size={28} />
+              )}
+            </ChatFixedButtonInnerContainer>
+          </ChatFixedButton>
+          <ChatIframe
+            hidden={!open}
+            src="https://libraryh3lp.com/chat/umlibraryaskalibrarian@chat.libraryh3lp.com?skin=27279"
+            title="Chat with Ask a Librarian"
+          />
+        </ChatFixedContainer>
+      )
     }
 
-    return null
+    return (
+      <Button
+        onClick={this.handleClick}
+        kind="secondary"
+      >
+        {this.renderButton()}
+      </Button>
+    )
   }
 }
 
