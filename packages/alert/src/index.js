@@ -72,7 +72,8 @@ Alert.propTypes = {
     "informational",
     "error",
     "warning",
-    "success"
+    "success",
+    "none"
   ]),
   className: PropTypes.string
 };

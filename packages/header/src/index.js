@@ -185,11 +185,11 @@ Header.propTypes = {
   /**
     Site name
   */
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   /**
     The url to go to when a user clicks the site name.
   */
-  siteUrl: PropTypes.string.isRequired,
+  siteUrl: PropTypes.string,
   /**
     The nav is an array of objects. The objects can have `text` and `href` or `to` attributes.
   */

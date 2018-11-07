@@ -36,7 +36,10 @@ const List = ({
 }) => {
   if (type === 'bulleted') {
     return (
-      <StyledUL className={className}>
+      <StyledUL
+        className={className}
+        {...other}
+      >
         {children}
       </StyledUL>
     )
@@ -44,19 +47,27 @@ const List = ({
 
   if (type === 'numbered') {
     return (
-      <StyledOL className={className}>
+      <StyledOL
+        className={className}
+        {...other}
+      >
         {children}
       </StyledOL>
     )
   }
 
   return (
-    <StyledList className={className}>{children}</StyledList>
+    <StyledList
+      className={className}
+      {...other}
+    >
+      {children}
+    </StyledList>
   )
 }
 
 List.propTypes = {
-  type: PropTypes.bool
+  type: PropTypes.string
 };
 
 export default List;

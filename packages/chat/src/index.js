@@ -31,10 +31,9 @@ const StyledAskUsSVG = styled(AskUsSVG)({
   marginRight: '0.5rem'
 })
 
-const ChatFixedContainer = styled('buttton')({
+const ChatFixedContainer = styled('div')({
   position: 'fixed',
   right: '1rem',
-  marginLeft: '1rem',
   bottom: '0',
   maxWidth: '22rem',
   background: 'white',

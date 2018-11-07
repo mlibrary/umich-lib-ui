@@ -17,8 +17,8 @@ export let Example = () => (
       Some inline text.
     </Text>
 
-    <Text inline>
-      More inline text.
+    <Text lede>
+      Some lede sized text body copy paragraph. This includes even more text to give a good representation of a more average length paragraph. That way you can see more than one line wrapping.
     </Text>
   </div>
 )

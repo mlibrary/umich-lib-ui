@@ -11,6 +11,9 @@ const StyledText = styled('p')(
   }),
   ({ small }) => ({
     fontSize: small && '0.875rem'
+  }),
+  ({ lede }) => ({
+    fontSize: lede && '1.125rem'
   })
 )
 
@@ -19,25 +22,29 @@ const Text = ({
   children,
   inline,
   small,
+  lede,
   ...other
 }) => (
   <StyledText
     className={className}
-    {...other}
     inline={inline}
     small={small}
+    lede={lede}
+    {...other}
   >{children}</StyledText>
 )
 
 Text.propTypes = {
   inline: PropTypes.bool,
   small: PropTypes.bool,
+  lede: PropTypes.bool,
   children: PropTypes.node.isRequired,
 };
 
 Text.defaultProps = {
   inline: false,
   small: false,
+  lede: false,
   italic: false,
 };
 
