@@ -4,6 +4,14 @@ title: ResourceAccess
 
 Use this component to provide a comprehensive listing of options to access a resource.
 
+## Install
+
+```
+npm install @umich-lib-ui/resource-access
+```
+
+## Usage
+
 ```jsx
 // @live
 <ResourceAccess
