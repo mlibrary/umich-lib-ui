@@ -82,7 +82,7 @@ Row cell links that use `to` and render with `renderAnchor`. This is useful if y
 
 ### Rows
 
-Table rows must be an array of arrays. Each inner array represent a row and will contain objects for each cell. A cell object must contain a text key with a string value. If you wish the cell to be linked then include `to` or an `href` key. See `renderAnchor` prop to decide between `to` or `href`.
+Table rows must be an array of arrays. Each inner array represent a row and will contain objects for each cell. A cell object must contain a `text` key with a string value. If you wish the cell to be linked then include `to` or an `href` key. See `renderAnchor` prop to decide between `to` or `href`.
 
 #### Link cell
 
@@ -200,5 +200,126 @@ Row cell links that use `to` and render with `renderAnchor`. This is useful if y
       {data.text}
     </a>
   )}
+/>
+```
+
+## Show all or fewer rows
+
+### One row
+
+Renders the single row.
+
+```jsx
+// @live
+<ResourceAccess
+  headings={["Action", "Description", "Status"]}
+  rows={[
+    [
+      { text: "Get this", href: "#" },
+      { text: "v.1 2012" },
+      { text: "On shelf", intent: 'success', icon: 'check_circle' }
+    ]
+  ]}
+/>
+```
+
+### Two rows
+
+Renders both rows.
+
+```jsx
+// @live
+<ResourceAccess
+  headings={["Action", "Description", "Status"]}
+  rows={[
+    [
+      { text: "Get this", href: "#" },
+      { text: "v.1 2012" },
+      { text: "On shelf", intent: 'success', icon: 'check_circle' }
+    ],
+    [
+      { text: "Get this", href: "#" },
+      { text: "v.2 2013" },
+      { text: "Missing", intent: 'warning', icon: 'warning' }
+    ]
+  ]}
+/>
+```
+
+### Three to six rows
+
+Renders the first row and collapses the remaining.
+
+```jsx
+// @live
+<ResourceAccess
+  headings={["Action", "Description", "Status"]}
+  name="holdings"
+  rows={[
+    [
+      { text: "Get this", href: "#" },
+      { text: "v.1 2012" },
+      { text: "On shelf", intent: 'success', icon: 'check_circle' }
+    ],
+    [
+      { text: "Get this", href: "#" },
+      { text: "v.2 2013" },
+      { text: "Missing", intent: 'warning', icon: 'warning' }
+    ],
+    [
+      { text: "Get this", href: "#" },
+      { text: "v.2 2014" },
+      { text: "Checked out", intent: 'error', icon: 'error' }
+    ],
+  ]}
+/>
+```
+
+### Seven or more rows
+
+Renders the first row and collapses the remaining, but provides a second button to undo the show all action in the second row.
+
+```jsx
+// @live
+<ResourceAccess
+  headings={["Action", "Description", "Status"]}
+  name="holdings"
+  rows={[
+    [
+      { text: "Get this", href: "#" },
+      { text: "v.1 2012" },
+      { text: "On shelf", intent: 'success', icon: 'check_circle' }
+    ],
+    [
+      { text: "Get this", href: "#" },
+      { text: "v.2 2013" },
+      { text: "Missing", intent: 'warning', icon: 'warning' }
+    ],
+    [
+      { text: "Get this", href: "#" },
+      { text: "v.2 2014" },
+      { text: "Checked out", intent: 'error', icon: 'error' }
+    ],
+    [
+      { text: "Get this", href: "#" },
+      { text: "v.1 2012" },
+      { text: "On shelf", intent: 'success', icon: 'check_circle' }
+    ],
+    [
+      { text: "Get this", href: "#" },
+      { text: "v.2 2013" },
+      { text: "Missing", intent: 'warning', icon: 'warning' }
+    ],
+    [
+      { text: "Get this", href: "#" },
+      { text: "v.2 2014" },
+      { text: "Checked out", intent: 'error', icon: 'error' }
+    ],
+    [
+      { text: "Get this", href: "#" },
+      { text: "v.1 2012" },
+      { text: "On shelf", intent: 'success', icon: 'check_circle' }
+    ]
+  ]}
 />
 ```
