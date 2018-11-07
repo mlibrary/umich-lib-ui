@@ -2,14 +2,24 @@
 title: "Header"
 ---
 
-Use the standard U-M Library header.
+<lede>Use the standard U-M Library header.</lede>
+
+## Install
+
+```
+npm install @umich-lib-ui/header
+```
+
+## Usage
 
 ```jsx
 // @live
 <Header />
 ```
 
-## Site name
+## Header props
+
+### Name
 
 Add a site name with `name`.
 
@@ -18,7 +28,7 @@ Add a site name with `name`.
 <Header name="Search" />
 ```
 
-## Navigation
+### Navigation
 
 Keep the header as simple as possible and only add critical navigation elements with `nav`.
 

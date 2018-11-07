@@ -4,6 +4,14 @@ title: "Alert"
 
 <lede>Use Alerts to notify users of important information.</lede>
 
+## Install
+
+```
+npm install @umich-lib-ui/alert
+```
+
+## Usage
+
 ```jsx
 // @live
 

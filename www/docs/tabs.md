@@ -2,7 +2,15 @@
 title: Tabs
 ---
 
-Use to display one panel of content at a time. Each tab panel has an associated tab element, that when activated, displays the panel.
+<lede>Use to display one panel of content at a time. Each tab panel has an associated tab element, that when activated, displays the panel.</lede>
+
+## Install
+
+```
+npm install @umich-lib-ui/tabs
+```
+
+## Usage
 
 ```jsx
 // @live
@@ -28,8 +36,8 @@ Use to display one panel of content at a time. Each tab panel has an associated 
 
 ## Styling
 
-`Tabs`, `Tab`, and `TabPanel` components by default do not have styles. They do accept `className` props.
+`Tabs`, `Tab`, and `TabPanel` components by default do not have styles. They do accept `className` or `style` props.
 
-## Props
+## Tabs props
 
 The `Tab` `to` prop links to the `TabPanel` `id`. Be sure those match and are unique.

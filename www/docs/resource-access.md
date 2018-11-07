@@ -2,7 +2,7 @@
 title: ResourceAccess
 ---
 
-Use this component to provide a comprehensive listing of options to access a resource.
+<lede>Use this component to provide a comprehensive listing of options to access a resource.</lede>
 
 ## Install
 

@@ -2,7 +2,15 @@
 title: Expandable
 ---
 
-Use `Expandable`, `ExpandableChildren`, and `ExpandableButton` to show an initial subset of elements. The remaining will be hidden and can be expanded by the user.
+<lede>Use `Expandable`, `ExpandableChildren`, and `ExpandableButton` to show an initial subset of elements. The remaining will be hidden and can be expanded by the user.</lede>
+
+## Install
+
+```
+npm install @umich-lib-ui/expandable
+```
+
+## Usage
 
 ```jsx
 // @live

@@ -2,14 +2,25 @@
 title: TextInput
 ---
 
-Use this to enable the user to enter text that's no longer than a single line.
+<lede>Use this to enable the user to enter text that's no longer than a single line.</lede>
+
+## Install
+
+```
+npm install @umich-lib-ui/text-input
+```
+
+## Usage
+
 
 ```jsx
 // @live
 <TextInput id="full-name" labelText="Full name" />
 ```
 
-## Description text
+## TextInput props
+
+### Description text
 
 Let users know why you're asking for input and what it will be used for with `descriptionText`.
 
@@ -24,7 +35,7 @@ Let users know why you're asking for input and what it will be used for with `de
 />
 ```
 
-## Invalid input and message
+### Invalid input and message
 
 If input is invalid provide add `invalid` and a descriptive `invalidText` message.
 
@@ -41,7 +52,7 @@ If input is invalid provide add `invalid` and a descriptive `invalidText` messag
 />
 ```
 
-## Hide the label
+### Hide the label
 
 A label is required for accessibility, but if your use case requires it to be hidden visually then use `hideLabel`.
 

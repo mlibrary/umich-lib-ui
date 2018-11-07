@@ -2,7 +2,15 @@
 title: RecordFields
 ---
 
-Use to display metadata, often with field values that link out.
+<lede>Use to display metadata, often with field values that link out.</lede>
+
+## Install
+
+```
+npm install @umich-lib-ui/record-fields
+```
+
+## Usage
 
 ```jsx
 // @live
