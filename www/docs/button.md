@@ -2,7 +2,7 @@
 title: "Button"
 ---
 
-Use buttons to move though a transaction, aim to use only one button per page. 
+<lede>Use buttons to move though a transaction, aim to use only one button per page.</lede>
 
 ```jsx
 // @live

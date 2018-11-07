@@ -35,6 +35,10 @@ const StyledCode = styled('code')({
   fontSize: '80%',
 })
 
+const StyledLede = styled('p')({
+  fontSize: '1.25em'
+})
+
 /**
   Headings
 */
@@ -75,7 +79,8 @@ const renderAst = new rehypeReact({
     'text': Text,
     'iconography': Iconography,
     'gatsby-link': ({ to, children }) => <Link to={to}>{children}</Link>,
-    'color-intent': ColorIntent
+    'color-intent': ColorIntent,
+    'lede': StyledLede
   },
 
   // A workaround to replace the container div created by rehype-react with a React fragment.
