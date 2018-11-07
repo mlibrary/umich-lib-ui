@@ -99,7 +99,7 @@ class Chat extends React.Component {
   }
 
   componentDidMount() {
-    const presenceUrl = 'https://libraryh3lp-com.proxy.lib.umich.edu/presence/jid/umlibraryaskalibrarian/chat.libraryh3lp.com/text'
+    const presenceUrl = 'https://libraryh3lp-com.proxy.lib.umich.edu/presence/jid/umlibraryaskalibrarian/chat.libraryh3lp.com/?skin=27279'
 
     /**
       Get the online status of the LibraryH3lp service.
