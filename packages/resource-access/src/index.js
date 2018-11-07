@@ -101,7 +101,7 @@ class TrimCellText extends React.Component {
       <React.Fragment>
         <span style={{ paddingRight: '0.25rem' }}>{displayText}</span>
         <Button
-          kind="tertiary"
+          kind="secondary"
           small
           aria-expanded={isExpanded}
           onClick={() => this.setState({ expanded: !isExpanded })}
