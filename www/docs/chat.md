@@ -4,7 +4,15 @@ title: "Chat"
 
 <lede>Provide users access to the Ask a Librarian chat service.</lede>
 
-## Open in a new window
+## Install
+
+```
+npm install @umich-lib-ui/chat
+```
+
+## Usage
+
+### Open in a new window
 
 By default, `Chat` will open into a new window when a user clicks the button.
 
@@ -14,7 +22,7 @@ By default, `Chat` will open into a new window when a user clicks the button.
 <Chat />
 ```
 
-## Fix to the viewport
+### Fix to the viewport
 
 Optionally, use `fixed` to position `Chat` to the bottom right of the viewport on wide screens.
 
