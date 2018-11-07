@@ -122,7 +122,7 @@ const Cell = ({
           icon={cell.icon}
           style={{
             marginRight: '0.25rem',
-            marginBottom: '-2px'
+            marginTop: '-2px'
           }}
         />)}
 
