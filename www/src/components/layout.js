@@ -20,7 +20,6 @@ const DocContainer = styled('div')({
   [MEDIA_QUERIES.LARGESCREEN]: {
     display: 'grid',
     height: '100vh',
-    width: '100vw',
     gridTemplateColumns: '16rem auto',
     gridTemplateRows: 'max-content',
     gridTemplateAreas: `
