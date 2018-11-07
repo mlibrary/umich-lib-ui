@@ -146,12 +146,6 @@ const Cell = ({
   Use this component to provide a comprehensive listing of options to access a resource.
 */
 class ResourceAccess extends React.Component {
-  constructor(props) {
-    super(props)
-    this.captionId = 'caption-' + Math.random().toString(36).substr(2, 9);
-    this.summaryId = 'summary-' + Math.random().toString(36).substr(2, 9);
-  }
-
   render() {
     const {
       caption,
@@ -192,7 +186,7 @@ class ResourceAccess extends React.Component {
               </tr>
             </thead>
             <tbody>
-              {rows.length === 2 ? (
+              {rows.length <= 2 ? (
                 <React.Fragment>
                   {rows.map((row, i) => (
                     <tr key={i}>
@@ -234,7 +228,7 @@ class ResourceAccess extends React.Component {
                   <ExpandableProvider>
                     {context =>
                       <React.Fragment>
-                        {rows.length > 1 && (context.expanded || rows.length <= 6) ? (
+                        {(context.expanded || rows.length <= 6) ? (
                           <tr>
                             <td colSpan={`${headings.length}`}>
                               <ExpandableButton kind="secondary" small count={rows.length} name={name} />
