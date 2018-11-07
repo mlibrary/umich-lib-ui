@@ -5,7 +5,7 @@
   "dependencies": {
     "@reach/alert": "^0.1.1",
     "@umich-lib-ui/styles": "^0.1.0-alpha.16",
-    "emotion": "^9.2.8"
+    "react-emotion": "^9.2.12"
   },
   "peerDependencies": {
     "react": "^16.4.0",

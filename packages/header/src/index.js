@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { css } from 'emotion'
 import styled from 'react-emotion'
 import {
   colors,
@@ -63,34 +62,17 @@ const StyledNameContainer = styled('div')({
   display: 'block'
 })
 
-const cssLogoLibrary = css({
-  marginLeft: '0.5rem',
-  paddingLeft: '0.5rem',
-  borderLeft: 'solid 1px white',
-  marginRight: '0.5rem'
-})
-
-const cssLogoSVG = css({
-  display: 'inherit',
-  height: '1.6rem',
-})
-
-const cssLogoSiteNameLink = css({
-  color: 'white',
-  textDecoration: 'none'
-})
-
-const cssNavList = css({
+const StyledNavList = styled('ul')({
   listStyle: "none",
   padding: '0',
   margin: '0',
-  a: {
+  'a': {
     color: 'white',
     textDecoration: 'none'
   }
 })
 
-const cssNavListItem = css({
+const StyledNavListItem = styled('li')({
   display: 'inline-block',
   '&:not(:last-child)': {
     marginRight: '1rem'
@@ -98,7 +80,13 @@ const cssNavListItem = css({
 })
 
 const UMichBlockM = () => (
-  <svg viewBox="0 0 202 144" className={cssLogoSVG}>
+  <svg
+    viewBox="0 0 202 144"
+    style={{
+      display: 'inherit',
+      height: '1.6rem',
+    }}
+  >
     <title>University of Michigan</title>
     <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g fill="#EBBF28">
@@ -109,7 +97,13 @@ const UMichBlockM = () => (
 )
 
 const UMichLibrary = () => (
-  <svg viewBox="0 0 715 144" className={cssLogoSVG}>
+  <svg
+    viewBox="0 0 715 144"
+    style={{
+      display: 'inherit',
+      height: '1.6rem',
+    }}
+  >
     <title>Library</title>
     <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g transform="translate(-281.000000, 0.000000)" fill="#FFFFFF">
@@ -158,22 +152,41 @@ const Header = ({
         <StyledLogoNameContainer>
           <StyledLogoContainer>
             <a href="https://umich.edu/"><UMichBlockM className="logo__svg" /></a>
-            <a href="https://www.lib.umich.edu/" className={cssLogoLibrary}><UMichLibrary className="logo__svg" /></a>
+            <a
+              href="https://www.lib.umich.edu/"
+              style={{
+                marginLeft: '0.5rem',
+                paddingLeft: '0.5rem',
+                borderLeft: 'solid 1px white',
+                marginRight: '0.5rem'
+              }}
+            ><UMichLibrary className="logo__svg" /></a>
           </StyledLogoContainer>
           {name && siteUrl && (
             <StyledNameContainer>
-              <a href={siteUrl} className={cssLogoSiteNameLink}>{name}</a>
+              <a
+                href={siteUrl}
+                style={{
+                  color: 'white',
+                  textDecoration: 'none'
+                }}
+              >{name}</a>
             </StyledNameContainer>
           )}
         </StyledLogoNameContainer>
 
         {nav && nav.length && (
           <StyledNav>
-            <ul className={cssNavList}>
+            <StyledNavList>
               {nav.map((item, key) => (
-                <li key={key} className={cssNavListItem}><NavItem item={item} renderAnchor={renderAnchor} /></li>
+                <StyledNavListItem key={key}>
+                  <NavItem
+                    item={item} 
+                    renderAnchor={renderAnchor}
+                  />
+                </StyledNavListItem>
               ))}
-            </ul>
+            </StyledNavList>
           </StyledNav>
         )}
       </StyledHeaderInner>

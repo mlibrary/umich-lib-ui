@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import icons from './icons'
-import { css } from 'emotion'
+import styled from 'react-emotion'
 
-const cssIconBase = css({
+const StyledSVG = styled('svg')({
+  display: 'inline-block',
+  verticalAlign: 'middle',
   fill: 'currentColor'
 })
 
@@ -21,28 +23,17 @@ const Icon = ({
     console.warn(`[Icon] "${icon}" is not a valid icon name.`)
   }
 
-  const styles = {
-    svg: {
-      display: 'inline-block',
-      verticalAlign: 'middle',
-    }
-  };
-
   return (
-    <svg
-      style={styles.svg}
+    <StyledSVG
       width={`${size}px`}
       height={`${size}px`}
       viewBox="0 0 24 24"
-      className={css`${cssIconBase} ${className}`}
+      className={className}
       {...other}
     >
       {title && <title>{title}</title>}
-      <path
-        style={styles.path}
-        d={icons[icon]}
-      ></path>
-    </svg>
+      <path d={icons[icon]} />
+    </StyledSVG>
   )
 }
 

@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'react-emotion'
 import Icon from '../../../packages/icon'
-import { css } from 'emotion'
 import {
   RESET_BUTTON,
   colors,
@@ -68,11 +67,11 @@ const StyledInnerButton = styled('span')({
   alignItems: 'center'
 })
 
-const cssActiveLink = css({
+const activeLinkStyles = {
   fontWeight: '600',
   borderLeft: `solid 3px ${colors.blue[500]}`,
   background: colors.grey[200]
-})
+}
 
 const windowGlobal = typeof window !== 'undefined' && window
 
@@ -123,7 +122,12 @@ class NavSection extends React.Component {
           <ul style={{ marginTop: '-1rem', marginBottom: '1rem' }}>
             {items.map((item, i) => (
               <StyledNavListItem key={i}>
-                <Link to={item.to} activeClassName={cssActiveLink}>{item.title}</Link>
+                <Link
+                  to={item.to}
+                  activeStyle={activeLinkStyles}
+                >
+                  {item.title}
+                </Link>
               </StyledNavListItem>
             ))}
           </ul>
@@ -142,7 +146,12 @@ const SideNav = ({ data }) => {
             {section.items ? (
               <NavSection key={s} title={section.title} items={section.items}  />
             ) : (
-              <Link to={section.to} activeClassName={cssActiveLink}>{section.title}</Link>
+              <Link
+                to={section.to}
+                activeStyle={activeLinkStyles}
+              >
+                {section.title}
+              </Link>
             )}
           </StyledNavListItem>
         ))}

@@ -2,7 +2,6 @@ import React from "react"
 import rehypeReact from "rehype-react"
 import Heading from '../../../packages/heading'
 import LiveCode from './livecode'
-import { css } from 'emotion'
 import styled from 'react-emotion'
 import { colors } from '../../../packages/styles'
 import ColorPalette from './color-palette'
