@@ -2,7 +2,7 @@
 title: "Alert"
 ---
 
-Use Alerts to notify users of important information.
+<lede>Use Alerts to notify users of important information.</lede>
 
 ```jsx
 // @live

@@ -36,7 +36,8 @@ const StyledCode = styled('code')({
 })
 
 const StyledLede = styled('p')({
-  fontSize: '1.25em'
+  fontSize: '1.25em',
+  marginBottom: '1em'
 })
 
 /**

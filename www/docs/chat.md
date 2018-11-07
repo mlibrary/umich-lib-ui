@@ -2,11 +2,11 @@
 title: "Chat"
 ---
 
-<lede>Provide users access to Ask a Librarian chat when the service.</lede>
+<lede>Provide users access to the Ask a Librarian chat service.</lede>
 
 ## Open in a new window
 
-By default, `Chat` will open into a new window when a user clicks the button to access Ask a Librarian.
+By default, `Chat` will open into a new window when a user clicks the button.
 
 ```jsx
 // @live
