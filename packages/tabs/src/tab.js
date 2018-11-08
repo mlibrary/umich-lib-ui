@@ -3,8 +3,8 @@ import React from 'react'
 class Tab extends React.Component {
   tabRef = React.createRef();
 
-  componentDidUpdate() {
-    if (this.props.selected) {
+  componentDidUpdate(prevProps) {
+    if (this.props.selected !== prevProps.selected) {
       this.tabRef.current.focus()
     }
   }

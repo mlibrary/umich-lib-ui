@@ -14,6 +14,10 @@ Spacing helpers
 .x-spacing > *:not(:last-child) {
   margin-right: 1rem;
 }
+*:focus {
+  outline: 2px solid #FFCB05;
+  outline-offset: 0;
+}
 `
 
 export const SITE_WIDTH = 'auto';
