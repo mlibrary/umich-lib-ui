@@ -1,9 +1,9 @@
 {
   "name": "@umich-lib-ui/heading",
-  "version": "0.1.0-alpha.19",
+  "version": "0.1.0-alpha.20",
   "module": "lib/index.js",
   "dependencies": {
-    "@umich-lib-ui/styles": "^0.1.0-alpha.19",
+    "@umich-lib-ui/styles": "^0.1.0-alpha.20",
     "react-emotion": "^9.2.12"
   },
   "peerDependencies": {
