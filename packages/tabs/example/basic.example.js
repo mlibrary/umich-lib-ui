@@ -1,7 +1,7 @@
 import React from "react";
 import {
-  Tabbed,
   Tabs,
+  TabList,
   Tab,
   TabPanel
 } from "../src/index";
@@ -9,24 +9,24 @@ import {
 export let name = "basic";
 
 export let Example = () => (
-  <Tabbed id="tab-example">
-    <Tabs>
-      <Tab to="#section1">Section 1</Tab>
-      <Tab to="#section2">Section 2</Tab>
-      <Tab to="#section3">Section 3</Tab>
-    </Tabs>
+  <Tabs>
+    <TabList>
+      <Tab>Section 1</Tab>
+      <Tab>Section 2</Tab>
+      <Tab>Section 3</Tab>
+    </TabList>
 
-    <TabPanel id="section1">
+    <TabPanel>
       <p>Section 1 panel.</p>
       <a href="#">A link</a>
     </TabPanel>
-    <TabPanel id="section2">
+    <TabPanel>
       <p>Section 2 panel.</p>
       <a href="#">A link</a>
     </TabPanel>
-    <TabPanel id="section3">
+    <TabPanel>
       <p>Section 3 panel.</p>
       <a href="#">A link</a>
     </TabPanel>
-  </Tabbed>
+  </Tabs>
 )

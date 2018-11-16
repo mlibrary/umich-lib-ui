@@ -15,23 +15,23 @@ npm install @umich-lib-ui/tabs
 ```jsx
 // @live
 
-<Tabbed>
-  <Tabs>
-    <Tab to="#section1">Section 1</Tab>
-    <Tab to="#section2">Section 2</Tab>
-    <Tab to="#section3">Section 3</Tab>
-  </Tabs>
+<Tabs>
+  <TabList>
+    <Tab>Tab 1</Tab>
+    <Tab>Tab 2</Tab>
+    <Tab>Tab 3</Tab>
+  </TabList>
 
-  <TabPanel id="section1">
-    Section 1 panel content.
+  <TabPanel>
+    Tab Panel 1 panel content.
   </TabPanel>
-  <TabPanel id="section2">
-    Section 2 panel content.
+  <TabPanel>
+    Tab Panel 2 panel content.
   </TabPanel>
-  <TabPanel id="section3">
-    Section 3 panel content.
+  <TabPanel>
+    Tab Panel 3 panel content.
   </TabPanel>
-</Tabbed>
+</Tabs>
 ```
 
 ## Styling

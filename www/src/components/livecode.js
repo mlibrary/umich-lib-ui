@@ -23,7 +23,7 @@ import List from '../../../packages/list'
 import ResourceAccess from '../../../packages/resource-access'
 import RecordFields from '../../../packages/record-fields'
 import {
-  Tabbed,
+  TabList,
   Tabs,
   Tab,
   TabPanel
@@ -52,7 +52,7 @@ const scope = {
   Text,
   TextInput,
   colors,
-  Tabbed,
+  TabList,
   Tabs,
   Tab,
   TabPanel

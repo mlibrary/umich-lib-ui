@@ -126,6 +126,10 @@ export const RESET_BUTTON = {
   }
 }
 
+export const CARD = {
+  boxShadow: '0 2px 2px 0 rgba(0,0,0,.12), 0 2px 4px 0 rgba(0,0,0,.24);'
+}
+
 /*
   TODO
   - Add gutter config system for viewport padding
