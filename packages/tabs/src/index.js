@@ -7,7 +7,6 @@ import {
 } from 'react-tabs';
 import {
   colors,
-  CARD,
   MEDIA_QUERIES
 } from '@umich-lib-ui/styles'
 
@@ -19,9 +18,11 @@ const TabList = styled(UnstyledTabList)({
   listStyle: 'none',
   margin: 0,
   padding: 0,
+  borderLeft: `solid 2px ${colors.grey[400]}`,
   [MEDIA_QUERIES.LARGESCREEN]: {
     display: 'flex',
     alignItems: 'baseline',
+    borderLeft: 'none',
     borderBottom: `solid 2px ${colors.grey[400]}`
   },
 })
@@ -46,11 +47,12 @@ const dynamicTabStyles = props => {
 const Tab = styled(UnstyledTab)(
   {
     cursor: 'pointer',
-    padding: '0.5rem 1rem',
+    padding: '0.5rem 0.75rem',
     borderLeft: `solid 3px transparent`,
+    marginLeft: '-2px',
     [MEDIA_QUERIES.LARGESCREEN]: {
-      padding: '0.5rem 1.25rem',
       marginBottom: '-3px',
+      marginLeft: 0,
       borderLeft: 'none'
     }
   },

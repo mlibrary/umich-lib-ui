@@ -34,10 +34,6 @@ npm install @umich-lib-ui/tabs
 </Tabs>
 ```
 
-## Styling
-
-`Tabs`, `Tab`, and `TabPanel` components by default do not have styles. They do accept `className` or `style` props.
-
 ## Tabs props
 
-The `Tab` `to` prop links to the `TabPanel` `id`. Be sure those match and are unique.
+This component is a wrap of the [react-tabs](https://github.com/reactjs/react-tabs). See documention for props there. 
