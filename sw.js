@@ -26,29 +26,29 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-319afdefb2e9ee5fcbf6.js"
+    "url": "webpack-runtime-939a28e88415cdc6d54b.js"
   },
   {
-    "url": "app-7d1cd48211d38bfae333.js"
+    "url": "app-a3635a6b58030e24ae55.js"
   },
   {
-    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-170df88cc1676d38075d.js"
+    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-7ad988e6d61a03b02529.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "e3d71b16110a956ce2c120e6caba6efb"
+    "revision": "88758069c53ecccd712e58a2405e3826"
   },
   {
     "url": "1.2e248bc18be15ab51425.css"
   },
   {
-    "url": "1-ea135796ab0b34f47d2a.js"
+    "url": "1-853bb1ec2be7148f3134.js"
   },
   {
-    "url": "component---src-pages-404-js-7ace1bc54d9913be5107.js"
+    "url": "component---src-pages-404-js-4cc268c551f61d203dc5.js"
   },
   {
-    "url": "0-ab8d60c896b656654f0f.js"
+    "url": "0-2b37b7c1898b216fb35e.js"
   },
   {
     "url": "static/d/164/path---404-html-516-62a-NZuapzHg3X9TaN1iIixfv1W23E.json",
@@ -67,34 +67,8 @@ workbox.routing.registerNavigationRoute("/offline-plugin-app-shell-fallback/inde
   blacklist: [/\?(.+&)?no-cache=1$/],
 });
 
-workbox.routing.registerRoute(/\.(?:png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/, workbox.strategies.staleWhileRevalidate(), 'GET');
-workbox.routing.registerRoute(/^https?:/, workbox.strategies.networkFirst(), 'GET');
+workbox.routing.registerRoute(/(\.js$|\.css$|\/static\/)/, workbox.strategies.cacheFirst(), 'GET');
+workbox.routing.registerRoute(/^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/, workbox.strategies.staleWhileRevalidate(), 'GET');
+workbox.routing.registerRoute(/^https?:\/\/fonts\.googleapis\.com\/css/, workbox.strategies.staleWhileRevalidate(), 'GET');
+// noop
 "use strict";
-
-/* global workbox */
-self.addEventListener("message", function (event) {
-  var api = event.data.api;
-
-  if (api === "gatsby-runtime-cache") {
-    var resources = event.data.resources;
-    var cacheName = workbox.core.cacheNames.runtime;
-    event.waitUntil(caches.open(cacheName).then(function (cache) {
-      return Promise.all(resources.map(function (resource) {
-        var request; // Some external resources don't allow
-        // CORS so get an opaque response
-
-        if (resource.match(/^https?:/)) {
-          request = fetch(resource, {
-            mode: "no-cors"
-          });
-        } else {
-          request = fetch(resource);
-        }
-
-        return request.then(function (response) {
-          return cache.put(resource, response);
-        });
-      }));
-    }));
-  }
-});
