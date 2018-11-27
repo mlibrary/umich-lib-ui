@@ -17,20 +17,64 @@ npm install @umich-lib-ui/tabs
 
 <Tabs>
   <TabList>
-    <Tab>Tab 1</Tab>
-    <Tab>Tab 2</Tab>
-    <Tab>Tab 3</Tab>
+    <Tab>Catalog</Tab>
+    <Tab>Articles</Tab>
+    <Tab>Databases</Tab>
   </TabList>
 
-  <TabPanel>
-    Tab Panel 1 panel content.
-  </TabPanel>
-  <TabPanel>
-    Tab Panel 2 panel content.
-  </TabPanel>
-  <TabPanel>
-    Tab Panel 3 panel content.
-  </TabPanel>
+  <div style={{ margin: '1rem 0' }}>
+    <TabPanel>
+      <form action="https://search.lib.umich.edu/catalog" method="get" className="y-spacing">
+        <Heading size="medium" level={3}>Library Catalog Search</Heading>
+        <p>The Catalog is the definitive place for finding materials held by the U-M Library.</p>
+
+        <div className="layout-flex x-spacing">
+          <TextInput
+            id="search-query"
+            labelText="Search terms"
+            type="search"
+            hideLabel
+            name="query"
+          />
+          <Button type="submit">Search</Button>
+        </div>
+      </form>
+    </TabPanel>
+    <TabPanel>
+      <form action="https://search.lib.umich.edu/articles" method="get" className="y-spacing">
+        <Heading size="medium" level={3}>Library Articles Search</Heading>
+        <p>Articles is a gateway to discovering a wide range of the library's resources.</p>
+
+        <div className="layout-flex x-spacing">
+          <TextInput
+            id="search-query"
+            labelText="Search terms"
+            type="search"
+            hideLabel
+            name="query"
+          />
+          <Button type="submit">Search</Button>
+        </div>
+      </form>
+    </TabPanel>
+    <TabPanel>
+      <form action="https://search.lib.umich.edu/databases" method="get" className="y-spacing">
+        <Heading size="medium" level={3}>Library Database Search</Heading>
+        <p>Databases are library search engines focused on a specific subject or range of subjects. Some may highlight a particular format, while others will contain a variety of material types.</p>
+
+        <div className="layout-flex x-spacing">
+          <TextInput
+            id="search-query"
+            labelText="Search terms"
+            type="search"
+            hideLabel
+            name="query"
+          />
+          <Button type="submit">Search</Button>
+        </div>
+      </form>
+    </TabPanel>
+  </div>
 </Tabs>
 ```
 

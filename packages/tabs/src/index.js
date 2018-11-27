@@ -30,13 +30,24 @@ const TabList = styled(UnstyledTabList)({
 const dynamicTabStyles = props => {
   if (props.selected) {
     return {
+      fontWeight: '600',
       color: colors.blue[500],
       borderLeft: `solid 3px ${colors.blue[500]}`,
       background: colors.grey[200],
       [MEDIA_QUERIES.LARGESCREEN]: {
         borderLeft: 'none',
         background: 'none',
-        borderBottom: `solid 3px ${colors.blue[500]}`
+        border: `solid 1px ${colors.grey[400]}`,
+        borderTop: `solid 3px ${colors.blue[500]}`,
+        borderBottom: `solid 2px white`,
+      }
+    }
+  } else {
+    return {
+      ':hover': {
+        [MEDIA_QUERIES.LARGESCREEN]: {
+          borderBottom: `solid 2px ${colors.grey[500]}`,
+        }
       }
     }
   }
@@ -47,11 +58,11 @@ const dynamicTabStyles = props => {
 const Tab = styled(UnstyledTab)(
   {
     cursor: 'pointer',
-    padding: '0.5rem 0.75rem',
+    padding: '0.5rem 1.25rem',
     borderLeft: `solid 3px transparent`,
     marginLeft: '-2px',
     [MEDIA_QUERIES.LARGESCREEN]: {
-      marginBottom: '-3px',
+      marginBottom: '-2px',
       marginLeft: 0,
       borderLeft: 'none'
     }
