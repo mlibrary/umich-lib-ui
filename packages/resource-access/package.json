@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "module": "lib/index.js",
   "dependencies": {
-    "@umich-lib/button": "^0.1.1",
+    "@umich-lib/button": "^0.1.2",
     "@umich-lib/expandable": "^0.1.0",
     "@umich-lib/icon": "^0.1.0",
     "@umich-lib/styles": "^0.1.0",
