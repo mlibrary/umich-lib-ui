@@ -1,6 +1,6 @@
 {
   "name": "@umich-lib/styles",
-  "version": "0.1.0-alpha.0",
+  "version": "0.1.0",
   "module": "lib/index.js",
   "files": [
     "lib"
