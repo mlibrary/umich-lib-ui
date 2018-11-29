@@ -1,11 +1,11 @@
 {
   "name": "@umich-lib-ui/text-input",
-  "version": "0.1.0-alpha.21",
+  "version": "0.1.0",
   "module": "lib/index.js",
   "dependencies": {
     "@reach/visually-hidden": "^0.1.1",
-    "@umich-lib-ui/input": "^0.1.0-alpha.21",
-    "@umich-lib-ui/styles": "^0.1.0-alpha.21",
+    "@umich-lib-ui/input": "^0.1.0",
+    "@umich-lib-ui/styles": "^0.1.0",
     "react-emotion": "^9.2.12"
   },
   "peerDependencies": {
