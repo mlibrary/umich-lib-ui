@@ -43,6 +43,7 @@
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   },
   "devDependencies": {
+    "gatsby-transformer-json": "^2.1.6",
     "gh-pages": "^2.0.0"
   }
 }

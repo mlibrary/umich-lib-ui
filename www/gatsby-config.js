@@ -13,6 +13,19 @@ module.exports = {
         path: `${__dirname}/docs`
       }
     },
+    {
+      resolve: `gatsby-transformer-json`,
+      options: {
+        typeName: 'Json',
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'packages',
+        path: `${__dirname}/../packages`
+      }
+    },
     `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -35,14 +48,7 @@ module.exports = {
     /*
     // This doesn't work for some reason...
     // https://github.com/gatsbyjs/gatsby/issues/7543
-    `gatsby-transformer-react-docgen`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: 'data',
-        path: `${__dirname}/../packages`
-      },
-    },
+    `gatsby-transformer-react-docgen`
     */
   ],
 }

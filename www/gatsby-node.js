@@ -16,6 +16,19 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       name: `name`,
       value: name,
     })
+
+    /*
+      TODO: Get the related package.json version number
+      for the React Component. 
+
+      const version = // ...
+
+      createNodeField({
+        node,
+        name: `version`,
+        value: version,
+      })
+    */
   }
 }
 
@@ -44,6 +57,13 @@ exports.createPages = ({ graphql, actions }) => {
                 name
               }
               htmlAst
+            }
+          }
+        }
+        allDirectory {
+          edges {
+            node {
+              name
             }
           }
         }
