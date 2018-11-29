@@ -95,13 +95,28 @@ const Button = ({
   ...other
 }) => {
   const button = (
-    <StyledButton {...other} kind={kind} small={small} disabled={disabled} type={type}>
+    <StyledButton
+      {...other}
+      kind={kind}
+      small={small}
+      disabled={disabled}
+      type={type}
+      className={className}
+    >
       {children}
     </StyledButton>
   );
 
   const anchor = (
-    <StyledAnchor {...other} href={href} kind={kind} small={small} disabled={disabled} type={type}>
+    <StyledAnchor
+      href={href}
+      kind={kind}
+      small={small}
+      disabled={disabled}
+      type={type}
+      className={className}
+      {...other}
+    >
       {children}
     </StyledAnchor>
   );
