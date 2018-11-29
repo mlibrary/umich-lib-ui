@@ -1,9 +1,9 @@
 {
   "name": "@umich-lib/input",
-  "version": "0.1.0",
+  "version": "0.1.0-alpha.0",
   "module": "lib/index.js",
   "dependencies": {
-    "@umich-lib/styles": "^0.1.0",
+    "@umich-lib/styles": "^0.1.0-alpha.0",
     "react-emotion": "^9.2.12"
   },
   "peerDependencies": {
