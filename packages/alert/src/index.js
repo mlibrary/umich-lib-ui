@@ -4,7 +4,7 @@ import ReachAlert from '@reach/alert';
 import {
   colors,
   SITE_WIDTH
-} from '@umich-lib-ui/styles'
+} from '@umich-lib/styles'
 import styled from 'react-emotion'
 
 const alertIntentStyles = {

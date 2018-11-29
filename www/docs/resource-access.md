@@ -7,7 +7,7 @@ title: ResourceAccess
 ## Install
 
 ```
-npm install @umich-lib-ui/resource-access
+npm install @umich-lib/resource-access
 ```
 
 ## Usage

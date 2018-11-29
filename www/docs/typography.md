@@ -33,7 +33,7 @@ Use `size` to adjust the visual size of the heading. Use `level` to set the sema
 ### Install Heading
 
 ```
-npm install @umich-lib-ui/heading --save
+npm install @umich-lib/heading --save
 ```
 
 ## Body text
@@ -56,7 +56,7 @@ npm install @umich-lib-ui/heading --save
 ### Install Text
 
 ```
-npm install @umich-lib-ui/text --save
+npm install @umich-lib/text --save
 ```
 
 ## Links
@@ -118,7 +118,7 @@ Unstyled lists.
 ### Install List
 
 ```
-npm install @umich-lib-ui/list --save
+npm install @umich-lib/list --save
 ```
 
 ## Line-height

@@ -7,7 +7,7 @@ title: "Chat"
 ## Install
 
 ```
-npm install @umich-lib-ui/chat
+npm install @umich-lib/chat
 ```
 
 ## Usage

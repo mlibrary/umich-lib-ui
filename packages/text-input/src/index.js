@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
-import { colors, base } from '@umich-lib-ui/styles'
-import Input from '@umich-lib-ui/input'
+import { colors, base } from '@umich-lib/styles'
+import Input from '@umich-lib/input'
 import VisuallyHidden from "@reach/visually-hidden";
 
 const StyledFormItem = styled('div')(

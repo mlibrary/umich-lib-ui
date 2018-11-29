@@ -7,7 +7,7 @@ title: "Button"
 ## Install
 
 ```
-npm install @umich-lib-ui/button
+npm install @umich-lib/button
 ```
 
 ## Usage

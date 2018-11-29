@@ -4,7 +4,7 @@ import styled from 'react-emotion';
 import {
   colors,
   RESET_BUTTON
-} from '@umich-lib-ui/styles'
+} from '@umich-lib/styles'
 
 const createButtonStyles = (props) => {
   const { kind, small, disabled } = props

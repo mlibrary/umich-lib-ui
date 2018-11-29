@@ -7,7 +7,7 @@ title: Tabs
 ## Install
 
 ```
-npm install @umich-lib-ui/tabs
+npm install @umich-lib/tabs
 ```
 
 ## Usage

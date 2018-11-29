@@ -7,7 +7,7 @@ title: Expandable
 ## Install
 
 ```
-npm install @umich-lib-ui/expandable
+npm install @umich-lib/expandable
 ```
 
 ## Usage

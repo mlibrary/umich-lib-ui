@@ -7,7 +7,7 @@ title: "Header"
 ## Install
 
 ```
-npm install @umich-lib-ui/header
+npm install @umich-lib/header
 ```
 
 ## Usage

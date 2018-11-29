@@ -7,7 +7,7 @@ title: "Alert"
 ## Install
 
 ```
-npm install @umich-lib-ui/alert
+npm install @umich-lib/alert
 ```
 
 ## Usage

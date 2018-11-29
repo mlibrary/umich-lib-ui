@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'react-emotion';
-import { colors, base } from '@umich-lib-ui/styles'
+import { colors, base } from '@umich-lib/styles'
 
 const StyledInput = styled('input')(
   base,

@@ -7,7 +7,7 @@ title: TextInput
 ## Install
 
 ```
-npm install @umich-lib-ui/text-input
+npm install @umich-lib/text-input
 ```
 
 ## Usage

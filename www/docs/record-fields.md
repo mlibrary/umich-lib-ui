@@ -7,7 +7,7 @@ title: RecordFields
 ## Install
 
 ```
-npm install @umich-lib-ui/record-fields
+npm install @umich-lib/record-fields
 ```
 
 ## Usage

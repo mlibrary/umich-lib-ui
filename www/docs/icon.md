@@ -7,7 +7,7 @@ title: Icon
 ## Install
 
 ```
-npm install @umich-lib-ui/icon
+npm install @umich-lib/icon
 ```
 
 ## Usage

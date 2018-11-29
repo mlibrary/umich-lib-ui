@@ -1,12 +1,12 @@
 import React from 'react'
 import axios from 'axios'
 import PropTypes from 'prop-types';
-import Button from '@umich-lib-ui/button'
-import Icon from '@umich-lib-ui/icon'
+import Button from '@umich-lib/button'
+import Icon from '@umich-lib/icon'
 import styled from 'react-emotion';
 import {
   BREAKPOINTS
-} from '@umich-lib-ui/styles'
+} from '@umich-lib/styles'
 
 const AskUsSVG = ({ className }) => (
   <svg className={className} width="282.682" height="130.146" viewBox="0 0 282.682 130.146">

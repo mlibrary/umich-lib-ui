@@ -1,19 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types'
-import Icon from '@umich-lib-ui/icon'
+import Icon from '@umich-lib/icon'
 import {
   Expandable,
   ExpandableProvider,
   ExpandableChildren,
   ExpandableButton
-} from '@umich-lib-ui/expandable'
+} from '@umich-lib/expandable'
 import styled from 'react-emotion'
 import {
   colors,
   intent_colors,
   MEDIA_QUERIES
-} from '@umich-lib-ui/styles'
-import Button from '@umich-lib-ui/button'
+} from '@umich-lib/styles'
+import Button from '@umich-lib/button'
 
 const FigureStyled = styled('figure')({
   overflowX: 'auto',

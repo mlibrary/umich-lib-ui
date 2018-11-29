@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { css, cx } from 'react-emotion'
-import { base, colors } from '@umich-lib-ui/styles'
+import { base, colors } from '@umich-lib/styles'
 
 const cssHeadingBase = css(base, {
   display: 'block',

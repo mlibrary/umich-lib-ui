@@ -5,7 +5,7 @@ title: "Styles"
 ## Install
 
 ```
-npm install @umich-lib-ui/styles
+npm install @umich-lib/styles
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm install @umich-lib-ui/styles
 ```
 import {
   colors
-} from '@umich-lib-ui/styles'
+} from '@umich-lib/styles'
 ```
 
 ```jsx

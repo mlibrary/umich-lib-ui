@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { ExpandableContext } from './expandable'
-import Button from '@umich-lib-ui/button'
+import Button from '@umich-lib/button'
 
 const cleanList = (list) => {
   return list.filter(x => (x ? true : false)).join(' ').trim()

@@ -5,7 +5,7 @@ import {
   colors,
   SITE_WIDTH,
   MEDIA_QUERIES
-} from '@umich-lib-ui/styles'
+} from '@umich-lib/styles'
 
 
 const StyledHeader = styled('header')({

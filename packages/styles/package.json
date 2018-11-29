@@ -1,5 +1,5 @@
 {
-  "name": "@umich-lib-ui/styles",
+  "name": "@umich-lib/styles",
   "version": "0.1.0",
   "module": "lib/index.js",
   "files": [

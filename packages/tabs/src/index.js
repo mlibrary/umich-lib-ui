@@ -8,7 +8,7 @@ import {
 import {
   colors,
   MEDIA_QUERIES
-} from '@umich-lib-ui/styles'
+} from '@umich-lib/styles'
 
 const Tabs = styled(UnstyledTabs)({
   width: '100%'

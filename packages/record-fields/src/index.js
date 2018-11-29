@@ -4,7 +4,7 @@ import styled from 'react-emotion'
 import {
   MEDIA_QUERIES,
   colors
-} from '@umich-lib-ui/styles'
+} from '@umich-lib/styles'
 
 const StyledDL = styled('dl')({
   width: '100%',
