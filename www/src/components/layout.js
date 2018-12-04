@@ -8,7 +8,8 @@ import Header from '../../../packages/header'
 import Alert from '../../../packages/alert'
 import {
   SITE_WIDTH,
-  MEDIA_QUERIES
+  MEDIA_QUERIES,
+  colors
 } from '../../../packages/styles'
 import "../scss/init.scss"
 import styled from 'react-emotion'
@@ -89,6 +90,10 @@ const Layout = ({ children }) => (
             {
               name: 'description',
               content: 'Design your service using U-M Library styles, components, and patterns.'
+            },
+            {
+              name: 'theme-color',
+              content: `${colors.blue[600]}`
             }
           ]}
           link={[
