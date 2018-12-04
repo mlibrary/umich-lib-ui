@@ -11,7 +11,7 @@ import {
 const StyledHeader = styled('header')({
   display: 'block',
   background: colors.brand.blue,
-  padding: '1rem 0'
+  padding: '0.8rem 0'
 })
 
 const StyledHeaderInner = styled('div')({
@@ -84,7 +84,7 @@ const UMichBlockM = () => (
     viewBox="0 0 202 144"
     style={{
       display: 'inherit',
-      height: '1.6rem',
+      height: '26px',
     }}
   >
     <title>University of Michigan</title>
