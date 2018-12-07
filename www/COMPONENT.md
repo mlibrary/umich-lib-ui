@@ -1,6 +1,6 @@
-```
+---
 title: ComponentName
-```
+---
 
 <lede>Lede about ComponentName</lede>
 
