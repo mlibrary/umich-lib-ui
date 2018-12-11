@@ -1,22 +1,12 @@
 ---
 title: Contribute
 ---
+## Let us know about research insights 
+Do you have research that backs up existing styles, components, or patterns and corresponding insights to add to the Design System? Or findings that show we should maybe make some changes? Please let us know! The best way to get in touch about research is sending a message to the #design-system channel on Slack. 
 
-## Contribution criteria
+## Suggest changes to an existing style, component, or pattern
 
-The <gatsby-link to="/design-system-team">Design System team</gatsby-link> reviews porposals to check they meet the following criteria. Proposals that meet the criteria will then be marked ‘to do’, ready to be worked on.
-
-### 1. Useful
-
-There is evidence that it would be useful for many teams or services. Evidence could be screenshots or links to versions of it being used in different services.
-
-### 2. Unique
-
-It does not replicate something already in the Design System. If it’s intended to replace an existing style, component, or pattern, there is evidence to show that it’s better than the existing version.
-
-## Propose modifications to an existing style, component, or pattern
-
-This process is TBD. 
+Please suggest changes to something that already exists in the Design System by commenting on the issue for that style, component or pattern.
 
 ## Propose a style, component, or pattern
 
@@ -30,22 +20,25 @@ If your idea is on the backlog and marked as ‘proposed’, follow the link and
 
 If your idea is not on the backlog, [raise an issue using the template](https://github.com/mlibrary/umich-lib-ui/issues/new). A member of the Design System team will get in touch to discuss your proposal.
 
-At this stage, you just need to present your idea and evidence of the user needs. You can include screenshots or links to versions of the component or pattern in use, but avoid spending time working on a specific design or writing code.
+At this stage, **you just need to present your idea and evidence of the user needs**. You can include screenshots or links to versions of the component or pattern in use, but avoid spending time working on a specific design or writing code.
 
 ### 3. Send your proposal for review
 
-The Design System team will help you prepare your proposal and share it to review. When your proposal is ready the Design System team will let you know the decision and recommendations, if there are any.
+The Design System team will help you prepare your proposal and share it to review. The team reviews proposals to check they meet the following criteria. 
 
-If the team finds that your proposal is useful and unique, it will be marked as ‘to do’ on the community backlog.
+1. **Useful** - There is evidence that it would be useful for many teams or services. Evidence could be screenshots or links to versions of it being used in different services.
 
-At this point, you can either start to develop the component or pattern or leave it for someone else to work on.
+2. **Unique** - It does not replicate something already in the Design System. If it’s intended to replace an existing style, component, or pattern, there is evidence to show that it’s better than the existing version.
+
+If the team finds that your proposal is useful and unique, it will be marked as ‘to do’ on the community backlog. At this point, you can either start to develop the component or pattern or leave it for someone else to work on.
 
 ## Develop a style, component, or pattern
 
 Anyone can choose to work on items marked ‘to do’ in the [community backlog](https://github.com/mlibrary/umich-lib-ui/labels/proposal).
 
-If you see something you would like to work on, email the Design System team at [design-discovery@lib.umich.edu](mailto:design-discovery@lib.umich.edu).
+If you see something you would like to work on, email the Design System team at [design-discovery@lib.umich.edu](mailto:design-discovery@lib.umich.edu) for help getting started.
 
+<!--
 ### 1. Plan your work with the Design System team
 
 After you’ve emailed them, a member of the Design System team will get in touch to arrange a kick-off meeting.
@@ -65,3 +58,4 @@ If you’re happy to go ahead, the team will assign you to the issue as a contri
 ### 3. Send your contribution for review
 
 ### 4. Get ready to publish
+--!>
