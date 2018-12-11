@@ -1,7 +1,8 @@
+- page: get-started
 - page: principles
-- page: accessibility
-- page: glossary
 - page: contribute
+- page: glossary
+- page: accessibility
 - page: styles
   pages: 
     - colors

@@ -22,9 +22,11 @@ If your idea is not on the backlog, [raise an issue using the template](https://
 
 At this stage, **you just need to present your idea and evidence of the user needs**. You can include screenshots or links to versions of the component or pattern in use, but avoid spending time working on a specific design or writing code.
 
-### 3. Send your proposal for review
+### 3. Submit proposal for review
 
 The Design System team will help you prepare your proposal and share it to review. The team reviews proposals to check they meet the following criteria. 
+
+#### Contribution criteria
 
 1. **Useful** - There is evidence that it would be useful for many teams or services. Evidence could be screenshots or links to versions of it being used in different services.
 

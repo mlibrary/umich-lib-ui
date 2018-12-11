@@ -141,6 +141,9 @@ const SideNav = ({ data }) => {
   return (
     <SectionNav role="navigation" aria-label="side bar" tabIndex="0">
       <StyledList>
+        <StyledNavListItem>
+          <Link to="/" activeStyle={activeLinkStyles}>Home</Link>
+        </StyledNavListItem>
         {data.map((section, s) => (
           <StyledNavListItem key={s}>
             {section.items ? (

@@ -1,6 +1,6 @@
 import React from 'react'
-import Button from '../../../packages/button'
 import Heading from '../../../packages/heading'
+import Text from '../../../packages/text'
 import Layout from '../components/layout'
 
 export default () => {
@@ -9,13 +9,19 @@ export default () => {
       <div className="y-spacing">
         <Heading level={1} size="xlarge" className="text" style={{ marginTop: '0' }}>Design your service using U-M Library styles, components, and patterns</Heading>
 
-        <p className="lede text">Use this design system to make your service consistent with other library services. Learn from the research and experience of other teams and avoid repeating work that has already been done.</p>
+        <Text lede>Use this design system to make your service consistent with other library services. Learn from the research and experience of other teams and avoid repeating work that has already been done.</Text>
 
-        <Heading level={2} size="large" className="text">Try it out</Heading>
+        <Heading level={2} size="large">Ways you can use the Design System</Heading>
 
-        <p className="text">Each component has examples to experiment and test. Go even further and launch an online sandbox code editor environment.</p>
+        <Text>The goal of our approach is to make the Design System a useful tool and resource regardless of your project or the framework being used. Depending on the context of the project and tech stack, there a variety of ways you can use the Design System.</Text>
 
-        <Button href="https://codesandbox.io/s/8z337kk6r9">Launch online code editor</Button>
+        <Heading level={3} size="medium">Consult the styles, components, and patterns</Heading>
+
+        <Text>Make your service cohesive with other U-M Library services. Save time with reusable, accessible components for forms, alerts, tabs, icons, and more. Help users through common tasks like handling errors, completing forms, and providing access to resources.</Text>
+
+        <Heading level={3} size="medium" className="text">Read the research insights behind our design decisions</Heading>
+
+        <Text>Use the included research insights to educate yourself and help you talk to colleagues and stakeholders about the thought process behind designs.</Text>
       </div>
     </Layout>
   )
