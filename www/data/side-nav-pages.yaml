@@ -15,15 +15,12 @@
     - header
     - icon
     - text-input
-    - resource-access
     - record-fields
     - styles
     - tabs
 - page: patterns
   pages:
-    - forms
-    - errors-and-validation
-    - getting-feedback
+    - resource-access
 - page: contribute
 - page: glossary
 - page: accessibility
