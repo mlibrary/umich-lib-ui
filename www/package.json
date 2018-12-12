@@ -21,6 +21,7 @@
     "gatsby-transformer-react-docgen": "^2.1.1",
     "gatsby-transformer-remark": "^1.7.44",
     "gatsby-transformer-yaml": "latest",
+    "github-slugger": "^1.2.0",
     "node-sass": "^4.9.3",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
