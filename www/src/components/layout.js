@@ -38,11 +38,10 @@ const DocMain = styled('div')({
 })
 
 const DocMainContent = styled('div')({
-  maxWidth: '38rem',
   margin: '0 auto',
-  padding: '2rem 1rem',
+  padding: '1rem 2rem',
   [MEDIA_QUERIES.LARGESCREEN]: {
-    padding: '2rem'
+    padding: '2rem 3rem'
   }
 })
 
