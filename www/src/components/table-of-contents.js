@@ -20,6 +20,10 @@ const OL = styled('ol')({
 */
 const TableOfContents = ({ headings }) => {
   slugger.reset()
+
+  if (typeof window === 'undefined') {
+    return null
+  }
   
   return (
     <OL>
