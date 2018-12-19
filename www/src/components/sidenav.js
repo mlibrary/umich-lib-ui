@@ -139,7 +139,7 @@ class NavSection extends React.Component {
 
 const SideNav = ({ data }) => {
   return (
-    <SectionNav role="navigation" aria-label="side bar" tabIndex="0">
+    <SectionNav role="navigation" aria-label="side bar">
       <StyledList>
         <StyledNavListItem>
           <Link to="/" activeStyle={activeLinkStyles}>Home</Link>
