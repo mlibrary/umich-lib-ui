@@ -7,7 +7,7 @@ import Layout from '../components/layout'
 export default () => {
   return (
     <Layout>
-      <div className="y-spacing">
+      <div className="y-spacing content">
         <Heading level={1} size="xlarge" className="text" style={{ marginTop: '0' }}>Design your service using U-M Library styles, components, and patterns</Heading>
 
         <Text lede>Use this design system to make your service consistent with other library services. Learn from the research and experience of other teams and avoid repeating work that has already been done.</Text>

@@ -39,7 +39,7 @@ const DocMain = styled('div')({
 
 const DocMainContent = styled('div')({
   margin: '0 auto',
-  padding: '1rem 2rem',
+  padding: '1rem',
   [MEDIA_QUERIES.LARGESCREEN]: {
     padding: '2rem 3rem'
   }

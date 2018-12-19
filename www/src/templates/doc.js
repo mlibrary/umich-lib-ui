@@ -17,7 +17,7 @@ const docTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <article role="main" className="doc">
+      <article role="main" className="content">
         <header>
           <Heading level={1} size="xlarge" style={{ marginTop: '0' }}>{title}</Heading>
         </header>

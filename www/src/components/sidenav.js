@@ -23,7 +23,7 @@ const SectionNav = styled('nav')({
 })
 
 const StyledList = styled('ul')({
-  margin: '2rem 0'
+  padding: '2rem 0'
 })
 
 const cssNavListItem = {
