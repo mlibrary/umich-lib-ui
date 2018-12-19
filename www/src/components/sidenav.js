@@ -80,7 +80,7 @@ class NavSection extends React.Component {
   
   isExpanded = (key) => {
     if (windowGlobal) {
-      return localStorage.getItem(key) == 'true' ? true : false
+      return localStorage.getItem(key) === 'true' ? true : false
     }
 
     return this.state[key]

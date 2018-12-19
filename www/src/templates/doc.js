@@ -4,9 +4,6 @@ import Layout from "../components/layout"
 import Markdown from "../components/markdown"
 import TableOfContents from '../components/table-of-contents'
 import Heading from '../../../packages/heading'
-import {
-  colors,
-} from '../../../packages/styles'
 import styled from 'react-emotion'
 
 const StyledFooter = styled('footer')({
