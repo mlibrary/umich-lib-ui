@@ -12,7 +12,7 @@ title: "Some Title"
 ---
 ```
 
-[View the component template](/COMPONENT.md)
+[View the component template](/www/COMPONENT.md)
 
 ## Code blocks
 
