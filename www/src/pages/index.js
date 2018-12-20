@@ -18,17 +18,15 @@ export default () => {
 
         <Heading level={3} size="medium">Consult the styles, components, and patterns</Heading>
 
-        <Text>Make your service cohesive with other U-M Library services. Save time with reusable, accessible components for forms, alerts, tabs, icons, and more. Help users through common tasks like handling errors, completing forms, and providing access to resources.</Text>
+        <Text>Consider this is your central source for consulting U-M Library interface designs and make it your go-to destination!</Text>
 
         <Heading level={3} size="medium" className="text">Read the research insights behind our design decisions</Heading>
 
         <Text>Use the included key research insights to educate yourself and help you talk to colleagues and stakeholders about the thought process behind designs.</Text>
       
-        <Heading level={2} size="large">Ready to get started?</Heading>
+        <Heading level={3} size="medium">Use the styles, components, and patterns</Heading>
 
-        <Text>To consult the Design System, read research insights, and review intent, dive right in!</Text>
-
-        <Text>To use the styles, components, and patterns in your project, see the <Link to="/get-started/">get started</Link> page for details.</Text>
+        <Text>See the <Link to="/get-started/">get started</Link> page for details.</Text>
       </div>
     </Layout>
   )
