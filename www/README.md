@@ -12,6 +12,8 @@ title: "Some Title"
 ---
 ```
 
+[View the component template](/COMPONENT.md)
+
 ## Code blocks
 
 Use to render a react element and provide a live code editor.
