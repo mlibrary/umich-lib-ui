@@ -6,7 +6,7 @@ Do you have research that backs up existing styles, components, or patterns and 
 
 ## Suggest changes to an existing style, component, or pattern
 
-Please suggest changes to something that already exists in the Design System by commenting on the issue for that style, component or pattern.
+Please suggest changes to something that already exists in the Design System by sending a message to the #design-system channel on Slack.
 
 ## Propose a style, component, or pattern
 
@@ -16,15 +16,13 @@ Check if someone else has already suggested your idea or something similar on th
 
 If your idea is on the backlog and marked as ‘proposed’, follow the link and comment on the issue. Say you need the component or pattern and share any examples or evidence you have to support the proposal.
 
-### 2. Raise an issue
+### 2. Raise an issue for an review
 
 If your idea is not on the backlog, [raise an issue using the template](https://github.com/mlibrary/umich-lib-ui/issues/new). A member of the Design System team will get in touch to discuss your proposal.
 
 At this stage, **you just need to present your idea and evidence of the user needs**. You can include screenshots or links to versions of the component or pattern in use, but avoid spending time working on a specific design or writing code.
 
-### 3. Submit proposal for review
-
-The Design System team will help you prepare your proposal and share it to review. The team reviews proposals to check they meet the following criteria. 
+The team reviews proposals to check they meet the following criteria. 
 
 #### Contribution criteria
 
