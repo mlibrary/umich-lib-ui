@@ -8,17 +8,18 @@ title: Design System team
 
 The team:
 
+- builds and maintains the system, including styles, components, and patterns, as well as documentation for use and contributions
 - reviews proposals and contributions against the <gatsby-link to="/contribute/#contribution-criteria">contribution criteria</gatsby-link>
-- makes recommendations to help contributors improve their work
+- stewards the system to ensure it evolves to meet growing needs
+- consults with stakeholders on styles, components, and patterns
 - advocates for the needs of end users and the library
-
-This team consults with multidisciplinary groups of representatives from across the library. This means that decisions made are fair and unbiased, and that the Design System reflects the experiences of the whole library and not just one department.
 
 ## Members of the team
 
 - Bridget Burke
 - Heidi Burkhardt
 - Jon Earley
+- Ellen Schlegelmilch
 
 ## Contact us
 
