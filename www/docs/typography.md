@@ -39,7 +39,7 @@ npm install @umich-lib/heading --save
 ## Body text
 
 - avoid using bold and italics
-- use 19px for body copy and 16px for smaller screens.
+- use 18px for large screens and 16px for smaller screens.
 - use smaller sizes only if there’s a user need
 
 ```jsx
