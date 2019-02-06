@@ -113,10 +113,10 @@ Use `show` to define how many items are showed at inital render.
   return (
     <div className="y-spacing">
       <Expandable>
-        <ExpandableButton name="colors" count={colors.length} kind="tertiary" />
+        <ExpandableButton name="colors" />
 
         <ul>
-          <ExpandableChildren show={1}>
+          <ExpandableChildren show={3}>
             {colors.map((color, key) => <li key={key}>{color}</li>)}
           </ExpandableChildren>
         </ul>
