@@ -1,6 +1,6 @@
 {
   "name": "@umich-lib/icon",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "module": "lib/index.js",
   "dependencies": {
     "@umich-lib/styles": "^0.1.0",
