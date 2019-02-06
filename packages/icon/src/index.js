@@ -17,6 +17,7 @@ const Icon = ({
   size,
   title,
   className,
+  d,
   ...other
 }) => {
   if (!icons.hasOwnProperty(icon)) {
@@ -32,7 +33,7 @@ const Icon = ({
       {...other}
     >
       {title && <title>{title}</title>}
-      <path d={icons[icon]} />
+      <path d={d || icons[icon]} />
     </StyledSVG>
   )
 }
