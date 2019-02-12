@@ -48,7 +48,7 @@ Icon.propTypes = {
 }
 
 Icon.defaultProps = {
-  size: 16,
+  size: 18,
 };
 
 export { icons }
