@@ -37,7 +37,7 @@ Let users know why you're asking for input and what it will be used for with `de
 
 ### Invalid input and message
 
-If input is invalid provide add `invalid` and a descriptive `invalidText` message.
+If input is invalid add `invalid` and a descriptive `invalidText` message.
 
 ```jsx
 // @live

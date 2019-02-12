@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { colors, base } from '@umich-lib/styles'
 import Input from '@umich-lib/input'
+import Icon from '@umich-lib/icon'
 import VisuallyHidden from "@reach/visually-hidden";
 
 const StyledFormItem = styled('div')(
@@ -89,7 +90,7 @@ const TextInput = ({
 
   const error = invalid ? (
     <StyledFormItemErrorMessage id={errorId}>
-      {invalidText}
+      <Icon icon="error" /> {invalidText}
     </StyledFormItemErrorMessage>
   ) : null;
 
