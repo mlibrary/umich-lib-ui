@@ -13,7 +13,7 @@ const ColorPalette = ({ palette }) => (
             background: colors[palette][shade],
             padding: '0.5rem 1rem',
             fontWeight: '600',
-            color: shade > 400 || shade == 'blue' ? 'white' : '',
+            color: shade > 400 || shade === 'blue' ? 'white' : '',
             display: 'flex',
             justifyContent: 'space-between',
             margin: '0 -1rem',

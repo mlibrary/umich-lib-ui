@@ -10,5 +10,5 @@ export default ({ children }) => (
       margin: '1rem -1rem',
       background: colors.green[400]
     }}
-  ><b style={{ fontWeight: '700' }}><span>⌨️</span> Accessibility:</b> {children}</p>
+  ><b style={{ fontWeight: '700' }}><span role="img" aria-label="">⌨️</span> Accessibility:</b> {children}</p>
 )

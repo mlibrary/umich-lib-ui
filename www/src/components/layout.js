@@ -5,7 +5,6 @@ import { StaticQuery, graphql } from 'gatsby'
 import SideNav from './sidenav'
 import getSideNavData from '../../utils/get-side-nav-data'
 import Header from '../../../packages/header'
-import Alert from '../../../packages/alert'
 import {
   SITE_WIDTH,
   MEDIA_QUERIES,
