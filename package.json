@@ -6,11 +6,8 @@
     "build": "lerna exec --parallel -- babel src -d lib --config-file ../../.babelrc",
     "build:watch": "lerna exec --parallel -- babel src -d lib --config-file ../../.babelrc -w",
     "bootstrap": "lerna bootstrap --hoist",
-    "publish:next": "lerna publish --npm-tag next",
-    "publish:canary": "lerna publish --canary --yes",
     "publish": "lerna publish",
-    "html-sketchapp-install": "html-sketchapp install",
-    "html-sketchapp": "html-sketchapp"
+    "sketch": "story2sketch --url http://localhost:9001/iframe.html --output asketch/stories.asketch.json"
   },
   "version": "0.0.0",
   "dependencies": {

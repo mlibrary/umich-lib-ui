@@ -8,4 +8,4 @@ lerna-debug.log
 /packages/*/es
 /packages/*/node_modules
 /packages/*/lib
-*.asketch.json
+/sketch/**
