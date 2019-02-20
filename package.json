@@ -8,7 +8,9 @@
     "bootstrap": "lerna bootstrap --hoist",
     "publish:next": "lerna publish --npm-tag next",
     "publish:canary": "lerna publish --canary --yes",
-    "publish": "lerna publish"
+    "publish": "lerna publish",
+    "html-sketchapp-install": "html-sketchapp install",
+    "html-sketchapp": "html-sketchapp"
   },
   "version": "0.0.0",
   "dependencies": {
@@ -27,7 +29,9 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.20",
-    "lerna": "^3.4.3"
+    "html-sketchapp-cli": "^0.6.2",
+    "lerna": "^3.4.3",
+    "story2sketch": "^1.4.0"
   },
   "publishConfig": {
     "access": "public"
