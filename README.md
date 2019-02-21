@@ -95,6 +95,17 @@ To publish an official version and follow [Lerna publish prompts](https://github
 npm run publish
 ```
 
+## Export Components to Sketch
+
+We use [story2sketch](https://github.com/chrisvxd/story2sketch) library to handle turning our Storybook stories into _almost_ Sketch. See the story2sketch repo for more info.
+
+```
+// Storybook must be active
+npm run sketch
+```
+
+This enables designers to use Design System components in Sketch.
+
 ## 🆘 Help / Questions
 
 Open a GitHub issue.
