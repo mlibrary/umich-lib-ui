@@ -10,7 +10,7 @@ Each style, component, or pattern will contain what you need for use, but use th
 
 ### React
 
-The Design System is distrubuted as <gatsby-link to="/glossary/#react">React components</gatsby-link> and published on the NPM registry. This means to use the components in your project, you will need to understand and use React.
+The Design System is distributed as <gatsby-link to="/glossary/#react">React components</gatsby-link> and published on the NPM registry. This means to use the components in your project, you will need to understand and use React.
 
 ### HTML, CSS, and JavaScript
 
@@ -18,7 +18,7 @@ We’re so glad you’re interested, but it’s not ready yet! <gatsby-link to="
 
 ## Using styles
 
-Styles make you service look and feel like a U-M Library service. The design system provides colors, typography, layout, and iconography.
+Styles make your service look and feel like a U-M Library service. The design system provides colors, typography, layout, and iconography.
 
 ## Using components
 
