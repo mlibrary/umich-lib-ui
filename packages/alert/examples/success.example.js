@@ -1,8 +1,8 @@
 import React from "react";
 import Alert from "../src/index";
 
-export let name = "informational";
+export let name = "success";
 
 export let Example = () => (
-  <Alert intent="informational">Hello there.</Alert>
+  <Alert intent="success">You did it!</Alert>
 )
