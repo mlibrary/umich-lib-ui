@@ -99,8 +99,9 @@ npm run publish
 
 We use [story2sketch](https://github.com/chrisvxd/story2sketch) library to handle turning our Storybook stories into _almost_ Sketch. See the story2sketch repo for more info.
 
+Make sure Storybook is active before running this command.
+
 ```
-// Storybook must be active
 npm run sketch
 ```
 
