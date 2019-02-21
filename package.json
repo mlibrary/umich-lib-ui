@@ -7,7 +7,7 @@
     "build:watch": "lerna exec --parallel -- babel src -d lib --config-file ../../.babelrc -w",
     "bootstrap": "lerna bootstrap --hoist",
     "publish": "lerna publish",
-    "sketch": "story2sketch --url http://localhost:9001/iframe.html --output asketch/stories.asketch.json"
+    "sketch": "story2sketch"
   },
   "version": "0.0.0",
   "dependencies": {
