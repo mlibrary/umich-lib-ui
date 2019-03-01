@@ -27,9 +27,7 @@ configure(() => {
   req.keys().forEach(pathToExample => {
     const { name, Example } = req(pathToExample);
     storiesOf(getPackageName(pathToExample), module).add(name, () => (
-      <div style={{ margin: '1rem' }}>
-        <Example />
-      </div>
+      <Example />
     ));
   });
 }, module);

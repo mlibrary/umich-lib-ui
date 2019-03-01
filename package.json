@@ -6,13 +6,11 @@
     "build": "lerna exec --parallel -- babel src -d lib --config-file ../../.babelrc",
     "build:watch": "lerna exec --parallel -- babel src -d lib --config-file ../../.babelrc -w",
     "bootstrap": "lerna bootstrap --hoist",
-    "publish:next": "lerna publish --npm-tag next",
-    "publish:canary": "lerna publish --canary --yes",
-    "publish": "lerna publish"
+    "publish": "lerna publish",
+    "sketch": "story2sketch"
   },
   "version": "0.0.0",
   "dependencies": {
-    "@storybook/react": "^3.4.10",
     "emotion": "^9.2.12",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
@@ -23,11 +21,13 @@
     "@babel/core": "^7.1.5",
     "@babel/preset-env": "^7.1.5",
     "@babel/preset-react": "^7.0.0",
-    "babel-core": "^6.26.3",
+    "@storybook/react": "next",
+    "babel-loader": "^8.0.5",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.20",
-    "lerna": "^3.4.3"
+    "lerna": "^3.13.0",
+    "story2sketch": "^1.4.0"
   },
   "publishConfig": {
     "access": "public"
