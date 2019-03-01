@@ -44,11 +44,52 @@ table {
 	border-spacing: 0;
 }
 
+/*
+Font family
+*/
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700');
+
 body,
 html {
   padding: 0;
   margin: 0;
-	font-size: 19px;
+	font-size: 16px;
 	font-family: 'Source Sans Pro', sans-serif;
 	line-height: 1.5;
+}
+
+@media only screen and (min-width: 641px) {
+	body,
+	html {
+		font-size: 18px;
+	}
+}
+
+/*
+	Font smoothing.
+*/
+* {
+	-webkit-font-smoothing: antialiased;
+	box-sizing: border-box;
+}
+
+/*
+	Link color
+*/
+a {
+	color: #126DC1;
+}
+
+/*
+Spacing helpers
+*/
+.y-spacing > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.x-spacing > *:not(:last-child) {
+  margin-right: 1rem;
+}
+*:focus {
+  outline: 2px solid #FFCB05;
+  outline-offset: 0;
 }

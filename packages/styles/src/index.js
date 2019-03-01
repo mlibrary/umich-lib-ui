@@ -111,4 +111,5 @@ export const CARD = {
 /*
   TODO
   - Add gutter config system for viewport padding
+  - Add Global Style component: https://emotion.sh/docs/globals
 */
