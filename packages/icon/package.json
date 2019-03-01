@@ -1,11 +1,11 @@
 {
   "name": "@umich-lib/icon",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "module": "lib/index.js",
   "dependencies": {
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
-    "@umich-lib/styles": "^0.1.0"
+    "@umich-lib/styles": "^0.1.1"
   },
   "peerDependencies": {
     "react": "^16.4.0",
