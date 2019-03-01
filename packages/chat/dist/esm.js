@@ -2,7 +2,7 @@ import React from 'react';
 import { bool } from 'prop-types';
 import Button from '@umich-lib-ui/button';
 import Icon from '@umich-lib-ui/icon';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import { BREAKPOINTS } from '@umich-lib-ui/styles';
 
 function _classCallCheck(instance, Constructor) {

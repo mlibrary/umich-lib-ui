@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 var GithubSlugger = require('github-slugger')
 
 // GitHubSlugger is used here since the plugin

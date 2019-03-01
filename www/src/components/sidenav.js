@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import Icon from '../../../packages/icon'
 import {
   RESET_BUTTON,

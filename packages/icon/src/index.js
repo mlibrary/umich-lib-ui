@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import icons from './icons'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 
 const StyledSVG = styled('svg')({
   display: 'inline-block',

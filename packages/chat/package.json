@@ -3,11 +3,12 @@
   "version": "0.1.1",
   "module": "lib/index.js",
   "dependencies": {
+    "@emotion/core": "^10.0.7",
+    "@emotion/styled": "^10.0.7",
     "@umich-lib/button": "^0.1.2",
     "@umich-lib/icon": "^0.1.0",
     "@umich-lib/styles": "^0.1.0",
-    "axios": "^0.18.0",
-    "react-emotion": "^9.2.12"
+    "axios": "^0.18.0"
   },
   "peerDependencies": {
     "react": "^16.4.0",

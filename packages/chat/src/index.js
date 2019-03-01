@@ -3,7 +3,7 @@ import axios from 'axios'
 import PropTypes from 'prop-types';
 import Button from '@umich-lib/button'
 import Icon from '@umich-lib/icon'
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import {
   BREAKPOINTS
 } from '@umich-lib/styles'

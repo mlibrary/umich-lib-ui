@@ -11,7 +11,7 @@ import {
   colors
 } from '../../../packages/styles'
 import "../scss/init.scss"
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import favicon from '../../static/favicon.ico'
 
 const DocContainer = styled('div')({

@@ -1,29 +1,7 @@
-import { injectGlobal } from 'react-emotion'
-
-injectGlobal`
-/*
-Font family
-*/
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700');
-/*
-Spacing helpers
-*/
-.y-spacing > *:not(:last-child) {
-  margin-bottom: 1rem;
-}
-.x-spacing > *:not(:last-child) {
-  margin-right: 1rem;
-}
-*:focus {
-  outline: 2px solid #FFCB05;
-  outline-offset: 0;
-}
-`
-
 export const SITE_WIDTH = 'auto';
 /*
   Notes:
-  - Maybe this should be called constants?
+  - Maybe this should be called constants? Or considered a core package?
 */
 
 /*
