@@ -31,12 +31,6 @@ const sizes = {
   }
 }
 
-console.log('sizes', sizes['small'])
-
-function createStyles(props) {
-  return sizes[props.size]
-}
-
 /*
   Start with base styles and then bring in the
   styles specific to the size of the heading.
@@ -48,7 +42,7 @@ const StyledHeading = styled.h1(
     fontWeight: '700',
     lineHeight: '1.25',
   },
-  props => createStyles(props)
+  props => sizes[props.size]
 )
 
 /**
