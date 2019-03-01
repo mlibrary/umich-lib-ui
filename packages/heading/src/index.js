@@ -40,9 +40,9 @@ const StyledHeading = styled.h1(
     display: 'block',
     color: colors.grey[700],
     fontWeight: '700',
-    lineHeight: '1.25',
+    lineHeight: '1.25'
   },
-  props => sizes[props.size]
+  ({ size }) => sizes[size]
 )
 
 /**
@@ -50,7 +50,6 @@ const StyledHeading = styled.h1(
 */
 const Heading = ({
   children,
-  size,
   level,
   ...other
 }) => (
