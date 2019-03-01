@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import { colors, base } from '@umich-lib/styles'
 import Input from '@umich-lib/input'
 import Icon from '@umich-lib/icon'

@@ -5,7 +5,7 @@ import {
   colors,
   SITE_WIDTH
 } from '@umich-lib/styles'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 
 const alertIntentStyles = {
   'informational': {

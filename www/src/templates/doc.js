@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import Markdown from "../components/markdown"
 import TableOfContents from '../components/table-of-contents'
 import Heading from '../../../packages/heading'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 
 const StyledFooter = styled('footer')({
   margin: '2rem 0'

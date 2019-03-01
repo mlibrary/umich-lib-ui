@@ -1,16 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { css, cx } from 'react-emotion'
-import { base, colors } from '@umich-lib/styles'
+import styled from '@emotion/styled'
+import { colors } from '@umich-lib/styles'
 
-const cssHeadingBase = css(base, {
-  display: 'block',
-  fontWeight: '700',
-  lineHeight: '1.25',
-  color: colors.grey[700]
-})
-
-const cssHeadingSize = {
+const sizes = {
   'xsmall': {
     marginBottom: '0.25em',
     marginTop: '1.5em',
@@ -38,22 +31,33 @@ const cssHeadingSize = {
   }
 }
 
+/*
+  Start with base styles and then bring in the
+  styles specific to the size of the heading.
+*/
+const StyledHeading = styled.h1(
+  {
+    display: 'block',
+    color: colors.grey[700],
+    fontWeight: '700',
+    lineHeight: '1.25'
+  },
+  ({ size }) => sizes[size]
+)
+
 /**
   Use headings consistently to create a clear content hierarchy.
 */
 const Heading = ({
   children,
-  size,
   level,
-  className,
   ...other
-}) => {
-  const HeadingTag = `h${level}`
-
-  return (
-    <HeadingTag {...other} className={cx(cssHeadingBase, css(cssHeadingSize[size]), className)}>{children}</HeadingTag>
-  )
-}
+}) => (
+  <StyledHeading
+    as={'h' + level}
+    {...other}
+  >{children}</StyledHeading>
+)
 
 Heading.propTypes = {
   children: PropTypes.node,

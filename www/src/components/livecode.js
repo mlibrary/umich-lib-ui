@@ -6,7 +6,7 @@ import {
   LiveError,
   LivePreview
 } from 'react-live'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import Component from "@reach/component-component";
 import Alert from '../../../packages/alert'
 import Button from '../../../packages/button'
