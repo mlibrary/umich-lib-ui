@@ -67,7 +67,7 @@ Use `name` to include the name in the `ExpandableButton` text.
           </ExpandableChildren>
         </ul>
 
-        <ExpandableButton name="colors" count={colors.length} small />
+        <ExpandableButton name="colors" count={COLORS.length} small />
       </Expandable>
     </div>
   )
@@ -87,7 +87,7 @@ Use `count` to include the count of items in the `ExpandableButton` text.
   return (
     <div className="y-spacing">
       <Expandable>
-        <ExpandableButton name="colors" count={colors.length} small kind="secondary" />
+        <ExpandableButton name="colors" count={COLORS.length} small kind="secondary" />
 
         <ul>
           <ExpandableChildren show={1}>

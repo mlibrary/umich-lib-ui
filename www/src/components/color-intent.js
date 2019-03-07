@@ -1,14 +1,14 @@
 import React from 'react'
-import { intent_colors } from '../../../packages/styles';
+import { INTENT_COLORS } from '../../../packages/styles';
 
 export default () => (
   <article>
     <ol>
-      {Object.keys(intent_colors).map((intent, s) => (
+      {Object.keys(INTENT_COLORS).map((intent, s) => (
         <li
           key={s}
           style={{
-            background: intent_colors[intent],
+            background: INTENT_COLORS[intent],
             padding: '0.5rem 1rem',
             fontWeight: '600',
             color: 'white',
@@ -17,7 +17,7 @@ export default () => (
             margin: '0 -1rem',
           }}
         >
-          <span>{intent}</span><span>{intent_colors[intent]}</span>
+          <span>{intent}</span><span>{INTENT_COLORS[intent]}</span>
         </li>
       ))}
     </ol>

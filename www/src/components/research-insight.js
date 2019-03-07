@@ -1,14 +1,14 @@
 import React from 'react'
-import { colors } from '../../../packages/styles'
+import { COLORS } from '../../../packages/styles'
 
 export default ({ children }) => (
   <p
     style={{
       borderLeft: 'solid 4px',
-      borderLeftColor: colors.blue[600],
+      borderLeftColor: COLORS.blue[600],
       padding: '0.5rem 1rem',
       margin: '1rem -1rem',
-      background: colors.blue[300]
+      background: COLORS.blue[300]
     }}
   ><b style={{ fontWeight: '700' }}><span role="img" aria-label="">💡</span> Research insight:</b> {children}</p>
 )

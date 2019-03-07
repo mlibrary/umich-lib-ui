@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from '@emotion/styled'
 import {
   MEDIA_QUERIES,
-  colors
+  COLORS
 } from '@umich-lib/styles'
 
 const StyledDL = styled('dl')({
@@ -12,7 +12,7 @@ const StyledDL = styled('dl')({
     display: 'table'
   },
   'dt': {
-    color: colors.grey[600],
+    color: COLORS.grey[600],
     fontSize: '0.875rem',
     padding: '0.5rem 1rem 0 1rem',
     [MEDIA_QUERIES.LARGESCREEN]: {
@@ -41,10 +41,10 @@ const StyledField = styled('div')(
   },
   props => !props.condensed && {
     '&:nth-child(odd)': {
-      background: colors.grey[100],
+      background: COLORS.grey[100],
     },
     '&:nth-child(even)': {
-      background: colors.grey[200]
+      background: COLORS.grey[200]
     },
   },
   props => props.condensed && {
@@ -78,7 +78,7 @@ const StyledNestedField = styled('ol')({
       height: '0.35rem',
       borderRight: '2px solid',
       borderTop: '2px solid',
-      borderColor: colors.grey[600],
+      borderColor: COLORS.grey[600],
       transform: 'rotate(45deg)',
       marginLeft: '0.25rem',
       marginRight: '0.5rem'

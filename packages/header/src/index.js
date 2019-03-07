@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled'
 import {
-  colors,
+  COLORS,
   SITE_WIDTH,
   MEDIA_QUERIES
 } from '@umich-lib/styles'
@@ -10,7 +10,7 @@ import {
 
 const StyledHeader = styled('header')({
   display: 'block',
-  background: colors.brand.blue,
+  background: COLORS.brand.blue,
   padding: '0.8rem 0'
 })
 

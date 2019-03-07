@@ -3,8 +3,7 @@ import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import Icon from '../../../packages/icon'
 import {
-  RESET_BUTTON,
-  colors,
+  COLORS,
   MEDIA_QUERIES
 } from '../../../packages/styles'
 
@@ -13,15 +12,15 @@ const SectionNav = styled('nav')({
   'a': {
     textDecoration: 'none'
   },
-  background: `${colors.grey[100]}`,
-  borderTop: `solid 1px ${colors.grey[400]}`,
+  background: `${COLORS.grey[100]}`,
+  borderTop: `solid 1px ${COLORS.grey[400]}`,
   [MEDIA_QUERIES.LARGESCREEN]: {
     gridArea: 'side',
     borderTop: 'none',
-    borderRight: `solid 1px ${colors.grey[400]}`,
+    borderRight: `solid 1px ${COLORS.grey[400]}`,
   },
 })
-
+ 
 const StyledList = styled('ul')({
   padding: '2rem 0'
 })
@@ -48,7 +47,6 @@ const BasicButton = ({ className, children, ...other }) => (
 )
 
 const StyledButton = styled(BasicButton)(
-  RESET_BUTTON,
   {
     margin: '1rem 0',
     display: 'block',
@@ -69,8 +67,8 @@ const StyledInnerButton = styled('span')({
 
 const activeLinkStyles = {
   fontWeight: '600',
-  borderLeft: `solid 3px ${colors.blue[500]}`,
-  background: colors.grey[200]
+  borderLeft: `solid 3px ${COLORS.blue[500]}`,
+  background: COLORS.grey[200]
 }
 
 const windowGlobal = typeof window !== 'undefined' && window

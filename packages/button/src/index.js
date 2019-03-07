@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import {
-  colors,
+  COLORS,
   RESET_BUTTON
 } from '@umich-lib/styles'
 
@@ -25,9 +25,9 @@ const createButtonStyles = (props) => {
     case 'start':
       styles = {
         ...styles,
-        background: colors.blue[500],
+        background: COLORS.blue[500],
         color: 'white',
-        borderBottom: colors.blue[600],
+        borderBottom: COLORS.blue[600],
         borderBottomWidth: '3px',
         borderBottomStyle: 'solid',
         padding: '0.5rem 1.15rem',
@@ -38,9 +38,9 @@ const createButtonStyles = (props) => {
     case 'primary':
       styles = {
         ...styles,
-        background: colors.blue[500],
+        background: COLORS.blue[500],
         color: 'white',
-        borderBottom: colors.blue[600],
+        borderBottom: COLORS.blue[600],
         borderBottomWidth: '3px',
         borderBottomStyle: 'solid',
         fontWeight: '600',
@@ -50,8 +50,8 @@ const createButtonStyles = (props) => {
       styles = {
         ...styles,
         background: 'transparent',
-        color: colors.grey[600],
-        borderColor: colors.grey[500],
+        color: COLORS.grey[600],
+        borderColor: COLORS.grey[500],
         borderWidth: '1px',
         borderStyle: 'solid'
       }

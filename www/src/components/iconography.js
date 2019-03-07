@@ -1,5 +1,5 @@
 import React from 'react'
-import { colors } from '../../../packages/styles';
+import { COLORS } from '../../../packages/styles';
 import Icon, { icons } from '../../../packages/icon'
 
 export default () => (
@@ -21,7 +21,7 @@ export default () => (
         <div style={{
           display: 'flex',
           padding: '0.75rem',
-          background: colors.grey[200],
+          background: COLORS.grey[200],
           alignItems: 'center',
           justifyContent: 'center'
         }}><Icon icon={i} size={24} /></div>
