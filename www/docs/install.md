@@ -1,14 +1,19 @@
 ---
-title: Install
+title: Get started
 ---
 
 <lede>If you're using React, the easiest way to get started is to install the `@umich-lib/core` [package](https://www.npmjs.com/package/@umich-lib-ui/core).</lede>
+
+## Install
 
 ```
 npm install --save @umich-lib/core
 ```
 
+## Import
+
 Then import the components you need from `@umich-lib/core`.
+
 
 ```
 import {
@@ -26,6 +31,10 @@ And then use them.
 
 ```
 
-## Full example
+## Example
+
+Review this complete basic example to see how it all comes together.
 
 <iframe src="https://codesandbox.io/embed/q9wq1rmj3q?fontsize=14" style="width: calc(100% + 2rem + 1px); height:600px; border:0; border-radius: 4px; overflow:hidden; margin: 0 calc(-1rem + -1px);" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
+## Starter project
