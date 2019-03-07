@@ -208,6 +208,19 @@ export function GlobalStyleSheet() {
       outline: 2px solid ${COLORS.maize};
       outline-offset: 0;
     }
+    .layout-flex {
+      display: flex;
+    }
+
+    /*
+      Accessibility utilities
+    */
+    .visually-hidden {
+      /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+      position: absolute !important;
+      height: 1px; width: 1px;
+      overflow: hidden;
+    }
   `
 
   return (
