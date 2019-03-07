@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled'
-import { colors } from '@umich-lib/styles'
+import { COLORS } from '@umich-lib/styles'
 
 const sizes = {
   'xsmall': {
@@ -38,7 +38,7 @@ const sizes = {
 const StyledHeading = styled.h1(
   {
     display: 'block',
-    color: colors.grey[700],
+    color: COLORS.grey[700],
     fontWeight: '700',
     lineHeight: '1.25'
   },

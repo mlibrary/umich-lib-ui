@@ -24,7 +24,7 @@ import {
 <p
   style={{
     color: 'white',
-    background: colors.blue[600],
+    background: COLORS.blue[600],
     padding: '0.5rem 1rem'
   }}
 >

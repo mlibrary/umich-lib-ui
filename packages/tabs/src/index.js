@@ -6,7 +6,7 @@ import {
   TabPanel as UnstyledTabPanel
 } from 'react-tabs';
 import {
-  colors,
+  COLORS,
   MEDIA_QUERIES
 } from '@umich-lib/styles'
 
@@ -18,12 +18,12 @@ const TabList = styled(UnstyledTabList)({
   listStyle: 'none',
   margin: 0,
   padding: 0,
-  borderLeft: `solid 2px ${colors.grey[400]}`,
+  borderLeft: `solid 2px ${COLORS.grey[400]}`,
   [MEDIA_QUERIES.LARGESCREEN]: {
     display: 'flex',
     alignItems: 'baseline',
     borderLeft: 'none',
-    borderBottom: `solid 2px ${colors.grey[400]}`
+    borderBottom: `solid 2px ${COLORS.grey[400]}`
   },
 })
 
@@ -31,14 +31,14 @@ const dynamicTabStyles = props => {
   if (props.selected) {
     return {
       fontWeight: '600',
-      color: colors.blue[500],
-      borderLeft: `solid 3px ${colors.blue[500]}`,
-      background: colors.grey[200],
+      color: COLORS.blue[500],
+      borderLeft: `solid 3px ${COLORS.blue[500]}`,
+      background: COLORS.grey[200],
       [MEDIA_QUERIES.LARGESCREEN]: {
         borderLeft: 'none',
         background: 'none',
-        border: `solid 1px ${colors.grey[400]}`,
-        borderTop: `solid 3px ${colors.blue[500]}`,
+        border: `solid 1px ${COLORS.grey[400]}`,
+        borderTop: `solid 3px ${COLORS.blue[500]}`,
         borderBottom: `solid 2px white`,
       }
     }
@@ -46,7 +46,7 @@ const dynamicTabStyles = props => {
     return {
       ':hover': {
         [MEDIA_QUERIES.LARGESCREEN]: {
-          borderBottom: `solid 2px ${colors.grey[500]}`,
+          borderBottom: `solid 2px ${COLORS.grey[500]}`,
         }
       }
     }

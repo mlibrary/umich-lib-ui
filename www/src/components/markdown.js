@@ -3,7 +3,7 @@ import rehypeReact from "rehype-react"
 import Heading from '../../../packages/heading'
 import LiveCode from './livecode'
 import styled from '@emotion/styled'
-import { colors } from '../../../packages/styles'
+import { COLORS } from '../../../packages/styles'
 import ColorPalette from './color-palette'
 import ColorIntent from './color-intent'
 import ResearchInsight from './research-insight'
@@ -15,8 +15,8 @@ import { Link } from 'gatsby'
 
 const StyledPre = styled('pre')({
   display: 'block',
-  background: colors.grey[100],
-  border: `solid 1px ${colors.grey[400]}`,
+  background: COLORS.grey[100],
+  border: `solid 1px ${COLORS.grey[400]}`,
   padding: '1rem',
   margin: '0 -1rem',
   'code': {
@@ -27,7 +27,7 @@ const StyledPre = styled('pre')({
 
 const StyledCode = styled('code')({
   display: 'inline-block',
-  background: colors.grey[200],
+  background: COLORS.grey[200],
   borderRadius: '3px',
   padding: '0 0.25rem',
   fontFamily: `Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace`,

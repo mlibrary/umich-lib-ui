@@ -1,16 +1,16 @@
 import React from 'react'
-import { colors } from '../../../packages/styles';
+import { COLORS } from '../../../packages/styles';
 import Heading from '../../../packages/heading'
 
 const ColorPalette = ({ palette }) => (
   <section>
     <Heading level={3} size="medium">{palette}</Heading>
     <ol>
-      {Object.keys(colors[palette]).map((shade, s) => (
+      {Object.keys(COLORS[palette]).map((shade, s) => (
         <li
           key={s}
           style={{
-            background: colors[palette][shade],
+            background: COLORS[palette][shade],
             padding: '0.5rem 1rem',
             fontWeight: '600',
             color: shade > 400 || shade === 'blue' ? 'white' : '',
@@ -19,7 +19,7 @@ const ColorPalette = ({ palette }) => (
             margin: '0 -1rem',
           }}
         >
-          <span>{shade}</span><span>{colors[palette][shade]}</span>
+          <span>{shade}</span><span>{COLORS[palette][shade]}</span>
         </li>
       ))}
     </ol>
@@ -28,7 +28,7 @@ const ColorPalette = ({ palette }) => (
 
 export default () => (
   <article>
-    {Object.keys(colors).map((palette, p) => (
+    {Object.keys(COLORS).map((palette, p) => (
       <ColorPalette palette={palette} key={p} />
     ))}
   </article>

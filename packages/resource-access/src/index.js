@@ -9,8 +9,8 @@ import {
 } from '@umich-lib/expandable'
 import styled from '@emotion/styled'
 import {
-  colors,
-  intent_colors,
+  COLORS,
+  INTENT_COLORS,
   MEDIA_QUERIES
 } from '@umich-lib/styles'
 import Button from '@umich-lib/button'
@@ -21,7 +21,7 @@ const FigureStyled = styled('figure')({
   margin: 0,
   padding: 0,
   'tr:not(:last-child)': {
-    borderBottom: `solid 1px ${colors.grey[400]}`
+    borderBottom: `solid 1px ${COLORS.grey[400]}`
   }
 })
 
@@ -46,8 +46,8 @@ const NotesListStyled = styled('ul')({
 
 const StyledTH = styled('th')({
   fontSize: '0.875rem',
-  color: colors.grey[600],
-  borderBottom: `solid 2px ${colors.grey[400]}`
+  color: COLORS.grey[600],
+  borderBottom: `solid 2px ${COLORS.grey[400]}`
 })
 
 const td_and_th = {
@@ -67,7 +67,7 @@ const TableStyled = styled('table')({
   tableLayout: 'fixed',
   'tbody': {
     'tr:not(:last-child)': {
-      borderBottom: `solid 1px ${colors.grey[400]}`
+      borderBottom: `solid 1px ${COLORS.grey[400]}`
     }
   },
   'td': td_and_th,
@@ -191,7 +191,7 @@ class ResourceAccess extends React.Component {
                   {rows.map((row, i) => (
                     <tr key={i}>
                       {row.map((cell, t) => (
-                        <td key={t} style={{ color: `${intent_colors[cell.intent]}`}}>
+                        <td key={t} style={{ color: `${INTENT_COLORS[cell.intent]}`}}>
                           <Cell cell={cell} renderAnchor={renderAnchor} />
                         </td>
                       ))}
@@ -202,7 +202,7 @@ class ResourceAccess extends React.Component {
                 <React.Fragment>
                   <tr>
                     {rows[0].map((cell, t) => (
-                      <td key={t} style={{ color: `${intent_colors[cell.intent]}`}}>
+                      <td key={t} style={{ color: `${INTENT_COLORS[cell.intent]}`}}>
                         <Cell cell={cell} renderAnchor={renderAnchor} />
                       </td>
                     ))}
@@ -218,7 +218,7 @@ class ResourceAccess extends React.Component {
                     {rows.slice(1).map((row, i) => (
                       <tr key={i}>
                         {row.map((cell, t) => (
-                          <td key={t} style={{ color: `${intent_colors[cell.intent]}`}}>
+                          <td key={t} style={{ color: `${INTENT_COLORS[cell.intent]}`}}>
                             <Cell cell={cell} renderAnchor={renderAnchor} />
                           </td>
                         ))}

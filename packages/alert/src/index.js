@@ -2,31 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ReachAlert from '@reach/alert';
 import {
-  colors,
+  COLORS,
   SITE_WIDTH
 } from '@umich-lib/styles'
 import styled from '@emotion/styled'
 
 const alertIntentStyles = {
   'informational': {
-    color: colors.blue[600],
-    background: colors.blue[300],
-    borderColor: colors.blue[500]
+    color: COLORS.blue[600],
+    background: COLORS.blue[300],
+    borderColor: COLORS.blue[500]
   },
   'success': {
-    color: colors.green[600],
-    background: colors.green[400],
-    borderColor: colors.green[500]
+    color: COLORS.green[600],
+    background: COLORS.green[400],
+    borderColor: COLORS.green[500]
   },
   'warning': {
-    color: colors.orange[600],
-    background: colors.orange[400],
-    borderColor: colors.orange[500]
+    color: COLORS.orange[600],
+    background: COLORS.orange[400],
+    borderColor: COLORS.orange[500]
   },
   'error': {
-    color: colors.red[600],
-    background: colors.red[400],
-    borderColor: colors.red[500]
+    color: COLORS.red[600],
+    background: COLORS.red[400],
+    borderColor: COLORS.red[500]
   }
 }
 
@@ -34,8 +34,8 @@ const StyledAlert = styled(ReachAlert)(
   {
     margin: '0',
     padding: '0.5rem 0',
-    borderBottom: `solid 1px ${colors.grey[500]}`,
-    background: colors.grey[200]
+    borderBottom: `solid 1px ${COLORS.grey[500]}`,
+    background: COLORS.grey[200]
   },
   props => ({
     ...alertIntentStyles[props.intent]

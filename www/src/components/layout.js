@@ -6,16 +6,15 @@ import SideNav from './sidenav'
 import getSideNavData from '../../utils/get-side-nav-data'
 import Header from '../../../packages/header'
 import {
-  SITE_WIDTH,
+  GlobalStyleSheet,
   MEDIA_QUERIES,
-  colors
+  COLORS
 } from '../../../packages/styles'
 import "../scss/init.scss"
 import styled from '@emotion/styled'
 import favicon from '../../static/favicon.ico'
 
 const DocContainer = styled('div')({
-  maxWidth: SITE_WIDTH,
   margin: '0 auto',
   [MEDIA_QUERIES.LARGESCREEN]: {
     display: 'grid',
@@ -91,7 +90,7 @@ const Layout = ({ children }) => (
             },
             {
               name: 'theme-color',
-              content: `${colors.blue[600]}`
+              content: `${COLORS.blue[600]}`
             }
           ]}
           link={[
@@ -104,6 +103,7 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
+        <GlobalStyleSheet />
         <DocContainer>
           <StyledHeaderContainer role="banner">
             <Header name="Design System" />

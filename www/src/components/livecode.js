@@ -31,7 +31,7 @@ import {
 import Text from '../../../packages/text'
 import TextInput from '../../../packages/text-input'
 import {
-  colors
+  COLORS
 } from '../../../packages/styles'
 
 const scope = {
@@ -51,7 +51,7 @@ const scope = {
   RecordFields,
   Text,
   TextInput,
-  colors,
+  COLORS,
   TabList,
   Tabs,
   Tab,
@@ -63,7 +63,7 @@ const StyledCodeContainer = styled('div')({
 })
 
 const StyledCodePreview = styled('div')({
-  border: `solid 1px ${colors.grey[400]}`,
+  border: `solid 1px ${COLORS.grey[400]}`,
   marginBottom: '-1px'
 })
 
