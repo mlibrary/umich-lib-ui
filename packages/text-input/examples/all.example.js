@@ -4,7 +4,6 @@ import TextInput from "../src/index";
 export let name = "all";
 
 export let Example = () => (
-  <div>
     <TextInput
       id="email-address"
       labelText="Email address"
@@ -12,5 +11,4 @@ export let Example = () => (
       type="email"
       placeholder="uniqname@umich.edu"
     />
-  </div>
 )
