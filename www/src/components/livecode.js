@@ -7,14 +7,16 @@ import {
   LivePreview
 } from 'react-live'
 import styled from '@emotion/styled'
-import * as ds from '../../../packages/core'
+import * as core from '../../../packages/core'
 import {
   COLORS,
   Alert
 } from '../../../packages/core'
+import Component from '@reach/component-component'
 
 const scope = {
-  ...ds
+  ...core,
+  Component
 }
 
 const StyledCodeContainer = styled('div')({
