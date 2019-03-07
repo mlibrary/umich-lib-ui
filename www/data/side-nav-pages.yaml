@@ -1,5 +1,5 @@
-- page: principles
-- page: get-started
+- page: introduction
+- page: install
 - page: styles
   pages: 
     - colors
@@ -16,11 +16,11 @@
     - icon
     - text-input
     - record-fields
+    - resource-access
     - styles
     - tabs
 - page: patterns
-  pages:
-    - resource-access
+- page: principles
 - page: contribute
 - page: glossary
 - page: accessibility
