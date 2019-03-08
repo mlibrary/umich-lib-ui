@@ -8,28 +8,6 @@ Use typography to create clear hierarchies and to make text content easy to scan
 
 The design system uses the open-sourced typeface [Source Sans Pro](https://fonts.google.com/specimen/Source+Sans+Pro).
 
-## Headings
-
-- use headings consistently to create a clear content hierarchy
-- write all heading in sentence case
-
-```jsx
-// @live
-<div>
-  <Heading size="xlarge" level={1}>An extra large heading</Heading>
-  <Heading size="large" level={2}>A large heading</Heading>
-  <Heading size="medium" level={3}>A medium heading</Heading>
-  <Heading size="small" level={4}>A small heading</Heading>
-  <Heading size="xsmall" level={4}>An extra small heading</Heading>
-</div>
-```
-
-Use `size` to adjust the visual size of the heading. Use `level` to set the semantic level of the heading.
-
-<research-insight>
-  The most important piece of information or action for the user should be in the headings. Users tend to scan a page instead of closely reading paragraph text.
-</research-insight>
-
 ## Body text
 
 - avoid using bold and italics
