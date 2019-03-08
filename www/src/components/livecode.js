@@ -7,55 +7,16 @@ import {
   LivePreview
 } from 'react-live'
 import styled from '@emotion/styled'
-import Component from "@reach/component-component";
-import Alert from '../../../packages/alert'
-import Button from '../../../packages/button'
-import Chat from '../../../packages/chat'
+import * as core from '../../../packages/core'
 import {
-  Expandable,
-  ExpandableChildren,
-  ExpandableButton
-} from '../../../packages/expandable'
-import Header from '../../../packages/header'
-import Heading from '../../../packages/heading'
-import Icon, { icons } from '../../../packages/icon'
-import List from '../../../packages/list'
-import ResourceAccess from '../../../packages/resource-access'
-import RecordFields from '../../../packages/record-fields'
-import {
-  TabList,
-  Tabs,
-  Tab,
-  TabPanel
-} from '../../../packages/tabs'
-import Text from '../../../packages/text'
-import TextInput from '../../../packages/text-input'
-import {
-  COLORS
-} from '../../../packages/styles'
+  COLORS,
+  Alert
+} from '../../../packages/core'
+import Component from '@reach/component-component'
 
 const scope = {
-  Alert,
-  Button,
-  Chat,
-  Component,
-  Expandable,
-  ExpandableChildren,
-  ExpandableButton,
-  Header,
-  Heading,
-  Icon,
-  icons,
-  List,
-  ResourceAccess,
-  RecordFields,
-  Text,
-  TextInput,
-  COLORS,
-  TabList,
-  Tabs,
-  Tab,
-  TabPanel
+  ...core,
+  Component
 }
 
 const StyledCodeContainer = styled('div')({
@@ -100,7 +61,11 @@ class LiveCode extends React.Component {
     const { code } = this.props
 
     return (
-      <LiveProvider code={code} scope={{...scope}} mountStylesheet={false}>
+      <LiveProvider
+        code={code}
+        scope={{...scope}}
+        mountStylesheet={false}
+      >
         <CodeEditorLive />
       </LiveProvider>
     )

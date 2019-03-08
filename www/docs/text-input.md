@@ -2,13 +2,7 @@
 title: TextInput
 ---
 
-<lede>Use this to enable the user to enter text that's no longer than a single line.</lede>
-
-## Install
-
-```
-npm install @umich-lib/text-input
-```
+<lede>Use `TextInput` to enable the user to enter text that's no longer than a single line.</lede>
 
 ## Usage
 

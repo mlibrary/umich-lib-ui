@@ -1,12 +1,12 @@
 {
   "name": "@umich-lib/alert",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "module": "lib/index.js",
   "dependencies": {
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
     "@reach/alert": "^0.1.1",
-    "@umich-lib/styles": "^1.0.0"
+    "@umich-lib/styles": "^1.0.1"
   },
   "peerDependencies": {
     "react": "^16.4.0",

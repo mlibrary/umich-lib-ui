@@ -2,13 +2,7 @@
 title: "Chat"
 ---
 
-<lede>Provide users access to the Ask a Librarian chat service.</lede>
-
-## Install
-
-```
-npm install @umich-lib/chat
-```
+<lede>Use `Chat` to provide users access to the Ask a Librarian chat service.</lede>
 
 ## Usage
 
@@ -21,6 +15,8 @@ By default, `Chat` will open into a new window when a user clicks the button.
 
 <Chat />
 ```
+
+## Chat props
 
 ### Fix to the viewport
 

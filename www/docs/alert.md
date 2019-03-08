@@ -2,13 +2,7 @@
 title: "Alert"
 ---
 
-<lede>Use Alerts to notify users of important information.</lede>
-
-## Install
-
-```
-npm install @umich-lib/alert
-```
+<lede>Use `Alert` to notify users of important information.</lede>
 
 ## Usage
 

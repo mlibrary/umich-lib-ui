@@ -2,13 +2,7 @@
 title: Icon
 ---
 
-<lede>Use this to render SVG icons.</lede>
-
-## Install
-
-```
-npm install @umich-lib/icon
-```
+<lede>Use `Icon` to render SVG icons.</lede>
 
 ## Usage
 

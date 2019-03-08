@@ -2,13 +2,7 @@
 title: "Header"
 ---
 
-<lede>Use the standard U-M Library header.</lede>
-
-## Install
-
-```
-npm install @umich-lib/header
-```
+<lede>Use `Header` as the standard U-M Library header.</lede>
 
 ## Usage
 

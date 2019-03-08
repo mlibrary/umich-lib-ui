@@ -2,13 +2,7 @@
 title: "Button"
 ---
 
-<lede>Use buttons to move though a transaction, aim to use only one button per page.</lede>
-
-## Install
-
-```
-npm install @umich-lib/button
-```
+<lede>Use `Button` to move though a transaction, aim to use only one primary button per page.</lede>
 
 ## Usage
 

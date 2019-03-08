@@ -2,13 +2,7 @@
 title: RecordFields
 ---
 
-<lede>Use to display metadata, often with field values that link out.</lede>
-
-## Install
-
-```
-npm install @umich-lib/record-fields
-```
+<lede>Use `RecordFields` to display metadata, often with field values that link out.</lede>
 
 ## Usage
 
