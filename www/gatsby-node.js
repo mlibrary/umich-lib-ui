@@ -1,7 +1,7 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
+exports.onCreateNode = ({ graphql, node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
     /*
@@ -9,26 +9,13 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       a better way to get just the filename, but ended up with this.
     */
     const slug = createFilePath({ node, getNode, basePath: `pages` })
-    const name = slug.split('/').filter(x => x !== "").pop()
+    const fileName = slug.split('/').filter(x => x !== "").pop()
 
     createNodeField({
       node,
-      name: `name`,
-      value: name,
+      name: `slug`,
+      value: fileName,
     })
-
-    /*
-      TODO: Get the related package.json version number
-      for the React Component. 
-
-      const version = // ...
-
-      createNodeField({
-        node,
-        name: `version`,
-        value: version,
-      })
-    */
   }
 }
 
@@ -39,14 +26,6 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     graphql(`
       {
-        allSideNavPagesYaml {
-          edges {
-            node {
-              page
-              pages
-            }
-          }
-        }
         allMarkdownRemark {
           edges {
             node {
@@ -54,16 +33,8 @@ exports.createPages = ({ graphql, actions }) => {
                 title
               }
               fields {
-                name
+                slug
               }
-              htmlAst
-            }
-          }
-        }
-        allDirectory {
-          edges {
-            node {
-              name
             }
           }
         }
@@ -72,44 +43,17 @@ exports.createPages = ({ graphql, actions }) => {
       if (result.errors) {
         reject(result.errors)
       }
-     
-      // Create Side Nav pages where markdown files exist.
-      result.data.allSideNavPagesYaml.edges.forEach(({ node }) => {
-        // Find the markdown that match the YAML page
-        const remarkEdge = result.data.allMarkdownRemark.edges.find(remarkEdge => {
-          return remarkEdge.node.fields.name === node.page
-        })
-        
-        // Create section landing page
-        if (remarkEdge) {
-          createPage({
-            path: `/${node.page}/`,
-            component: path.resolve(`./src/templates/doc.js`),
-            context: {
-              name: node.page,
-              pages: node.pages
-            },
-          })
 
-          if (node.pages) {
-            node.pages.forEach(page => {
-              // Does the child pages exist.
-              const remarkEdge = result.data.allMarkdownRemark.edges.find(remarkEdge => {
-                return remarkEdge.node.fields.name === page
-              })
-  
-              if (remarkEdge) {
-                createPage({
-                  path: `/${node.page}/${page}`,
-                  component: path.resolve(`./src/templates/doc.js`),
-                  context: {
-                    name: page
-                  },
-                })
-              }
-            })
-          }
-        }
+      result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+        const {
+          slug
+        } = node.fields
+        const docTemplate = path.resolve(`./src/templates/doc.js`)
+        createPage({
+          path: `/${slug}/`,
+          component: docTemplate,
+          context: { slug },
+        })
       })
       resolve()
     })

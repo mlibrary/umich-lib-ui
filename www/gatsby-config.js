@@ -6,6 +6,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-offline`,
+    `gatsby-transformer-yaml`,
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -25,14 +26,6 @@ module.exports = {
         name: 'packages',
         path: `${__dirname}/../packages`
       }
-    },
-    `gatsby-transformer-yaml`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: 'data',
-        path: `./data/`
-      },
     },
     {
       resolve: `gatsby-transformer-remark`,

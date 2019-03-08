@@ -13,7 +13,7 @@ const StyledFooter = styled('footer')({
 const docTemplate = ({ data }) => {
   const { htmlAst, headings } = data.markdownRemark
   const { title } = data.markdownRemark.frontmatter
-  const { name } = data.markdownRemark.fields
+  const { slug } = data.markdownRemark.fields
 
   return (
     <Layout>
@@ -29,7 +29,7 @@ const docTemplate = ({ data }) => {
         </div>
 
         <StyledFooter>
-          <a href={`https://github.com/mlibrary/umich-lib-components-react/edit/master/www/docs/${name}.md`}>Edit this page on Github</a>
+          <a href={`https://github.com/mlibrary/umich-lib-components-react/edit/master/www/docs/${slug}.md`}>Edit this page on Github</a>
         </StyledFooter>
       </article>
     </Layout>
@@ -37,14 +37,14 @@ const docTemplate = ({ data }) => {
 }
 
 export const query = graphql`
-  query DocByName($name: String!){
-    markdownRemark(fields: { name: { eq: $name } }) {
+  query DocBySlug($slug: String!){
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       htmlAst
       frontmatter {
         title
       }
       fields {
-        name
+        slug
       }
       headings {
         depth

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import SideNav from './sidenav'
-import getSideNavData from '../../utils/get-side-nav-data'
 import Header from '../../../packages/header'
 import {
   GlobalStyleSheet,
@@ -19,11 +18,11 @@ const DocContainer = styled('div')({
   [MEDIA_QUERIES.LARGESCREEN]: {
     display: 'grid',
     height: '100vh',
-    gridTemplateColumns: '16rem auto',
+    gridTemplateColumns: 'auto 16rem',
     gridTemplateRows: 'max-content',
     gridTemplateAreas: `
       "header header"
-      "side main"
+      "main side"
     `
   }
 })
@@ -39,7 +38,9 @@ const DocMainContent = styled('div')({
   margin: '0 auto',
   padding: '1rem',
   [MEDIA_QUERIES.LARGESCREEN]: {
-    padding: '2rem 3rem'
+    padding: '2rem 1rem',
+    maxWidth: '52rem',
+    margin: '0 auto'
   }
 })
 
@@ -56,14 +57,6 @@ const Layout = ({ children }) => (
             title
           }
         }
-        allSideNavPagesYaml {
-          edges {
-            node {
-              page
-              pages
-            }
-          }
-        }
         allMarkdownRemark {
           edges {
             node {
@@ -71,7 +64,7 @@ const Layout = ({ children }) => (
                 title
               }
               fields {
-                name
+                slug
               }
               htmlAst
             }
@@ -108,7 +101,7 @@ const Layout = ({ children }) => (
           <StyledHeaderContainer role="banner">
             <Header name="Design System" />
           </StyledHeaderContainer>
-          <SideNav data={getSideNavData(data)} />
+          <SideNav />
           <DocMain>
             <DocMainContent>
               {children}

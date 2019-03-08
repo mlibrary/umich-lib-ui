@@ -2,7 +2,7 @@
 title: Install
 ---
 
-<lede>If you're using React, the easiest way to get started is to install the `@umich-lib/core` [package](https://www.npmjs.com/package/@umich-lib-ui/core).</lede>
+<lede>If you're using React, the easiest way to get started is to install the `@umich-lib/core` [package](https://www.npmjs.com/package/@umich-lib/core).</lede>
 
 ```
 npm install --save @umich-lib/core
@@ -31,10 +31,6 @@ And then use those components.
 
 ## Example
 
-Review this complete basic example to see how it all comes together.
+Review this basic, but complete example to see how it all comes together.
 
 <iframe src="https://codesandbox.io/embed/q9wq1rmj3q?fontsize=14" style="width: calc(100% + 2rem + 1px); height:600px; border:0; border-radius: 4px; overflow:hidden; margin: 0 calc(-1rem + -1px);" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
-
-## Starter projects
-
-[in progress]

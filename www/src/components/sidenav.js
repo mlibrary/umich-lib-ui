@@ -1,135 +1,72 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, StaticQuery, graphql } from 'gatsby'
 import styled from '@emotion/styled'
-import Icon from '../../../packages/icon'
 import {
   COLORS,
-  MEDIA_QUERIES
-} from '../../../packages/styles'
+  MEDIA_QUERIES,
+  Heading
+} from '../../../packages/core'
 
 const SectionNav = styled('nav')({
   gridArea: 'footer',
   'a': {
     textDecoration: 'none'
   },
+  padding: '1rem 0',
   background: `${COLORS.grey[100]}`,
   borderTop: `solid 1px ${COLORS.grey[400]}`,
   [MEDIA_QUERIES.LARGESCREEN]: {
     gridArea: 'side',
     borderTop: 'none',
-    borderRight: `solid 1px ${COLORS.grey[400]}`,
+    borderLeft: `solid 1px ${COLORS.grey[400]}`
   },
 })
- 
-const StyledList = styled('ul')({
-  padding: '2rem 0'
+
+const StyledNavHeading = styled(Heading)({
+  padding: '0.2rem 1rem',
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    padding: '0.2rem 2rem',
+  }
 })
 
-const cssNavListItem = {
+const StyledNavLink = styled(Link)({
   display: 'block',
-  padding: '0.25rem 1rem',
   '&:hover': {
     textDecoration: 'underline'
   },
+  padding: '0.2rem 1rem',
   [MEDIA_QUERIES.LARGESCREEN]: {
-    padding: '0.25rem 2rem'
+    padding: '0.2rem 2rem',
   }
-}
-
-const StyledNavListItem = styled('li')({
-  lineHeight: '1.5',
-  'a': cssNavListItem,
-  'button': cssNavListItem
 })
-
-const BasicButton = ({ className, children, ...other }) => (
-  <button className={className} {...other}>{children}</button>
-)
-
-const StyledButton = styled(BasicButton)(
-  {
-    margin: '1rem 0',
-    display: 'block',
-    width: '100%',
-    cursor: 'pointer'
-  }
-)
-
-const StyledButtonText = styled('span')({
-  fontWeight: '700'
-})
-
-const StyledInnerButton = styled('span')({
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center'
-})
-
-const activeLinkStyles = {
-  fontWeight: '600',
-  borderLeft: `solid 3px ${COLORS.blue[500]}`,
-  background: COLORS.grey[200]
-}
-
-const windowGlobal = typeof window !== 'undefined' && window
 
 class NavSection extends React.Component {
-  state = {}
-  
-  isExpanded = (key) => {
-    if (windowGlobal) {
-      return localStorage.getItem(key) === 'true' ? true : false
-    }
-
-    return this.state[key]
-  }
-
-  updateState = (key, value) => {
-    this.setState({ [key]: value })
-
-    if (windowGlobal) {
-      localStorage.setItem(key, value)
-    }
-  }
-
-  getKey = (title) => {
-    return `openSection#${title}`
-  }
-
   render() {
     const { title, items } = this.props
-    const key = this.getKey(title)
-    const expanded = this.isExpanded(key)
 
     return (
       <React.Fragment>
-        <StyledButton
-          onClick={() => this.updateState(key, !expanded)}
-          aria-expanded={expanded}
-        >
-          <StyledInnerButton>
-            <StyledButtonText>{title}</StyledButtonText>
-            {expanded ? (
-              <Icon icon="expand_less" size={32} />
-            ) : (
-              <Icon icon="expand_more" size={32} />
-            )}
-          </StyledInnerButton>
-        </StyledButton>
-        {expanded && (
-          <ul style={{ marginTop: '-1rem', marginBottom: '1rem' }}>
-            {items.map((item, i) => (
-              <StyledNavListItem key={i}>
-                <Link
-                  to={item.to}
-                  activeStyle={activeLinkStyles}
-                >
-                  {item.title}
-                </Link>
-              </StyledNavListItem>
-            ))}
-          </ul>
-        )}
+        <StyledNavHeading
+          level={2}
+          size="small"
+        >{title}</StyledNavHeading>
+
+        <ul>
+          {items.map((item, i) => (
+            <li key={i}>
+              <StyledNavLink
+                to={item.to}
+                activeStyle={{
+                  fontWeight: '700',
+                  borderLeft: `4px solid ${COLORS.blue[500]}`,
+                  background: COLORS.grey[200]
+                }}
+              >
+                {item.text}
+              </StyledNavLink>
+            </li>
+          ))}
+        </ul>
       </React.Fragment>
     )
   }
@@ -137,27 +74,88 @@ class NavSection extends React.Component {
 
 const SideNav = ({ data }) => {
   return (
-    <SectionNav role="navigation" aria-label="side bar">
-      <StyledList>
-        <StyledNavListItem>
-          <Link to="/" activeStyle={activeLinkStyles}>Home</Link>
-        </StyledNavListItem>
-        {data.map((section, s) => (
-          <StyledNavListItem key={s}>
-            {section.items ? (
+    <StaticQuery
+      query={graphql`
+        query SiteNavQuery {
+          allDocsYaml {
+            edges {
+              node {
+                title
+                items
+              }
+            }
+          }
+          allMarkdownRemark {
+            edges {
+              node {
+                frontmatter {
+                  title
+                }
+                fields {
+                  slug
+                }
+              }
+            }
+          }
+        }
+      `}
+      render={data => {
+        /*
+          Take the two queries and turn it into this shape:
+
+          const nav = [
+            {
+              title: '...',
+              items: [
+                {
+                  text: '...',
+                  to: '...'
+                }
+              ]
+            },
+            ...
+          ]
+        */
+
+        const docs = data.allMarkdownRemark.edges
+        const nav = data.allDocsYaml.edges.reduce((acc, edge) => {
+          const {
+            title,
+            items
+          } = edge.node
+
+          const itemsWithTo = items.reduce((pages, item) => {
+            const doc = docs.find(doc => doc.node.fields.slug === item)
+
+            if (doc) {
+              pages = pages.concat({
+                text: doc.node.frontmatter.title,
+                to: `/${doc.node.fields.slug}`
+              })
+            }
+
+            return pages
+          }, [])
+
+          if (itemsWithTo.length > 0) {
+            acc = acc.concat({
+              title,
+              items: itemsWithTo
+            })
+          }
+
+          return acc
+        }, [])
+
+        return (
+          <SectionNav role="navigation" aria-label="side bar">
+            {nav.map((section, s) => (
               <NavSection key={s} title={section.title} items={section.items}  />
-            ) : (
-              <Link
-                to={section.to}
-                activeStyle={activeLinkStyles}
-              >
-                {section.title}
-              </Link>
-            )}
-          </StyledNavListItem>
-        ))}
-      </StyledList>
-    </SectionNav>
+            ))}
+          </SectionNav>
+        )
+      }}
+    />
   )
 }
 
