@@ -2,13 +2,7 @@
 title: Tabs
 ---
 
-<lede>Use to display one panel of content at a time. Each tab panel has an associated tab element, that when activated, displays the panel.</lede>
-
-## Install
-
-```
-npm install @umich-lib/tabs
-```
+<lede>Use `Tabs`, `TabList`, `Tab`, and `TabPanel` to display one panel of content at a time. Each tab panel has an associated tab element, that when activated, displays the panel.</lede>
 
 ## Usage
 

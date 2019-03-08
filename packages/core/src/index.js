@@ -8,7 +8,6 @@ import Input from "@umich-lib/input"
 import List from "@umich-lib/list"
 import RecordFields from "@umich-lib/record-fields"
 import ResourceAccess from "@umich-lib/resource-access"
-import Tabs from "@umich-lib/tabs"
 import Text from "@umich-lib/text"
 import TextInput from "@umich-lib/text-input"
 import {
@@ -24,6 +23,12 @@ import {
   MEDIA_QUERIES,
   GlobalStyleSheet
 } from "@umich-lib/styles"
+import {
+  Tabs,
+  TabList,
+  Tab,
+  TabPanel
+} from "@umich-lib/tabs"
 
 /*
   All the Design System Components included in core.
@@ -39,7 +44,6 @@ export {
   List,
   RecordFields,
   ResourceAccess,
-  Tabs,
   Text,
   TextInput
 }
@@ -63,4 +67,14 @@ export {
   BREAKPOINTS,
   MEDIA_QUERIES,
   GlobalStyleSheet
+}
+
+/*
+  Exports from @umich-lib/tabs
+*/
+export {
+  Tabs,
+  TabList,
+  Tab,
+  TabPanel
 }

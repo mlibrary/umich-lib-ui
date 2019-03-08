@@ -2,21 +2,7 @@
 title: "Styles"
 ---
 
-## Install
-
-```
-npm install @umich-lib/styles
-```
-
-## Usage
-
-### Colors
-
-```
-import {
-  colors
-} from '@umich-lib/styles'
-```
+## Colors
 
 ```jsx
 // @live

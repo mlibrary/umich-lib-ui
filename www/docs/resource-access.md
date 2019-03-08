@@ -2,13 +2,7 @@
 title: ResourceAccess
 ---
 
-<lede>Use this pattern to provide a comprehensive listing of options to access a resource.</lede>
-
-## Install
-
-```
-npm install @umich-lib/resource-access
-```
+<lede>Use `RecordFields` pattern to provide a comprehensive listing of options to access a resource.</lede>
 
 ## Usage
 
@@ -45,7 +39,7 @@ npm install @umich-lib/resource-access
 />
 ```
 
-## ResourceAccess Props
+## ResourceAccess props
 
 ### Headings
 

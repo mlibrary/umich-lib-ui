@@ -30,12 +30,6 @@ Use `size` to adjust the visual size of the heading. Use `level` to set the sema
   The most important piece of information or action for the user should be in the headings. Users tend to scan a page instead of closely reading paragraph text.
 </research-insight>
 
-### Install Heading
-
-```
-npm install @umich-lib/heading --save
-```
-
 ## Body text
 
 - avoid using bold and italics
@@ -51,12 +45,6 @@ npm install @umich-lib/heading --save
 // @live
 
 <Text small>A small font sized supporting text paragraph. This includes even more text to give a good representation of a more average length paragraph. That way you can see more than one line wrapping.</Text>
-```
-
-### Install Text
-
-```
-npm install @umich-lib/text --save
 ```
 
 ## Links
@@ -113,12 +101,6 @@ Unstyled lists.
   <li>this is another item in the list</li>
   <li>and another item with a bit more text</li>
 </List>
-```
-
-### Install List
-
-```
-npm install @umich-lib/list --save
 ```
 
 ## Line-height

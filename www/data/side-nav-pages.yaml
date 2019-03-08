@@ -17,9 +17,7 @@
     - text-input
     - record-fields
     - resource-access
-    - styles
     - tabs
-- page: patterns
 - page: principles
 - page: contribute
 - page: glossary

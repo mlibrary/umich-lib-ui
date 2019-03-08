@@ -2,7 +2,7 @@
 title: Introduction
 ---
 
-<lede>The Design System is a bit like a branded lego kit for creating high quality user interfaces for the University of Michigan Library.</lede>
+<lede>This Design System is a bit like a branded lego kit for creating high quality user interfaces at the University of Michigan Library.</lede>
 
 ## Distributed as React components
 
@@ -10,9 +10,9 @@ The Design System is distributed as <gatsby-link to="/glossary/#react">React com
 
 Learn more about <gatsby-link to="/why-react">why we chose to go with React</gatsby-link> and what that means for teams who don't use React.
 
-## But what about regular HTML, CSS, and JavaScript?
+## But what about copy pasting regular HTML, CSS, and JavaScript?
 
-We’re so glad you’re interested, but it’s not here yet. <gatsby-link to="/design-system-team#contact-us">Get in touch</gatsby-link> if you’re interested to help us prioritize distributing the design system in other formats.
+We’re so glad you’re interested, but vanilla HTML, CSS, and JavaScript is not available (yet). <gatsby-link to="/design-system-team#contact-us">Get in touch</gatsby-link> if you’re interested to help us prioritize and plan distributing the design system in other formats.
 
 ## How the Design System is organized
 
