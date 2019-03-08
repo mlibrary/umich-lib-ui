@@ -1,14 +1,14 @@
 {
   "name": "@umich-lib/resource-access",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "module": "lib/index.js",
   "dependencies": {
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
-    "@umich-lib/button": "^0.1.3",
-    "@umich-lib/expandable": "^0.1.1",
-    "@umich-lib/icon": "^0.1.2",
-    "@umich-lib/styles": "^1.0.0"
+    "@umich-lib/button": "^0.1.4",
+    "@umich-lib/expandable": "^0.1.2",
+    "@umich-lib/icon": "^0.1.3",
+    "@umich-lib/styles": "^1.0.1"
   },
   "peerDependencies": {
     "react": "^16.4.0",

@@ -1,11 +1,11 @@
 {
   "name": "@umich-lib/button",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "module": "lib/index.js",
   "dependencies": {
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
-    "@umich-lib/styles": "^1.0.0"
+    "@umich-lib/styles": "^1.0.1"
   },
   "peerDependencies": {
     "react": "^16.4.0",
