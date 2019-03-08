@@ -2,7 +2,7 @@
 title: Iconography
 ---
 
-See the <gatsby-link to="/components/icon">Icon component</gatsby-link> for how to use an icon.
+See the <gatsby-link to="/icon">Icon component</gatsby-link> for how to use an icon.
 
 ## Available icons
 

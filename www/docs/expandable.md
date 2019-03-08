@@ -32,7 +32,7 @@ title: Expandable
 
 ## ExpandableButton
 
-`ExpandableButton` is the same as a regular `Button`. See <gatsby-link to="/components/button">Button component</gatsby-link> for docs.
+`ExpandableButton` is the same as a regular `Button`. See <gatsby-link to="/button">Button component</gatsby-link> for docs.
 
 ## Expandable props
 

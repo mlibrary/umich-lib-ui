@@ -11,7 +11,9 @@ title: Icon
 <Icon icon="check_circle" />
 ```
 
-## Size
+## Icon props
+
+### Size
 
 Adjust the pixel `size`. The default size is 16px.
 
@@ -30,7 +32,7 @@ Adjust the pixel `size`. The default size is 16px.
 </ul>
 ```
 
-## Color
+### Color
 
 An icon inherits color.
 
@@ -44,7 +46,7 @@ An icon inherits color.
 </p>
 ```
 
-## Draw a custom icon
+### Draw a custom icon
 
 Icon optionally takes a path to be drawn [SVG path `d` attribute](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/d). Use this if your icon is unique and doesn't need to be part of the official design system iconography, but it still makes sense to use the Icon component.
 
