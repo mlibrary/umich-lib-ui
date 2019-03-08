@@ -8,23 +8,6 @@ Use typography to create clear hierarchies and to make text content easy to scan
 
 The design system uses the open-sourced typeface [Source Sans Pro](https://fonts.google.com/specimen/Source+Sans+Pro).
 
-## Body text
-
-- avoid using bold and italics
-- use 18px for large screens and 16px for smaller screens.
-- use smaller sizes only if there’s a user need
-
-```jsx
-// @live
-<Text>A regular font sized body copy paragraph. This includes even more text to give a good representation of a more average length paragraph. That way you can see more than one line wrapping.</Text>
-```
-
-```jsx
-// @live
-
-<Text small>A small font sized supporting text paragraph. This includes even more text to give a good representation of a more average length paragraph. That way you can see more than one line wrapping.</Text>
-```
-
 ## Links
 
 Links within body copy should be blue and underlined.
@@ -45,41 +28,6 @@ Links without surrounding text should not have a full stop at the end.
 
 - links must be unique and descriptive of their destination.
 - avoid generic "view-more" type links.
-
-## Lists
-
-Bullet point list items start with a lowercase letter and have no full stop at the end.
-
-```jsx
-// @live
-<List type="bulleted">
-  <li>here is a bulleted list</li>
-  <li>this is another item in the list</li>
-  <li>and another item with a bit more text</li>
-</List>
-```
-
-Use numbered steps instead of bullet points to guide a user through a process. Steps end in a full stop because each should be a complete sentence.
-
-```jsx
-// @live
-<List type="numbered">
-  <li>Understand that this is a numbered list.</li>
-  <li>Follow the second step in this numbered list.</li>
-  <li>Make sure each item is a full sentence ending with a full stop.</li>
-</List>
-```
-
-Unstyled lists.
-
-```jsx
-// @live
-<List>
-  <li>here is a bulleted list</li>
-  <li>this is another item in the list</li>
-  <li>and another item with a bit more text</li>
-</List>
-```
 
 ## Line-height
 
