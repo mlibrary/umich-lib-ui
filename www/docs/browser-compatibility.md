@@ -1,5 +1,5 @@
 ---
-title: Browser compatability
+title: Browser compatibility
 ---
 
 ## How we decide
