@@ -26,7 +26,7 @@ export default () => {
       
         <Heading level={3} size="medium">Use the styles, components, and patterns</Heading>
 
-        <Text>See the <Link to="/get-started/">get started</Link> page for details.</Text>
+        <Text>See the <Link to="/introduction/">introduction</Link> page for details.</Text>
       </div>
     </Layout>
   )
