@@ -1,0 +1,19 @@
+{
+  "name": "@umich-lib/search",
+  "version": "0.1.0",
+  "module": "lib/index.js",
+  "dependencies": {
+    "pride": "git://github.com/mlibrary/pride.git"
+  },
+  "peerDependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "d5691544a2e539b8afaebc23f84e015400834c18"
+}
