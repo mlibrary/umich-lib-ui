@@ -17,13 +17,13 @@
   "devDependencies": {
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.0",
     "@babel/preset-env": "^7.1.5",
     "@babel/preset-react": "^7.0.0",
     "@storybook/react": "next",
     "babel-loader": "^8.0.5",
     "babel-plugin-emotion": "^10.0.7",
     "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.20",
     "lerna": "^3.13.0",
     "story2sketch": "^1.4.0"
