@@ -20,7 +20,7 @@ Anyone should be able to understand and use our interfaces. Our sites are intuit
 Design Systems are rules, principles, and constraints, implemented in design and code. It aims to: 
 
 - be a living system open to contribution
-- create in context with real projects and not in a bubble
+- be created in context with real projects and not in a bubble
 - meet high accessibility standards WCAG 2.1 (A and AA)
 - build on the research and experience of other teams
 - promote consistency and cohesion
