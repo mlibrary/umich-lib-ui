@@ -38,15 +38,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "packages/*/src/**/*.js",
-      "!**/node_modules/**"
-    ],
-    "roots": [
-      "packages/"
-    ],
-    "testEnvironment": "node"
   }
 }
