@@ -1,11 +1,15 @@
 {
   "name": "umich-lib-ui",
   "scripts": {
-    "develop": "start-storybook -p 9001 -c .storybook",
-    "build:storybook": "build-storybook -c .storybook -o dist",
+    "bootstrap": "lerna bootstrap --hoist --force-local",
     "build": "lerna exec --parallel -- babel src -d lib --config-file ../../.babelrc",
-    "build:watch": "lerna exec --parallel -- babel src -d lib --config-file ../../.babelrc -w",
-    "bootstrap": "lerna bootstrap --hoist",
+    "build:watch": "lerna exec --parallel -- babel src -d lib --config-file ../../babel.config.js -w",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "develop": "npm run bootstrap && npm run storybook && npm run build:watch",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --coverage --watch",
+    "build:storybook": "build-storybook -c .storybook -o dist",
     "publish": "lerna publish",
     "sketch": "story2sketch"
   },
@@ -21,14 +25,27 @@
     "@babel/preset-env": "^7.1.5",
     "@babel/preset-react": "^7.0.0",
     "@storybook/react": "next",
+    "babel-jest": "^24.5.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-emotion": "^10.0.7",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.20",
+    "jest": "^24.5.0",
     "lerna": "^3.13.0",
+    "react-test-renderer": "^16.8.5",
     "story2sketch": "^1.4.0"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "packages/*/src/**/*.js",
+      "!**/node_modules/**"
+    ],
+    "roots": [
+      "packages/"
+    ],
+    "testEnvironment": "node"
   }
 }
