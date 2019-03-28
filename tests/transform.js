@@ -4,8 +4,8 @@ const babelOptions = {
     '@babel/preset-env'],
   plugins: [
     'require-context-hook',
-    "transform-class-properties",
-    "@babel/plugin-proposal-object-rest-spread"
+    'transform-class-properties',
+    '@babel/plugin-proposal-object-rest-spread'
   ]
 };
 
