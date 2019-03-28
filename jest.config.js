@@ -4,5 +4,8 @@ module.exports = {
   ],
   transform: {
     '^.+\\.js?$': '<rootDir>/tests/transform.js'
-  }
+  },
+  collectCoverageFrom: [
+    "packages/*/src/**/*.js"
+  ]
 }
