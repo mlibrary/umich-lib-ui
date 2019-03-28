@@ -2,7 +2,7 @@
   "name": "umich-lib-ui",
   "scripts": {
     "bootstrap": "lerna bootstrap --hoist --force-local",
-    "build": "lerna exec --parallel -- babel src -d lib --config-file ../../.babelrc",
+    "build": "lerna exec --parallel -- babel src -d lib --config-file ../../babel.config.js",
     "build:watch": "lerna exec --parallel -- babel src -d lib --config-file ../../babel.config.js -w",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "develop": "npm run bootstrap && npm run storybook && npm run build:watch",
