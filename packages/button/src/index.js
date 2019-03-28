@@ -56,8 +56,6 @@ const createButtonStyles = (props) => {
         borderStyle: 'solid'
       }
       break;
-    default:
-      break;
   }
 
   if (small) {
