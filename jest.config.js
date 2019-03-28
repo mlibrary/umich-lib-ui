@@ -7,5 +7,8 @@ module.exports = {
   },
   collectCoverageFrom: [
     "packages/*/src/**/*.js"
+  ],
+  roots: [
+    "packages/"
   ]
 }
