@@ -9,6 +9,7 @@ module.exports = {
     "packages/*/src/**/*.js"
   ],
   roots: [
-    "packages/"
+    "packages/",
+    ".storybook/"
   ]
 }
