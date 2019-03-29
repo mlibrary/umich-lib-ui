@@ -15,41 +15,21 @@ Run these commands before doing anything else.
 ```
 git clone https://github.com/mlibrary/umich-lib-ui.git
 cd umich-lib-ui
-npm install
 ```
 
 ## ⌨️ Development
 
-### 1. Boostrap Lerna
-
-All dependencies get linked for cross-component and package development
-```sh
-npm run bootstrap
-```
-
-### 2. Watch packages and build
+Starts the Storybook development environment at `http://localhost:9001` and opens the documentation site at `http://localhost:8000`.
 
 ```sh
-npm run build:watch
+npm start
 ```
 
-### 3. Start the development environment
-
-Starts the the storybook development environment. 
-```sh
-npm run develop
-```
-Opens up Storybook at `http://localhost:9001`
-
-### 4. Develop components in `/packages/`.
-
-Anytime you add a new component you will need to run `npm run bootstrap` again.
-
-## `www` / doc site
+## `www` / documentation site
 
 Built with [Gatsby v2](https://www.gatsbyjs.org/) for a fast website.
 
-See the README in `www` directory.
+See the README in the `www` directory.
 
 ## 📦 Publishing
 

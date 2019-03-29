@@ -20,10 +20,6 @@ const Icon = ({
   d,
   ...other
 }) => {
-  if (!icons.hasOwnProperty(icon)) {
-    console.warn(`[Icon] "${icon}" is not a valid icon name.`)
-  }
-
   return (
     <StyledSVG
       width={`${size}px`}
@@ -40,7 +36,7 @@ const Icon = ({
 
 Icon.propTypes = {
   /** Icon name. */
-  icon: PropTypes.string.isRequired,
+  icon: PropTypes.string,
   /** Size of the icon in pixels. */
   size: PropTypes.number,
   /** Include a title if this icon requires a text alternative. */
