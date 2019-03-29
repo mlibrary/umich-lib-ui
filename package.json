@@ -5,7 +5,7 @@
     "build": "lerna exec --parallel -- babel src -d lib --config-file ../../babel.config.js",
     "build:watch": "lerna exec --parallel -- babel src -d lib --config-file ../../babel.config.js -w",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "start": "npm install && npm run bootstrap && npm run build:watch & npm run storybook & (cd www/ && npm install && npm run develop)",
+    "start": "npm run storybook & (cd www/ && npm run develop)",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --coverage --watch",
