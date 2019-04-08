@@ -6,50 +6,58 @@ import { Global, css } from '@emotion/core'
   https://styleguide.github.com/primer/support/color-system/
 */
 export const COLORS = {
-  brand: {
-    maize: '#FFCB05',
-    blue: '#00274C'
-  },
-  grey: {
-    '600': '#262626',
-    '500': '#4E4E4E',
-    '400': '#CCC',
-    '300': '#E5E5E5',
-    '200': '#F2F2F2',
-    '100': '#FAFAFA'
+  maize: {
+    '100': '#FFF9E6',
+    '200': '#FFEA9B',
+    '300': '#FFDA50',
+    '400': '#FFCB05',
+    '500': '#EABA02'
   },
   blue: {
-    '700': '#00274C',
-    '600': '#0C5292',
-    '500': '#126DC1',
-    '400': '#CCE6FF',
-    '300': '#E6F3FF',
-    '200': '#F2F9FF'
+    '100': '#F7F8F9',
+    '200': '#B2BEC9',
+    '300': '#4C6781',
+    '400': '#00274C',
+    '500': '#001324'
   },
-  green: {
-    '600': '#057C42',
-    '500': '#05A657',
-    '400': '#E2F4EB'
+  neutral: {
+    '000': '#FFFFFF',
+    '100': '#E5E9ED',
+    '200': '#8A96A1',
+    '300': '#637381',
+    '400': '#212B36',
+    '500': '#06080A'
   },
-  orange: {
-    '600': '#AA5600',
-    '500': '#E77504',
-    '400': '#FFEEDD'
+  coral: {
+    '100': '#FDF0EB',
+    '200': '#F7C3B1',
+    '300': '#F19675',
+    '400': '#EB693B',
+    '500': '#CC4B1D'
   },
-  red: {
-    '600': '#C53B26',
-    '500': '#ED5D47',
-    '400': '#FFEAE7'
+  teal: {
+    '100': '#E9F2F5',
+    '200': '#A7CDDB',
+    '300': '#65A8BF',
+    '400': '#2483A4',
+    '500': '#106684'
+  },
+  beige: {
+    '100': '#FDFCF8',
+    '200': '#FAF5E6',
+    '300': '#F5EDD3',
+    '400': '#F2E6C1',
+    '500': '#D8CA9E'
   }
 }
 
 export const LINK_COLOR = COLORS.blue[500]
 
 export const INTENT_COLORS = {
-  informational: COLORS.blue[600],
-  success: COLORS.green[600],
-  warning: COLORS.orange[600],
-  error: COLORS.red[600]
+  informational: COLORS.blue[400],
+  success: COLORS.teal[400],
+  warning: COLORS.maize[400],
+  error: COLORS.coral[400]
 }
 
 export const BREAKPOINTS = {
