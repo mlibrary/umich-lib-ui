@@ -15,12 +15,6 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-transformer-json`,
-      options: {
-        typeName: 'Json',
-      }
-    },
-    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'packages',
@@ -37,11 +31,5 @@ module.exports = {
       },
     },
     `gatsby-plugin-emotion`
-    
-    /*
-    // This doesn't work for some reason...
-    // https://github.com/gatsbyjs/gatsby/issues/7543
-    `gatsby-transformer-react-docgen`
-    */
   ],
 }
