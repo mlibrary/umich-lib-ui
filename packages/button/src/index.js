@@ -25,11 +25,7 @@ const createButtonStyles = (props) => {
     case 'start':
       styles = {
         ...styles,
-        background: COLORS.blue[500],
-        color: 'white',
-        borderBottom: COLORS.blue[600],
-        borderBottomWidth: '3px',
-        borderBottomStyle: 'solid',
+        background: COLORS.maize[400],
         padding: '0.5rem 1.15rem',
         fontSize: '1.25rem',
         fontWeight: '600',
@@ -38,22 +34,15 @@ const createButtonStyles = (props) => {
     case 'primary':
       styles = {
         ...styles,
-        background: COLORS.blue[500],
-        color: 'white',
-        borderBottom: COLORS.blue[600],
-        borderBottomWidth: '3px',
-        borderBottomStyle: 'solid',
+        background: COLORS.maize[400],
         fontWeight: '600',
       }
       break;
     case 'secondary':
       styles = {
         ...styles,
-        background: 'transparent',
-        color: COLORS.grey[600],
-        borderColor: COLORS.grey[500],
-        borderWidth: '1px',
-        borderStyle: 'solid'
+        borderColor: COLORS.blue[300],
+        border: 'solid 1px'
       }
       break;
   }

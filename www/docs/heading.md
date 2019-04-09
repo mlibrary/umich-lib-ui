@@ -2,13 +2,15 @@
 title: Heading
 ---
 
-<lede>Use `Heading` to creating headings for consistent and clear content hierarchy. Write all heading in sentence case.</lede>
+<lede>Use `Heading` to create clear hierarchies and to make text content easy to scan and read. It is the core structure of any well designed interface.</lede>
 
 <research-insight>
   The most important piece of information or action for the user should be in the headings. Users tend to scan a page instead of closely reading paragraph text.
 </research-insight>
 
 ## Usage
+
+Write all heading in sentence case.
 
 ```jsx
 // @live

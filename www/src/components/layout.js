@@ -18,11 +18,11 @@ const DocContainer = styled('div')({
   [MEDIA_QUERIES.LARGESCREEN]: {
     display: 'grid',
     height: '100vh',
-    gridTemplateColumns: 'auto 16rem',
+    gridTemplateColumns: '16rem auto',
     gridTemplateRows: 'max-content',
     gridTemplateAreas: `
       "header header"
-      "main side"
+      "side main"
     `
   }
 })
@@ -83,7 +83,7 @@ const Layout = ({ children }) => (
             },
             {
               name: 'theme-color',
-              content: `${COLORS.blue[600]}`
+              content: `${COLORS.blue[400]}`
             }
           ]}
           link={[

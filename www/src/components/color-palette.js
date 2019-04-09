@@ -1,35 +1,48 @@
 import React from 'react'
 import { COLORS } from '../../../packages/styles';
 import Heading from '../../../packages/heading'
+import styled from '@emotion/styled'
+import { MEDIA_QUERIES } from '../../../packages/styles'
+
+const StyledContainer = styled('div')({
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    columns: '3'
+  }
+})
 
 const ColorPalette = ({ palette }) => (
-  <section>
-    <Heading level={3} size="medium">{palette}</Heading>
-    <ol>
+  <section style={{
+    breakInside: 'avoid'
+  }}>
+    <ol style={{
+      display: 'block',
+      marginBottom: '2rem',
+      border: `solid 1px ${COLORS[palette][200]}`
+    }}>
       {Object.keys(COLORS[palette]).map((shade, s) => (
         <li
           key={s}
           style={{
             background: COLORS[palette][shade],
-            padding: '0.5rem 1rem',
+            width: '100%',
+            maxWidth: '100%',
+            padding: '0.75rem 1rem',
             fontWeight: '600',
-            color: shade > 400 || shade === 'blue' ? 'white' : '',
             display: 'flex',
             justifyContent: 'space-between',
-            margin: '0 -1rem',
           }}
         >
-          <span>{shade}</span><span>{COLORS[palette][shade]}</span>
+          <span>{palette}-{shade}</span><span>{COLORS[palette][shade]}</span>
         </li>
       ))}
     </ol>
   </section>
 )
 
-export default () => (
-  <article>
-    {Object.keys(COLORS).map((palette, p) => (
-      <ColorPalette palette={palette} key={p} />
+export default ({ colors }) => (
+  <StyledContainer>
+    {colors.map((palette, p) => (
+      <ColorPalette palette={palette} p={p} />
     ))}
-  </article>
+  </StyledContainer>
 )

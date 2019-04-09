@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from '@emotion/styled'
 import { COLORS } from '@umich-lib/styles'
 
-const sizes = {
+export const sizes = {
   'xsmall': {
     marginBottom: '0.25em',
     marginTop: '1.5em',
@@ -19,15 +19,27 @@ const sizes = {
     marginTop: '1.875em',
     fontSize: '1.2rem'
   },
+  'subtitle': {
+    fontSize: '28px',
+    lineHeight: '35px',
+    fontWeight: '600',
+  },
+  'title': {
+    fontSize: '32px',
+    lineHeight: '40px',
+    fontWeight: '800',
+  },
   'large': {
-    marginBottom: '0.555em',
-    marginTop: '1.25em',
-    fontSize: '1.5rem'
+    fontFamily: 'Crimson Text',
+    fontSize: '36px',
+    lineHeight: '45px',
+    fontWeight: '400',
   },
   'xlarge': {
-    marginBottom: '0.625em',
-    marginTop: '1.25em',
-    fontSize: '2.4rem'
+    fontFamily: 'Crimson Text',
+    fontSize: '56px',
+    lineHeight: '70px',
+    fontWeight: '400',
   }
 }
 
@@ -38,7 +50,6 @@ const sizes = {
 const StyledHeading = styled.h1(
   {
     display: 'block',
-    color: COLORS.grey[700],
     fontWeight: '700',
     lineHeight: '1.25'
   },

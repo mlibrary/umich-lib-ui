@@ -15,8 +15,8 @@ import { Link } from 'gatsby'
 
 const StyledPre = styled('pre')({
   display: 'block',
-  background: COLORS.grey[100],
-  border: `solid 1px ${COLORS.grey[400]}`,
+  background: COLORS.neutral[100],
+  border: `solid 1px ${COLORS.neutral[400]}`,
   padding: '1rem',
   margin: '0 -1rem',
   'code': {
@@ -27,7 +27,7 @@ const StyledPre = styled('pre')({
 
 const StyledCode = styled('code')({
   display: 'inline-block',
-  background: COLORS.grey[200],
+  background: COLORS.neutral[100],
   borderRadius: '3px',
   padding: '0 0.25rem',
   fontFamily: `Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace`,
@@ -68,7 +68,8 @@ const renderAst = new rehypeReact({
     ul: ({ children }) => <List type="bulleted">{children}</List>,
     ol: ({ children }) => <List type="numbered">{children}</List>,
     pre: StyledPre,
-    'color-palette': ColorPalette,
+    'colors-primary': () => <ColorPalette colors={['maize', 'blue', 'neutral']} />,
+    'colors-secondary': () => <ColorPalette colors={['coral', 'teal', 'beige']} />,
     'research-insight': ResearchInsight,
     'accessibility-insight': AccessibilityInsight,
     'text': Text,

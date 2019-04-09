@@ -2,7 +2,7 @@
 title: "Typography"
 ---
 
-Use typography to create clear hierarchies and to make text content easy to scan and read. It is the core structure of any well designed interface.
+U-M Library’s Design System provides a constrained, purposeful set of typographic styles. Maintaining consistency with these styles ensures that elements in the UI are clear and easily recognizable when scanning the page. The text sizes, styles, and layouts were selected to balance content and UI and foster familiarity.
 
 ## Font
 

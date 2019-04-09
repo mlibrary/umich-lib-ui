@@ -38,10 +38,10 @@ An icon inherits color.
 
 ```jsx
 // @live
-<p style={{ color: COLORS.green[600] }}>
+<p style={{ color: COLORS.teal[400] }}>
   <Icon icon="check_circle" /> Yes!
   <span
-    style={{ color: COLORS.red[600] }}
+    style={{ color: COLORS.red[400] }}
   ><Icon icon="error" /> No!</span>
 </p>
 ```

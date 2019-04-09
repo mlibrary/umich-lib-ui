@@ -10,7 +10,7 @@ import {
 
 const StyledHeader = styled('header')({
   display: 'block',
-  background: COLORS.brand.blue,
+  background: COLORS.blue[400],
   padding: '0.8rem 0'
 })
 

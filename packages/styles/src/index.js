@@ -51,7 +51,9 @@ export const COLORS = {
   }
 }
 
-export const LINK_COLOR = COLORS.blue[500]
+export const LINK_COLOR = COLORS.teal[400]
+
+export const FONT_COLOR = COLORS.blue[500]
 
 export const INTENT_COLORS = {
   informational: COLORS.blue[400],
@@ -167,25 +169,16 @@ export function GlobalStyleSheet() {
       are not being requests as another file to fetch, it's OK to import the
       font family because it's not as slow as tranditional setups.
     */
-    @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700');
+    @import url('https://fonts.googleapis.com/css?family=Crimson+Text|Muli:400,600,700');  
     
     body,
     html {
       padding: 0;
       margin: 0;
       font-size: 16px;
-      font-family: 'Source Sans Pro', sans-serif;
+      font-family: 'Muli', sans-serif;
       line-height: 1.5;
-    }
-    
-    /*
-      On large screens, make the font size a little bigger.
-    */
-    ${MEDIA_QUERIES.LARGESCREEN} {
-      body,
-      html {
-        font-size: 18px;
-      }
+      color: ${COLORS.neutral[400]}
     }
     
     /*
@@ -213,7 +206,7 @@ export function GlobalStyleSheet() {
       margin-right: 1rem;
     }
     *:focus {
-      outline: 2px solid ${COLORS.maize};
+      outline: 2px solid ${COLORS.teal[400]};
       outline-offset: 0;
     }
     .layout-flex {

@@ -21,7 +21,7 @@ export default () => (
         <div style={{
           display: 'flex',
           padding: '0.75rem',
-          background: COLORS.grey[200],
+          background: COLORS.neutral[200],
           alignItems: 'center',
           justifyContent: 'center'
         }}><Icon icon={i} size={24} /></div>

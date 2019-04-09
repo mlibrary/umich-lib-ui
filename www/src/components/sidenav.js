@@ -13,12 +13,11 @@ const SectionNav = styled('nav')({
     textDecoration: 'none'
   },
   padding: '1rem 0',
-  background: `${COLORS.grey[100]}`,
-  borderTop: `solid 1px ${COLORS.grey[400]}`,
+  borderTop: `solid 1px ${COLORS.neutral[100]}`,
   [MEDIA_QUERIES.LARGESCREEN]: {
     gridArea: 'side',
     borderTop: 'none',
-    borderLeft: `solid 1px ${COLORS.grey[400]}`
+    borderRight: `solid 2px ${COLORS.neutral[100]}`
   },
 })
 
@@ -34,9 +33,12 @@ const StyledNavLink = styled(Link)({
   '&:hover': {
     textDecoration: 'underline'
   },
-  padding: '0.2rem 1rem',
+  lineHeight: '2',
+  borderLeft: 'solid 4px transparent',
+  padding: '0.4rem 1rem',
+  color: `${COLORS.blue[400]}`,
   [MEDIA_QUERIES.LARGESCREEN]: {
-    padding: '0.2rem 2rem',
+    padding: '0.2rem 3rem',
   }
 })
 
@@ -58,8 +60,8 @@ class NavSection extends React.Component {
                 to={item.to}
                 activeStyle={{
                   fontWeight: '700',
-                  borderLeft: `4px solid ${COLORS.blue[500]}`,
-                  background: COLORS.grey[200]
+                  borderLeft: `4px solid ${COLORS.maize[400]}`,
+                  background: COLORS.maize[100]
                 }}
               >
                 {item.text}

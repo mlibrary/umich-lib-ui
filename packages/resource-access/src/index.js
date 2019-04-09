@@ -21,7 +21,7 @@ const FigureStyled = styled('figure')({
   margin: 0,
   padding: 0,
   'tr:not(:last-child)': {
-    borderBottom: `solid 1px ${COLORS.grey[400]}`
+    borderBottom: `solid 1px ${COLORS.neutral[400]}`
   }
 })
 
@@ -46,8 +46,8 @@ const NotesListStyled = styled('ul')({
 
 const StyledTH = styled('th')({
   fontSize: '0.875rem',
-  color: COLORS.grey[600],
-  borderBottom: `solid 2px ${COLORS.grey[400]}`
+  color: COLORS.neutral[400],
+  borderBottom: `solid 2px ${COLORS.neutral[400]}`
 })
 
 const td_and_th = {
@@ -67,7 +67,7 @@ const TableStyled = styled('table')({
   tableLayout: 'fixed',
   'tbody': {
     'tr:not(:last-child)': {
-      borderBottom: `solid 1px ${COLORS.grey[400]}`
+      borderBottom: `solid 1px ${COLORS.neutral[400]}`
     }
   },
   'td': td_and_th,

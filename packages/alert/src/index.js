@@ -9,24 +9,20 @@ import styled from '@emotion/styled'
 
 const alertIntentStyles = {
   'informational': {
-    color: COLORS.beige[500],
-    background: COLORS.beige[100],
-    borderColor: COLORS.beige[400]
+    background: COLORS.beige[400],
+    borderColor: COLORS.beige[500]
   },
   'success': {
-    color: COLORS.teal[500],
-    background: COLORS.teal[100],
-    borderColor: COLORS.teal[400]
+    background: COLORS.teal[400],
+    borderColor: COLORS.teal[500]
   },
   'warning': {
-    color: COLORS.maize[500],
-    background: COLORS.maize[100],
-    borderColor: COLORS.maize[400]
+    background: COLORS.maize[400],
+    borderColor: COLORS.maize[500]
   },
   'error': {
-    color: COLORS.coral[500],
-    background: COLORS.coral[100],
-    borderColor: COLORS.coral[400]
+    background: COLORS.coral[400],
+    borderColor: COLORS.coral[500]
   }
 }
 
@@ -34,7 +30,8 @@ const StyledAlert = styled(ReachAlert)(
   {
     margin: '0',
     padding: '0.5rem 0',
-    borderBottom: `solid 1px ${COLORS.neutral[500]}`,
+    color: COLORS.neutral[400],
+    borderBottom: `solid 1px ${COLORS.neutral[400]}`,
     background: COLORS.neutral[100]
   },
   props => ({

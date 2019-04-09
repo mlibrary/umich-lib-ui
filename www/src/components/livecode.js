@@ -24,7 +24,7 @@ const StyledCodeContainer = styled('div')({
 })
 
 const StyledCodePreview = styled('div')({
-  border: `solid 1px ${COLORS.grey[400]}`,
+  border: `solid 1px ${COLORS.neutral[400]}`,
   marginBottom: '-1px'
 })
 
