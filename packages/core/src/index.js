@@ -21,7 +21,8 @@ import {
   INTENT_COLORS,
   BREAKPOINTS,
   MEDIA_QUERIES,
-  GlobalStyleSheet
+  SPACING,
+  GlobalStyleSheet,
 } from "@umich-lib/styles"
 import {
   Tabs,
@@ -64,6 +65,7 @@ export {
 export {
   COLORS,
   INTENT_COLORS,
+  SPACING,
   BREAKPOINTS,
   MEDIA_QUERIES,
   GlobalStyleSheet

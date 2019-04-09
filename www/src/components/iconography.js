@@ -14,14 +14,14 @@ export default () => (
         style={{
           flex: '1 1 10rem',
           maxWidth: '10rem',
-          height: '6rem',
+          height: '8rem',
           marginRight: '1rem',
         }}
       >
         <div style={{
           display: 'flex',
-          padding: '0.75rem',
-          background: COLORS.neutral[200],
+          padding: '1rem 2rem',
+          background: COLORS.blue[100],
           alignItems: 'center',
           justifyContent: 'center'
         }}><Icon icon={i} size={24} /></div>

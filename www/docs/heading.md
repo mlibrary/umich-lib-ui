@@ -26,6 +26,8 @@ Use `size` to change the visual size of the heading.
 ```jsx
 // @live
 <div>
+  <Heading size="display-xlarge" level={1}>An extra large display heading</Heading>
+  <Heading size="display-large" level={2}>A large display heading</Heading>
   <Heading size="xlarge" level={1}>An extra large heading</Heading>
   <Heading size="large" level={2}>A large heading</Heading>
   <Heading size="medium" level={3}>A medium heading</Heading>

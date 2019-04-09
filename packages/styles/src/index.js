@@ -1,6 +1,19 @@
 import React from "react";
 import { Global, css } from '@emotion/core' 
 
+export const SPACING = {
+  '3XS': '0.125rem',
+  '2XS': '0.25rem',
+  'XS': '0.5rem',
+  'SM': '0.75rem',
+  'M': '1rem',
+  'L': '1.5rem',
+  'XL': '2rem',
+  '2XL': '3rem',
+  '4XL': '4rem',
+  '5XL': '6rem'
+}
+
 /*
   Inspired by GitHub color system
   https://styleguide.github.com/primer/support/color-system/
@@ -204,10 +217,6 @@ export function GlobalStyleSheet() {
     }
     .x-spacing > *:not(:last-child) {
       margin-right: 1rem;
-    }
-    *:focus {
-      outline: 2px solid ${COLORS.teal[400]};
-      outline-offset: 0;
     }
     .layout-flex {
       display: flex;

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled'
-import { COLORS } from '@umich-lib/styles'
 
 export const sizes = {
   'xsmall': {
@@ -17,29 +16,30 @@ export const sizes = {
   'medium': {
     marginBottom: '0.83333em',
     marginTop: '1.875em',
-    fontSize: '1.2rem'
-  },
-  'subtitle': {
-    fontSize: '28px',
-    lineHeight: '35px',
-    fontWeight: '600',
-  },
-  'title': {
-    fontSize: '32px',
-    lineHeight: '40px',
-    fontWeight: '800',
+    fontSize: '1.2rem', 
+    fontWeight: '600'
   },
   'large': {
-    fontFamily: 'Crimson Text',
-    fontSize: '36px',
-    lineHeight: '45px',
-    fontWeight: '400',
+    marginBottom: '0.555em',
+    marginTop: '1.25em',
+    fontSize: '1.5rem', 
+    fontWeight: '600'
   },
   'xlarge': {
-    fontFamily: 'Crimson Text',
+    marginBottom: '0.625em',
+    marginTop: '1.25em',
+    fontSize: '2.4rem',
+    fontWeight: '800'
+  },
+  'display-xlarge': {
+    fontFamily: "Crimson Text",
     fontSize: '56px',
     lineHeight: '70px',
-    fontWeight: '400',
+  },
+  'display-large': {
+    fontFamily: "Crimson Text",
+    fontSize: '36px',
+    lineHeight: '45px',
   }
 }
 
@@ -50,7 +50,6 @@ export const sizes = {
 const StyledHeading = styled.h1(
   {
     display: 'block',
-    fontWeight: '700',
     lineHeight: '1.25'
   },
   ({ size }) => sizes[size]
@@ -62,10 +61,12 @@ const StyledHeading = styled.h1(
 const Heading = ({
   children,
   level,
+  className,
   ...other
 }) => (
   <StyledHeading
     as={'h' + level}
+    className={className}
     {...other}
   >{children}</StyledHeading>
 )

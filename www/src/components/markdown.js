@@ -15,8 +15,8 @@ import { Link } from 'gatsby'
 
 const StyledPre = styled('pre')({
   display: 'block',
-  background: COLORS.neutral[100],
-  border: `solid 1px ${COLORS.neutral[400]}`,
+  background: COLORS.blue[100],
+  border: `solid 1px ${COLORS.neutral[100]}`,
   padding: '1rem',
   margin: '0 -1rem',
   'code': {
@@ -27,7 +27,7 @@ const StyledPre = styled('pre')({
 
 const StyledCode = styled('code')({
   display: 'inline-block',
-  background: COLORS.neutral[100],
+  background: COLORS.blue[100],
   borderRadius: '3px',
   padding: '0 0.25rem',
   fontFamily: `Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace`,

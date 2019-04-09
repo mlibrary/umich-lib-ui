@@ -6,9 +6,9 @@ const findMarkdownEdge = (allMarkdownRemark, name) => {
 }
 
 export default (data) => {
-  const { allSideNavPagesYaml, allMarkdownRemark } = data
+  const { allNavigationPagesYaml, allMarkdownRemark } = data
 
-  return allSideNavPagesYaml.edges.reduce((acc, edge) => {
+  return allNavigationPagesYaml.edges.reduce((acc, edge) => {
     const yamlName = edge.node.page
     const mdEdgeFound = findMarkdownEdge(allMarkdownRemark, yamlName)
 

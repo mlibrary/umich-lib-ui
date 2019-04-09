@@ -3,16 +3,32 @@ import { Link, StaticQuery, graphql } from 'gatsby'
 import styled from '@emotion/styled'
 import {
   COLORS,
-  MEDIA_QUERIES,
-  Heading
-} from '../../../packages/core'
+  SPACING,
+  MEDIA_QUERIES
+} from '../../../packages/core/src'
+import MLibraryLogo from '../components/mlibrary-logo'
+
+const LogoContainer = styled(Link)({
+  display: 'block',
+  padding: SPACING['L'],
+  maxWidth: `calc(200px + ${SPACING['XL']} + ${SPACING['XL']})`
+})
+
+const SiteName = styled('span')({
+  textTransform: 'uppercase',
+  fontSize: '18px',
+  letterSpacing: '4.5px',
+  lineHeight: '24px',
+  fontWeight: '600',
+  color: COLORS.neutral[300]
+})
 
 const SectionNav = styled('nav')({
   gridArea: 'footer',
   'a': {
     textDecoration: 'none'
   },
-  padding: '1rem 0',
+  lineHeight: 2,
   borderTop: `solid 1px ${COLORS.neutral[100]}`,
   [MEDIA_QUERIES.LARGESCREEN]: {
     gridArea: 'side',
@@ -21,11 +37,13 @@ const SectionNav = styled('nav')({
   },
 })
 
-const StyledNavHeading = styled(Heading)({
-  padding: '0.2rem 1rem',
-  [MEDIA_QUERIES.LARGESCREEN]: {
-    padding: '0.2rem 2rem',
-  }
+const StyledNavHeading = styled('h2')({
+  color: COLORS.neutral[300],
+  textTransform: 'uppercase',
+  fontWeight: '680',
+  letterSpacing: '1.25px',
+  fontSize: '14px',
+  padding: `0 ${SPACING['L']}`,
 })
 
 const StyledNavLink = styled(Link)({
@@ -33,12 +51,11 @@ const StyledNavLink = styled(Link)({
   '&:hover': {
     textDecoration: 'underline'
   },
-  lineHeight: '2',
   borderLeft: 'solid 4px transparent',
   padding: '0.4rem 1rem',
   color: `${COLORS.blue[400]}`,
   [MEDIA_QUERIES.LARGESCREEN]: {
-    padding: '0.2rem 3rem',
+    padding: `0 ${SPACING['XL']}`,
   }
 })
 
@@ -53,7 +70,9 @@ class NavSection extends React.Component {
           size="small"
         >{title}</StyledNavHeading>
 
-        <ul>
+        <ul style={{
+          marginBottom: SPACING['L'],
+        }}>
           {items.map((item, i) => (
             <li key={i}>
               <StyledNavLink
@@ -74,7 +93,7 @@ class NavSection extends React.Component {
   }
 }
 
-const SideNav = ({ data }) => {
+const Navigation = ({ data }) => {
   return (
     <StaticQuery
       query={graphql`
@@ -151,6 +170,11 @@ const SideNav = ({ data }) => {
 
         return (
           <SectionNav role="navigation" aria-label="side bar">
+            <LogoContainer to="/" >
+              <MLibraryLogo />
+              <SiteName>Design System</SiteName>
+            </LogoContainer>
+
             {nav.map((section, s) => (
               <NavSection key={s} title={section.title} items={section.items}  />
             ))}
@@ -161,4 +185,4 @@ const SideNav = ({ data }) => {
   )
 }
 
-export default SideNav
+export default Navigation

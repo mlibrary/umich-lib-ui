@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import SideNav from './sidenav'
+import Navigation from './Navigation'
 import Header from '../../../packages/header'
 import {
   GlobalStyleSheet,
@@ -31,16 +31,6 @@ const DocMain = styled('div')({
   [MEDIA_QUERIES.LARGESCREEN]: {
     gridArea: 'main',
     justifySelf: 'stretch'
-  }
-})
-
-const DocMainContent = styled('div')({
-  margin: '0 auto',
-  padding: '1rem',
-  [MEDIA_QUERIES.LARGESCREEN]: {
-    padding: '2rem 1rem',
-    maxWidth: '52rem',
-    margin: '0 auto'
   }
 })
 
@@ -98,14 +88,9 @@ const Layout = ({ children }) => (
         </Helmet>
         <GlobalStyleSheet />
         <DocContainer>
-          <StyledHeaderContainer role="banner">
-            <Header name="Design System" />
-          </StyledHeaderContainer>
-          <SideNav />
+          <Navigation />
           <DocMain>
-            <DocMainContent>
-              {children}
-            </DocMainContent>
+            {children}
           </DocMain>
         </DocContainer>
       </>
