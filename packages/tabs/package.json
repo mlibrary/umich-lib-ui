@@ -10,8 +10,8 @@
     "react-tabs": "^2.3.0"
   },
   "peerDependencies": {
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+    "react":"^16.8.5",
+    "react-dom":"^16.8.5"
   },
   "files": [
     "lib"

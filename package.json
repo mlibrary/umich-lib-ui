@@ -16,8 +16,8 @@
   "version": "0.0.0",
   "dependencies": {
     "@babel/polyfill": "^7.4.0",
-    "react": "^16.6.1",
-    "react-dom": "^16.6.1"
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.5",
