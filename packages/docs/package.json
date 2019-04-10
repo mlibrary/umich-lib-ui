@@ -1,0 +1,47 @@
+{
+  "name": "@umich-lib/docs",
+  "description": "U-M Design System documentation site.",
+  "version": "1.0.0",
+  "author": "Jon Earley <earleyj@umich.edu>",
+  "dependencies": {
+    "@emotion/core": "^10.0.10",
+    "@emotion/styled": "^10.0.10",
+    "@mdx-js/mdx": "^0.20.3",
+    "@mdx-js/react": "^1.0.0-alpha.12",
+    "@mdx-js/tag": "^0.20.3",
+    "@umich-lib/core": "^0.1.1",
+    "gatsby": "^2.2.9",
+    "gatsby-image": "^2.0.34",
+    "gatsby-mdx": "^0.4.4",
+    "gatsby-plugin-manifest": "^2.0.24",
+    "gatsby-plugin-offline": "^2.0.25",
+    "gatsby-plugin-react-helmet": "^3.0.10",
+    "gatsby-plugin-sharp": "^2.0.30",
+    "gatsby-source-filesystem": "^2.0.8",
+    "gatsby-transformer-sharp": "^2.1.17",
+    "prism-react-renderer": "^0.1.6",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-helmet": "^5.2.0",
+    "react-live": "^2.0.1"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "format": "prettier --write \"src/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "prettier": "^1.16.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/christopherbiscardi/gatsby-starter-mdx-basic"
+  }
+}
