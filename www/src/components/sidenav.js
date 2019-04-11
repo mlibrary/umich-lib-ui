@@ -29,6 +29,20 @@ const StyledNavHeading = styled(Heading)({
   }
 })
 
+const activeStyle={
+  fontWeight: '700',
+  borderLeft: `4px solid ${COLORS.blue[500]}`,
+  background: COLORS.grey[200]
+}
+
+const isActive = ({
+  isPartiallyCurrent, href, location
+}) => {
+  return ( isPartiallyCurrent && location.pathname.match(href + '/?$') )
+    ? {style: activeStyle}
+    : {}
+}
+
 const StyledNavLink = styled(Link)({
   display: 'block',
   '&:hover': {
@@ -56,11 +70,7 @@ class NavSection extends React.Component {
             <li key={i}>
               <StyledNavLink
                 to={item.to}
-                activeStyle={{
-                  fontWeight: '700',
-                  borderLeft: `4px solid ${COLORS.blue[500]}`,
-                  background: COLORS.grey[200]
-                }}
+                getProps={isActive}
               >
                 {item.text}
               </StyledNavLink>
