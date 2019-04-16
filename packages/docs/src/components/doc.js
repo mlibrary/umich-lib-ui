@@ -12,8 +12,7 @@ import Layout from './layout'
 
 const ContentContainer = styled('div')({
   maxWidth: '1024px',
-  marginLeft: 'auto',
-  marginRight: 'auto'
+  margin: `auto ${SPACING['L']}`
 })
 
 const XMargins = styled('div')({
