@@ -7,8 +7,7 @@ import {
   COLORS,
   MEDIA_QUERIES,
 } from '@umich-lib/core'
-import CodeBlock from './CodeBlock'
-
+import mdx_components from './mdx_components'
 import Logo from './logo'
 
 const Root = styled('div')({
@@ -29,11 +28,6 @@ const Side = styled('div')({
 const Main = styled('main')({
   width: '100%'
 })
-
-const mdx_components = {
-  pre: props => <div {...props} />,
-  code: CodeBlock
-}
 
 const Layout = (props) => (
   <MDXProvider components={mdx_components}>
