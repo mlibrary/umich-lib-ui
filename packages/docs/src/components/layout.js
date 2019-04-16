@@ -1,11 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
+import {MDXProvider} from '@mdx-js/tag'
 import {
   GlobalStyleSheet,
   COLORS,
   MEDIA_QUERIES,
 } from '@umich-lib/core'
+import CodeBlock from './CodeBlock'
 
 import Logo from './logo'
 
@@ -28,8 +30,13 @@ const Main = styled('main')({
   width: '100%'
 })
 
+const mdx_components = {
+  pre: props => <div {...props} />,
+  code: CodeBlock
+}
+
 const Layout = (props) => (
-  <>
+  <MDXProvider components={mdx_components}>
     <GlobalStyleSheet />
     <Root>
       <Main>
@@ -39,7 +46,7 @@ const Layout = (props) => (
         <Logo />
       </Side>
     </Root>
-  </>
+  </MDXProvider>
 )
 
 Layout.propTypes = {

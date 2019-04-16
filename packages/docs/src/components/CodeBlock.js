@@ -1,13 +1,15 @@
 import React from 'react'
 import Highlight, {defaultProps} from 'prism-react-renderer'
 import {LiveProvider, LiveEditor, LiveError, LivePreview} from 'react-live'
+import * as core from '@umich-lib/core'
 
 export default ({children, className, live}) => {
   const language = className.replace(/language-/, '')
+
   if (live) {
     return (
-      <div style={{marginTop: '40px'}}>
-        <LiveProvider code={children}>
+      <div>
+        <LiveProvider code={children} scope={{ ...core }}>
           <LivePreview />
           <LiveEditor />
           <LiveError />
