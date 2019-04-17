@@ -12,7 +12,7 @@ import Layout from './layout'
 
 const ContentContainer = styled('div')({
   maxWidth: '1024px',
-  margin: `auto ${SPACING['L']}`
+  margin: `0 ${SPACING['M']}`
 })
 
 const XMargins = styled('div')({
@@ -68,7 +68,7 @@ const Doc = (props) => {
           </XMargins>
         </div>
         <XMargins>
-          <ContentContainer>
+          <ContentContainer style={{ marginTop: SPACING['XL'] }}>
             {props.children}
           </ContentContainer>
         </XMargins>

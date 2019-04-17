@@ -5,10 +5,12 @@ import {MDXProvider} from '@mdx-js/tag'
 import {
   GlobalStyleSheet,
   COLORS,
+  SPACING,
   MEDIA_QUERIES,
 } from '@umich-lib/core'
 import mdx_components from './mdx_components'
 import Logo from './logo'
+import NavigationContent from './navigation.mdx'
 
 const Root = styled('div')({
   [MEDIA_QUERIES.LARGESCREEN]: {
@@ -29,6 +31,16 @@ const Main = styled('main')({
   width: '100%'
 })
 
+const SideNav = styled('nav')({
+  padding: `0 ${SPACING['L']}`,
+  'li': {
+    padding: `${SPACING['2XS']} 0`
+  },
+  'ul ul': {
+    marginLeft: SPACING['L']
+  }
+})
+
 const Layout = (props) => (
   <MDXProvider components={mdx_components}>
     <GlobalStyleSheet />
@@ -38,6 +50,9 @@ const Layout = (props) => (
       </Main>
       <Side>
         <Logo />
+        <SideNav>
+          <NavigationContent />
+        </SideNav>
       </Side>
     </Root>
   </MDXProvider>

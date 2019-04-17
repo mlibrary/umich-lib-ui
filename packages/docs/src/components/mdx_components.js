@@ -1,6 +1,7 @@
 import React from 'react'
 import {
-  Heading
+  Heading,
+  Text
 } from '@umich-lib/core'
 import CodeBlock from './CodeBlock'
 
@@ -19,6 +20,11 @@ const Heading5 = ({ children, ...other }) => (
 const Heading6 = ({ children, ...other }) => (
   <Heading level={6} size="xsmall" {...other}>{children}</Heading>
 )
+const P = ({ children, ...other }) => (
+  <Text {...other} style={{
+    maxWidth: '32em'
+  }}>{children}</Text>
+)
 
 export default {
   h2: Heading2,
@@ -26,5 +32,6 @@ export default {
   h4: Heading4,
   h5: Heading5,
   h6: Heading6,
+  p: P,
   code: CodeBlock
 }
