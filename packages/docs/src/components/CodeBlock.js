@@ -49,7 +49,7 @@ function CodeEditor({ live }) {
 const CodeEditorLive = withLive(CodeEditor)
 
 export default ({children, className, live}) => {
-  const language = className.replace(/language-/, '')
+  const language = className ? className.replace(/language-/, '') : ''
 
   if (live) {
     return (

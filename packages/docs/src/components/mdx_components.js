@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import {
   Heading,
   Text
@@ -22,9 +23,24 @@ const Heading6 = ({ children, ...other }) => (
 )
 const P = ({ children, ...other }) => (
   <Text {...other} style={{
-    maxWidth: '32em'
+    maxWidth: '32em',
+    marginBottom: '1rem'
   }}>{children}</Text>
 )
+const A = ({ children, href, ...other }) => {
+  /*
+    The check if the href is an internal link.
+  */
+  if (href.startsWith('/')) {
+    return (
+      <Link to={href} {...other}>{children}</Link>
+    )
+  }
+
+  return (
+    <a {...other}>{children}</a>
+  )
+}
 
 export default {
   h2: Heading2,
@@ -33,5 +49,6 @@ export default {
   h5: Heading5,
   h6: Heading6,
   p: P,
-  code: CodeBlock
+  code: CodeBlock,
+  a: A
 }

@@ -11,7 +11,7 @@ var colors = {
   comment: "#212B3",
   keyword: "#06080A",
   primitive: "#212B3",
-  string: "#637381",
+  string: "#212B3",
   variable: "#212B3",
   boolean: "#212B3",
   punctuation: "#212B3",
