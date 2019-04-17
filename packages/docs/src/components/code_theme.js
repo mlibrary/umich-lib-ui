@@ -7,25 +7,25 @@
 /*:: import type { PrismTheme } from '../src/types' */
 
 var colors = {
-  char: "#212B3",
-  comment: "#212B3",
+  char: "#212B36",
+  comment: "#212B36",
   keyword: "#06080A",
-  primitive: "#212B3",
-  string: "#212B3",
-  variable: "#212B3",
-  boolean: "#212B3",
-  punctuation: "#212B3",
+  primitive: "#212B36",
+  string: "#212B36",
+  variable: "#212B36",
+  boolean: "#212B36",
+  punctuation: "#212B36",
   tag: "#2483A4",
-  function: "#212B3",
-  className: "#212B3",
-  method: "#212B3",
-  operator: "#212B3",
+  function: "#212B36",
+  className: "#212B36",
+  method: "#212B36",
+  operator: "#212B36",
 }
 
 var theme /*: PrismTheme */ = {
   plain: {
-    backgroundColor: "#E5E9ED",
-    color: "#212B3",
+    backgroundColor: "white",
+    color: "#212B36",
   },
   styles: [
     {
