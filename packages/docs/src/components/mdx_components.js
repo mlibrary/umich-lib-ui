@@ -27,13 +27,32 @@ const P = ({ children, ...other }) => (
     marginBottom: '1rem'
   }}>{children}</Text>
 )
+
+const activeLinkStyle = {
+  fontWeight: '700'
+}
+
+const isActive = ({
+  isPartiallyCurrent,
+  href,
+  location
+}) => {
+  return (isPartiallyCurrent && location.pathname.match(href + '/?$'))
+    ? {style: activeLinkStyle}
+    : {}
+}
+
 const A = ({ children, href, ...other }) => {
   /*
     The check if the href is an internal link.
   */
   if (href.startsWith('/')) {
     return (
-      <Link to={href} {...other}>{children}</Link>
+      <Link
+        to={href}
+        {...other}
+        getProps={isActive}
+      >{children}</Link>
     )
   }
 
