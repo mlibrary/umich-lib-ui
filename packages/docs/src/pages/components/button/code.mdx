@@ -9,18 +9,59 @@ navigation:
 
 import { Button } from '@umich-lib/core'
 
-## Primary
-
-Primary buttons are used to highlight the strongest call to action on a page and should only be used once per screen. Not every screen requires a primary button.
-
 ```jsx live=true
-<Button>Primary button</Button>
+<Button>Example</Button>
 ```
 
-## Secondary
+## Button Props
 
-This is the standard button for most use cases. Default buttons may be used several times per screen.
+|Prop|Type|Required|Default|
+|----|----|--------|-------|
+|[element props](#element-props)|spread|false|n/a|
+|[kind](#kind)|enum "primary" or "secondary"|false|"primary"|
+|[children](#children)|node|true|n/a|
+
+### element Props
+
+Any props not listed above will be spread onto the underlying element.
 
 ```jsx live=true
-<Button kind="secondary">Secondary button</Button>
+<Button
+  style={{ width: '10rem' }}
+  className="class-for-button"
+>
+  Primary
+</Button>
+```
+
+### kind
+
+*Type*: enum "primary" | "secondary" default: "primary"
+
+Controls how the `Button` is styled.
+
+```jsx live=true
+<Button>Primary</Button>
+```
+
+```jsx live=true
+<Button kind="secondary">Secondary</Button>
+```
+
+### children
+
+*Type*: `node`
+
+Regular React children.
+
+```jsx live=true
+<Button>
+  <Icon icon="search" size={24} /> Search
+</Button>
+```
+
+```jsx live=true
+<Button>
+  <span>Anything can go here</span>
+</Button>
 ```
