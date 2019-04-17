@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
+import GithubSlugger from 'github-slugger'
 import {
   Heading,
   Text,
@@ -9,20 +10,39 @@ import {
 } from '@umich-lib/core'
 import CodeBlock from './CodeBlock'
 
+/*
+  Attempted to use MDX Component Autolink Header,
+  but it threw and error and wasn't sure how to
+  make it work with @umich-lib/core Heading.
+
+  So, for now, just adding the slug with github-slugger.
+
+  This can be problematic if a page shares the same
+  heading as this creates a new slugger each time
+  a slug is created.
+
+  Also, this lacks the hover on a heading and click
+  for a link feature.
+*/
+function slug(item) {
+  let slugger = new GithubSlugger()
+  return slugger.slug(item)
+}
+
 const Heading2 = ({ children, ...other }) => (
-  <Heading level={2} size="large" {...other}>{children}</Heading>
+  <Heading level={2} size="large" id={slug(children)} {...other}>{children}</Heading>
 )
 const Heading3 = ({ children, ...other }) => (
-  <Heading level={3} size="medium" {...other}>{children}</Heading>
+  <Heading level={3} size="medium" id={slug(children)} {...other}>{children}</Heading>
 )
 const Heading4 = ({ children, ...other }) => (
-  <Heading level={4} size="small" {...other}>{children}</Heading>
+  <Heading level={4} size="small" id={slug(children)} {...other}>{children}</Heading>
 )
 const Heading5 = ({ children, ...other }) => (
-  <Heading level={5} size="xsmall" {...other}>{children}</Heading>
+  <Heading level={5} size="xsmall" id={slug(children)} {...other}>{children}</Heading>
 )
 const Heading6 = ({ children, ...other }) => (
-  <Heading level={6} size="xsmall" {...other}>{children}</Heading>
+  <Heading level={6} size="xsmall" id={slug(children)} {...other}>{children}</Heading>
 )
 const P = ({ children, ...other }) => (
   <Text {...other} style={{
