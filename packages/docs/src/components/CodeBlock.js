@@ -15,7 +15,8 @@ import {
 } from '@umich-lib/core'
 import theme from './code_theme'
 
-const border_color = COLORS.neutral[100]
+const border_color = COLORS.neutral['100']
+const background_color = COLORS.neutral['000']
 
 function CodeEditor({ live }) {
   return (
@@ -23,7 +24,9 @@ function CodeEditor({ live }) {
       margin: `${SPACING['L']} 0`,
       borderLeft: `solid 1px ${border_color}`,
       borderRight: `solid 1px ${border_color}`,
-      borderBottom: `solid 1px ${border_color}`
+      borderBottom: `solid 1px ${border_color}`,
+      background: background_color,
+      marginBottom: SPACING['L']
     }}>
       <div style={{
         padding: SPACING['L'],
@@ -65,9 +68,19 @@ export default ({children, className, live}) => {
     )
   }
   return (
-    <Highlight {...defaultProps} code={children} language={language}>
+    <Highlight {...defaultProps} code={children.trim()} language={language} theme={theme}>
       {({className, style, tokens, getLineProps, getTokenProps}) => (
-        <pre className={className} style={{...style, padding: '20px'}}>
+        <pre
+          className={className}
+          style={{
+            padding: SPACING['L'],
+            fontFamily: 'monospace',
+            border: `solid 1px ${border_color}`,
+            background: background_color,
+            marginBottom: SPACING['L'],
+            ...style
+          }}
+        >
           {tokens.map((line, i) => (
             <div key={i} {...getLineProps({line, key: i})}>
               {line.map((token, key) => (
