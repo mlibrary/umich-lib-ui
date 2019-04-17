@@ -1,8 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import styled from '@emotion/styled'
 import {
   Heading,
-  Text
+  Text,
+  COLORS,
+  SPACING
 } from '@umich-lib/core'
 import CodeBlock from './CodeBlock'
 
@@ -28,8 +31,29 @@ const P = ({ children, ...other }) => (
   }}>{children}</Text>
 )
 
+const TableContainer = styled('div')({
+  overflowX: 'auto'
+})
+
+const Table = styled('table')({
+  width: '100%',
+  'th': {
+    fontWeight: '800',
+    textAlign: 'left'
+  },
+  'th, td': {
+    padding: SPACING['M'],
+    paddingLeft: '0',
+    borderBottom: `solid 1px ${COLORS.neutral[100]}`,
+  }
+})
+
+const EM = styled('em')({
+  fontStyle: 'italic'
+})
+
 const activeLinkStyle = {
-  fontWeight: '700'
+  /*fontWeight: '700'*/
 }
 
 const isActive = ({
@@ -57,7 +81,7 @@ const A = ({ children, href, ...other }) => {
   }
 
   return (
-    <a {...other}>{children}</a>
+    <a href={href} {...other}>{children}</a>
   )
 }
 
@@ -69,5 +93,7 @@ export default {
   h6: Heading6,
   p: P,
   code: CodeBlock,
-  a: A
+  a: A,
+  table: (props) => <TableContainer><Table {...props} /></TableContainer>,
+  em: EM
 }
