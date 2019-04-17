@@ -13,6 +13,7 @@ import {
   SPACING,
   COLORS
 } from '@umich-lib/core'
+import theme from './code_theme'
 
 const border_color = COLORS.neutral[100]
 
@@ -31,7 +32,7 @@ function CodeEditor({ live }) {
         <LivePreview />
       </div>
       <div style={{
-        padding: SPACING['L'],
+        padding: `calc(${SPACING['L']} - 10px)`,
         borderTop: `solid 1px ${border_color}`
       }}>
         <LiveEditor ignoreTabKey={true} />
@@ -56,7 +57,7 @@ export default ({children, className, live}) => {
         <LiveProvider
           code={children.trim()}
           scope={{ ...core }}
-          mountStylesheet={false}
+          theme={theme}
         >
           <CodeEditorLive />
         </LiveProvider>
