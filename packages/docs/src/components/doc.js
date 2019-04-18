@@ -8,11 +8,23 @@ import {
   MEDIA_QUERIES
 } from '@umich-lib/core'
 
+import SEO from './seo'
 import Layout from './layout'
 
 const ContentContainer = styled('div')({
   maxWidth: '1024px',
   margin: `0 ${SPACING['M']}`
+})
+
+const DocHeadingContainer = styled('div')({
+  'h1': {
+    marginTop: '0'
+  },
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    'h1': {
+      marginTop: SPACING['XL']
+    },
+  }
 })
 
 const XMargins = styled('div')({
@@ -31,6 +43,14 @@ const DocContainer = styled('div')({
   }
 })
 
+const DocHeaderContainer = styled('div')({
+  background: COLORS.blue[100],
+  borderBottom: `solid 1px ${COLORS.neutral[100]}`,
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    paddingTop: SPACING['L'],
+  }
+})
+
 const Doc = (props) => {
   const {
     title,
@@ -39,15 +59,14 @@ const Doc = (props) => {
 
   return (
     <Layout>
+      <SEO title={title} />
       <article>
-        <div style={{
-          background: COLORS.blue[100],
-          borderBottom: `solid 1px ${COLORS.neutral[100]}`,
-          paddingTop: SPACING['L']
-        }}>
+        <DocHeaderContainer>
           <XMargins>
             <ContentContainer>
-              <Heading level={1} size="xlarge">{title}</Heading>
+              <DocHeadingContainer>
+                <Heading level={1} size="xlarge">{title}</Heading>
+              </DocHeadingContainer>
               {navigation && (
                 <ol>
                   {navigation.map(({text, to}) => (
@@ -66,8 +85,8 @@ const Doc = (props) => {
                         textDecoration: 'none'
                       }}
                       activeStyle={{
-                        borderBottom: `solid 4px ${COLORS.maize[400]}`,
-                        fontWeight: '800'
+                        borderBottom: `solid 3px ${COLORS.teal[400]}`,
+                        fontWeight: '600'
                       }}
                     >{text}</Link></li>
                   ))}
@@ -75,7 +94,7 @@ const Doc = (props) => {
               )}
             </ContentContainer>
           </XMargins>
-        </div>
+        </DocHeaderContainer>
         <XMargins>
           <ContentContainer
             style={{

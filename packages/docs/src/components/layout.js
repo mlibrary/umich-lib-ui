@@ -20,11 +20,19 @@ const Root = styled('div')({
 })
 
 const Side = styled('div')({
-  display: 'block',
-  minHeight: '100vh',
-  minWidth: '250px',
-  order: '-1',
-  borderRight: `solid 2px ${COLORS.neutral[100]}`
+  background: COLORS.blue[100],
+  borderTop: `solid 2px ${COLORS.neutral[100]}`,
+  padding: `${SPACING['XL']} 0`,
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    borderTop: 'none',
+    background: 'white',
+    padding: '0',
+    display: 'block',
+    minHeight: '100vh',
+    minWidth: '250px',
+    order: '-1',
+    borderRight: `solid 2px ${COLORS.neutral[100]}`
+  }
 })
 
 const Main = styled('main')({
@@ -38,6 +46,27 @@ const list_link_styles = {
     boxShadow: `inset 0 -2px ${COLORS.teal[300]}`
   } 
 }
+
+const LargeScreenOnly = styled('div')({
+  display: 'none',
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    display: 'block'
+  }
+})
+
+const SmallScreenOnly = styled('div')({
+  display: 'block',
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    display: 'none'
+  }
+})
+
+const LogoContainer = styled('div')({
+  background: COLORS.blue[100],
+  'svg': {
+    maxWidth: '10rem'
+  }
+})
 
 /*
   A bunch of selectors to override
@@ -74,11 +103,18 @@ const Layout = (props) => (
   <MDXProvider components={components}>
     <GlobalStyleSheet />
     <Root>
+      <SmallScreenOnly>
+        <LogoContainer>
+          <Logo />
+        </LogoContainer>
+      </SmallScreenOnly>
       <Main>
         {props.children}
       </Main>
       <Side>
-        <Logo />
+        <LargeScreenOnly>
+          <Logo />
+        </LargeScreenOnly>
         <SideNav>
           <NavigationContent />
         </SideNav>
