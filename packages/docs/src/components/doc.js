@@ -8,8 +8,8 @@ import {
   MEDIA_QUERIES
 } from '@umich-lib/core'
 
-import SEO from './seo'
 import Layout from './layout'
+import SEO from './seo'
 
 const ContentContainer = styled('div')({
   maxWidth: '1024px',
@@ -59,8 +59,8 @@ const Doc = (props) => {
 
   return (
     <Layout>
-      <SEO title={title} />
       <article>
+        <SEO title={title} />
         <DocHeaderContainer>
           <XMargins>
             <ContentContainer>

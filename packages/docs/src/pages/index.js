@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import styled from '@emotion/styled'
 import {
   COLORS,
   SPACING,
@@ -8,7 +9,7 @@ import {
 import Layout from '../components/layout'
 import Container from '../components/container'
 import AbstractImage from '../components/abstract-image'
-import styled from '@emotion/styled'
+import SEO from '../components/seo'
 
 const features = [
   {
@@ -123,6 +124,7 @@ const Feature = ({ heading, to, text, borderColor }) => {
 export default () => {
   return (
     <Layout>
+      <SEO title="Home" />
       <div style={{
         position: 'relative'
       }}>
