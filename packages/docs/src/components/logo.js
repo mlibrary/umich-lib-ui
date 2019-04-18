@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import {
   SPACING,
+  COLORS,
   Text
 } from '@umich-lib/core'
 
@@ -46,7 +47,13 @@ function Logo() {
       }}
     >
       <MLibraryLogo />
-      <Text>DESIGN SYSTEM</Text>
+      <Text style={{
+        letterSpacing: `4.3px`,
+        lineHeight: `23px`,
+        color: COLORS.neutral['300'],
+        fontWeight: '800',
+        fontSize: '18px'
+      }}>DESIGN SYSTEM</Text>
     </Link>
   )
 }

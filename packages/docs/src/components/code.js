@@ -13,7 +13,7 @@ import {
   SPACING,
   COLORS
 } from '@umich-lib/core'
-import theme from './code_theme'
+import theme from './code-theme'
 
 const border_color = COLORS.neutral['100']
 const background_color = COLORS.neutral['000']

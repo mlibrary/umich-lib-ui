@@ -7,32 +7,28 @@ navigation:
     to: '/components/button/usage'
 ---
 
+import { Button, Text } from '@umich-lib/core'
+
+<Text lede>The API documentation of the Button React component.</Text>
+
+- Source: https://github.com/mlibrary/umich-lib-ui/blob/master/packages/button/src/index.js
+
+```js
 import { Button } from '@umich-lib/core'
+```
 
 ```jsx live=true
 <Button>Example</Button>
 ```
 
-## Button Props
+## Button props
 
 |Prop|Type|Required|Default|
 |----|----|--------|-------|
-|[element props](#element-props)|spread|false|n/a|
 |[kind](#kind)|enum "primary" or "secondary"|false|"primary"|
+|[small](#small)|boolean|false|"false"|
 |[children](#children)|node|true|n/a|
-
-### element Props
-
-Any props not listed above will be spread onto the underlying element.
-
-```jsx live=true
-<Button
-  style={{ width: '10rem' }}
-  className="class-for-button"
->
-  Primary
-</Button>
-```
+|[element props](#element-props)|spread|false|n/a|
 
 ### kind
 
@@ -46,6 +42,20 @@ Controls how the `Button` is styled.
 
 ```jsx live=true
 <Button kind="secondary">Secondary</Button>
+```
+
+### small
+
+*Type*: boolean default: "false"
+
+Controls if the `Button` is styled smaller.
+
+```jsx live=true
+<Button small>Small primary</Button>
+```
+
+```jsx live=true
+<Button kind="secondary" small>Small secondary</Button>
 ```
 
 ### children
@@ -62,6 +72,20 @@ Regular React children.
 
 ```jsx live=true
 <Button>
-  <span>Anything can go here</span>
+  <span>Anything can go here.</span>{" "}
+  <span>It's true.</span>
+</Button>
+```
+
+### element props
+
+Any props not listed above will be spread onto the underlying element.
+
+```jsx live=true
+<Button
+  style={{ width: '10rem' }}
+  className="a-custom-class"
+>
+  Primary
 </Button>
 ```

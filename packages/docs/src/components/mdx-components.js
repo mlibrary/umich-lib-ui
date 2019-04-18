@@ -6,9 +6,10 @@ import {
   Heading,
   Text,
   COLORS,
-  SPACING
+  SPACING,
+  List
 } from '@umich-lib/core'
-import CodeBlock from './CodeBlock'
+import Code from './code'
 
 /*
   Attempted to use MDX Component Autolink Header,
@@ -29,6 +30,10 @@ function slug(item) {
   return slugger.slug(item)
 }
 
+const textMaxWidth = {
+  maxWidth: '32rem'
+}
+
 const Heading2 = ({ children, ...other }) => (
   <Heading level={2} size="large" id={slug(children)} {...other}>{children}</Heading>
 )
@@ -46,8 +51,7 @@ const Heading6 = ({ children, ...other }) => (
 )
 const P = ({ children, ...other }) => (
   <Text {...other} style={{
-    maxWidth: '32em',
-    marginBottom: '1rem'
+    ...textMaxWidth
   }}>{children}</Text>
 )
 
@@ -106,14 +110,19 @@ const A = ({ children, href, ...other }) => {
 }
 
 export default {
+  wrapper: ({ children }) => (
+    <React.Fragment>{children}</React.Fragment>
+  ),
   h2: Heading2,
   h3: Heading3,
   h4: Heading4,
   h5: Heading5,
   h6: Heading6,
-  p: P,
-  code: CodeBlock,
+  code: Code,
   a: A,
+  ul: props => <List type="bulleted" {...props} />,
+  ol: props => <List type="numbered" {...props} />,
   table: (props) => <TableContainer><Table {...props} /></TableContainer>,
-  em: EM
+  em: EM,
+  strong: (props) => <strong style={{ fontWeight: '800' }} {...props} />
 }

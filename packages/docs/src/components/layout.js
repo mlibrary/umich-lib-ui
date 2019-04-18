@@ -8,7 +8,7 @@ import {
   SPACING,
   MEDIA_QUERIES,
 } from '@umich-lib/core'
-import mdx_components from './mdx_components'
+import components from './mdx-components'
 import Logo from './logo'
 import NavigationContent from './navigation.mdx'
 
@@ -31,18 +31,47 @@ const Main = styled('main')({
   width: '100%'
 })
 
+const list_link_styles = {
+  textDecoration: 'none',
+  color: COLORS.neutral[400],
+  ':hover': {
+    boxShadow: `inset 0 -2px ${COLORS.teal[300]}`
+  } 
+}
+
+/*
+  A bunch of selectors to override
+  MDX component styles.
+*/
 const SideNav = styled('nav')({
   padding: `0 ${SPACING['L']}`,
+  'ul': {
+    listStyle: 'none',
+    marginLeft: '0',
+    marginBottom: SPACING['XS']
+  },
   'li': {
-    padding: `${SPACING['2XS']} 0`
+    padding: `${SPACING['2XS']} 0`,
+    textTransform: 'uppercase',
+    fontWeight: '800',
+    letterSpacing: '1.25px',
+    color: COLORS.neutral[300],
+    fontSize: '14px',
   },
   'ul ul': {
-    marginLeft: SPACING['L']
+    marginLeft: SPACING['M']
+  },
+  'a': list_link_styles,
+  'li li': {
+    textTransform: 'initial',
+    fontWeight: '400',
+    letterSpacing: '0',
+    fontSize: '16px'
   }
 })
 
 const Layout = (props) => (
-  <MDXProvider components={mdx_components}>
+  <MDXProvider components={components}>
     <GlobalStyleSheet />
     <Root>
       <Main>

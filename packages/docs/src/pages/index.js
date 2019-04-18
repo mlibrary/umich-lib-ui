@@ -13,37 +13,37 @@ import styled from '@emotion/styled'
 const features = [
   {
     heading: 'Introduction',
-    to: '/introduction',
+    to: '/getting-started/introduction',
     text: 'Onboarding for designers and developers using the design system for the first time.',
     borderColor: COLORS.coral[200]
   },
   {
     heading: 'Install',
-    to: '/install',
+    to: '/getting-started/install',
     text: 'Using React? Install our package and import the components you need to start using the Design System.',
     borderColor: COLORS.maize[400]
   },
   {
     heading: 'Accessibility',
-    to: '/accessibility',
+    to: '/guides/accessibility',
     text: 'We’re committed to creating experiences that are accessible for everyone. Check out our accessibility guidelines and principles.',
     borderColor: COLORS.teal[200]
   },
   {
     heading: 'Principles',
-    to: '/principles',
+    to: '/about/principles',
     text: 'Read about the set of principles that underpins our design decisions.',
     borderColor: COLORS.teal[400]
   },
   {
     heading: 'Contribute',
-    to: '/contribute',
+    to: '/about/contribute',
     text: 'Do you have research that backs up existing styles or findings that show we should make changes? Let us know!',
     borderColor: COLORS.blue[400]
   },
   { 
     heading: 'The team',
-    to: '/desing-system-team',
+    to: '/about/design-system-team',
     text: 'Find out who’s responsible for the styles, components, and patterns published in our design system.',
     borderColor: COLORS.coral[400]
   } 

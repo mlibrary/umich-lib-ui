@@ -22,6 +22,15 @@ const XMargins = styled('div')({
   }
 })
 
+const DocContainer = styled('div')({
+  '> div > *:not(:last-child)': {
+    marginBottom: SPACING['M']
+  },
+  'p,li, h1, h2, h3, h4, h5, h6': {
+    maxWidth: '32rem'
+  }
+})
+
 const Doc = (props) => {
   const {
     title,
@@ -68,8 +77,15 @@ const Doc = (props) => {
           </XMargins>
         </div>
         <XMargins>
-          <ContentContainer style={{ marginTop: SPACING['XL'] }}>
-            {props.children}
+          <ContentContainer
+            style={{
+              marginTop: SPACING['XL'],
+              marginBottom: SPACING['2XL']
+            }}
+          >
+            <DocContainer>
+              {props.children}
+            </DocContainer>
           </ContentContainer>
         </XMargins>
       </article>

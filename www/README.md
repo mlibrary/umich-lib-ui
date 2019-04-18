@@ -27,7 +27,7 @@ Use to render a react element and provide a live code editor.
 
 For internal links, use <gatsby-link to="/path/to/thing">Gatsby link</gatsby-link> in your MD.
 
-> Include codeblock triple back ticks, but wasn't sure how to write it here with GitHub MD parser. View raw.
+> Include code triple back ticks, but wasn't sure how to write it here with GitHub MD parser. View raw.
 
 ## Development
 
