@@ -2,45 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled'
 
+import {
+  TYPOGRAPHY
+} from '@umich-lib/styles'
+
 export const sizes = {
-  'xsmall': {
-    marginBottom: '0.25em',
-    marginTop: '1.5em',
-    fontSize: '1rem'
-  },
-  'small': {
-    marginBottom: '0.25em',
-    marginTop: '1.5em',
-    fontSize: '1rem'
-  },
-  'medium': {
-    marginBottom: '0.83333em',
-    marginTop: '1.875em',
-    fontSize: '1.2rem', 
-    fontWeight: '600'
-  },
-  'large': {
-    marginBottom: '0.555em',
-    marginTop: '1.25em',
-    fontSize: '1.5rem', 
-    fontWeight: '600'
-  },
-  'xlarge': {
-    marginBottom: '0.625em',
-    marginTop: '1.25em',
-    fontSize: '2.4rem',
-    fontWeight: '800'
-  },
+  'xsmall': TYPOGRAPHY['XS'],
+  'small': TYPOGRAPHY['S'],
+  'medium': TYPOGRAPHY['M'],
+  'large': TYPOGRAPHY['L'],
+  'xlarge': TYPOGRAPHY['XL'],
   'display-xlarge': {
     fontFamily: "Crimson Text",
     fontSize: '56px',
     lineHeight: '70px',
   },
-  'display-large': {
-    fontFamily: "Crimson Text",
-    fontSize: '36px',
-    lineHeight: '45px',
-  }
+  'display-large': TYPOGRAPHY['3XL']
 }
 
 /*

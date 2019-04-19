@@ -14,6 +14,52 @@ export const SPACING = {
   '5XL': '6rem'
 }
 
+export const TYPOGRAPHY = {
+  '3XL': {
+    fontSize: '3.5rem',
+    fontFamily: 'Crimson Text',
+    lineHeight: '1.25'
+  },
+  '2XL': {
+    fontSize: '2.25rem',
+    fontFamily: 'Crimson Text',
+    lineHeight: '1.25'
+  },
+  'XL': {
+    fontSize: '2rem',
+    fontWeight: '800',
+    lineHeight: '1.25'
+  },
+  'L': {
+    fontSize: '1.75rem',
+    fontWeight: '600',
+    lineHeight: '1.25'
+  },
+  'M': {
+    fontSize: '1.5rem',
+    fontWeight: '600',
+    lineHeight: '1.25'
+  },
+  'S': {
+    fontSize: '1.25rem',
+    fontWeight: '600',
+    lineHeight: '1.4'
+  },
+  'XS': {
+    fontSize: '1.125rem',
+    lineHeight: '1.4'
+  },
+  '2XS': {
+    fontSize: '1rem'
+  },
+  '3XS': {
+    fontSize: '0.875rem',
+    fontWeight: '800',
+    letterSpacing: '1.25px',
+    textTransform: 'uppercase'
+  }
+}
+
 /*
   Inspired by GitHub color system
   https://styleguide.github.com/primer/support/color-system/

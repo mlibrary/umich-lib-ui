@@ -2,6 +2,8 @@ import React from 'react'
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
+import { TYPOGRAPHY } from '@umich-lib/styles'
+
 const StyledText = styled('p')(
   {
     fontSize: '1rem'
@@ -14,6 +16,9 @@ const StyledText = styled('p')(
   }),
   ({ lede }) => ({
     fontSize: lede && '1.125rem'
+  }),
+  ({ size }) => ({
+    ...TYPOGRAPHY[size]
   })
 )
 

@@ -63,11 +63,14 @@ const Table = styled('table')({
   width: '100%',
   'th': {
     fontWeight: '800',
-    textAlign: 'left'
+    textAlign: 'left',
+    borderBottom: `solid 2px ${COLORS.maize[400]}`,
   },
   'th, td': {
     padding: SPACING['M'],
-    paddingLeft: '0',
+    paddingLeft: '0'
+  },
+  'td': {
     borderBottom: `solid 1px ${COLORS.neutral[100]}`,
   }
 })
