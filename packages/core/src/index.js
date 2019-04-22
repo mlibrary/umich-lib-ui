@@ -3,7 +3,7 @@ import Button from "@umich-lib/button"
 import Chat from "@umich-lib/chat"
 import Header from "@umich-lib/header"
 import Heading from "@umich-lib/heading"
-import Icon from "@umich-lib/icon"
+import Icon, { icons } from "@umich-lib/icon"
 import Input from "@umich-lib/input"
 import List from "@umich-lib/list"
 import RecordFields from "@umich-lib/record-fields"
@@ -42,6 +42,7 @@ export {
   Header,
   Heading,
   Icon,
+  icons,
   Input,
   List,
   RecordFields,
