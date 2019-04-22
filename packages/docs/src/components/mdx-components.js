@@ -11,6 +11,7 @@ import {
   TYPOGRAPHY
 } from '@umich-lib/core'
 import Code from './code'
+import Table from './Table'
 
 /*
   Attempted to use MDX Component Autolink Header,
@@ -70,23 +71,6 @@ const P = ({ children, ...other }) => (
 
 const TableContainer = styled('div')({
   overflowX: 'auto'
-})
-
-const Table = styled('table')({
-  width: '100%',
-  marginBottom: SPACING['XL'],
-  'th': {
-    textAlign: 'left',
-    borderBottom: `solid 2px ${COLORS.maize[400]}`,
-    ...TYPOGRAPHY['3XS']
-  },
-  'th, td': {
-    padding: SPACING['M'],
-    paddingLeft: '0'
-  },
-  'td': {
-    borderBottom: `solid 1px ${COLORS.neutral[100]}`,
-  }
 })
 
 const EM = styled('em')({

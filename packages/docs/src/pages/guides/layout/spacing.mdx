@@ -1,0 +1,30 @@
+---
+title: Layout
+navigation:
+  - text: 'Spacing'
+    to: '/guides/layout/spacing'
+  - text: 'Grid'
+    to: '/guides/layout/grid'
+---
+
+import { SPACING } from '@umich-lib/core'
+import Table from '../../../components/table'
+
+Consistent spacing creates visual balance that makes the UI easier to scan. U-M Library’s Design System spacing scale can be applied to both margin or padding properties for both small, refined spacing situations, as well as to large spatial differences.
+
+<Table>
+  <thead>
+    <tr>
+      <th>Size</th>
+      <th>rem</th>
+    </tr>
+  </thead>
+  <tbody>
+    {Object.keys(SPACING).map(size => (
+      <tr>
+        <td>{size}</td>
+        <td>{SPACING[size]}</td>
+      </tr>
+    ))}
+  </tbody>
+</Table>
