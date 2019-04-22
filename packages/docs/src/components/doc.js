@@ -5,7 +5,8 @@ import {
   Heading,
   COLORS,
   SPACING,
-  MEDIA_QUERIES
+  MEDIA_QUERIES,
+  TYPOGRAPHY
 } from '@umich-lib/core'
 
 import Layout from './layout'
@@ -14,17 +15,6 @@ import SEO from './seo'
 const ContentContainer = styled('div')({
   maxWidth: '1024px',
   margin: `0 ${SPACING['M']}`
-})
-
-const DocHeadingContainer = styled('div')({
-  'h1': {
-    marginTop: '0'
-  },
-  [MEDIA_QUERIES.LARGESCREEN]: {
-    'h1': {
-      marginTop: SPACING['XL']
-    },
-  }
 })
 
 const XMargins = styled('div')({
@@ -38,17 +28,42 @@ const DocContainer = styled('div')({
   '> div > *:not(:last-child)': {
     marginBottom: SPACING['M']
   },
-  'p,li, h1, h2, h3, h4, h5, h6': {
-    maxWidth: '32rem'
+  'p, li, h1, h2, h3, h4, h5, h6': {
+    maxWidth: '38rem'
   }
 })
 
 const DocHeaderContainer = styled('div')({
+  display: 'flex',
+  justifyContent: 'flex-end',
+  flexDirection: 'column',
+  height: 'auto',
   background: COLORS.blue[100],
   borderBottom: `solid 1px ${COLORS.neutral[100]}`,
   [MEDIA_QUERIES.LARGESCREEN]: {
-    paddingTop: SPACING['L'],
+    height: '12rem'
   }
+})
+
+const activeStyle={
+  borderBottom: `solid 3px ${COLORS.teal[400]}`,                  fontWeight: '800'
+}
+
+const isActive = ({
+  isPartiallyCurrent, href, location
+}) => {
+  return ( isPartiallyCurrent && location.pathname.match(href + '/?$') )
+    ? {style: activeStyle}
+    : {}
+}
+
+const StyledNavLink = styled(Link)({
+  color: COLORS.neutral[400],
+  display: 'inline-block',
+  padding: `${SPACING['XS']} 0`,
+  textDecoration: 'none',
+  ...TYPOGRAPHY['3XS'],
+  fontWeight: '600'
 })
 
 const Doc = (props) => {
@@ -64,9 +79,9 @@ const Doc = (props) => {
         <DocHeaderContainer>
           <XMargins>
             <ContentContainer>
-              <DocHeadingContainer>
-                <Heading level={1} size="xlarge">{title}</Heading>
-              </DocHeadingContainer>
+              <Heading level={1} size="3XL" style={{
+                paddingBottom: SPACING['M']
+              }}>{title}</Heading>
               {navigation && (
                 <ol>
                   {navigation.map(({text, to}) => (
@@ -76,19 +91,10 @@ const Doc = (props) => {
                         display: 'inline-block',
                         marginRight: SPACING.L
                       }}
-                    ><Link
+                    ><StyledNavLink
                       to={to}
-                      style={{
-                        color: COLORS.neutral[400],
-                        display: 'inline-block',
-                        padding: `${SPACING.XS} 0`,
-                        textDecoration: 'none'
-                      }}
-                      activeStyle={{
-                        borderBottom: `solid 3px ${COLORS.teal[400]}`,
-                        fontWeight: '600'
-                      }}
-                    >{text}</Link></li>
+                      getProps={isActive}
+                    >{text}</StyledNavLink></li>
                   ))}
                 </ol>
               )}

@@ -51,16 +51,23 @@ const features = [
 ]
 
 const FeaturesContainer = styled('ul')({
-  marginTop: SPACING['2XL'],
-  display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fill, minmax(430px, 1fr))',
-  gridGap: SPACING['L']
+  marginTop: SPACING['XL'],
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
+    gridGap: SPACING['L'],
+    marginTop: SPACING['2XL'],
+  }
 })
 
 const Card = styled('li')({
   display: 'flex',
   flexDirection: 'column',
-  maxWidth: '100%'
+  maxWidth: '100%',
+  marginBottom: SPACING['L'],
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    marginBottom: 0
+  }
 })
 
 const CardHeading = styled('h2')({
@@ -86,8 +93,9 @@ const CardLink = styled(Link)({
 })
 
 const Title = styled('h1')({
+  display: 'none',
   position: 'absolute',
-  fontSize: '32px',
+  fontSize: '24px',
   letterSpacing: '14px',
   lineHeight: '52px',
   fontWeight: '800',
@@ -97,9 +105,11 @@ const Title = styled('h1')({
   textAlign: 'center',
   width: '100%',
   [MEDIA_QUERIES.LARGESCREEN]: {
-    fontSize: '46px',
+    display: 'block',
+    fontSize: '52px',
     top: 'calc(50% - 29px)',
-  }
+  },
+  padding: `0 ${SPACING['XL']}`
 })
 
 const Feature = ({ heading, to, text, borderColor }) => {

@@ -259,10 +259,10 @@ export function GlobalStyleSheet() {
       Spacing helpers
     */
     .y-spacing > *:not(:last-child) {
-      margin-bottom: 1rem;
+      margin-bottom: ${SPACING['XL']};
     }
     .x-spacing > *:not(:last-child) {
-      margin-right: 1rem;
+      margin-right: ${SPACING['XL']};
     }
     .layout-flex {
       display: flex;

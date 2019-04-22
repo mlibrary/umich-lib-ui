@@ -42,7 +42,7 @@ function Logo() {
       style={{
         textDecoration: 'none',
         display: 'block',
-        padding: SPACING['L'],
+        padding: `${SPACING['L']} ${SPACING['XL']}`,
         maxWidth: `calc(200px + ${SPACING['XL']} + ${SPACING['XL']})`
       }}
     >

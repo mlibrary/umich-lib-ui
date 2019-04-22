@@ -23,6 +23,7 @@ import {
   MEDIA_QUERIES,
   SPACING,
   GlobalStyleSheet,
+  TYPOGRAPHY
 } from "@umich-lib/styles"
 import {
   Tabs,
@@ -68,7 +69,8 @@ export {
   SPACING,
   BREAKPOINTS,
   MEDIA_QUERIES,
-  GlobalStyleSheet
+  GlobalStyleSheet,
+  TYPOGRAPHY
 }
 
 /*

@@ -7,7 +7,8 @@ import {
   Text,
   COLORS,
   SPACING,
-  List
+  List,
+  TYPOGRAPHY
 } from '@umich-lib/core'
 import Code from './code'
 
@@ -35,10 +36,22 @@ const textMaxWidth = {
 }
 
 const Heading2 = ({ children, ...other }) => (
-  <Heading level={2} size="large" id={slug(children)} {...other}>{children}</Heading>
+  <Heading
+    level={2}
+    size="XL"
+    id={slug(children)}
+    style={{ marginTop: SPACING['2XL'] }}
+    {...other}
+  >{children}</Heading>
 )
 const Heading3 = ({ children, ...other }) => (
-  <Heading level={3} size="medium" id={slug(children)} {...other}>{children}</Heading>
+  <Heading
+    level={3}
+    size="M"
+    id={slug(children)}
+    style={{ marginTop: SPACING['XL'] }}
+    {...other}
+  >{children}</Heading>
 )
 const Heading4 = ({ children, ...other }) => (
   <Heading level={4} size="small" id={slug(children)} {...other}>{children}</Heading>
@@ -61,10 +74,11 @@ const TableContainer = styled('div')({
 
 const Table = styled('table')({
   width: '100%',
+  marginBottom: SPACING['XL'],
   'th': {
-    fontWeight: '800',
     textAlign: 'left',
     borderBottom: `solid 2px ${COLORS.maize[400]}`,
+    ...TYPOGRAPHY['3XS']
   },
   'th, td': {
     padding: SPACING['M'],

@@ -7,6 +7,7 @@ import {
   COLORS,
   SPACING,
   MEDIA_QUERIES,
+  TYPOGRAPHY
 } from '@umich-lib/core'
 import components from './mdx-components'
 import Logo from './logo'
@@ -29,7 +30,7 @@ const Side = styled('div')({
     padding: '0',
     display: 'block',
     minHeight: '100vh',
-    minWidth: '250px',
+    minWidth: '280px',
     order: '-1',
     borderRight: `solid 2px ${COLORS.neutral[100]}`
   }
@@ -43,7 +44,7 @@ const list_link_styles = {
   textDecoration: 'none',
   color: COLORS.neutral[400],
   ':hover': {
-    boxShadow: `inset 0 -2px ${COLORS.teal[300]}`
+    boxShadow: `inset 0 -2px ${COLORS.teal[400]}`
   } 
 }
 
@@ -81,11 +82,7 @@ const SideNav = styled('nav')({
   },
   'li': {
     padding: `${SPACING['2XS']} 0`,
-    textTransform: 'uppercase',
-    fontWeight: '800',
-    letterSpacing: '1.25px',
-    color: COLORS.neutral[300],
-    fontSize: '14px',
+    ...TYPOGRAPHY['3XS']
   },
   'ul ul': {
     marginLeft: SPACING['M']
