@@ -32,6 +32,7 @@ const ColorPalette = ({ palette }) => (
             padding: '0.75rem 1rem',
             fontWeight: '600',
             display: 'flex',
+            marginBottom: '0',
             justifyContent: 'space-between',
           }}
         >

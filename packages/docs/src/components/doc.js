@@ -28,11 +28,14 @@ const DocContainer = styled('div')({
   '> div > *:not(:last-child)': {
     marginBottom: SPACING['M']
   },
-  'p, li, h1, h2, h3, h4, h5, h6': {
+  'span, p, li, h1, h2, h3, h4, h5, h6': {
     maxWidth: '38rem'
   },
   'li': {
     marginBottom: SPACING['S']
+  },
+  'img': {
+    maxWidth: '100%'
   }
 })
 
