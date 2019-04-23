@@ -1,0 +1,32 @@
+---
+title: Icon
+navigation:
+  - text: 'Code'
+    to: '/components/icon/code'
+  - text: 'Usage'
+    to: '/components/icon/usage'
+---
+
+import { COLORS } from '@umich-lib/core'
+
+## Color
+
+An icon inherits color.
+
+```jsx live
+<div
+  style={{
+    color: COLORS.teal[400]
+  }}
+>
+  <Icon icon="check_circle" /> Yes!
+  <span
+    style={{
+      color: COLORS.coral[500]
+    }}
+  >
+    <Icon icon="error" />
+    No!
+  </span>
+</div>
+```

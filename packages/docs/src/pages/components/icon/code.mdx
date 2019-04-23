@@ -1,0 +1,71 @@
+---
+title: Icon
+navigation:
+  - text: 'Code'
+    to: '/components/icon/code'
+  - text: 'Usage'
+    to: '/components/icon/usage'
+---
+
+import { Icon } from '@umich-lib/core'
+
+- Source: https://github.com/mlibrary/umich-lib-ui/blob/master/packages/icon/src/index.js
+
+```js
+import { Icon } from '@umich-lib/core'
+```
+
+```jsx live=true
+<Icon icon="document" />
+```
+
+## Button props
+
+|Prop|Type|Required|Default|
+|----|----|--------|-------|
+|[icon](#icon)|string|false|n/a|
+|[title](#title)|string|false|n/a|
+|[size](#size)|number|false|18|
+|[d](#d)|string|false|n/a|
+
+### icon
+
+*Type*: string
+
+Selects icon to render from the [iconography library](/guides/iconography/library).
+
+```jsx live=true
+<Icon icon="map" />
+```
+
+### title
+
+*Type*: string
+
+If the icon is necessary to understand and use the website, then add a text alternative with `title`.
+
+```jsx live=true
+<Icon icon="star_border" title="Favorite" />
+```
+
+### size
+
+*Type*: number default: "18"
+
+Sets the size of the icon in pixels.
+
+```jsx live=true
+<Icon icon="star" size={32} />
+```
+
+### d
+
+*Type*: `string`
+
+Defines a [SVG path `d` attribute](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/d) to be drawn.
+
+This is useful for using the `Icon` component, but the SVG you wish to use is not in the [conography library](/guides/iconography/library) and shouldn't me.
+
+```jsx live=true
+<Icon d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7l-2 3v1h8v-1l-2-3h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 12H3V4h18v10z" />
+```
