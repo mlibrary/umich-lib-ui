@@ -8,7 +8,6 @@ import {
 
 const Table = styled('table')({
   width: '100%',
-  marginBottom: SPACING['XL'],
   'th': {
     textAlign: 'left',
     borderBottom: `solid 2px ${COLORS.maize[400]}`,
