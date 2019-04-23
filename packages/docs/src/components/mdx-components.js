@@ -125,5 +125,13 @@ export default {
   ol: props => <List type="numbered" {...props} />,
   table: (props) => <TableContainer><Table {...props} /></TableContainer>,
   em: EM,
-  strong: (props) => <strong style={{ fontWeight: '800' }} {...props} />
+  strong: (props) => <strong style={{ fontWeight: '800' }} {...props} />,
+  blockquote: (props) => (
+    <blockquote style={{
+      fontStyle: 'italic',
+      borderLeft: `solid 4px ${COLORS.maize[300]}`,
+      background: COLORS.maize[100],
+      padding: SPACING['L']
+    }} {...props} />
+  )
 }
