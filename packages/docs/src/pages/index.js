@@ -4,10 +4,10 @@ import styled from '@emotion/styled'
 import {
   COLORS,
   SPACING,
-  MEDIA_QUERIES
+  MEDIA_QUERIES,
+  Margins
 } from '@umich-lib/core'
 import Layout from '../components/layout'
-import Container from '../components/container'
 import AbstractImage from '../components/abstract-image'
 import SEO from '../components/seo'
 
@@ -141,11 +141,11 @@ export default () => {
         <Title>Design System</Title>
         <AbstractImage />
       </div>
-      <Container>
+      <Margins>
         <FeaturesContainer>
           {features.map(f => <Feature {...f} />)}
         </FeaturesContainer>
-      </Container>
+      </Margins>
     </Layout>
   )
 }
