@@ -5,7 +5,7 @@ export const SPACING = {
   '3XS': '0.125rem',
   '2XS': '0.25rem',
   'XS': '0.5rem',
-  'SM': '0.75rem',
+  'S': '0.75rem',
   'M': '1rem',
   'L': '1.5rem',
   'XL': '2rem',
