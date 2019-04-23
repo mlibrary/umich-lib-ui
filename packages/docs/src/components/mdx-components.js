@@ -32,8 +32,8 @@ function slug(item) {
   return slugger.slug(item)
 }
 
-const textMaxWidth = {
-  maxWidth: '32rem'
+const maxWidth = {
+  maxWidth: '38rem'
 }
 
 const Heading2 = ({ children, ...other }) => (
@@ -65,7 +65,7 @@ const Heading6 = ({ children, ...other }) => (
 )
 const P = ({ children, ...other }) => (
   <Text {...other} style={{
-    ...textMaxWidth
+    ...maxWidth
   }}>{children}</Text>
 )
 
@@ -121,6 +121,7 @@ export default {
   h6: Heading6,
   code: Code,
   a: A,
+  p: P,
   ul: props => <List type="bulleted" {...props} />,
   ol: props => <List type="numbered" {...props} />,
   table: (props) => <TableContainer><Table {...props} /></TableContainer>,

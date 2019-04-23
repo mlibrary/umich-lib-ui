@@ -1,5 +1,6 @@
 import React from "react";
 import { Global, css } from '@emotion/core' 
+import styled from '@emotion/styled'
 
 export const SPACING = {
   '3XS': '0.125rem',
@@ -285,3 +286,24 @@ export function GlobalStyleSheet() {
     />
   )
 }
+
+export const Margins = styled('div')({
+  margin: `0 3vw`,
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    margin: `0 5vw`
+  }
+})
+
+export const LargeScreen = styled('div')({
+  display: 'none',
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    display: 'block'
+  }
+})
+
+export const SmallScreen = styled('div')({
+  display: 'block',
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    display: 'none'
+  }
+})

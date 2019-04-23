@@ -10,6 +10,7 @@ import RecordFields from "@umich-lib/record-fields"
 import ResourceAccess from "@umich-lib/resource-access"
 import Text from "@umich-lib/text"
 import TextInput from "@umich-lib/text-input"
+import UniversalHeader from '@umich-lib/universal-header'
 import {
   Expandable,
   ExpandableButton,
@@ -23,7 +24,10 @@ import {
   MEDIA_QUERIES,
   SPACING,
   GlobalStyleSheet,
-  TYPOGRAPHY
+  TYPOGRAPHY,
+  Margins,
+  SmallScreen,
+  LargeScreen
 } from "@umich-lib/styles"
 import {
   Tabs,
@@ -48,7 +52,8 @@ export {
   RecordFields,
   ResourceAccess,
   Text,
-  TextInput
+  TextInput,
+  UniversalHeader
 }
 
 /*
@@ -71,7 +76,10 @@ export {
   BREAKPOINTS,
   MEDIA_QUERIES,
   GlobalStyleSheet,
-  TYPOGRAPHY
+  TYPOGRAPHY,
+  Margins,
+  SmallScreen,
+  LargeScreen
 }
 
 /*

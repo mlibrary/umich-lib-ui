@@ -29,13 +29,13 @@ function CodeEditor({ live }) {
       marginBottom: SPACING['L']
     }}>
       <div style={{
-        padding: SPACING['L'],
+        padding: SPACING['M'],
         borderTop: `solid 1px ${border_color}`
       }}>
         <LivePreview />
       </div>
       <div style={{
-        padding: `calc(${SPACING['L']} - 10px)`,
+        padding: `calc(${SPACING['M']} - 10px)`,
         borderTop: `solid 1px ${border_color}`
       }}>
         <LiveEditor ignoreTabKey={true} />
@@ -73,7 +73,7 @@ export default ({children, className, live}) => {
         <pre
           className={className}
           style={{
-            padding: SPACING['L'],
+            padding: SPACING['M'],
             fontFamily: 'monospace',
             border: `solid 1px ${border_color}`,
             background: background_color,

@@ -7,7 +7,10 @@ import {
   COLORS,
   SPACING,
   MEDIA_QUERIES,
-  TYPOGRAPHY
+  TYPOGRAPHY,
+  UniversalHeader,
+  LargeScreen,
+  SmallScreen
 } from '@umich-lib/core'
 import components from './mdx-components'
 import Logo from './logo'
@@ -27,7 +30,6 @@ const Side = styled('div')({
   [MEDIA_QUERIES.LARGESCREEN]: {
     borderTop: 'none',
     background: 'white',
-    padding: '0',
     display: 'block',
     minHeight: '100vh',
     minWidth: '280px',
@@ -48,33 +50,12 @@ const list_link_styles = {
   } 
 }
 
-const LargeScreenOnly = styled('div')({
-  display: 'none',
-  [MEDIA_QUERIES.LARGESCREEN]: {
-    display: 'block'
-  }
-})
-
-const SmallScreenOnly = styled('div')({
-  display: 'block',
-  [MEDIA_QUERIES.LARGESCREEN]: {
-    display: 'none'
-  }
-})
-
-const LogoContainer = styled('div')({
-  background: COLORS.blue[100],
-  'svg': {
-    maxWidth: '10rem'
-  }
-})
-
 /*
   A bunch of selectors to override
   MDX component styles.
 */
 const SideNav = styled('nav')({
-  padding: `0 ${SPACING['L']}`,
+  padding: `0 3vw`,
   'ul': {
     listStyle: 'none',
     marginLeft: '0',
@@ -93,6 +74,17 @@ const SideNav = styled('nav')({
     fontWeight: '400',
     letterSpacing: '0',
     fontSize: '16px'
+  },
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    padding: `0 ${SPACING['XL']}`
+  }
+})
+
+const LogoContainer = styled('div')({
+  marginBottom: SPACING['L'],
+  padding: `0 3vw`,
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    padding: `0 ${SPACING['XL']}`
   }
 })
 
@@ -100,18 +92,19 @@ const Layout = (props) => (
   <MDXProvider components={components}>
     <GlobalStyleSheet />
     <Root>
-      <SmallScreenOnly>
-        <LogoContainer>
-          <Logo />
-        </LogoContainer>
-      </SmallScreenOnly>
+      <SmallScreen>
+        <UniversalHeader />
+      </SmallScreen>
       <Main>
+        <LargeScreen>
+          <UniversalHeader />
+        </LargeScreen>
         {props.children}
       </Main>
       <Side>
-        <LargeScreenOnly>
+        <LogoContainer>
           <Logo />
-        </LargeScreenOnly>
+        </LogoContainer>
         <SideNav>
           <NavigationContent />
         </SideNav>

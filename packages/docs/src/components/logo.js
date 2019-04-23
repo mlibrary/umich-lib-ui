@@ -3,12 +3,12 @@ import { Link } from 'gatsby'
 import {
   SPACING,
   COLORS,
-  Text
+  Text,
 } from '@umich-lib/core'
 
 function MLibraryLogo() {
   return (
-    <svg viewBox="0 0 199 30" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 199 30" xmlns="http://www.w3.org/2000/svg" style={{ maxWidth: '12rem' }}>
       <g id="Page-1" fill="none" fillRule="evenodd">
         <g id="M-Library" fillRule="nonzero">
           <polyline id="Fill-1" fill="#FFCB05" points="20.9572917 24.7441667 12.3733333 13.0122917 12.3733333 21.5458333 15.7866667 21.5458333 15.7866667 29.973125 0 29.973125 0 21.5458333 3.19875 21.5458333 3.19875 8.425625 0 8.425625 0 0 12.4010417 0 20.9572917 11.8164583 29.5135417 0 41.9116667 0 41.9116667 8.425625 38.7110417 8.425625 38.7110417 21.5458333 41.9116667 21.5458333 41.9116667 29.973125 26.1270833 29.973125 26.1270833 21.5458333 29.5377083 21.5458333 29.5377083 13.0122917 20.9572917 24.7441667"
@@ -42,7 +42,6 @@ function Logo() {
       style={{
         textDecoration: 'none',
         display: 'block',
-        padding: `${SPACING['L']} ${SPACING['XL']}`,
         maxWidth: `calc(200px + ${SPACING['XL']} + ${SPACING['XL']})`
       }}
     >

@@ -6,6 +6,7 @@ import { TYPOGRAPHY } from '@umich-lib/styles'
 
 const StyledText = styled('p')(
   {
+    maxWidth: '38rem',
     ...TYPOGRAPHY['2X']
   },
   ({ inline }) => ({

@@ -6,22 +6,15 @@ import {
   COLORS,
   SPACING,
   MEDIA_QUERIES,
-  TYPOGRAPHY
+  TYPOGRAPHY,
+  Margins
 } from '@umich-lib/core'
 
 import Layout from './layout'
 import SEO from './seo'
 
 const ContentContainer = styled('div')({
-  maxWidth: '1024px',
-  margin: `0 ${SPACING['M']}`
-})
-
-const XMargins = styled('div')({
-  margin: '0 3%',
-  [MEDIA_QUERIES.LARGESCREEN]: {
-    margin: '0 5%'
-  }
+  maxWidth: '1024px'
 })
 
 const DocContainer = styled('div')({
@@ -29,13 +22,16 @@ const DocContainer = styled('div')({
     marginBottom: SPACING['M']
   },
   'span, p, li, h1, h2, h3, h4, h5, h6': {
-    maxWidth: '38rem'
+    wordBreak: 'break-word',
   },
   'li': {
     marginBottom: SPACING['S']
   },
   'img': {
     maxWidth: '100%'
+  },
+  'pre': {
+    whiteSpace: 'normal'
   }
 })
 
@@ -83,10 +79,11 @@ const Doc = (props) => {
       <article>
         <SEO title={title} />
         <DocHeaderContainer>
-          <XMargins>
+          <Margins>
             <ContentContainer>
               <Heading level={1} size="3XL" style={{
-                paddingBottom: SPACING['M']
+                paddingBottom: SPACING['M'],
+                marginTop: SPACING['XL']
               }}>{title}</Heading>
               {navigation && (
                 <ol>
@@ -105,9 +102,9 @@ const Doc = (props) => {
                 </ol>
               )}
             </ContentContainer>
-          </XMargins>
+          </Margins>
         </DocHeaderContainer>
-        <XMargins>
+        <Margins>
           <ContentContainer
             style={{
               marginTop: SPACING['XL'],
@@ -118,7 +115,7 @@ const Doc = (props) => {
               {props.children}
             </DocContainer>
           </ContentContainer>
-        </XMargins>
+        </Margins>
       </article>
     </Layout>
   )
