@@ -8,9 +8,7 @@ import {
   SPACING,
   MEDIA_QUERIES,
   TYPOGRAPHY,
-  UniversalHeader,
-  LargeScreen,
-  SmallScreen
+  UniversalHeader
 } from '@umich-lib/core'
 import components from './mdx-components'
 import Logo from './logo'
@@ -18,17 +16,19 @@ import NavigationContent from './navigation.mdx'
 
 const Root = styled('div')({
   [MEDIA_QUERIES.LARGESCREEN]: {
-    display: 'flex',
     minHeight: '100vh'
   }
 })
 
+const SiteWrapper = styled('div')({
+  borderTop: `solid 2px ${COLORS.neutral[100]}`,
+  display: 'flex'
+})
+
 const Side = styled('div')({
   background: COLORS.blue[100],
-  borderTop: `solid 2px ${COLORS.neutral[100]}`,
   padding: `${SPACING['XL']} 0`,
   [MEDIA_QUERIES.LARGESCREEN]: {
-    borderTop: 'none',
     background: 'white',
     display: 'block',
     minHeight: '100vh',
@@ -92,23 +92,20 @@ const Layout = (props) => (
   <MDXProvider components={components}>
     <GlobalStyleSheet />
     <Root>
-      <SmallScreen>
-        <UniversalHeader />
-      </SmallScreen>
-      <Main>
-        <LargeScreen>
-          <UniversalHeader />
-        </LargeScreen>
-        {props.children}
-      </Main>
-      <Side>
-        <LogoContainer>
-          <Logo />
-        </LogoContainer>
-        <SideNav>
-          <NavigationContent />
-        </SideNav>
-      </Side>
+      <UniversalHeader />
+      <SiteWrapper>
+        <Main>
+          {props.children}
+        </Main>
+        <Side>
+          <LogoContainer>
+            <Logo />
+          </LogoContainer>
+          <SideNav>
+            <NavigationContent />
+          </SideNav>
+        </Side>
+      </SiteWrapper>
     </Root>
   </MDXProvider>
 )

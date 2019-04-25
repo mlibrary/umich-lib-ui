@@ -45,7 +45,7 @@ const Link = styled('a')({
   display: 'block',
   textDecoration: 'none',
   cursor: 'pointer',
-  padding: `${SPACING['S']} 0`,
+  padding: `${SPACING['XS']} 0`,
   ':hover': {
     'span': {
       boxShadow: `inset 0 -2px ${COLORS.teal[400]}`
@@ -59,7 +59,7 @@ const Link = styled('a')({
 */
 const SitesButton = styled('button')({
   cursor: 'pointer',
-  padding: `${SPACING['S']} 0`,
+  padding: `${SPACING['XS']} 0`,
   ':hover': {
     'span': {
       boxShadow: `inset 0 -2px ${COLORS.teal[400]}`
