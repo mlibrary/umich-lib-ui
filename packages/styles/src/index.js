@@ -288,7 +288,7 @@ export function GlobalStyleSheet() {
 }
 
 export const Margins = styled('div')({
-  margin: `0 3vw`,
+  margin: `0 ${SPACING['L']}`,
   [MEDIA_QUERIES.LARGESCREEN]: {
     margin: `0 5vw`
   }

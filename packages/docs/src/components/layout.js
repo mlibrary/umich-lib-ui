@@ -22,7 +22,9 @@ const Root = styled('div')({
 
 const SiteWrapper = styled('div')({
   borderTop: `solid 2px ${COLORS.neutral[100]}`,
-  display: 'flex'
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    display: 'flex'
+  }
 })
 
 const Side = styled('div')({

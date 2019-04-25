@@ -255,7 +255,7 @@ function UniversalHeader() {
       <Margins>
         <HeaderContent>
           <LargeScreen>
-            <Link href="https://www.lib.umich.edu/"><HeaderText>University of Michigan Library</HeaderText></Link>
+            <Link href="https://www.lib.umich.edu/"><HeaderText>lib.umich.edu</HeaderText></Link>
           </LargeScreen>
           <SmallScreen>
           <Link href="https://www.lib.umich.edu/"><HeaderText>U-M Library</HeaderText></Link>
