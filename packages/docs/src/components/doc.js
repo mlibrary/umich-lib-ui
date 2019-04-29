@@ -73,6 +73,15 @@ const Doc = (props) => {
     title,
     navigation
   } = props.pageContext.frontmatter
+  const { location } = props
+
+  let github_path
+  if (location.pathname) {
+    github_path =
+    'https://github.com/mlibrary/umich-lib-ui/tree/next/packages/docs/src/pages'
+    + location.pathname.slice(0, -1)
+    + '.mdx'
+  }
 
   return (
     <Layout>
@@ -114,6 +123,10 @@ const Doc = (props) => {
             <DocContainer>
               {props.children}
             </DocContainer>
+
+            {github_path && (
+              <a href={github_path}>Edit this page on Github</a>
+            )}
           </ContentContainer>
         </Margins>
       </article>
