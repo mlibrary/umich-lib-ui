@@ -80,16 +80,20 @@ const Overlay = styled('div')({
   background: 'white',
   zIndex: '1',
   padding: SPACING['M'],
+  position: `absolute`,
+  left: `auto`,
+  right: `0`,
+  width: `862px`,
+  maxWidth: `calc(100vw - ${SPACING['XL']})`,
+  border: `solid 1px ${COLORS.neutral[100]}`,
+  boxShadow: `0 4px 8px 0 rgba(0, 0, 0, 0.1)`,
+  padding: SPACING['L'],
+  marginLeft: SPACING['XL'],
+  marginBottom: SPACING['L'],
   [MEDIA_QUERIES.LARGESCREEN]: {
-    position: `absolute`,
-    left: `auto`,
-    right: `0`,
-    width: `862px`,
-    maxWidth: `92vw`,
-    border: `solid 1px ${COLORS.neutral[100]}`,
-    boxShadow: `0 4px 8px 0 rgba(0, 0, 0, 0.1)`,
     padding: SPACING['XL'],
-    marginLeft: SPACING['XL'],
+    maxWidth: `calc(90vw)`,
+    width: `862px`,
   }
 })
 
@@ -123,7 +127,10 @@ const LinksContainer = styled('div')({
 
 const LinkItem = styled('li')({
   maxWidth: '32rem',
-  marginBottom: '1rem'
+  ':not(:last-child)': {
+
+    marginBottom: '1rem'
+  }
 })
 
 const LinkTitle = styled('span')({
@@ -255,10 +262,10 @@ function UniversalHeader() {
       <Margins>
         <HeaderContent>
           <LargeScreen>
-            <Link href="https://www.lib.umich.edu/"><HeaderText>lib.umich.edu</HeaderText></Link>
+            <Link href="https://www.lib.umich.edu/"><HeaderText>University of Michigan</HeaderText></Link>
           </LargeScreen>
           <SmallScreen>
-          <Link href="https://www.lib.umich.edu/"><HeaderText>U-M Library</HeaderText></Link>
+          <Link href="https://www.lib.umich.edu/"><HeaderText><abbr title="University of Michigan">U-M</abbr> Library</HeaderText></Link>
           </SmallScreen>
           <Sites />
         </HeaderContent>
