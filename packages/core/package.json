@@ -20,7 +20,8 @@
     "@umich-lib/text": "^0.1.2",
     "@umich-lib/text-input": "^0.1.2",
     "@umich-lib/universal-header": "^0.1.0",
-    "@umich-lib/navigation": "^0.1.0"
+    "@umich-lib/navigation": "^0.1.0",
+    "@umich-lib/loading": "^0.1.0"
   },
   "files": [
     "lib"

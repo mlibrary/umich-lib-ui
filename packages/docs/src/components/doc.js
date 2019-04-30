@@ -125,7 +125,14 @@ const Doc = (props) => {
             </DocContainer>
 
             {github_path && (
-              <a href={github_path}>Edit this page on Github</a>
+              <div style={{
+                display: 'block',
+                borderTop: `solid 1px ${COLORS.neutral[100]}`,
+                marginTop: SPACING['XL'],
+                paddingTop: SPACING['XL']
+              }}>
+                <a href={github_path}>Edit this page on Github</a>
+              </div>
             )}
           </ContentContainer>
         </Margins>

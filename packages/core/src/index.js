@@ -12,6 +12,7 @@ import Text from "@umich-lib/text"
 import TextInput from "@umich-lib/text-input"
 import UniversalHeader from '@umich-lib/universal-header'
 import Navigation from '@umich-lib/navigation'
+import Loading from '@umich-lib/loading'
 import {
   Expandable,
   ExpandableButton,
@@ -50,6 +51,7 @@ export {
   icons,
   Input,
   List,
+  Loading,
   RecordFields,
   ResourceAccess,
   Text,
