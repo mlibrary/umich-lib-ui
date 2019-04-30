@@ -7,31 +7,35 @@ import { TYPOGRAPHY } from '@umich-lib/styles'
 const StyledText = styled('p')(
   {
     maxWidth: '38rem',
-    ...TYPOGRAPHY['2X']
   },
   ({ inline }) => ({
     display: inline && 'inline',
   }),
   ({ size }) => ({
     ...TYPOGRAPHY[size]
-  })
+  }),
+  ({ lede }) => {
+    if (lede) {
+      return TYPOGRAPHY['XS']
+    }
+  }
 )
 
 const Text = ({
-  className,
-  children,
   inline,
+  lede,
   ...other
 }) => (
   <StyledText
-    className={className}
     inline={inline}
+    lede={lede}
     {...other}
-  >{children}</StyledText>
+  />
 )
 
 Text.propTypes = {
   inline: PropTypes.bool,
+  lede: PropTypes.bool,
   children: PropTypes.node.isRequired,
 };
 
