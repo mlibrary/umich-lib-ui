@@ -43,12 +43,10 @@ export const TYPOGRAPHY = {
   },
   'S': {
     fontSize: '1.25rem',
-    fontWeight: '600',
-    lineHeight: '1.4'
+    fontWeight: '600'
   },
   'XS': {
-    fontSize: '1.125rem',
-    lineHeight: '1.4'
+    fontSize: '1.125rem'
   },
   '2XS': {
     fontSize: '1rem'
