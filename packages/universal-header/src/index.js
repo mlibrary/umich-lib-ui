@@ -11,6 +11,7 @@ import {
   SmallScreen
 } from '@umich-lib/styles'
 import Icon from '@umich-lib/icon'
+import Loading from '@umich-lib/loading'
 
 /*
   Add background color and flex the title
@@ -153,6 +154,13 @@ const LinkDescription = styled('p')({
   color: COLORS.neutral['300']
 })
 
+const LoadingContainer = styled('div')({
+  height: '380px',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center'
+})
+
 /*
   Reshape the data from Drupal
   so that it can better suited for
@@ -240,13 +248,15 @@ function Sites() {
       {open && (
         <Overlay>
           <SitesLede><Highlight>Explore</Highlight> what the library has to offer.</SitesLede>
-          {data && (
-            <React.Fragment>
-              <LinksContainer>
-                <SiteLinks data={data.primary} />
-                <SiteLinks data={data.secondary} />
-              </LinksContainer>
-            </React.Fragment>
+          {data ? (
+            <LinksContainer>
+              <SiteLinks data={data.primary} />
+              <SiteLinks data={data.secondary} />
+            </LinksContainer>
+          ) : (
+            <LoadingContainer>
+              <Loading />
+            </LoadingContainer>
           )}
         </Overlay>
       )}
