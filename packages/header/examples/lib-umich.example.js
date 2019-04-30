@@ -58,6 +58,10 @@ function LibUmichHeader() {
     }
   }, []);
 
+  if (!primary || !secondary) {
+    return <p>Loading navigation data from Drupal...</p>
+  }
+
   return (
     <Header
       primary={primary}

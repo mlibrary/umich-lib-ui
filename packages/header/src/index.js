@@ -134,7 +134,9 @@ function NavPrimaryItem({
             <span class="text">{label}</span>
           </PrimaryNavButton>
           {open && (
-            <MegaMenu children={children} />
+            <MegaMenu>
+              <MegaMenuNav items={children} />
+            </MegaMenu>
           )}
         </React.Fragment>
       ) : (
@@ -191,12 +193,22 @@ const MegaMenuInnerContainer = styled('div')({
   padding: `${SPACING['L']} 0`
 })
 
+const MegaMenuNavButton = styled('button')({
+  display: 'block',
+  width: '100%',
+  textAlign: 'left',
+  padding: `${SPACING['XS']} 0`,
+  ':hover': {
+    background: COLORS.teal[100]
+  }
+})
+
 function MegaMenu({ children }){
   return (
     <MegaMenuContainer>
       <Margins>
         <MegaMenuInnerContainer>
-          <MegaMenuNav items={children} />
+          {children}
         </MegaMenuInnerContainer>
       </Margins>
     </MegaMenuContainer>
@@ -207,7 +219,11 @@ function MegaMenuNav({ items }) {
   return (
     <ul>
       {items.map(item => (
-        <li key={item.label}>{item.label}</li>
+        <li key={item.label}>
+          <MegaMenuNavButton>
+            {item.label}
+          </MegaMenuNavButton>
+        </li>
       ))}
     </ul>
   )
