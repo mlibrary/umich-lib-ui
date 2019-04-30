@@ -1,40 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled'
 import {
   COLORS,
-  SITE_WIDTH,
-  MEDIA_QUERIES
+  MEDIA_QUERIES,
+  SPACING,
+  Margins,
+  TYPOGRAPHY
 } from '@umich-lib/styles'
+import Icon from '@umich-lib/icon'
 
 
 const StyledHeader = styled('header')({
   display: 'block',
-  background: COLORS.blue[400],
-  padding: '0.8rem 0'
+  background: 'white',
+  borderBottom: `solid 1px ${COLORS.neutral['100']}`
 })
 
-const StyledHeaderInner = styled('div')({
-  margin: '0 auto',
-  padding: '0 1rem',
-  maxWidth: SITE_WIDTH,
-  '> *:not(:last-child)': {
-    marginBottom: '1rem'
-  },
-  [MEDIA_QUERIES.LARGESCREEN]: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    '> *:not(:last-child)': {
-      marginBottom: '0'
-    }
-  }
-})
-
-const StyledNav = styled('nav')({
-  [MEDIA_QUERIES.LARGESCREEN]: {
-    marginLeft: '1rem'
-  }
+const HeaderInnerContainer = styled('div')({
+  position: 'relative'
 })
 
 const StyledLogoNameContainer = styled('div')({
@@ -55,28 +39,8 @@ const StyledLogoNameContainer = styled('div')({
 
 const StyledLogoContainer = styled('div')({
   display: 'flex',
-  alignItems: 'center'
-})
-
-const StyledNameContainer = styled('div')({
-  display: 'block'
-})
-
-const StyledNavList = styled('ul')({
-  listStyle: "none",
-  padding: '0',
-  margin: '0',
-  'a': {
-    color: 'white',
-    textDecoration: 'none'
-  }
-})
-
-const StyledNavListItem = styled('li')({
-  display: 'inline-block',
-  '&:not(:last-child)': {
-    marginRight: '1rem'
-  }
+  alignItems: 'center',
+  padding: `${SPACING['M']} 0`
 })
 
 const UMichBlockM = () => (
@@ -84,7 +48,7 @@ const UMichBlockM = () => (
     viewBox="0 0 202 144"
     style={{
       display: 'inherit',
-      height: '26px',
+      height: '2.2rem',
     }}
   >
     <title>University of Michigan</title>
@@ -101,12 +65,12 @@ const UMichLibrary = () => (
     viewBox="0 0 715 144"
     style={{
       display: 'inherit',
-      height: '1.6rem',
+      height: '2.2rem',
     }}
   >
     <title>Library</title>
     <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-      <g transform="translate(-281.000000, 0.000000)" fill="#FFFFFF">
+      <g transform="translate(-281.000000, 0.000000)" fill={COLORS.blue['400']}>
         <polyline points="281.497 144 281.497 0.202 299.817 0.202 299.817 128.067 352.598 128.067 352.598 144 281.497 144"></polyline>
         <polygon points="374.194 143.94 392.511 143.94 392.511 0.202 374.194 0.202"></polygon>
         <path d="M436.948,128.067 L462.84,128.067 C482.357,128.067 489.334,114.123 489.334,103.573 C489.334,80.665 475.187,76.682 456.472,76.682 L436.948,76.682 L436.948,128.067 Z M436.948,60.747 L463.64,60.747 C477.974,60.547 484.954,51.788 484.954,37.845 C484.954,25.896 478.174,16.135 462.84,16.135 L436.948,16.135 L436.948,60.747 Z M418.625,144 L418.625,0.202 L465.433,0.202 C485.349,0.202 492.119,6.972 497.495,14.942 C502.481,22.71 503.275,31.276 503.275,34.059 C503.275,51.984 497.102,63.939 478.576,68.117 L478.576,69.117 C499.096,71.507 508.054,83.854 508.054,103.573 C508.054,140.417 481.165,144 464.833,144 L418.625,144 L418.625,144 Z"></path>
@@ -119,21 +83,173 @@ const UMichLibrary = () => (
   </svg>
 )
 
-const NavItem = ({
-  item,
-  renderAnchor
-}) => {
-  if (item.href) {
-    return (
-      <a href={item.href}>{ item.text }</a>
-    )
+const PrimaryNavItem = styled('li')({
+  display: 'inline-block',
+})
+
+const primary_nav_item_styles = {
+  ...TYPOGRAPHY['XS'],
+  paddingBottom: `calc(${SPACING['S']} - 3px)`, // less border spacing.
+  marginRight: SPACING['M'],
+  cursor: 'pointer',
+  borderBottom: `solid 3px transparent`,
+  ':hover': {
+    borderBottom: `solid 3px ${COLORS.teal['400']}`
+  }
+}
+
+const nav_primary_item_active_styles = {
+  borderBottom: `solid 3px ${COLORS.teal['400']}`
+}
+
+const PrimaryNavButton = styled('button')(
+  {
+    ...primary_nav_item_styles,
+  }, ({ open }) => {
+
+    if (open) {
+      return {
+        ...nav_primary_item_active_styles
+      }
+    }
+  })
+
+// TODO: Pass in component to use. Render prop?
+const PrimaryNavLink = styled('a')({
+  ...primary_nav_item_styles
+})
+
+function NavPrimaryItem({
+  children,
+  label,
+  to,
+  open,
+  onClick
+}) {
+  return (
+    <PrimaryNavItem>
+      {children ? (
+        <React.Fragment>
+          <PrimaryNavButton onClick={onClick} open={open}>
+            <span class="text">{label}</span>
+          </PrimaryNavButton>
+          {open && (
+            <MegaMenu children={children} />
+          )}
+        </React.Fragment>
+      ) : (
+        <PrimaryNavLink to={to}><span class="text">{label}</span></PrimaryNavLink>
+      )}
+    </PrimaryNavItem>
+  )
+}
+
+function NavPrimary({ primary }) {
+  const [open, setOpen] = useState(null)
+
+  /*
+    If the user clicks on an already opened item
+    then they are trying to close it.
+
+    Otherwise set the new thing to open.
+  */
+  function handleOpen(i) {
+    if (open === i) {
+      setOpen(null)
+    } else {
+      setOpen(i)
+    }
   }
 
-  if (item.to) {
-    return (
-      renderAnchor(item)
-    )
+  return (
+    <nav role="navigation">
+      <ul>
+        {primary.map((item, i) => (
+          <NavPrimaryItem
+            {...item}
+            open={i === open}
+            onClick={() => handleOpen(i)}
+          />
+        ))}
+      </ul>
+    </nav>
+  )
+}
+
+// Weirdness to get full width.
+const MegaMenuContainer = styled('div')({
+  borderTop: `solid 1px ${COLORS.neutral[100]}`,
+  position: 'absolute',
+  width: 'calc(100% + 10vw)',
+  margin: '0 -5vw',  // Undo site margins to be full width.
+  background: 'white',
+  left: '0',
+  marginTop: '1px', // Otherwise covers the header bottom border.
+})
+
+const MegaMenuInnerContainer = styled('div')({
+  padding: `${SPACING['L']} 0`
+})
+
+function MegaMenu({ children }){
+  return (
+    <MegaMenuContainer>
+      <Margins>
+        <MegaMenuInnerContainer>
+          <MegaMenuNav items={children} />
+        </MegaMenuInnerContainer>
+      </Margins>
+    </MegaMenuContainer>
+  )
+}
+
+function MegaMenuNav({ items }) {
+  return (
+    <ul>
+      {items.map(item => (
+        <li key={item.label}>{item.label}</li>
+      ))}
+    </ul>
+  )
+}
+
+const NavSecondaryContainer = styled('nav')({
+  position: 'absolute',
+  top: SPACING['M'],
+  right: '0'
+})
+
+const nav_secondary_item_styles = {
+  ...TYPOGRAPHY['3XS']
+}
+
+const NavSecondaryItem = styled('li')({
+  display: 'inline-block'
+})
+
+const NavSecondaryLink = styled('a')({
+  ...nav_secondary_item_styles,
+  paddingBottom: SPACING['S'],
+  marginLeft: SPACING['L'],
+  cursor: 'pointer',
+  color: COLORS.neutral['300'],
+  ':hover': {
+    textDecoration: 'underline'
   }
+})
+
+function NavSecondary({ secondary }) {
+  return (
+    <NavSecondaryContainer>
+      <ul>
+       {secondary.map(item => (
+          <NavSecondaryItem>
+            <NavSecondaryLink>{item.label}</NavSecondaryLink>
+          </NavSecondaryItem>
+       ))}
+      </ul>
+    </NavSecondaryContainer>
+  )
 }
 
 /**
@@ -141,15 +257,13 @@ const NavItem = ({
 */
 const Header = ({
   name,
-  siteUrl,
-  nav,
-  renderAnchor,
-  className
+  primary,
+  secondary
 }) => {
   return (
-    <StyledHeader className={className}>
-      <StyledHeaderInner data-inner-container>
-        <StyledLogoNameContainer>
+    <StyledHeader>
+      <Margins>
+        <HeaderInnerContainer>
           <StyledLogoContainer>
             <a href="https://umich.edu/"><UMichBlockM className="logo__svg" /></a>
             <a
@@ -157,39 +271,20 @@ const Header = ({
               style={{
                 marginLeft: '0.5rem',
                 paddingLeft: '0.5rem',
-                borderLeft: 'solid 1px white',
+                borderLeft: `solid 1px ${COLORS.blue['400']}`,
                 marginRight: '0.5rem'
               }}
             ><UMichLibrary className="logo__svg" /></a>
           </StyledLogoContainer>
-          {name && siteUrl && (
-            <StyledNameContainer>
-              <a
-                href={siteUrl}
-                style={{
-                  color: 'white',
-                  textDecoration: 'none'
-                }}
-              >{name}</a>
-            </StyledNameContainer>
+          {primary && (
+            <NavPrimary primary={primary} />
           )}
-        </StyledLogoNameContainer>
 
-        {nav && nav.length && (
-          <StyledNav>
-            <StyledNavList>
-              {nav.map((item, key) => (
-                <StyledNavListItem key={key}>
-                  <NavItem
-                    item={item} 
-                    renderAnchor={renderAnchor}
-                  />
-                </StyledNavListItem>
-              ))}
-            </StyledNavList>
-          </StyledNav>
-        )}
-      </StyledHeaderInner>
+          {secondary && (
+            <NavSecondary secondary={secondary} />
+          )}
+        </HeaderInnerContainer>
+      </Margins>
     </StyledHeader>
   )
 }

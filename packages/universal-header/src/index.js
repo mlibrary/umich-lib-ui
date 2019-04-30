@@ -120,9 +120,16 @@ const SitesLede = styled('p')({
   Styling for link items
 */
 const LinksContainer = styled('div')({
+  'ul:first-of-type': {
+    marginBottom: SPACING['M']
+  },
   [MEDIA_QUERIES.LARGESCREEN]: {
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    'ul:first-of-type': {
+      margin: '0',
+      marginRight: SPACING['L']
+    }
   }
 })
 
@@ -168,7 +175,6 @@ const LoadingContainer = styled('div')({
 */
 function transformData(data) {
   return {
-    label: "Explore",
     primary: data.filter(item => item.level === "1"),
     secondary: data.filter(item => item.level === "2")
   };
