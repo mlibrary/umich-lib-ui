@@ -11,6 +11,7 @@ import {
   SmallScreen
 } from '@umich-lib/styles'
 import Icon from '@umich-lib/icon'
+import Loading from '@umich-lib/loading'
 
 /*
   Add background color and flex the title
@@ -80,16 +81,20 @@ const Overlay = styled('div')({
   background: 'white',
   zIndex: '1',
   padding: SPACING['M'],
+  position: `absolute`,
+  left: `auto`,
+  right: `0`,
+  width: `862px`,
+  maxWidth: `calc(100vw - ${SPACING['XL']})`,
+  border: `solid 1px ${COLORS.neutral[100]}`,
+  boxShadow: `0 4px 8px 0 rgba(0, 0, 0, 0.1)`,
+  padding: SPACING['L'],
+  marginLeft: SPACING['XL'],
+  marginBottom: SPACING['L'],
   [MEDIA_QUERIES.LARGESCREEN]: {
-    position: `absolute`,
-    left: `auto`,
-    right: `0`,
-    width: `862px`,
-    maxWidth: `92vw`,
-    border: `solid 1px ${COLORS.neutral[100]}`,
-    boxShadow: `0 4px 8px 0 rgba(0, 0, 0, 0.1)`,
     padding: SPACING['XL'],
-    marginLeft: SPACING['XL'],
+    maxWidth: `calc(90vw)`,
+    width: `862px`,
   }
 })
 
@@ -123,7 +128,10 @@ const LinksContainer = styled('div')({
 
 const LinkItem = styled('li')({
   maxWidth: '32rem',
-  marginBottom: '1rem'
+  ':not(:last-child)': {
+
+    marginBottom: '1rem'
+  }
 })
 
 const LinkTitle = styled('span')({
@@ -144,6 +152,13 @@ const LinkLink = styled('a')({
 
 const LinkDescription = styled('p')({
   color: COLORS.neutral['300']
+})
+
+const LoadingContainer = styled('div')({
+  height: '380px',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center'
 })
 
 /*
@@ -233,13 +248,15 @@ function Sites() {
       {open && (
         <Overlay>
           <SitesLede><Highlight>Explore</Highlight> what the library has to offer.</SitesLede>
-          {data && (
-            <React.Fragment>
-              <LinksContainer>
-                <SiteLinks data={data.primary} />
-                <SiteLinks data={data.secondary} />
-              </LinksContainer>
-            </React.Fragment>
+          {data ? (
+            <LinksContainer>
+              <SiteLinks data={data.primary} />
+              <SiteLinks data={data.secondary} />
+            </LinksContainer>
+          ) : (
+            <LoadingContainer>
+              <Loading />
+            </LoadingContainer>
           )}
         </Overlay>
       )}
@@ -255,10 +272,10 @@ function UniversalHeader() {
       <Margins>
         <HeaderContent>
           <LargeScreen>
-            <Link href="https://www.lib.umich.edu/"><HeaderText>lib.umich.edu</HeaderText></Link>
+            <Link href="https://www.lib.umich.edu/"><HeaderText>University of Michigan</HeaderText></Link>
           </LargeScreen>
           <SmallScreen>
-          <Link href="https://www.lib.umich.edu/"><HeaderText>U-M Library</HeaderText></Link>
+          <Link href="https://www.lib.umich.edu/"><HeaderText><abbr title="University of Michigan">U-M</abbr> Library</HeaderText></Link>
           </SmallScreen>
           <Sites />
         </HeaderContent>
