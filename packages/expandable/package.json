@@ -1,12 +1,12 @@
 {
   "name": "@umich-lib/expandable",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.1",
   "module": "lib/index.js",
   "main": "src/index.js",
   "dependencies": {
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
-    "@umich-lib/button": "^1.0.0-alpha.0"
+    "@umich-lib/button": "^1.0.0-alpha.1"
   },
   "peerDependencies": {
     "react": "^16.8.5",
