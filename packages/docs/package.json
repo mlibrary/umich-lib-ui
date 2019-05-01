@@ -46,5 +46,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/christopherbiscardi/gatsby-starter-mdx-basic"
-  }
+  },
+  "gitHead": "aadbeefe313803e17945871e316e68e2826b5dba"
 }

@@ -1,6 +1,6 @@
 {
   "name": "@umich-lib/icon",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.1",
   "module": "lib/index.js",
   "main": "src/index.js",
   "dependencies": {
@@ -18,5 +18,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "d5691544a2e539b8afaebc23f84e015400834c18"
+  "gitHead": "aadbeefe313803e17945871e316e68e2826b5dba"
 }

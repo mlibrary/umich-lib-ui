@@ -10,7 +10,7 @@
     "@umich-lib/expandable": "^1.0.0-alpha.0",
     "@umich-lib/header": "^1.0.0-alpha.0",
     "@umich-lib/heading": "^1.0.0-alpha.0",
-    "@umich-lib/icon": "^1.0.0-alpha.0",
+    "@umich-lib/icon": "^1.0.0-alpha.1",
     "@umich-lib/input": "^1.0.0-alpha.0",
     "@umich-lib/list": "^1.0.0-alpha.0",
     "@umich-lib/loading": "^1.0.0-alpha.0",
@@ -29,5 +29,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "d5691544a2e539b8afaebc23f84e015400834c18"
+  "gitHead": "aadbeefe313803e17945871e316e68e2826b5dba"
 }

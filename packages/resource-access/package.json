@@ -8,7 +8,7 @@
     "@emotion/styled": "^10.0.7",
     "@umich-lib/button": "^1.0.0-alpha.0",
     "@umich-lib/expandable": "^1.0.0-alpha.0",
-    "@umich-lib/icon": "^1.0.0-alpha.0",
+    "@umich-lib/icon": "^1.0.0-alpha.1",
     "@umich-lib/styles": "^2.0.0-alpha.0"
   },
   "peerDependencies": {
@@ -21,5 +21,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "d5691544a2e539b8afaebc23f84e015400834c18"
+  "gitHead": "aadbeefe313803e17945871e316e68e2826b5dba"
 }
