@@ -2,7 +2,6 @@
   "name": "@umich-lib/core",
   "version": "1.0.0-alpha.1",
   "module": "lib/index.js",
-  "main": "src/index.js",
   "dependencies": {
     "@umich-lib/alert": "^1.0.0-alpha.1",
     "@umich-lib/button": "^1.0.0-alpha.1",
@@ -29,5 +28,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "aadbeefe313803e17945871e316e68e2826b5dba"
+  "gitHead": "8f1d5263dba5e3f65a64ccf18ad19189f4963b2f"
 }
