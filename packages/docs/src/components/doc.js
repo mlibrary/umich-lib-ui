@@ -24,9 +24,6 @@ const DocContainer = styled('div')({
   'span, p, li, h1, h2, h3, h4, h5, h6': {
     wordBreak: 'break-word',
   },
-  'li': {
-    marginBottom: SPACING['S']
-  },
   'img': {
     maxWidth: '100%'
   },
