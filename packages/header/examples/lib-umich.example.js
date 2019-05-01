@@ -16,7 +16,7 @@ function processDrupalNavData(data) {
       children = processDrupalNavData(item.children)
 
       return {
-        label: item.text,
+        text: item.text,
         to: item.to,
         children: processDrupalNavData(item.children)
       }
@@ -24,7 +24,7 @@ function processDrupalNavData(data) {
 
     // No children.
     return {
-      label: item.text,
+      text: item.text,
       to: item.to
     }
   })

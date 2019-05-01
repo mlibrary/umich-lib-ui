@@ -145,7 +145,7 @@ const DropdownListItemLink = styled('a')({
 
 function NavPrimaryItem({
   children,
-  label,
+  text,
   to,
   open,
   onClick
@@ -155,7 +155,7 @@ function NavPrimaryItem({
       {children ? (
         <React.Fragment>
           <PrimaryNavButton onClick={onClick} open={open} aria-expanded={open}>
-            <span class="text">{label}</span>
+            <span className="text">{text}</span>
           </PrimaryNavButton>
           {open && (
             <Dropdown>
@@ -163,11 +163,13 @@ function NavPrimaryItem({
                 {children.map(item => (
                   <DropdownListItem>
                     <DropdownListItemLink href="">
-                      <span>{item.label}</span>
+                      <span>{item.text}</span>
                     </DropdownListItemLink>
-                    <p style={{
-                      color: COLORS.neutral['300']
-                    }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
+                    {item.description && (
+                      <p style={{
+                        color: COLORS.neutral['300']
+                      }}>{item.description}</p>
+                    )}
                   </DropdownListItem>
                 ))}
               </DropdownList>
@@ -175,7 +177,7 @@ function NavPrimaryItem({
           )}
         </React.Fragment>
       ) : (
-        <PrimaryNavLink to={to}><span class="text">{label}</span></PrimaryNavLink>
+        <PrimaryNavLink to={to}><span>{text}</span></PrimaryNavLink>
       )}
     </PrimaryNavItem>
   )
@@ -204,6 +206,7 @@ function NavPrimary({ primary }) {
         {primary.map((item, i) => (
           <NavPrimaryItem
             {...item}
+            key={item.text + i}
             open={i === open}
             onClick={() => handleOpen(i)}
           />
@@ -274,7 +277,7 @@ function NavSecondary({ secondary }) {
       <ul>
        {secondary.map(item => (
           <NavSecondaryItem key={item.to}>
-            <NavSecondaryLink href={item.to}>{item.label}</NavSecondaryLink>
+            <NavSecondaryLink href={item.to}>{item.text}</NavSecondaryLink>
           </NavSecondaryItem>
        ))}
       </ul>
@@ -320,21 +323,10 @@ const Header = ({
 }
 
 Header.propTypes = {
-  /**
-    Site name
-  */
   name: PropTypes.string,
-  /**
-    The url to go to when a user clicks the site name.
-  */
   siteUrl: PropTypes.string,
-  /**
-    The nav is an array of objects. The objects can have `text` and `href` or `to` attributes.
-  */
-  nav: PropTypes.array,
-  /**
-    A render prop to handle the nav object `to` prop.
-  */
+  primary: PropTypes.array,
+  secondary: PropTypes.array,
   renderAnchor: PropTypes.func
 };
 
