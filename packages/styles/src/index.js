@@ -290,7 +290,7 @@ export const Margins = styled('div')({
   maxWidth: '1280px',
   padding: `0 ${SPACING['M']}`,
   [MEDIA_QUERIES.LARGESCREEN]: {
-    padding: `0 ${SPACING['XL']}`
+    padding: `0 ${SPACING['2XL']}`
   }
 })
 
