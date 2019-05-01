@@ -6,27 +6,20 @@ export let name = "lib.umich.edu";
 
 function processDrupalNavData(data) {
   return data.map(item => {
-    /*
-      Check if the item has children
-      and return it.
-    */
-    let children
-
-    if (item.children && item.children.length) {
-      children = processDrupalNavData(item.children)
-
-      return {
-        text: item.text,
-        to: item.to,
-        children: processDrupalNavData(item.children)
-      }
-    }
-
-    // No children.
-    return {
+    let navItem = {
       text: item.text,
       to: item.to
     }
+
+    if (item.description && item.description.length) {
+      navItem.description = item.description
+    }
+
+    if (item.children && item.children.length) {
+      navItem.children = processDrupalNavData(item.children)
+    }
+
+    return item
   })
 }
 
