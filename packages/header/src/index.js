@@ -134,9 +134,9 @@ function NavPrimaryItem({
             <span class="text">{label}</span>
           </PrimaryNavButton>
           {open && (
-            <MegaMenu>
-              <MegaMenuNav items={children} />
-            </MegaMenu>
+            <Dropdown>
+              <DropdownNav items={children} />
+            </Dropdown>
           )}
         </React.Fragment>
       ) : (
@@ -179,50 +179,165 @@ function NavPrimary({ primary }) {
 }
 
 // Weirdness to get full width.
-const MegaMenuContainer = styled('div')({
-  borderTop: `solid 1px ${COLORS.neutral[100]}`,
+const DropdownContainer = styled('div')({
+  border: `solid 1px ${COLORS.neutral[100]}`,
   position: 'absolute',
   width: 'calc(100% + 10vw)',
   margin: '0 -5vw',  // Undo site margins to be full width.
   background: 'white',
   left: '0',
   marginTop: '1px', // Otherwise covers the header bottom border.
+  boxShadow: `0 4px 8px 0 rgba(0, 0, 0, 0.1)`,
+  zIndex: '1'
 })
 
-const MegaMenuInnerContainer = styled('div')({
-  padding: `${SPACING['L']} 0`
+const DropdownInnerContainer = styled('div')({
+  position: 'relative'
 })
 
-const MegaMenuNavButton = styled('button')({
+const dropdown_nav_item_styles = {
+  ...TYPOGRAPHY['3XS'],
   display: 'block',
   width: '100%',
   textAlign: 'left',
-  padding: `${SPACING['XS']} 0`,
+  padding: SPACING['XS'],
+  borderLeft: 'solid 3px transparent',
+  color: COLORS.neutral['400']
+}
+
+const DropdownNavButton = styled('button')(
+  {
+    ...dropdown_nav_item_styles,
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    ':hover': {
+      cursor: 'pointer'
+    }
+  },
+  ({ open }) => {
+    if (open) {
+      return {
+        borderColor: COLORS.teal[400],
+        background: COLORS.teal[100]
+      }
+    }
+  }
+)
+
+const DropdownNavLink = styled('a')(
+  {
+    ...dropdown_nav_item_styles,
+    ':hover': {
+      cursor: 'pointer'
+    }
+  }
+)
+
+const dropdown_padding = SPACING['L']
+
+const DropdownPanel = styled('div')({
+  position: 'absolute',
+  right: 0,
+  top: 0, // Padding of the DropdownInnerContainer.
+  width: 'calc(100% - 20rem)', // less the width of the Dropdown nav list items.
+  padding: dropdown_padding
+})
+
+const PanelLink = styled('a')({
+  color: COLORS.neutral[400],
+  display: 'inline-block',
+  padding: `${SPACING['2XS']} 0`,
+  textDecoration: 'none',
   ':hover': {
-    background: COLORS.teal[100]
+    textDecoration: 'underline'
   }
 })
 
-function MegaMenu({ children }){
+function Dropdown({ children }){
   return (
-    <MegaMenuContainer>
+    <DropdownContainer>
       <Margins>
-        <MegaMenuInnerContainer>
+        <DropdownInnerContainer>
           {children}
-        </MegaMenuInnerContainer>
+        </DropdownInnerContainer>
       </Margins>
-    </MegaMenuContainer>
+    </DropdownContainer>
   )
 }
 
-function MegaMenuNav({ items }) {
+function DropdownNav({ items }) {
+  const [open, setOpen] = useState(null)
+
+  function handleClick(i) {
+    if (i === open) {
+      setOpen(null)
+    } else {
+      setOpen(i)
+    }
+  }
+
   return (
-    <ul>
-      {items.map(item => (
+    <ul style={{
+      width: '20rem',
+      borderRight: `solid 1px ${COLORS.neutral[100]}`,
+      paddingTop: dropdown_padding,
+      paddingBottom: SPACING['3XL']
+    }}>
+      {items.map((item, i) => (
         <li key={item.label}>
-          <MegaMenuNavButton>
-            {item.label}
-          </MegaMenuNavButton>
+          {item.children ? (
+            <React.Fragment>
+              <DropdownNavButton
+                onClick={() => handleClick(i)}
+                open={open === i}
+              >
+                {item.label}
+
+                <span style={{
+                  lineHeight: '0',
+                  marginLeft: '1rem'
+                }}><Icon icon="navigate_next" /></span>
+              </DropdownNavButton>
+
+              {open === i && (
+                <DropdownPanel>
+                  <div
+                    style={{
+                      paddingBottom: SPACING['M'],
+                      marginBottom: SPACING['M'],
+                      borderBottom: `solid 1px ${COLORS.neutral['100']}`
+                    }}
+                  >
+                    <h2
+                      style={{
+                        ...TYPOGRAPHY['M']
+                      }}
+                    >{item.label}</h2>
+                  </div>
+
+                  {item.children && (
+                    <ul style={{ columns: '2' }}>
+                      {item.children.map(child => (
+                        <li
+                          style={{
+                            ...TYPOGRAPHY['XS']
+                          }}
+                        ><PanelLink
+                          href={child.to}
+                        >{child.label}</PanelLink></li>
+                      ))}
+                    </ul>
+                  )}
+                </DropdownPanel>
+              )}
+            </React.Fragment>
+          ) : (
+            <DropdownNavLink>
+              {item.label}
+            </DropdownNavLink>
+          )}
+          
         </li>
       ))}
     </ul>
@@ -231,8 +346,10 @@ function MegaMenuNav({ items }) {
 
 const NavSecondaryContainer = styled('nav')({
   position: 'absolute',
-  top: SPACING['M'],
-  right: '0'
+  top: 0,
+  right: 0,
+  padding: SPACING['M'],
+  paddingRight: '0'
 })
 
 const nav_secondary_item_styles = {
@@ -259,8 +376,8 @@ function NavSecondary({ secondary }) {
     <NavSecondaryContainer>
       <ul>
        {secondary.map(item => (
-          <NavSecondaryItem>
-            <NavSecondaryLink>{item.label}</NavSecondaryLink>
+          <NavSecondaryItem key={item.to}>
+            <NavSecondaryLink to={item.to}>{item.label}</NavSecondaryLink>
           </NavSecondaryItem>
        ))}
       </ul>
