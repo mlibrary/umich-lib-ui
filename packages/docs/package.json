@@ -1,7 +1,7 @@
 {
   "name": "@umich-lib/docs",
   "description": "U-M Design System documentation site.",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "author": "Jon Earley <earleyj@umich.edu>",
   "dependencies": {
     "@emotion/core": "^10.0.10",
