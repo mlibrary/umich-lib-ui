@@ -143,12 +143,32 @@ const DropdownListItemLink = styled('a')({
   },
 })
 
+function DropdownListItemLinkContainer({
+  text,
+  to,
+  linkAs
+}) {
+  if (linkAs) {
+    return (
+      <DropdownListItemLink to={to} as={linkAs}>
+        <span>{text}</span>
+      </DropdownListItemLink>
+    )
+  }
+  return (
+    <DropdownListItemLink href={to}>
+      <span>{text}</span>
+    </DropdownListItemLink>
+  )
+}
+
 function NavPrimaryItem({
   children,
   text,
   to,
   open,
-  onClick
+  onClick,
+  linkAs
 }) {
   return (
     <PrimaryNavItem>
@@ -162,9 +182,7 @@ function NavPrimaryItem({
               <DropdownList>
                 {children.map(item => (
                   <DropdownListItem>
-                    <DropdownListItemLink href="">
-                      <span>{item.text}</span>
-                    </DropdownListItemLink>
+                    <DropdownListItemLinkContainer linkAs={linkAs} {...item} />
                     {item.description && (
                       <p style={{
                         color: COLORS.neutral['300']
@@ -177,13 +195,16 @@ function NavPrimaryItem({
           )}
         </React.Fragment>
       ) : (
-        <PrimaryNavLink to={to}><span>{text}</span></PrimaryNavLink>
+        <PrimaryNavLink href={to}><span>{text}</span></PrimaryNavLink>
       )}
     </PrimaryNavItem>
   )
 }
 
-function NavPrimary({ primary }) {
+function NavPrimary({
+  primary,
+  linkAs
+}) {
   const [open, setOpen] = useState(null)
 
   /*
@@ -206,6 +227,7 @@ function NavPrimary({ primary }) {
         {primary.map((item, i) => (
           <NavPrimaryItem
             {...item}
+            linkAs={linkAs}
             key={item.text + i}
             open={i === open}
             onClick={() => handleOpen(i)}
@@ -271,13 +293,32 @@ const NavSecondaryLink = styled('a')({
   }
 })
 
-function NavSecondary({ secondary }) {
+function NavSecondaryLinkContainer({
+  to,
+  text,
+  linkAs
+}) {
+  if (linkAs) {
+    return (
+      <NavSecondaryLink to={to} as={linkAs}>{text}</NavSecondaryLink>
+    )
+  }
+
+  return (
+    <NavSecondaryLink href={to}>{text}</NavSecondaryLink>
+  )
+}
+
+function NavSecondary({
+  secondary,
+  linkAs
+}) {
   return (
     <NavSecondaryContainer>
       <ul>
        {secondary.map(item => (
           <NavSecondaryItem key={item.to}>
-            <NavSecondaryLink href={item.to}>{item.text}</NavSecondaryLink>
+            <NavSecondaryLinkContainer {...item} linkAs={linkAs}/>
           </NavSecondaryItem>
        ))}
       </ul>
@@ -291,7 +332,8 @@ function NavSecondary({ secondary }) {
 const Header = ({
   name,
   primary,
-  secondary
+  secondary,
+  linkAs
 }) => {
   return (
     <StyledHeader>
@@ -310,11 +352,17 @@ const Header = ({
             ><UMichLibrary className="logo__svg" /></a>
           </StyledLogoContainer>
           {primary && (
-            <NavPrimary primary={primary} />
+            <NavPrimary
+              primary={primary}
+              linkAs={linkAs}
+            />
           )}
 
           {secondary && (
-            <NavSecondary secondary={secondary} />
+            <NavSecondary
+              secondary={secondary}
+              linkAs={linkAs}
+            />
           )}
         </HeaderInnerContainer>
       </Margins>
@@ -327,7 +375,7 @@ Header.propTypes = {
   siteUrl: PropTypes.string,
   primary: PropTypes.array,
   secondary: PropTypes.array,
-  renderAnchor: PropTypes.func
+  linkAs: PropTypes.any
 };
 
 Header.defaultProps = {
