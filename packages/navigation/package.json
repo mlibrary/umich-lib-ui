@@ -1,14 +1,14 @@
 {
   "name": "@umich-lib/navigation",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "module": "lib/index.js",
   "dependencies": {
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
-    "@umich-lib/button": "^1.0.0-alpha.1",
-    "@umich-lib/icon": "^1.0.0-alpha.2",
-    "@umich-lib/styles": "^2.0.0-alpha.1",
-    "@umich-lib/text": "^1.0.0-alpha.1",
+    "@umich-lib/button": "^1.0.0-alpha.2",
+    "@umich-lib/icon": "^1.0.0-alpha.3",
+    "@umich-lib/styles": "^2.0.0-alpha.2",
+    "@umich-lib/text": "^1.0.0-alpha.2",
     "react-modal": "^3.8.1"
   },
   "peerDependencies": {
