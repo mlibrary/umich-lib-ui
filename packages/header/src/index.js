@@ -119,6 +119,30 @@ const PrimaryNavLink = styled('a')({
   ...primary_nav_item_styles
 })
 
+const DropdownList = styled('ul')({
+  columns: '2',
+  columnGap: SPACING['XL']
+})
+
+const DropdownListItem = styled('li')({
+  breakInside: 'avoid',
+  padding: `${SPACING['S']} ${SPACING['L']}`,
+  maxWidth: '38rem'
+})
+
+const DropdownListItemLink = styled('a')({
+  ...TYPOGRAPHY['3XS'],
+  textDecoration: 'none',
+  color: COLORS.neutral['400'],
+  padding: `${SPACING['XS']} 0`,
+  'span': {
+    padding: `${SPACING['3XS']} 0`,
+  },
+  ':hover span': {
+    boxShadow: `inset 0 -2px ${COLORS.teal[400]}`
+  },
+})
+
 function NavPrimaryItem({
   children,
   label,
@@ -130,12 +154,23 @@ function NavPrimaryItem({
     <PrimaryNavItem>
       {children ? (
         <React.Fragment>
-          <PrimaryNavButton onClick={onClick} open={open}>
+          <PrimaryNavButton onClick={onClick} open={open} aria-expanded={open}>
             <span class="text">{label}</span>
           </PrimaryNavButton>
           {open && (
             <Dropdown>
-              <DropdownNav items={children} />
+              <DropdownList>
+                {children.map(item => (
+                  <DropdownListItem>
+                    <DropdownListItemLink href="">
+                      <span>{item.label}</span>
+                    </DropdownListItemLink>
+                    <p style={{
+                      color: COLORS.neutral['300']
+                    }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
+                  </DropdownListItem>
+                ))}
+              </DropdownList>
             </Dropdown>
           )}
         </React.Fragment>
@@ -181,9 +216,9 @@ function NavPrimary({ primary }) {
 // Weirdness to get full width.
 const DropdownContainer = styled('div')({
   border: `solid 1px ${COLORS.neutral[100]}`,
+  borderTop: 'none',
   position: 'absolute',
-  width: 'calc(100% + 10vw)',
-  margin: '0 -5vw',  // Undo site margins to be full width.
+  width: '100%',
   background: 'white',
   left: '0',
   marginTop: '1px', // Otherwise covers the header bottom border.
@@ -192,155 +227,16 @@ const DropdownContainer = styled('div')({
 })
 
 const DropdownInnerContainer = styled('div')({
-  position: 'relative'
-})
-
-const dropdown_nav_item_styles = {
-  ...TYPOGRAPHY['3XS'],
-  display: 'block',
-  width: '100%',
-  textAlign: 'left',
-  padding: SPACING['XS'],
-  borderLeft: 'solid 3px transparent',
-  color: COLORS.neutral['400']
-}
-
-const DropdownNavButton = styled('button')(
-  {
-    ...dropdown_nav_item_styles,
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    ':hover': {
-      cursor: 'pointer'
-    }
-  },
-  ({ open }) => {
-    if (open) {
-      return {
-        borderColor: COLORS.teal[400],
-        background: COLORS.teal[100]
-      }
-    }
-  }
-)
-
-const DropdownNavLink = styled('a')(
-  {
-    ...dropdown_nav_item_styles,
-    ':hover': {
-      cursor: 'pointer'
-    }
-  }
-)
-
-const dropdown_padding = SPACING['L']
-
-const DropdownPanel = styled('div')({
-  position: 'absolute',
-  right: 0,
-  top: 0, // Padding of the DropdownInnerContainer.
-  width: 'calc(100% - 20rem)', // less the width of the Dropdown nav list items.
-  padding: dropdown_padding
-})
-
-const PanelLink = styled('a')({
-  color: COLORS.neutral[400],
-  display: 'inline-block',
-  padding: `${SPACING['2XS']} 0`,
-  textDecoration: 'none',
-  ':hover': {
-    textDecoration: 'underline'
-  }
+  padding: `${SPACING['M']} ${SPACING['XL']}`
 })
 
 function Dropdown({ children }){
   return (
     <DropdownContainer>
-      <Margins>
-        <DropdownInnerContainer>
-          {children}
-        </DropdownInnerContainer>
-      </Margins>
+      <DropdownInnerContainer>
+        {children}
+      </DropdownInnerContainer>
     </DropdownContainer>
-  )
-}
-
-function DropdownNav({ items }) {
-  const [open, setOpen] = useState(null)
-
-  function handleClick(i) {
-    if (i === open) {
-      setOpen(null)
-    } else {
-      setOpen(i)
-    }
-  }
-
-  return (
-    <ul style={{
-      width: '20rem',
-      borderRight: `solid 1px ${COLORS.neutral[100]}`,
-      paddingTop: dropdown_padding,
-      paddingBottom: SPACING['3XL']
-    }}>
-      {items.map((item, i) => (
-        <li key={item.label}>
-          {item.children ? (
-            <React.Fragment>
-              <DropdownNavButton
-                onClick={() => handleClick(i)}
-                open={open === i}
-              >
-                {item.label}
-
-                <span style={{
-                  lineHeight: '0',
-                  marginLeft: '1rem'
-                }}><Icon icon="navigate_next" /></span>
-              </DropdownNavButton>
-
-              {open === i && (
-                <DropdownPanel>
-                  <div
-                    style={{
-                      paddingBottom: SPACING['M'],
-                      marginBottom: SPACING['M'],
-                      borderBottom: `solid 1px ${COLORS.neutral['100']}`
-                    }}
-                  >
-                    <h2
-                      style={{
-                        ...TYPOGRAPHY['M']
-                      }}
-                    >{item.label}</h2>
-                  </div>
-
-                  {item.children && (
-                    <ul style={{ columns: '2' }}>
-                      {item.children.map(child => (
-                        <li
-                          style={{
-                            ...TYPOGRAPHY['XS']
-                          }}
-                        ><PanelLink
-                          href={child.to}
-                        >{child.label}</PanelLink></li>
-                      ))}
-                    </ul>
-                  )}
-                </DropdownPanel>
-              )}
-            </React.Fragment>
-          ) : (
-            <DropdownNavLink>
-              {item.label}
-            </DropdownNavLink>
-          )}
-          
-        </li>
-      ))}
-    </ul>
   )
 }
 
@@ -366,6 +262,7 @@ const NavSecondaryLink = styled('a')({
   marginLeft: SPACING['L'],
   cursor: 'pointer',
   color: COLORS.neutral['300'],
+  textDecoration: 'none',
   ':hover': {
     textDecoration: 'underline'
   }
@@ -377,7 +274,7 @@ function NavSecondary({ secondary }) {
       <ul>
        {secondary.map(item => (
           <NavSecondaryItem key={item.to}>
-            <NavSecondaryLink to={item.to}>{item.label}</NavSecondaryLink>
+            <NavSecondaryLink href={item.to}>{item.label}</NavSecondaryLink>
           </NavSecondaryItem>
        ))}
       </ul>

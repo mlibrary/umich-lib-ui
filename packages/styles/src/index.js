@@ -286,9 +286,11 @@ export function GlobalStyleSheet() {
 }
 
 export const Margins = styled('div')({
-  margin: `0 ${SPACING['M']}`,
+  margin: '0 auto',
+  maxWidth: '1280px',
+  padding: `0 ${SPACING['M']}`,
   [MEDIA_QUERIES.LARGESCREEN]: {
-    margin: `0 5vw`
+    padding: `0 ${SPACING['XL']}`
   }
 })
 
