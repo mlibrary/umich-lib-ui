@@ -10,6 +10,7 @@ import {
 } from '@umich-lib/styles'
 import Icon from '@umich-lib/icon'
 
+import useESC from './use-esc'
 
 const StyledHeader = styled('header')({
   display: 'block',
@@ -84,7 +85,9 @@ const UMichLibrary = () => (
 )
 
 const PrimaryNavItem = styled('li')({
-  display: 'inline-block',
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    display: 'inline-block'
+  }
 })
 
 const primary_nav_item_styles = {
@@ -117,8 +120,10 @@ const PrimaryNavLink = styled('a')({
 })
 
 const DropdownList = styled('ul')({
-  columns: '2',
-  columnGap: SPACING['XL']
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    columns: '2',
+    columnGap: SPACING['XL']
+  }
 })
 
 const DropdownListItem = styled('li')({
@@ -171,11 +176,15 @@ function NavPrimaryItem({
     <PrimaryNavItem>
       {children ? (
         <React.Fragment>
-          <PrimaryNavButton onClick={onClick} open={open} aria-expanded={open}>
+          <PrimaryNavButton
+            onClick={onClick}
+            open={open}
+            aria-expanded={open}
+          >
             <span className="text">{text}</span>
           </PrimaryNavButton>
           {open && (
-            <Dropdown>
+            <Dropdown onClose={onClick}>
               <DropdownList>
                 {children.map(item => (
                   <DropdownListItem>
@@ -252,9 +261,11 @@ const DropdownInnerContainer = styled('div')({
   padding: `${SPACING['M']}`
 })
 
-function Dropdown({ children }){
+function Dropdown({ children, onClose }) {
+  const [ node ] = useESC(onClose)
+
   return (
-    <DropdownContainer>
+    <DropdownContainer ref={node}>
       <DropdownInnerContainer>
         {children}
       </DropdownInnerContainer>
