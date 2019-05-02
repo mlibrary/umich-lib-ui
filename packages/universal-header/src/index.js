@@ -33,8 +33,13 @@ const HeaderContent = styled('div')({
 */
 const HeaderText = styled('span')({
   ...TYPOGRAPHY['3XS'],
-  color: COLORS.neutral[400]
+  color: COLORS.neutral[300]
 })
+
+const hover_styles = {
+  boxShadow: `inset 0 -2px ${COLORS.teal[400]}`,
+  color: COLORS.neutral[400]
+}
 
 /*
   Link has a larger touch target and
@@ -49,7 +54,7 @@ const Link = styled('a')({
   padding: `${SPACING['XS']} 0`,
   ':hover': {
     'span': {
-      boxShadow: `inset 0 -2px ${COLORS.teal[400]}`
+      ...hover_styles
     }
   }
 })
@@ -63,7 +68,7 @@ const SitesButton = styled('button')({
   padding: `${SPACING['XS']} 0`,
   ':hover': {
     'span': {
-      boxShadow: `inset 0 -2px ${COLORS.teal[400]}`
+      ...hover_styles
     }
   }
 })
@@ -93,8 +98,7 @@ const Overlay = styled('div')({
   marginBottom: SPACING['L'],
   [MEDIA_QUERIES.LARGESCREEN]: {
     padding: SPACING['XL'],
-    maxWidth: `calc(90vw)`,
-    width: `862px`,
+    maxWidth: `calc(100vw - ${SPACING['2XL']} * 2)` // less the margins
   }
 })
 
@@ -126,9 +130,15 @@ const LinksContainer = styled('div')({
   [MEDIA_QUERIES.LARGESCREEN]: {
     display: 'flex',
     justifyContent: 'space-between',
-    'ul:first-of-type': {
+    'ul:last-of-type': {
+      minWidth: '14rem',
       margin: '0',
-      marginRight: SPACING['L']
+      marginLeft: SPACING['XL'],
+      paddingLeft: SPACING['XL'],
+      borderLeft: `solid 1px ${COLORS.neutral[100]}`,
+      'li': {
+        marginBottom: SPACING['S']
+      }
     }
   }
 })
@@ -136,13 +146,12 @@ const LinksContainer = styled('div')({
 const LinkItem = styled('li')({
   maxWidth: '32rem',
   ':not(:last-child)': {
-
     marginBottom: '1rem'
   }
 })
 
 const LinkTitle = styled('span')({
-  ...TYPOGRAPHY['3XS'],
+  fontWeight: '800',
   display: 'inline-block',
   color: COLORS.neutral['400']
 })
@@ -250,7 +259,7 @@ function Sites() {
       <SitesButton
         onClick={() => setOpen(!open)}
         aria-expanded={open}
-      ><HeaderText>Explore</HeaderText> {open ? (<Icon icon="expand_less" />) : (<Icon icon="expand_more" />)}</SitesButton>
+      ><HeaderText>Explore</HeaderText> <Icon icon="expand_more" /></SitesButton>
       {open && (
         <Overlay>
           <SitesLede><Highlight>Explore</Highlight> what the library has to offer.</SitesLede>
@@ -278,10 +287,10 @@ function UniversalHeader() {
       <Margins>
         <HeaderContent>
           <LargeScreen>
-            <Link href="https://www.lib.umich.edu/"><HeaderText>University of Michigan</HeaderText></Link>
+            <Link href="https://www.lib.umich.edu/"><HeaderText>University of Michigan library</HeaderText></Link>
           </LargeScreen>
           <SmallScreen>
-          <Link href="https://www.lib.umich.edu/"><HeaderText><abbr title="University of Michigan">U-M</abbr> Library</HeaderText></Link>
+            <Link href="https://www.lib.umich.edu/"><HeaderText><abbr title="University of Michigan">U-M</abbr> Library</HeaderText></Link>
           </SmallScreen>
           <Sites />
         </HeaderContent>
