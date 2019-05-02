@@ -92,10 +92,7 @@ const primary_nav_item_styles = {
   paddingBottom: `calc(${SPACING['S']} - 3px)`, // less border spacing.
   marginRight: SPACING['M'],
   cursor: 'pointer',
-  borderBottom: `solid 3px transparent`,
-  ':hover': {
-    borderBottom: `solid 3px ${COLORS.teal['400']}`
-  }
+  borderBottom: `solid 3px transparent`
 }
 
 const nav_primary_item_active_styles = {
@@ -131,7 +128,7 @@ const DropdownListItem = styled('li')({
 })
 
 const DropdownListItemLink = styled('a')({
-  ...TYPOGRAPHY['3XS'],
+  fontWeight: '800',
   textDecoration: 'none',
   color: COLORS.neutral['400'],
   padding: `${SPACING['XS']} 0`,
@@ -252,7 +249,7 @@ const DropdownContainer = styled('div')({
 })
 
 const DropdownInnerContainer = styled('div')({
-  padding: `${SPACING['M']} ${SPACING['XL']}`
+  padding: `${SPACING['M']}`
 })
 
 function Dropdown({ children }){
@@ -316,11 +313,11 @@ function NavSecondary({
   return (
     <NavSecondaryContainer>
       <ul>
-       {secondary.map(item => (
+        {secondary.map(item => (
           <NavSecondaryItem key={item.to}>
             <NavSecondaryLinkContainer {...item} linkAs={linkAs}/>
           </NavSecondaryItem>
-       ))}
+        ))}
       </ul>
     </NavSecondaryContainer>
   )
