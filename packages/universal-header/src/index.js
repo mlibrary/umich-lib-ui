@@ -85,7 +85,7 @@ const SitesContainer = styled('div')({
 
 const Overlay = styled('div')({
   background: 'white',
-  zIndex: '1',
+  zIndex: '10',
   position: `absolute`,
   left: `auto`,
   right: `0`,
