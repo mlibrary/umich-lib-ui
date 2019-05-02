@@ -1,14 +1,14 @@
 {
   "name": "@umich-lib/text-input",
-  "version": "1.0.0-alpha.5",
+  "version": "1.0.0-alpha.6",
   "module": "lib/index.js",
   "dependencies": {
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
     "@reach/visually-hidden": "^0.1.1",
-    "@umich-lib/icon": "^1.0.0-alpha.6",
-    "@umich-lib/input": "^1.0.0-alpha.5",
-    "@umich-lib/styles": "^2.0.0-alpha.5"
+    "@umich-lib/icon": "^1.0.0-alpha.7",
+    "@umich-lib/input": "^1.0.0-alpha.6",
+    "@umich-lib/styles": "^2.0.0-alpha.6"
   },
   "peerDependencies": {
     "react": "^16.8.5",
