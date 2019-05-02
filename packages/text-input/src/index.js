@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
-import { COLORS, base } from '@umich-lib/styles'
+import { COLORS } from '@umich-lib/styles'
 import Input from '@umich-lib/input'
 import Icon from '@umich-lib/icon'
 import VisuallyHidden from "@reach/visually-hidden";
@@ -18,7 +18,6 @@ const StyledFormItem = styled('div')(
 )
 
 const StyledLabel = styled('label')({
-  base,
   display: 'block',
   marginBottom: '0.5rem',
   boxSizing: 'border-box'

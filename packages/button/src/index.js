@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import {
-  COLORS,
-  RESET_BUTTON
+  COLORS
 } from '@umich-lib/styles'
 
 const createButtonStyles = (props) => {
@@ -59,12 +58,10 @@ const createButtonStyles = (props) => {
 }
 
 const StyledButton = styled('button')(
-  { ...RESET_BUTTON },
   props => createButtonStyles(props)
 )
 
 const StyledAnchor = styled('a')(
-  { ...RESET_BUTTON },
   props => createButtonStyles(props)
 )
 
