@@ -3,6 +3,7 @@
   "description": "U-M Design System documentation site.",
   "version": "1.0.0-alpha.5",
   "author": "Jon Earley <earleyj@umich.edu>",
+  "private": true,
   "dependencies": {
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.10",
