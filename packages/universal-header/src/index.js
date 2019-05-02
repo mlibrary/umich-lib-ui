@@ -144,6 +144,7 @@ const LinksContainer = styled('div')({
 })
 
 const LinkItem = styled('li')({
+  position: 'relative',
   maxWidth: '32rem',
   ':not(:last-child)': {
     marginBottom: '1rem'
@@ -157,9 +158,9 @@ const LinkTitle = styled('span')({
 })
 
 const LinkLink = styled('a')({
-  display: 'block',
   textDecoration: 'none',
   ':hover': {
+    cursor: 'pointer',
     ['span']: {
       boxShadow: `inset 0 -2px ${COLORS.teal[400]}`
     }
@@ -202,12 +203,12 @@ function SiteLinks({ data }) {
             <LinkTitle>
               {d.title}
             </LinkTitle>
-            {d.description && (
-              <LinkDescription>
-                {d.description}
-              </LinkDescription>
-            )}
           </LinkLink>
+          {d.description && (
+            <LinkDescription>
+              {d.description}
+            </LinkDescription>
+          )}
         </LinkItem>
       ))}
     </ul>
