@@ -1,14 +1,14 @@
 {
   "name": "@umich-lib/universal-header",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.5",
   "module": "lib/index.js",
   "dependencies": {
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
-    "@umich-lib/icon": "^1.0.0-alpha.5",
-    "@umich-lib/loading": "^1.0.0-alpha.4",
-    "@umich-lib/styles": "^2.0.0-alpha.4",
-    "@umich-lib/alert": "^1.0.0-alpha.4",
+    "@umich-lib/alert": "^1.0.0-alpha.5",
+    "@umich-lib/icon": "^1.0.0-alpha.6",
+    "@umich-lib/loading": "^1.0.0-alpha.5",
+    "@umich-lib/styles": "^2.0.0-alpha.5",
     "axios": "^0.18.0"
   },
   "peerDependencies": {
