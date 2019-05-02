@@ -39,9 +39,7 @@ const StyledAlert = styled(ReachAlert)(
 
 const StyledAlertInner = styled('div')({
   margin: '0 auto',
-  padding: '0 1rem',
-  fontSize: '0.875rem',
-  maxWidth: SITE_WIDTH
+  padding: '0 1rem'
 })
 
 /**

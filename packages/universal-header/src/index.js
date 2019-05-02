@@ -12,6 +12,7 @@ import {
 } from '@umich-lib/styles'
 import Icon from '@umich-lib/icon'
 import Loading from '@umich-lib/loading'
+import Alert from '@umich-lib/alert'
 
 /*
   Add background color and flex the title
@@ -218,6 +219,7 @@ function Sites() {
   const node = useRef();
   const [open, setOpen] = useState(false);
   const [data, setData] = useState(null);
+  const [error, setError] = useState(false);
 
   const handleClick = e => {
     if (node.current.contains(e.target)) {
@@ -241,6 +243,7 @@ function Sites() {
     if (!data) {
       axios.get("https://dev.lib.umich.edu/api/universalheader")
         .then(result => setData(transformData(result.data)))
+        .catch(error => setError(true))
     }
   }, []);
 
@@ -260,19 +263,30 @@ function Sites() {
         onClick={() => setOpen(!open)}
         aria-expanded={open}
       ><HeaderText>Explore</HeaderText> <Icon icon="expand_more" /></SitesButton>
+      
       {open && (
         <Overlay>
           <SitesLede><Highlight>Explore</Highlight> what the library has to offer.</SitesLede>
-          {data ? (
-            <LinksContainer>
-              <SiteLinks data={data.primary} />
-              <SiteLinks data={data.secondary} />
-            </LinksContainer>
+          {error ? (
+            <Alert intent="warning">
+              <p style={{ maxWidth: '36rem' }}><strong style={{ fontWeight: '800' }}>Error</strong>: We are unable to display our list of library websites at this time. We will make them available to you as soon as we can.</p>
+              <p style={{ marginTop: '1rem' }}>Please try refreshing or try again later.</p>
+            </Alert>
           ) : (
-            <LoadingContainer>
-              <Loading />
-            </LoadingContainer>
+            <React.Fragment>
+              {data ? (
+                <LinksContainer>
+                  <SiteLinks data={data.primary} />
+                  <SiteLinks data={data.secondary} />
+                </LinksContainer>
+              ) : (
+                <LoadingContainer>
+                  <Loading />
+                </LoadingContainer>
+              )}
+            </React.Fragment>
           )}
+          
         </Overlay>
       )}
     </SitesContainer>
