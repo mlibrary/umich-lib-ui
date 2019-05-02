@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled'
 import {
@@ -172,19 +172,33 @@ function NavPrimaryItem({
   onClick,
   linkAs
 }) {
+  const buttonElement = useRef()
+
+  function handleButtonClick() {
+    // If this is open then it will be closed.
+    if (open) {
+      console.log('set focus', open, text)
+
+      buttonElement.current.focus()
+    }
+
+    onClick()
+  }
+
   return (
     <PrimaryNavItem>
       {children ? (
         <React.Fragment>
           <PrimaryNavButton
-            onClick={onClick}
+            onClick={handleButtonClick}
             open={open}
             aria-expanded={open}
+            ref={buttonElement}
           >
             <span className="text">{text}</span>
           </PrimaryNavButton>
           {open && (
-            <Dropdown onClose={onClick}>
+            <Dropdown onClose={handleButtonClick}>
               <DropdownList>
                 {children.map(item => (
                   <DropdownListItem>
