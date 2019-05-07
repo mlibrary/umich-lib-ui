@@ -5,7 +5,8 @@ import PropTypes from 'prop-types';
 const baseListStyles = {
   margin: '0',
   padding: '0',
-  listStyle: 'none'
+  listStyle: 'none',
+  maxWidth: '38rem'
 }
 
 const StyledList = styled('ul')({

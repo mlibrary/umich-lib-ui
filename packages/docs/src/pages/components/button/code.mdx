@@ -1,0 +1,89 @@
+---
+title: Button
+navigation:
+  - text: 'Code'
+    to: '/components/button/code'
+  - text: 'Usage'
+    to: '/components/button/usage'
+---
+
+import { Button, Text } from '@umich-lib/core'
+
+Source: https://github.com/mlibrary/umich-lib-ui/blob/master/packages/button/src/index.js
+
+```js
+import { Button } from '@umich-lib/core'
+```
+
+```jsx live=true
+<Button>Example</Button>
+```
+
+## Button props
+
+|Prop|Type|Required|Default|
+|----|----|--------|-------|
+|[kind](#kind)|enum "primary" or "secondary"|false|"primary"|
+|[small](#small)|boolean|false|"false"|
+|[children](#children)|node|true|n/a|
+|[element props](#element-props)|spread|false|n/a|
+
+### kind
+
+*Type*: enum "primary" | "secondary" default: "primary"
+
+Controls how the `Button` is styled.
+
+```jsx live=true
+<Button>Primary</Button>
+```
+
+```jsx live=true
+<Button kind="secondary">Secondary</Button>
+```
+
+### small
+
+*Type*: boolean default: "false"
+
+Controls if the `Button` is styled smaller.
+
+```jsx live=true
+<Button small>Small primary</Button>
+```
+
+```jsx live=true
+<Button kind="secondary" small>Small secondary</Button>
+```
+
+### children
+
+*Type*: `node`
+
+Regular React children.
+
+```jsx live=true
+<Button>
+  <Icon icon="search" size={24} /> Search
+</Button>
+```
+
+```jsx live=true
+<Button>
+  <span>Anything can go here.</span>{" "}
+  <span>It's true.</span>
+</Button>
+```
+
+### element props
+
+Any props not listed above will be spread onto the underlying element.
+
+```jsx live=true
+<Button
+  style={{ width: '10rem' }}
+  className="a-custom-class"
+>
+  Primary
+</Button>
+```

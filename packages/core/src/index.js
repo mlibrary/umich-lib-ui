@@ -3,13 +3,16 @@ import Button from "@umich-lib/button"
 import Chat from "@umich-lib/chat"
 import Header from "@umich-lib/header"
 import Heading from "@umich-lib/heading"
-import Icon from "@umich-lib/icon"
+import Icon, { icons } from "@umich-lib/icon"
 import Input from "@umich-lib/input"
 import List from "@umich-lib/list"
 import RecordFields from "@umich-lib/record-fields"
 import ResourceAccess from "@umich-lib/resource-access"
 import Text from "@umich-lib/text"
 import TextInput from "@umich-lib/text-input"
+import UniversalHeader from '@umich-lib/universal-header'
+import Navigation from '@umich-lib/navigation'
+import Loading from '@umich-lib/loading'
 import {
   Expandable,
   ExpandableButton,
@@ -21,7 +24,12 @@ import {
   INTENT_COLORS,
   BREAKPOINTS,
   MEDIA_QUERIES,
-  GlobalStyleSheet
+  SPACING,
+  GlobalStyleSheet,
+  TYPOGRAPHY,
+  Margins,
+  SmallScreen,
+  LargeScreen
 } from "@umich-lib/styles"
 import {
   Tabs,
@@ -40,12 +48,15 @@ export {
   Header,
   Heading,
   Icon,
+  icons,
   Input,
   List,
+  Loading,
   RecordFields,
   ResourceAccess,
   Text,
-  TextInput
+  TextInput,
+  UniversalHeader
 }
 
 /*
@@ -64,9 +75,14 @@ export {
 export {
   COLORS,
   INTENT_COLORS,
+  SPACING,
   BREAKPOINTS,
   MEDIA_QUERIES,
-  GlobalStyleSheet
+  GlobalStyleSheet,
+  TYPOGRAPHY,
+  Margins,
+  SmallScreen,
+  LargeScreen
 }
 
 /*

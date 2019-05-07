@@ -1,16 +1,15 @@
 {
   "name": "@umich-lib/list",
-  "version": "0.1.2",
+  "version": "1.0.0-alpha.6",
   "module": "lib/index.js",
-  "main": "src/index.js",
   "dependencies": {
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
-    "@umich-lib/styles": "^1.0.1"
+    "@umich-lib/styles": "^2.0.0-alpha.6"
   },
   "peerDependencies": {
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
   },
   "files": [
     "lib"
@@ -18,5 +17,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "d5691544a2e539b8afaebc23f84e015400834c18"
+  "gitHead": "08343ada20a4126c5ea2a7246ee18a8cdb6ce75e"
 }

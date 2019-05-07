@@ -1,40 +1,25 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled'
 import {
   COLORS,
-  SITE_WIDTH,
-  MEDIA_QUERIES
+  MEDIA_QUERIES,
+  SPACING,
+  Margins,
+  TYPOGRAPHY
 } from '@umich-lib/styles'
+import Icon from '@umich-lib/icon'
 
+import useESC from './use-esc'
 
 const StyledHeader = styled('header')({
   display: 'block',
-  background: COLORS.brand.blue,
-  padding: '0.8rem 0'
+  background: 'white',
+  borderBottom: `solid 1px ${COLORS.neutral['100']}`
 })
 
-const StyledHeaderInner = styled('div')({
-  margin: '0 auto',
-  padding: '0 1rem',
-  maxWidth: SITE_WIDTH,
-  '> *:not(:last-child)': {
-    marginBottom: '1rem'
-  },
-  [MEDIA_QUERIES.LARGESCREEN]: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    '> *:not(:last-child)': {
-      marginBottom: '0'
-    }
-  }
-})
-
-const StyledNav = styled('nav')({
-  [MEDIA_QUERIES.LARGESCREEN]: {
-    marginLeft: '1rem'
-  }
+const HeaderInnerContainer = styled('div')({
+  position: 'relative'
 })
 
 const StyledLogoNameContainer = styled('div')({
@@ -55,28 +40,8 @@ const StyledLogoNameContainer = styled('div')({
 
 const StyledLogoContainer = styled('div')({
   display: 'flex',
-  alignItems: 'center'
-})
-
-const StyledNameContainer = styled('div')({
-  display: 'block'
-})
-
-const StyledNavList = styled('ul')({
-  listStyle: "none",
-  padding: '0',
-  margin: '0',
-  'a': {
-    color: 'white',
-    textDecoration: 'none'
-  }
-})
-
-const StyledNavListItem = styled('li')({
-  display: 'inline-block',
-  '&:not(:last-child)': {
-    marginRight: '1rem'
-  }
+  alignItems: 'center',
+  padding: `${SPACING['M']} 0`
 })
 
 const UMichBlockM = () => (
@@ -84,7 +49,7 @@ const UMichBlockM = () => (
     viewBox="0 0 202 144"
     style={{
       display: 'inherit',
-      height: '26px',
+      height: '2.2rem',
     }}
   >
     <title>University of Michigan</title>
@@ -101,12 +66,12 @@ const UMichLibrary = () => (
     viewBox="0 0 715 144"
     style={{
       display: 'inherit',
-      height: '1.6rem',
+      height: '2.2rem',
     }}
   >
     <title>Library</title>
     <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-      <g transform="translate(-281.000000, 0.000000)" fill="#FFFFFF">
+      <g transform="translate(-281.000000, 0.000000)" fill={COLORS.blue['400']}>
         <polyline points="281.497 144 281.497 0.202 299.817 0.202 299.817 128.067 352.598 128.067 352.598 144 281.497 144"></polyline>
         <polygon points="374.194 143.94 392.511 143.94 392.511 0.202 374.194 0.202"></polygon>
         <path d="M436.948,128.067 L462.84,128.067 C482.357,128.067 489.334,114.123 489.334,103.573 C489.334,80.665 475.187,76.682 456.472,76.682 L436.948,76.682 L436.948,128.067 Z M436.948,60.747 L463.64,60.747 C477.974,60.547 484.954,51.788 484.954,37.845 C484.954,25.896 478.174,16.135 462.84,16.135 L436.948,16.135 L436.948,60.747 Z M418.625,144 L418.625,0.202 L465.433,0.202 C485.349,0.202 492.119,6.972 497.495,14.942 C502.481,22.71 503.275,31.276 503.275,34.059 C503.275,51.984 497.102,63.939 478.576,68.117 L478.576,69.117 C499.096,71.507 508.054,83.854 508.054,103.573 C508.054,140.417 481.165,144 464.833,144 L418.625,144 L418.625,144 Z"></path>
@@ -119,21 +84,254 @@ const UMichLibrary = () => (
   </svg>
 )
 
-const NavItem = ({
-  item,
-  renderAnchor
-}) => {
-  if (item.href) {
+const PrimaryNavItem = styled('li')({
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    display: 'inline-block'
+  }
+})
+
+const primary_nav_item_styles = {
+  ...TYPOGRAPHY['XS'],
+  paddingBottom: `calc(${SPACING['S']} - 3px)`, // less border spacing.
+  marginRight: SPACING['M'],
+  cursor: 'pointer',
+  borderBottom: `solid 3px transparent`
+}
+
+const nav_primary_item_active_styles = {
+  borderBottom: `solid 3px ${COLORS.teal['400']}`
+}
+
+const PrimaryNavButton = styled('button')(
+  {
+    ...primary_nav_item_styles,
+  }, ({ open }) => {
+
+    if (open) {
+      return {
+        ...nav_primary_item_active_styles
+      }
+    }
+  })
+
+// TODO: Pass in component to use. Render prop?
+const PrimaryNavLink = styled('a')({
+  ...primary_nav_item_styles
+})
+
+const DropdownList = styled('ul')({
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    columns: '2',
+    columnGap: SPACING['XL']
+  }
+})
+
+const DropdownListItem = styled('li')({
+  breakInside: 'avoid',
+  padding: `${SPACING['S']} ${SPACING['L']}`,
+  maxWidth: '38rem'
+})
+
+const DropdownListItemLink = styled('a')({
+  fontWeight: '800',
+  textDecoration: 'none',
+  color: COLORS.neutral['400'],
+  padding: `${SPACING['XS']} 0`,
+  'span': {
+    padding: `${SPACING['3XS']} 0`,
+  },
+  ':hover span': {
+    boxShadow: `inset 0 -2px ${COLORS.teal[400]}`
+  },
+})
+
+function DropdownListItemLinkContainer({
+  text,
+  to,
+  linkAs
+}) {
+  if (linkAs) {
     return (
-      <a href={item.href}>{ item.text }</a>
+      <DropdownListItemLink to={to} as={linkAs}>
+        <span>{text}</span>
+      </DropdownListItemLink>
+    )
+  }
+  return (
+    <DropdownListItemLink href={to}>
+      <span>{text}</span>
+    </DropdownListItemLink>
+  )
+}
+
+function NavPrimaryItem({
+  children,
+  text,
+  to,
+  open,
+  onClick,
+  linkAs
+}) {
+  return (
+    <PrimaryNavItem>
+      {children ? (
+        <React.Fragment>
+          <PrimaryNavButton
+            onClick={onClick}
+            open={open}
+            aria-expanded={open}
+          >
+            <span className="text">{text}</span>
+          </PrimaryNavButton>
+          {open && (
+            <Dropdown onClose={onClick}>
+              <DropdownList>
+                {children.map(item => (
+                  <DropdownListItem>
+                    <DropdownListItemLinkContainer linkAs={linkAs} {...item} />
+                    {item.description && (
+                      <p style={{
+                        color: COLORS.neutral['300']
+                      }}>{item.description}</p>
+                    )}
+                  </DropdownListItem>
+                ))}
+              </DropdownList>
+            </Dropdown>
+          )}
+        </React.Fragment>
+      ) : (
+        <PrimaryNavLink href={to}><span>{text}</span></PrimaryNavLink>
+      )}
+    </PrimaryNavItem>
+  )
+}
+
+function NavPrimary({
+  primary,
+  linkAs
+}) {
+  const [open, setOpen] = useState(null)
+
+  /*
+    If the user clicks on an already opened item
+    then they are trying to close it.
+
+    Otherwise set the new thing to open.
+  */
+  function handleOpen(i) {
+    if (open === i) {
+      setOpen(null)
+    } else {
+      setOpen(i)
+    }
+  }
+
+  return (
+    <nav role="navigation">
+      <ul>
+        {primary.map((item, i) => (
+          <NavPrimaryItem
+            {...item}
+            linkAs={linkAs}
+            key={item.text + i}
+            open={i === open}
+            onClick={() => handleOpen(i)}
+          />
+        ))}
+      </ul>
+    </nav>
+  )
+}
+
+// Weirdness to get full width.
+const DropdownContainer = styled('div')({
+  border: `solid 1px ${COLORS.neutral[100]}`,
+  borderTop: 'none',
+  position: 'absolute',
+  width: '100%',
+  background: 'white',
+  left: '0',
+  marginTop: '1px', // Otherwise covers the header bottom border.
+  boxShadow: `0 4px 8px 0 rgba(0, 0, 0, 0.1)`,
+  zIndex: '1'
+})
+
+const DropdownInnerContainer = styled('div')({
+  padding: `${SPACING['M']}`
+})
+
+function Dropdown({ children, onClose }) {
+  const [ node ] = useESC(onClose)
+
+  return (
+    <DropdownContainer ref={node}>
+      <DropdownInnerContainer>
+        {children}
+      </DropdownInnerContainer>
+    </DropdownContainer>
+  )
+}
+
+const NavSecondaryContainer = styled('nav')({
+  position: 'absolute',
+  top: 0,
+  right: 0,
+  padding: SPACING['M'],
+  paddingRight: '0'
+})
+
+const nav_secondary_item_styles = {
+  ...TYPOGRAPHY['3XS']
+}
+
+const NavSecondaryItem = styled('li')({
+  display: 'inline-block'
+})
+
+const NavSecondaryLink = styled('a')({
+  ...nav_secondary_item_styles,
+  paddingBottom: SPACING['S'],
+  marginLeft: SPACING['L'],
+  cursor: 'pointer',
+  color: COLORS.neutral['300'],
+  textDecoration: 'none',
+  ':hover': {
+    textDecoration: 'underline'
+  }
+})
+
+function NavSecondaryLinkContainer({
+  to,
+  text,
+  linkAs
+}) {
+  if (linkAs) {
+    return (
+      <NavSecondaryLink to={to} as={linkAs}>{text}</NavSecondaryLink>
     )
   }
 
-  if (item.to) {
-    return (
-      renderAnchor(item)
-    )
-  }
+  return (
+    <NavSecondaryLink href={to}>{text}</NavSecondaryLink>
+  )
+}
+
+function NavSecondary({
+  secondary,
+  linkAs
+}) {
+  return (
+    <NavSecondaryContainer>
+      <ul>
+        {secondary.map(item => (
+          <NavSecondaryItem key={item.to}>
+            <NavSecondaryLinkContainer {...item} linkAs={linkAs}/>
+          </NavSecondaryItem>
+        ))}
+      </ul>
+    </NavSecondaryContainer>
+  )
 }
 
 /**
@@ -141,15 +339,14 @@ const NavItem = ({
 */
 const Header = ({
   name,
-  siteUrl,
-  nav,
-  renderAnchor,
-  className
+  primary,
+  secondary,
+  linkAs
 }) => {
   return (
-    <StyledHeader className={className}>
-      <StyledHeaderInner data-inner-container>
-        <StyledLogoNameContainer>
+    <StyledHeader>
+      <Margins>
+        <HeaderInnerContainer>
           <StyledLogoContainer>
             <a href="https://umich.edu/"><UMichBlockM className="logo__svg" /></a>
             <a
@@ -157,60 +354,36 @@ const Header = ({
               style={{
                 marginLeft: '0.5rem',
                 paddingLeft: '0.5rem',
-                borderLeft: 'solid 1px white',
+                borderLeft: `solid 1px ${COLORS.blue['400']}`,
                 marginRight: '0.5rem'
               }}
             ><UMichLibrary className="logo__svg" /></a>
           </StyledLogoContainer>
-          {name && siteUrl && (
-            <StyledNameContainer>
-              <a
-                href={siteUrl}
-                style={{
-                  color: 'white',
-                  textDecoration: 'none'
-                }}
-              >{name}</a>
-            </StyledNameContainer>
+          {primary && (
+            <NavPrimary
+              primary={primary}
+              linkAs={linkAs}
+            />
           )}
-        </StyledLogoNameContainer>
 
-        {nav && nav.length && (
-          <StyledNav>
-            <StyledNavList>
-              {nav.map((item, key) => (
-                <StyledNavListItem key={key}>
-                  <NavItem
-                    item={item} 
-                    renderAnchor={renderAnchor}
-                  />
-                </StyledNavListItem>
-              ))}
-            </StyledNavList>
-          </StyledNav>
-        )}
-      </StyledHeaderInner>
+          {secondary && (
+            <NavSecondary
+              secondary={secondary}
+              linkAs={linkAs}
+            />
+          )}
+        </HeaderInnerContainer>
+      </Margins>
     </StyledHeader>
   )
 }
 
 Header.propTypes = {
-  /**
-    Site name
-  */
   name: PropTypes.string,
-  /**
-    The url to go to when a user clicks the site name.
-  */
   siteUrl: PropTypes.string,
-  /**
-    The nav is an array of objects. The objects can have `text` and `href` or `to` attributes.
-  */
-  nav: PropTypes.array,
-  /**
-    A render prop to handle the nav object `to` prop.
-  */
-  renderAnchor: PropTypes.func
+  primary: PropTypes.array,
+  secondary: PropTypes.array,
+  linkAs: PropTypes.any
 };
 
 Header.defaultProps = {

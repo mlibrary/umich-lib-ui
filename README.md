@@ -30,7 +30,7 @@ npm run build:watch
 npm start
 ```
 
-## `www` / documentation site
+## docs package // documentation site
 
 Built with [Gatsby v2](https://www.gatsbyjs.org/) for a fast website.
 

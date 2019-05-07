@@ -1,0 +1,66 @@
+---
+title: Alert
+navigation:
+  - text: 'Code'
+    to: '/components/alert/code'
+  - text: 'Usage'
+    to: '/components/alert/usage'
+---
+
+import { Button, Text } from '@umich-lib/core'
+
+Source: https://github.com/mlibrary/umich-lib-ui/blob/master/packages/alert/src/index.js
+
+```js
+import { Alert } from '@umich-lib/core'
+```
+
+```jsx live=true
+<Alert>Hello there.</Alert>
+```
+
+## Alert props
+
+|Prop|Type|Required|Default|
+|----|----|--------|-------|
+|[intent](#intent)|enum "informational", "warning", "error", or "success"|false|"informational"|
+|[children](#children)|node|true|n/a|
+
+### intent
+
+*Type*: enum "informational", "warning", "error", or "success" default: "informational"
+
+Controls how the `Button` is styled visually.
+
+```jsx live=true
+<Alert intent="error">It's too late.</Alert>
+```
+```jsx live=true
+<Alert intent="success">You did it!</Alert>
+```
+```jsx live=true
+<Alert intent="warning">Don't do it!</Alert>
+```
+
+### children
+
+*Type*: `node`
+
+Regular React children.
+
+```jsx live=true
+<Alert>
+  <div 
+    style={{
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'baseline'
+    }}
+  >
+    <p>Did you know?</p>
+    <Button small onClick={
+      () => alert('Clicked!')
+    }>Yeah</Button>
+  </div>
+</Alert>
+```

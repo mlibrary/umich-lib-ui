@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
-import { COLORS, base } from '@umich-lib/styles'
+import { COLORS } from '@umich-lib/styles'
 import Input from '@umich-lib/input'
 import Icon from '@umich-lib/icon'
 import VisuallyHidden from "@reach/visually-hidden";
@@ -12,13 +12,12 @@ const StyledFormItem = styled('div')(
     boxSizing: 'border-box'
   },
   ({ invalid }) => ({
-    borderLeft: invalid && `solid 4px ${COLORS.red[600]}`,
+    borderLeft: invalid && `solid 4px ${COLORS.coral[400]}`,
     paddingLeft: invalid && '1rem'
   })
 )
 
 const StyledLabel = styled('label')({
-  base,
   display: 'block',
   marginBottom: '0.5rem',
   boxSizing: 'border-box'
@@ -27,14 +26,14 @@ const StyledLabel = styled('label')({
 const StyledFormItemDescription = styled('span')(
   {
     display: 'block',
-    color: COLORS.grey[600]
+    color: COLORS.neutral[400]
   }
 )
 
 const StyledFormItemErrorMessage = styled('p')(
   {
     marginTop: '0.5rem',
-    color: COLORS.red[600],
+    color: COLORS.coral[400],
     fontWeight: '600'
   }
 )

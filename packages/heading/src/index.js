@@ -1,48 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled'
-import { COLORS } from '@umich-lib/styles'
 
-const sizes = {
-  'xsmall': {
-    marginBottom: '0.25em',
-    marginTop: '1.5em',
-    fontSize: '1rem'
-  },
-  'small': {
-    marginBottom: '0.25em',
-    marginTop: '1.5em',
-    fontSize: '1rem'
-  },
-  'medium': {
-    marginBottom: '0.83333em',
-    marginTop: '1.875em',
-    fontSize: '1.2rem'
-  },
-  'large': {
-    marginBottom: '0.555em',
-    marginTop: '1.25em',
-    fontSize: '1.5rem'
-  },
-  'xlarge': {
-    marginBottom: '0.625em',
-    marginTop: '1.25em',
-    fontSize: '2.4rem'
-  }
-}
+import {
+  TYPOGRAPHY
+} from '@umich-lib/styles'
 
 /*
   Start with base styles and then bring in the
   styles specific to the size of the heading.
 */
 const StyledHeading = styled.h1(
-  {
-    display: 'block',
-    color: COLORS.grey[700],
-    fontWeight: '700',
-    lineHeight: '1.25'
-  },
-  ({ size }) => sizes[size]
+  ({ size }) => TYPOGRAPHY[size]
 )
 
 /**
@@ -51,10 +20,12 @@ const StyledHeading = styled.h1(
 const Heading = ({
   children,
   level,
+  className,
   ...other
 }) => (
   <StyledHeading
     as={'h' + level}
+    className={className}
     {...other}
   >{children}</StyledHeading>
 )
@@ -66,13 +37,7 @@ Heading.propTypes = {
     Avoid skipping heading levels: always start the page from level 1, next use level 2 and so on. Avoid using level 1 more than once on a page.
   */
   level: PropTypes.oneOf([1,2,3,4,5,6]),
-  size: PropTypes.oneOf([
-    'xsmall',
-    'small',
-    'medium',
-    'large',
-    'xlarge',
-  ]).isRequired
+  size: PropTypes.oneOf(Object.keys(TYPOGRAPHY)).isRequired
 };
 
 Heading.defaultProps = {

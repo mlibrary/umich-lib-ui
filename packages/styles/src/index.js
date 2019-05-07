@@ -1,55 +1,123 @@
 import React from "react";
 import { Global, css } from '@emotion/core' 
+import styled from '@emotion/styled'
+
+export const SPACING = {
+  '3XS': '0.125rem',
+  '2XS': '0.25rem',
+  'XS': '0.5rem',
+  'S': '0.75rem',
+  'M': '1rem',
+  'L': '1.5rem',
+  'XL': '2rem',
+  '2XL': '3rem',
+  '3XL': '4rem',
+  '4XL': '6rem'
+}
+
+export const TYPOGRAPHY = {
+  '3XL': {
+    fontSize: '3.5rem',
+    fontFamily: 'Crimson Text',
+    lineHeight: '1.25'
+  },
+  '2XL': {
+    fontSize: '2.25rem',
+    fontFamily: 'Crimson Text',
+    lineHeight: '1.25'
+  },
+  'XL': {
+    fontSize: '2rem',
+    fontWeight: '800',
+    lineHeight: '1.25'
+  },
+  'L': {
+    fontSize: '1.75rem',
+    fontWeight: '600',
+    lineHeight: '1.25'
+  },
+  'M': {
+    fontSize: '1.5rem',
+    fontWeight: '600',
+    lineHeight: '1.25'
+  },
+  'S': {
+    fontSize: '1.25rem',
+    fontWeight: '600'
+  },
+  'XS': {
+    fontSize: '1.125rem'
+  },
+  '2XS': {
+    fontSize: '1rem'
+  },
+  '3XS': {
+    fontSize: '0.875rem',
+    fontWeight: '800',
+    letterSpacing: '1.25px',
+    textTransform: 'uppercase'
+  }
+}
 
 /*
   Inspired by GitHub color system
   https://styleguide.github.com/primer/support/color-system/
 */
 export const COLORS = {
-  brand: {
-    maize: '#FFCB05',
-    blue: '#00274C'
-  },
-  grey: {
-    '600': '#262626',
-    '500': '#4E4E4E',
-    '400': '#CCC',
-    '300': '#E5E5E5',
-    '200': '#F2F2F2',
-    '100': '#FAFAFA'
+  maize: {
+    '100': '#FFF9E6',
+    '200': '#FFEA9B',
+    '300': '#FFDA50',
+    '400': '#FFCB05',
+    '500': '#EABA02'
   },
   blue: {
-    '700': '#00274C',
-    '600': '#0C5292',
-    '500': '#126DC1',
-    '400': '#CCE6FF',
-    '300': '#E6F3FF',
-    '200': '#F2F9FF'
+    '100': '#F7F8F9',
+    '200': '#B2BEC9',
+    '300': '#4C6781',
+    '400': '#00274C',
+    '500': '#001324'
   },
-  green: {
-    '600': '#057C42',
-    '500': '#05A657',
-    '400': '#E2F4EB'
+  neutral: {
+    '000': '#FFFFFF',
+    '100': '#E5E9ED',
+    '200': '#8A96A1',
+    '300': '#637381',
+    '400': '#212B36',
+    '500': '#06080A'
   },
-  orange: {
-    '600': '#AA5600',
-    '500': '#E77504',
-    '400': '#FFEEDD'
+  coral: {
+    '100': '#FDF0EB',
+    '200': '#F7C3B1',
+    '300': '#F19675',
+    '400': '#EB693B',
+    '500': '#CC4B1D'
   },
-  red: {
-    '600': '#C53B26',
-    '500': '#ED5D47',
-    '400': '#FFEAE7'
+  teal: {
+    '100': '#E9F2F5',
+    '200': '#A7CDDB',
+    '300': '#65A8BF',
+    '400': '#2483A4',
+    '500': '#106684'
+  },
+  beige: {
+    '100': '#FDFCF8',
+    '200': '#FAF5E6',
+    '300': '#F5EDD3',
+    '400': '#F2E6C1',
+    '500': '#D8CA9E'
   }
 }
 
-export const LINK_COLOR = COLORS.blue[500]
+export const LINK_COLOR = COLORS.teal[400]
+
+export const FONT_COLOR = COLORS.blue[500]
 
 export const INTENT_COLORS = {
-  informational: COLORS.blue[600],
-  success: COLORS.green[600],
-  warning: COLORS.orange[600],
-  error: COLORS.red[600]
+  informational: COLORS.blue[400],
+  success: COLORS.teal[400],
+  warning: COLORS.maize[400],
+  error: COLORS.coral[400]
 }
 
 export const BREAKPOINTS = {
@@ -159,25 +227,16 @@ export function GlobalStyleSheet() {
       are not being requests as another file to fetch, it's OK to import the
       font family because it's not as slow as tranditional setups.
     */
-    @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700');
+    @import url('https://fonts.googleapis.com/css?family=Crimson+Text|Muli:400,600,700');  
     
     body,
     html {
       padding: 0;
       margin: 0;
       font-size: 16px;
-      font-family: 'Source Sans Pro', sans-serif;
+      font-family: 'Muli', sans-serif;
       line-height: 1.5;
-    }
-    
-    /*
-      On large screens, make the font size a little bigger.
-    */
-    ${MEDIA_QUERIES.LARGESCREEN} {
-      body,
-      html {
-        font-size: 18px;
-      }
+      color: ${COLORS.neutral[400]}
     }
     
     /*
@@ -199,14 +258,10 @@ export function GlobalStyleSheet() {
       Spacing helpers
     */
     .y-spacing > *:not(:last-child) {
-      margin-bottom: 1rem;
+      margin-bottom: ${SPACING['XL']};
     }
     .x-spacing > *:not(:last-child) {
-      margin-right: 1rem;
-    }
-    *:focus {
-      outline: 2px solid ${COLORS.maize};
-      outline-offset: 0;
+      margin-right: ${SPACING['XL']};
     }
     .layout-flex {
       display: flex;
@@ -229,3 +284,27 @@ export function GlobalStyleSheet() {
     />
   )
 }
+
+export const Margins = styled('div')({
+  width: '100%',
+  margin: '0 auto',
+  maxWidth: '1280px',
+  padding: `0 ${SPACING['M']}`,
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    padding: `0 ${SPACING['2XL']}`
+  }
+})
+
+export const LargeScreen = styled('div')({
+  display: 'none',
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    display: 'block'
+  }
+})
+
+export const SmallScreen = styled('div')({
+  display: 'block',
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    display: 'none'
+  }
+})
