@@ -11,6 +11,7 @@ import {
 } from '../../../packages/styles'
 import "../scss/init.scss"
 import styled from '@emotion/styled'
+import Alert from '../../../packages/alert'
 import favicon from '../../static/favicon.ico'
 
 const DocContainer = styled('div')({
@@ -97,6 +98,16 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <GlobalStyleSheet />
+
+        <Alert intent="informational">
+          <div style={{
+            fontSize: '1rem'
+          }}>
+            <p>
+              <strong style={{ fontWeight: '600' }}>U-M Design System v1 is live!</strong> <a href="https://design-system.lib.umich.edu/">View v1 documentation</a> and upgrade from v0.
+            </p>
+          </div>
+        </Alert>
         <DocContainer>
           <StyledHeaderContainer role="banner">
             <Header name="Design System" />
