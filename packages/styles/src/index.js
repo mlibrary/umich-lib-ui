@@ -246,12 +246,15 @@ export function GlobalStyleSheet() {
       -webkit-font-smoothing: antialiased;
       box-sizing: border-box;
     }
-    
-    /*
-      Link color
-    */
+
     a {
-      color: ${LINK_COLOR};
+      color: inherit;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    button {
+      cursor: pointer;
     }
     
     /*
@@ -301,6 +304,52 @@ export const LargeScreen = styled('div')({
     display: 'block'
   }
 })
+
+export const LINK_STYLES = {
+  'default': {
+    color: COLORS.teal['400'],
+    boxShadow: `inset 0 -1px ${COLORS.teal[400]}`,
+    ':hover': {
+      boxShadow: `inset 0 -2px ${COLORS.teal[400]}`,
+    }
+  },
+  'subtle': {
+    color: COLORS.neutral['400'],
+    boxShadow: `inset 0 -1px ${COLORS.neutral[300]}`,
+    ':hover': {
+      boxShadow: `inset 0 -2px ${COLORS.neutral[300]}`,
+    }
+  },
+  'list': {
+    ...TYPOGRAPHY['XS'],
+    color: COLORS.neutral['400'],
+    ':hover': {
+      boxShadow: `inset 0 -2px ${COLORS.teal[400]}`,
+    }
+  },
+  'list-strong': {
+    ...TYPOGRAPHY['XS'],
+    fontWeight: '600',
+    color: COLORS.neutral['400'],
+    ':hover': {
+      boxShadow: `inset 0 -2px ${COLORS.teal[400]}`,
+    }
+  },
+  'special': {
+    ...TYPOGRAPHY['3XS'],
+    color: COLORS.teal['400'],
+    ':hover': {
+      boxShadow: `inset 0 -1px ${COLORS.teal[400]}`,
+    }
+  },
+  'special-subtle': {
+    ...TYPOGRAPHY['3XS'],
+    color: COLORS.neutral['300'],
+    ':hover': {
+      boxShadow: `inset 0 -1px ${COLORS.neutral[300]}`,
+    }
+  }
+}
 
 export const SmallScreen = styled('div')({
   display: 'block',
