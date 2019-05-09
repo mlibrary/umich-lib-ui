@@ -9,6 +9,7 @@
     "@umich-lib/icon": "^1.0.0-alpha.7",
     "@umich-lib/loading": "^1.0.0-alpha.6",
     "@umich-lib/styles": "^2.0.0-alpha.6",
+    "@umich-lib/link": "^0.1.0",
     "axios": "^0.18.0"
   },
   "peerDependencies": {

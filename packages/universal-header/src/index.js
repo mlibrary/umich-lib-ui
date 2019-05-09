@@ -8,11 +8,13 @@ import {
   MEDIA_QUERIES,
   Margins,
   LargeScreen,
-  SmallScreen
+  SmallScreen,
+  LINK_STYLES
 } from '@umich-lib/styles'
 import Icon from '@umich-lib/icon'
 import Loading from '@umich-lib/loading'
 import Alert from '@umich-lib/alert'
+import Link from '@umich-lib/link'
 
 /*
   Add background color and flex the title
@@ -25,7 +27,8 @@ const HeaderContainer = styled('header')({
 
 const HeaderContent = styled('div')({
   display: 'flex',
-  justifyContent: 'space-between'
+  justifyContent: 'space-between',
+  padding: `${SPACING['2XS']} 0`
 })
 
 /*
@@ -37,41 +40,12 @@ const HeaderText = styled('span')({
   color: COLORS.neutral[300]
 })
 
-const hover_styles = {
-  boxShadow: `inset 0 -2px ${COLORS.teal[400]}`,
-  color: COLORS.neutral[400]
-}
-
-/*
-  Link has a larger touch target and
-  selects the span when hovered to 
-  apply the "border". Using box shadow
-  to avoid the box model resizing.
-*/
-const Link = styled('a')({
-  display: 'block',
-  textDecoration: 'none',
-  cursor: 'pointer',
-  padding: `${SPACING['XS']} 0`,
-  ':hover': {
-    'span': {
-      ...hover_styles
-    }
-  }
-})
-
 /*
   Same goals as the Link, but
   semantically a button.
 */
 const SitesButton = styled('button')({
-  cursor: 'pointer',
-  padding: `${SPACING['XS']} 0`,
-  ':hover': {
-    'span': {
-      ...hover_styles
-    }
-  }
+  ...LINK_STYLES['special-subtle']
 })
 
 /*
@@ -131,7 +105,7 @@ const LinksContainer = styled('div')({
     display: 'flex',
     justifyContent: 'space-between',
     'ul:last-of-type': {
-      minWidth: '14rem',
+      minWidth: '16rem',
       margin: '0',
       marginLeft: SPACING['XL'],
       paddingLeft: SPACING['XL'],
@@ -148,22 +122,6 @@ const LinkItem = styled('li')({
   maxWidth: '32rem',
   ':not(:last-child)': {
     marginBottom: '1rem'
-  }
-})
-
-const LinkTitle = styled('span')({
-  fontWeight: '800',
-  display: 'inline-block',
-  color: COLORS.neutral['400']
-})
-
-const LinkLink = styled('a')({
-  textDecoration: 'none',
-  ':hover': {
-    cursor: 'pointer',
-    ['span']: {
-      boxShadow: `inset 0 -2px ${COLORS.teal[400]}`
-    }
   }
 })
 
@@ -199,11 +157,9 @@ function SiteLinks({ data }) {
     <ul>
       {data.map((d, i) => (
         <LinkItem key={i + d.title}>
-          <LinkLink href={d.link}>
-            <LinkTitle>
-              {d.title}
-            </LinkTitle>
-          </LinkLink>
+          <Link kind="list-strong" href={d.link}>
+            {d.title}
+          </Link>
           {d.description && (
             <LinkDescription>
               {d.description}
@@ -301,10 +257,14 @@ function UniversalHeader() {
       <Margins>
         <HeaderContent>
           <LargeScreen>
-            <Link href="https://www.lib.umich.edu/"><HeaderText>University of Michigan library</HeaderText></Link>
+            <Link href="https://www.lib.umich.edu/" kind="special-subtle">
+              University of Michigan library
+            </Link>
           </LargeScreen>
           <SmallScreen>
-            <Link href="https://www.lib.umich.edu/"><HeaderText><abbr title="University of Michigan">U-M</abbr> Library</HeaderText></Link>
+            <Link href="https://www.lib.umich.edu/" kind="special-subtle">
+              <abbr title="University of Michigan">U-M</abbr> Library
+            </Link>
           </SmallScreen>
           <Sites />
         </HeaderContent>
