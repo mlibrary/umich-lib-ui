@@ -20,7 +20,8 @@
     "@umich-lib/tabs": "^1.0.0-alpha.6",
     "@umich-lib/text": "^1.0.0-alpha.6",
     "@umich-lib/text-input": "^1.0.0-alpha.6",
-    "@umich-lib/universal-header": "^1.0.0-alpha.6"
+    "@umich-lib/universal-header": "^1.0.0-alpha.6",
+    "@umich-lib/link": "^0.1.0"
   },
   "files": [
     "lib"
