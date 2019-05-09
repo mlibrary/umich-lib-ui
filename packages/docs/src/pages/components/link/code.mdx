@@ -1,0 +1,81 @@
+---
+title: Link
+navigation:
+  - text: 'Code'
+    to: '/components/link/code'
+  - text: 'Usage'
+    to: '/components/link/usage'
+---
+
+import { Link } from '@umich-lib/core'
+
+Source: https://github.com/mlibrary/umich-lib-ui/blob/master/packages/link/src/index.js
+
+```js
+import { Link } from '@umich-lib/core'
+```
+
+```jsx live=true
+<Link href="#">View all events</Link>
+```
+
+## Link props
+
+|Prop|Type|Required|Default|
+|----|----|--------|-------|
+|[kind](#kind)|enum "default", "subtle", "list", "list-strong", "special", "special-subtle"|false|"default"|
+|[children](#children)|string|true|n/a|
+|[element props](#element-props)|spread|false|n/a|
+
+### kind
+
+*Type*: enum "default", "subtle", "list", "list-strong", "special", "special-subtle" default: "primary"
+
+Controls how the `Link` is styled.
+
+```jsx live
+<Link>Example link</Link>
+```
+
+```jsx live
+<Link kind="subtle">Example link</Link>
+```
+
+```jsx live
+<Link kind="list">Example link</Link>
+```
+
+```jsx live
+<Link kind="list-strong">Example link</Link>
+```
+
+```jsx live
+<Link kind="special">Example link</Link>
+```
+
+```jsx live
+<Link kind="special-subtle">Example link</Link>
+```
+
+### children
+
+*Type*: `node`
+
+Regular React children.
+
+```jsx live=true
+<Link href="#"><strong style={{ fontWeight: '800' }}>All events</strong></Link>
+```
+
+### element props
+
+Any props not listed above will be spread onto the underlying element.
+
+```jsx live=true
+<Link
+  style={{ fontWeight: '800' }}
+  href="#"
+>
+  Default link with other props
+</Link>
+```
