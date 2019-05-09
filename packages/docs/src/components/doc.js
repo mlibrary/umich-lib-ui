@@ -1,13 +1,13 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link as GatsbyLink } from 'gatsby'
 import styled from '@emotion/styled'
 import {
   Heading,
   COLORS,
   SPACING,
-  MEDIA_QUERIES,
   TYPOGRAPHY,
-  Margins
+  Margins,
+  Link
 } from '@umich-lib/core'
 
 import Layout from './layout'
@@ -36,16 +36,12 @@ const DocHeaderContainer = styled('div')({
   display: 'flex',
   justifyContent: 'flex-end',
   flexDirection: 'column',
-  height: 'auto',
-  background: COLORS.blue[100],
-  borderBottom: `solid 1px ${COLORS.neutral[100]}`,
-  [MEDIA_QUERIES.LARGESCREEN]: {
-    height: '12rem'
-  }
+  height: 'auto'
 })
 
 const activeStyle={
-  borderBottom: `solid 4px ${COLORS.teal[400]}`,                  fontWeight: '800'
+  borderBottom: `solid 4px ${COLORS.teal[400]}`,
+  fontWeight: '800'
 }
 
 const isActive = ({
@@ -56,7 +52,7 @@ const isActive = ({
     : {}
 }
 
-const StyledNavLink = styled(Link)({
+const StyledNavLink = styled(GatsbyLink)({
   color: COLORS.neutral[400],
   display: 'inline-block',
   padding: `${SPACING['XS']} 0`,
@@ -89,10 +85,12 @@ const Doc = (props) => {
             <ContentContainer>
               <Heading level={1} size="3XL" style={{
                 paddingBottom: SPACING['M'],
-                marginTop: SPACING['XL']
+                marginTop: SPACING['2XL']
               }}>{title}</Heading>
               {navigation && (
-                <ol>
+                <ol css={{
+                  borderBottom: `solid 1px ${COLORS.neutral[100]}`
+                }}>
                   {navigation.map(({text, to}) => (
                     <li
                       key={text + to}
@@ -124,11 +122,9 @@ const Doc = (props) => {
             {github_path && (
               <div style={{
                 display: 'block',
-                borderTop: `solid 1px ${COLORS.neutral[100]}`,
-                marginTop: SPACING['XL'],
-                paddingTop: SPACING['XL']
+                marginTop: SPACING['XL']
               }}>
-                <a href={github_path}>Edit this page on Github</a>
+                <Link href={github_path}>Edit this page on Github</Link>
               </div>
             )}
           </ContentContainer>
