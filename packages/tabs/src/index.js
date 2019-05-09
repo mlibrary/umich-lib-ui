@@ -7,7 +7,8 @@ import {
 } from 'react-tabs';
 import {
   COLORS,
-  MEDIA_QUERIES
+  MEDIA_QUERIES,
+  SPACING
 } from '@umich-lib/styles'
 
 const Tabs = styled(UnstyledTabs)({
@@ -18,12 +19,12 @@ const TabList = styled(UnstyledTabList)({
   listStyle: 'none',
   margin: 0,
   padding: 0,
-  borderLeft: `solid 2px ${COLORS.neutral[400]}`,
+  borderLeft: `solid 1px ${COLORS.neutral[100]}`,
   [MEDIA_QUERIES.LARGESCREEN]: {
     display: 'flex',
     alignItems: 'baseline',
     borderLeft: 'none',
-    borderBottom: `solid 2px ${COLORS.neutral[400]}`
+    borderBottom: `solid 1px ${COLORS.neutral[100]}`
   },
 })
 
@@ -32,22 +33,10 @@ const dynamicTabStyles = props => {
     return {
       fontWeight: '600',
       color: COLORS.blue[500],
-      borderLeft: `solid 3px ${COLORS.blue[500]}`,
-      background: COLORS.neutral[200],
+      borderLeft: `solid 4px ${COLORS.teal[400]}`,
       [MEDIA_QUERIES.LARGESCREEN]: {
         borderLeft: 'none',
-        background: 'none',
-        border: `solid 1px ${COLORS.neutral[400]}`,
-        borderTop: `solid 3px ${COLORS.blue[500]}`,
-        borderBottom: `solid 2px white`,
-      }
-    }
-  } else {
-    return {
-      ':hover': {
-        [MEDIA_QUERIES.LARGESCREEN]: {
-          borderBottom: `solid 2px ${COLORS.neutral[500]}`,
-        }
+        borderBottom: `solid 4px ${COLORS.teal[400]}`
       }
     }
   }
@@ -58,12 +47,13 @@ const dynamicTabStyles = props => {
 const Tab = styled(UnstyledTab)(
   {
     cursor: 'pointer',
-    padding: '0.5rem 1.25rem',
-    borderLeft: `solid 3px transparent`,
-    marginLeft: '-2px',
+    padding: `${SPACING['S']} ${SPACING['M']} `,
+    borderLeft: `solid 4px transparent`,
     [MEDIA_QUERIES.LARGESCREEN]: {
-      marginBottom: '-2px',
-      marginLeft: 0,
+      padding: `${SPACING['XS']} 0`,
+      ':not(:last-child)': {
+        marginRight: SPACING['L']
+      },
       borderLeft: 'none'
     }
   },
