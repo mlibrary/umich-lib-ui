@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   siteMetadata: {
-    title: 'U-M Library Design System',
+    title: 'Design System | University of Michigan',
     description:
       'Use this design system to make your service consistent with other library services. Learn from the research and experience of other teams and avoid repeating work that has already been done.',
     author: 'Jon Earley <earley@umich.edu>',
@@ -39,10 +39,10 @@ module.exports = {
         name: 'gatsby-default-mdx-basic',
         short_name: 'starter',
         start_url: '/',
-        background_color: '#00274C',
+        background_color: '#F7F8F9',
         theme_color: '#FFCB05',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/icon.png', // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-emotion`

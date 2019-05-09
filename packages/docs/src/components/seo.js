@@ -4,6 +4,9 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 function SEO({ description, lang, meta, keywords, title }) {
+
+  console.log('title', title)
+
   return (
     <StaticQuery
       query={detailsQuery}
@@ -15,6 +18,7 @@ function SEO({ description, lang, meta, keywords, title }) {
             htmlAttributes={{
               lang,
             }}
+            defaultTitle={data.site.siteMetadata.title}
             title={title}
             titleTemplate={`%s | ${data.site.siteMetadata.title}`}
             meta={[

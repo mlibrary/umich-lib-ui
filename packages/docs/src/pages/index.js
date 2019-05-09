@@ -134,7 +134,7 @@ const Feature = ({ heading, to, text, borderColor }) => {
 export default () => {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO />
       <div style={{
         position: 'relative'
       }}>
