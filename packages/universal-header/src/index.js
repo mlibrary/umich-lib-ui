@@ -45,7 +45,10 @@ const HeaderText = styled('span')({
   semantically a button.
 */
 const SitesButton = styled('button')({
-  ...LINK_STYLES['special-subtle']
+  ...LINK_STYLES['special-subtle'],
+  ':hover': {
+    'span': LINK_STYLES['special-subtle'][':hover']
+  }
 })
 
 /*
