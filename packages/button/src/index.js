@@ -40,8 +40,7 @@ const createButtonStyles = (props) => {
     case 'secondary':
       styles = {
         ...styles,
-        borderColor: COLORS.blue[300],
-        border: 'solid 1px'
+        background: COLORS.neutral[100],
       }
       break;
   }
