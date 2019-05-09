@@ -8,7 +8,8 @@ import {
   SPACING,
   MEDIA_QUERIES,
   TYPOGRAPHY,
-  UniversalHeader
+  UniversalHeader,
+  LINK_STYLES
 } from '@umich-lib/core'
 import components from './mdx-components'
 import Logo from './logo'
@@ -21,7 +22,6 @@ const Root = styled('div')({
 })
 
 const SiteWrapper = styled('div')({
-  borderTop: `solid 2px ${COLORS.neutral[100]}`,
   [MEDIA_QUERIES.LARGESCREEN]: {
     display: 'flex'
   }
@@ -36,21 +36,13 @@ const Side = styled('div')({
     minHeight: '100vh',
     minWidth: '280px',
     order: '-1',
-    borderRight: `solid 2px ${COLORS.neutral[100]}`
+    borderRight: `solid 1px ${COLORS.neutral['100']}`
   }
 })
 
 const Main = styled('main')({
   width: '100%'
 })
-
-const list_link_styles = {
-  textDecoration: 'none',
-  color: COLORS.neutral[400],
-  ':hover': {
-    boxShadow: `inset 0 -2px ${COLORS.teal[400]}`
-  } 
-}
 
 /*
   A bunch of selectors to override
@@ -70,12 +62,15 @@ const SideNav = styled('nav')({
   'ul ul': {
     marginLeft: SPACING['M']
   },
-  'a': list_link_styles,
   'li li': {
     textTransform: 'initial',
     fontWeight: '400',
     letterSpacing: '0',
     fontSize: '16px'
+  },
+  'a': {
+    color: COLORS.neutral['400'],
+    boxShadow: 'none'
   },
   [MEDIA_QUERIES.LARGESCREEN]: {
     padding: `0 ${SPACING['XL']}`

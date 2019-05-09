@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link as GatsbyLink } from 'gatsby'
 import styled from '@emotion/styled'
 import GithubSlugger from 'github-slugger'
 import {
@@ -8,7 +8,8 @@ import {
   COLORS,
   SPACING,
   List,
-  TYPOGRAPHY
+  Link,
+  LINK_STYLES
 } from '@umich-lib/core'
 import Code from './code'
 import Table from './Table'
@@ -77,19 +78,9 @@ const EM = styled('em')({
   fontStyle: 'italic'
 })
 
-const activeLinkStyle = {
-  /*fontWeight: '700'*/
-}
-
-const isActive = ({
-  isPartiallyCurrent,
-  href,
-  location
-}) => {
-  return (isPartiallyCurrent && location.pathname.match(href + '/?$'))
-    ? {style: activeLinkStyle}
-    : {}
-}
+const StyledGatsbyLink = styled(GatsbyLink)({
+  ...LINK_STYLES['default']
+})
 
 const A = ({ children, href, ...other }) => {
   /*
@@ -97,16 +88,15 @@ const A = ({ children, href, ...other }) => {
   */
   if (href.startsWith('/')) {
     return (
-      <Link
+      <StyledGatsbyLink
         to={href}
         {...other}
-        getProps={isActive}
-      >{children}</Link>
+      >{children}</StyledGatsbyLink>
     )
   }
 
   return (
-    <a href={href} {...other}>{children}</a>
+    <Link href={href} {...other}>{children}</Link>
   )
 }
 
