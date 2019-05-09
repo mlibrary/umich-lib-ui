@@ -226,7 +226,7 @@ function Sites() {
       {open && (
         <Overlay>
           <SitesLede><Highlight>Explore</Highlight> what the library has to offer.</SitesLede>
-          {true ? (
+          {error ? (
             <Alert intent="warning">
               <p style={{ maxWidth: '36rem' }}><strong style={{ fontWeight: '800' }}>Error</strong>: We are temporarily having trouble loading our list of library sites. Please try refreshing your page. You can also contact <Link href="https://www.lib.umich.edu/ask" kind="subtle">Ask a Librarian</Link> for help.</p>
             </Alert>
