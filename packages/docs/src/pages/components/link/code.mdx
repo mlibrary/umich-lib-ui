@@ -8,6 +8,7 @@ navigation:
 ---
 
 import { Link } from '@umich-lib/core'
+import { jsx } from '@emotion/core'
 
 Source: https://github.com/mlibrary/umich-lib-ui/blob/master/packages/link/src/index.js
 
@@ -78,4 +79,16 @@ Any props not listed above will be spread onto the underlying element.
 >
   Default link with other props
 </Link>
+```
+
+## Link styles
+
+If you need to use a component other than the anchor element, such as [Gatsby's Link](https://www.gatsbyjs.org/docs/gatsby-link/) or a routing library link, you can use `LINK_STYLES` with [Emotion](https://emotion.sh/docs/) and apply them.
+
+```js
+import { LINK_STYLES } from '@umich-lib/core'
+```
+
+```jsx
+<a href="#" css={{ ...LINK_STYLES['special'] }}>Special link</a>
 ```
