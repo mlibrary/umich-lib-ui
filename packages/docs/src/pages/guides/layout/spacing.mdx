@@ -5,9 +5,11 @@ navigation:
     to: '/guides/layout/spacing'
   - text: 'Grid'
     to: '/guides/layout/grid'
+  - text: 'Code'
+    to: '/guides/layout/code'
 ---
 
-import { SPACING, Text } from '@umich-lib/core'
+import { SPACING, Text, COLORS } from '@umich-lib/core'
 import Table from '../../../components/table'
 
 <Text lede>Consistent spacing creates visual balance that makes the UI easier to scan. U-M Library’s Design System spacing scale can be applied to both margin or padding properties for both small, refined spacing situations, as well as to large spatial differences.</Text>
@@ -17,6 +19,7 @@ import Table from '../../../components/table'
     <tr>
       <th>Size</th>
       <th>rem</th>
+      <th>Example</th>
     </tr>
   </thead>
   <tbody>
@@ -24,6 +27,12 @@ import Table from '../../../components/table'
       <tr>
         <td>{size}</td>
         <td>{SPACING[size]}</td>
+        <td><div style={{
+          display: 'inline-block',
+          height: SPACING[size],
+          width: SPACING[size],
+          background: COLORS.teal[400],
+        }}></div></td>
       </tr>
     ))}
   </tbody>

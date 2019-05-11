@@ -1,0 +1,57 @@
+---
+title: Layout
+navigation:
+  - text: 'Spacing'
+    to: '/guides/layout/spacing'
+  - text: 'Grid'
+    to: '/guides/layout/grid'
+  - text: 'Code'
+    to: '/guides/layout/code'
+---
+
+import { SPACING, COLORS, Text } from '@umich-lib/core'
+
+## Spacing
+
+```js
+import { SPACING } from '@umich-lib/core'
+```
+
+```jsx live
+<ul>
+  {Object.keys(SPACING).map(size => (
+    <li style={{
+      display: 'inline-block',
+      height: SPACING[size],
+      width: SPACING[size],
+      background: COLORS.teal['400'],
+      marginRight: SPACING['XS']
+    }}></li>
+  ))}
+</ul>
+```
+
+## Margins
+
+import { Margins } from '@umich-lib/core'
+
+```js
+import { Margins } from '@umich-lib/core'
+```
+
+```jsx live
+<Margins>
+  <section style={{
+    background: COLORS.teal['100'],
+    padding: SPACING['L']
+  }}>
+    <Heading
+      size="L"
+      level={2}
+      style={{ marginBottom: SPACING['S'] }}
+    >University of Michigan Library</Heading>
+
+    <Text>Our mission is to support, enhance, and collaborate in the instructional, research, and service activities of the faculty, students, and staff, and contribute to the common good by collecting, organizing, preserving, communicating, and sharing the record of human knowledge.</Text>
+  </section>
+</Margins>
+```
