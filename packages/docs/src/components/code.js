@@ -14,6 +14,7 @@ import {
   COLORS
 } from '@umich-lib/core'
 import theme from './code-theme'
+import VisuallyHidden from '@reach/visually-hidden'
 
 const border_color = COLORS.neutral['100']
 const background_color = COLORS.neutral['000']
@@ -35,10 +36,13 @@ function CodeEditor({ live }) {
         <LivePreview />
       </div>
       <div style={{
+        position: 'relative',
         padding: `calc(${SPACING['M']} - 10px)`,
         borderTop: `solid 1px ${border_color}`
       }}>
-        <LiveEditor ignoreTabKey={true} />
+        <label><VisuallyHidden>Live JSX editor</VisuallyHidden>
+          <LiveEditor ignoreTabKey={true} />
+        </label>
       </div>
       {live.error && (
         <Alert intent="error">
