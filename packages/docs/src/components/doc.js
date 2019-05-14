@@ -71,7 +71,7 @@ const Doc = (props) => {
   let github_path
   if (location.pathname) {
     github_path =
-    'https://github.com/mlibrary/umich-lib-ui/tree/next/packages/docs/src/pages'
+    'https://github.com/mlibrary/umich-lib-ui/tree/master/packages/docs/src/pages'
     + location.pathname.slice(0, -1)
     + '.mdx'
   }
