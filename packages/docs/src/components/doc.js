@@ -72,7 +72,7 @@ const Doc = (props) => {
   if (location.pathname) {
     github_path =
     'https://github.com/mlibrary/umich-lib-ui/tree/master/packages/docs/src/pages'
-    + location.pathname.slice(0, -1)
+    + location.pathname.replace(/\/$/, "")
     + '.mdx'
   }
 
