@@ -5,7 +5,6 @@
     "build": "lerna exec --parallel -- babel src -d lib --config-file ../../babel.config.js",
     "build:watch": "lerna exec --parallel -- babel src -d lib --config-file ../../babel.config.js -w",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "start": "lerna run --scope @umich-lib/docs start",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --coverage --watch",

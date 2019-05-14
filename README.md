@@ -25,14 +25,12 @@ Starts the Storybook development environment at `http://localhost:9001` and open
 ```sh
 npm run bootstrap
 npm run build:watch
-npm start
+npm run storybook
 ```
 
 ## Documentation site
 
-Built with [Gatsby v2](https://www.gatsbyjs.org/) for a fast website.
-
-Start the site locally.
+Start the doc site locally. Built with [Gatsby v2](https://www.gatsbyjs.org/) for a fast website.
 
 ```sh
 cd packages/docs
