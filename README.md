@@ -16,7 +16,7 @@ Run these commands before doing anything else.
 git clone https://github.com/mlibrary/umich-lib-ui.git
 cd umich-lib-ui
 npm install
-cd www
+cd packages/docs
 npm install
 ```
 
