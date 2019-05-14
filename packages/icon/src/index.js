@@ -62,7 +62,7 @@ const Icon = ({
   ...other
 }) => {
   // If no title, then hide for AD.
-  let isHidden = title ? true : false
+  let isHidden = title ? false : true
 
   return (
     <StyledSVG
