@@ -14,7 +14,6 @@
     "@umich-lib/link": "^0.1.1-alpha.0",
     "@umich-lib/list": "^1.0.0-alpha.7",
     "@umich-lib/loading": "^1.0.0-alpha.7",
-    "@umich-lib/navigation": "^1.0.0-alpha.7",
     "@umich-lib/record-fields": "^1.0.0-alpha.7",
     "@umich-lib/resource-access": "^1.0.0-alpha.7",
     "@umich-lib/styles": "^2.0.0-alpha.7",

@@ -36,20 +36,32 @@ module.exports = {
     {
       kind: "heading",
       stories: [
-        { name: 'heading level 1 - h1' },
-        { name: 'heading level 2 - h2' },
-        { name: 'heading level 3 - h3' },
-        { name: 'heading level 4 - h4' },
-        { name: 'heading level 5 - h5' },
-        { name: 'heading level 6 - h6' },
+        { name: '3XL' },
+        { name: '2XL' },
+        { name: 'XL' },
+        { name: 'L' },
+        { name: 'M' },
+        { name: 'S' },
+        { name: 'XS' },
+        { name: '2XS' },
+        { name: '3XS' },
       ]
     },
     {
-      kind: "text",
+      kind: "link",
       stories: [
-        { name: 'basic' },
-        { name: 'inline' },
-        { name: 'lede' },
+        { name: 'default' },
+        { name: 'subtle' },
+        { name: 'list' },
+        { name: 'list-strong' },
+        { name: 'special' },
+        { name: 'special-subtle' },
+      ]
+    },
+    {
+      kind: "loading",
+      stories: [
+        { name: 'default' },
         { name: 'small' },
       ]
     }
