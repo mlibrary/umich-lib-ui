@@ -34,10 +34,13 @@ npm start
 
 Built with [Gatsby v2](https://www.gatsbyjs.org/) for a fast website.
 
+Start the site locally.
+
 ```sh
 cd packages/docs
 npm run develop
 ```
+
 Be sure to run commands from the `docs` package directory.
 
 ## 📦 Publishing
