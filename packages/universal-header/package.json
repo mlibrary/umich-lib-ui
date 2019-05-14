@@ -1,15 +1,15 @@
 {
   "name": "@umich-lib/universal-header",
-  "version": "1.0.0-alpha.6",
+  "version": "1.0.0-alpha.7",
   "module": "lib/index.js",
   "dependencies": {
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
-    "@umich-lib/alert": "^1.0.0-alpha.6",
-    "@umich-lib/icon": "^1.0.0-alpha.7",
-    "@umich-lib/loading": "^1.0.0-alpha.6",
-    "@umich-lib/styles": "^2.0.0-alpha.6",
-    "@umich-lib/link": "^0.1.0",
+    "@umich-lib/alert": "^1.0.0-alpha.7",
+    "@umich-lib/icon": "^1.0.0-alpha.8",
+    "@umich-lib/link": "^0.1.1-alpha.0",
+    "@umich-lib/loading": "^1.0.0-alpha.7",
+    "@umich-lib/styles": "^2.0.0-alpha.7",
     "axios": "^0.18.0"
   },
   "peerDependencies": {

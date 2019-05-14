@@ -1,11 +1,11 @@
 {
   "name": "@umich-lib/loading",
-  "version": "1.0.0-alpha.6",
+  "version": "1.0.0-alpha.7",
   "module": "lib/index.js",
   "dependencies": {
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
-    "@umich-lib/styles": "^2.0.0-alpha.6"
+    "@umich-lib/styles": "^2.0.0-alpha.7"
   },
   "peerDependencies": {
     "react": "^16.8.5",
