@@ -1,6 +1,7 @@
 {
   "name": "@umich-lib/expandable",
   "version": "1.0.0-alpha.7",
+  "main": "lib/index.js",
   "module": "lib/index.js",
   "dependencies": {
     "@emotion/core": "^10.0.7",
