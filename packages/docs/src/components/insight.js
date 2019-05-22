@@ -10,17 +10,25 @@ function Insight({ kind, children }) {
     if (kind === 'research') {
       return (
         <React.Fragment>
-          💡 <stong css={{
+          💡 <strong css={{
             fontWeight: '800'
-          }}>Research insight: </stong>
+          }}>Research insight: </strong>
         </React.Fragment>
       )
     } else if (kind === 'accessibility') {
       return (
         <React.Fragment>
-          ⌨️ <stong css={{
+          ⌨️ <strong css={{
             fontWeight: '800'
-          }}>Accessibility insight: </stong>
+          }}>Accessibility insight: </strong>
+        </React.Fragment>
+      )
+    } else if (kind === 'design') {
+      return (
+        <React.Fragment>
+          📐 <strong css={{
+            fontWeight: '800'
+          }}>Design insight: </strong>
         </React.Fragment>
       )
     }
