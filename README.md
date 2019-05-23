@@ -16,6 +16,7 @@ Run these commands before doing anything else.
 git clone https://github.com/mlibrary/umich-lib-ui.git
 cd umich-lib-ui
 npm install
+npm run bootstrap
 ```
 
 ## ⌨️ Development
@@ -23,7 +24,6 @@ npm install
 Starts the Storybook development environment at `http://localhost:9001` and opens the documentation site at `http://localhost:8000`.
 
 ```sh
-npm run bootstrap
 npm run build:watch
 npm run storybook
 ```
