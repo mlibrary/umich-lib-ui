@@ -42,7 +42,7 @@ const Heading2 = ({ children, ...other }) => (
     level={2}
     size="XL"
     id={slug(children)}
-    style={{ marginTop: SPACING['2XL'] }}
+    style={{ marginTop: SPACING['2XL'], ...maxWidth }}
     {...other}
   >{children}</Heading>
 )
@@ -51,18 +51,24 @@ const Heading3 = ({ children, ...other }) => (
     level={3}
     size="M"
     id={slug(children)}
-    style={{ marginTop: SPACING['XL'] }}
+    style={{ marginTop: SPACING['XL'], ...maxWidth }}
     {...other}
   >{children}</Heading>
 )
 const Heading4 = ({ children, ...other }) => (
-  <Heading level={4} size="S" id={slug(children)} {...other}>{children}</Heading>
+  <Heading
+    level={4}
+    size="S"
+    id={slug(children)}
+    style={maxWidth}
+    {...other}
+  >{children}</Heading>
 )
 const Heading5 = ({ children, ...other }) => (
-  <Heading level={5} size="XS" id={slug(children)} {...other}>{children}</Heading>
+  <Heading level={5} size="XS" id={slug(children)} style={maxWidth} {...other}>{children}</Heading>
 )
 const Heading6 = ({ children, ...other }) => (
-  <Heading level={6} size="2XS" id={slug(children)} {...other}>{children}</Heading>
+  <Heading level={6} size="2XS" id={slug(children)} style={maxWidth} {...other}>{children}</Heading>
 )
 const P = ({ children, ...other }) => (
   <Text {...other} style={{
