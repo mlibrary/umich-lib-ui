@@ -1,6 +1,7 @@
 {
   "name": "@umich-lib/core",
   "version": "1.0.0-alpha.7",
+  "main": "lib/index.js",
   "module": "lib/index.js",
   "dependencies": {
     "@umich-lib/alert": "^1.0.0-alpha.7",
