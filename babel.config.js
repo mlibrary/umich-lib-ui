@@ -1,10 +1,10 @@
 module.exports = {
-  presets: [
+  "presets": [
     "@babel/preset-env",
-    "@babel/preset-react"
+    "@babel/preset-react",
+    "@emotion/babel-preset-css-prop"
   ],
-  plugins: [
-    "transform-class-properties",
-    "@babel/plugin-proposal-object-rest-spread"
+  "plugins": [
+    "@babel/plugin-proposal-class-properties"
   ]
 };

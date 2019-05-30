@@ -1,0 +1,58 @@
+---
+title: Text
+navigation:
+  - text: 'Code'
+    to: '/components/text/code'
+  - text: 'Usage'
+    to: '/components/text/usage'
+---
+
+import { Text, Icon } from '@umich-lib/core'
+
+Source: https://github.com/mlibrary/umich-lib-ui/blob/master/packages/text/src/index.js
+
+```js
+import { Text } from '@umich-lib/core'
+```
+
+```jsx live
+<Text size="2XL">University of Michigan Library</Text>
+```
+
+## Text props
+
+|Prop|Type|Required|Default|
+|----|----|--------|-------|
+|[size](#size)|string|false|n/a|
+|[children](#children)|node|false|n/a|
+
+
+### size
+
+*Type*: `string`
+
+Sets style from the [typography scale](/guides/typography/scale).
+
+```jsx live=true
+<Text>
+  University of Michigan Library
+</Text>
+```
+
+```jsx live=true
+<Text size="L">
+  University of Michigan Library
+</Text>
+```
+
+### children
+
+*Type*: `node`
+
+Regular React children.
+
+```jsx live=true
+<Text size="3XS">
+  <Icon icon="book" /> Book
+</Text>
+```

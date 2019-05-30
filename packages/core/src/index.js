@@ -6,7 +6,7 @@ import Heading from "@umich-lib/heading"
 import Icon, { icons } from "@umich-lib/icon"
 import Input from "@umich-lib/input"
 import List from "@umich-lib/list"
-import RecordFields from "@umich-lib/record-fields"
+import Metadata from "@umich-lib/metadata"
 import ResourceAccess from "@umich-lib/resource-access"
 import Text from "@umich-lib/text"
 import TextInput from "@umich-lib/text-input"
@@ -54,7 +54,7 @@ export {
   Link,
   List,
   Loading,
-  RecordFields,
+  Metadata,
   ResourceAccess,
   Text,
   TextInput,

@@ -15,7 +15,7 @@
     "@umich-lib/link": "^0.1.1-alpha.1",
     "@umich-lib/list": "^1.0.0-alpha.8",
     "@umich-lib/loading": "^1.0.0-alpha.8",
-    "@umich-lib/record-fields": "^1.0.0-alpha.8",
+    "@umich-lib/metadata": "^1.0.0-alpha.8",
     "@umich-lib/resource-access": "^1.0.0-alpha.8",
     "@umich-lib/styles": "^2.0.0-alpha.8",
     "@umich-lib/tabs": "^1.0.0-alpha.8",
