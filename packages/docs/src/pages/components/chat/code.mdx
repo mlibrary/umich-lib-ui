@@ -1,0 +1,36 @@
+---
+title: Chat
+navigation:
+  - text: 'Code'
+    to: '/components/chat/code'
+  - text: 'Usage'
+    to: '/components/chat/usage'
+---
+
+import { Chat } from '@umich-lib/core'
+
+Source: https://github.com/mlibrary/umich-lib-ui/blob/master/packages/chat/src/index.js
+
+```js
+import { Chat } from '@umich-lib/core'
+```
+
+```jsx live=true
+<Chat />
+```
+
+## Chat props
+
+|Prop|Type|Required|Default|
+|----|----|--------|-------|
+|[fixed](#fixed)|bool|false|false|
+
+### fixed
+
+*Type*: boolean
+
+Positions Chat to the bottom right of the viewport on wide screens.
+
+```jsx live=true
+<Chat fixed />
+```

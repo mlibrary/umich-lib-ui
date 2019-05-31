@@ -1,5 +1,5 @@
 import React from "react";
-import RecordFields from "../src/index";
+import Metadata from "../src/index";
 
 export let name = "basic";
 
@@ -45,7 +45,7 @@ const fields = [
 ]
 
 export let Example = () => (
-  <RecordFields
+  <Metadata
     fields={fields}
     renderAnchor={data => (
       <a className="rendered-prop-anchor-example" href={data.to}>

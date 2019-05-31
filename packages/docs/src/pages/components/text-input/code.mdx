@@ -1,0 +1,97 @@
+---
+title: TextInput
+navigation:
+  - text: 'Code'
+    to: '/components/text-input/code'
+  - text: 'Usage'
+    to: '/components/text-input/usage'
+---
+
+import { TextInput } from '@umich-lib/core'
+
+Source: https://github.com/mlibrary/umich-lib-ui/blob/master/packages/text-input/src/index.js
+
+```js
+import { TextInput } from '@umich-lib/core'
+```
+
+```jsx live
+<TextInput id="full-name" labelText="Full name" />
+```
+
+## TextInput props
+
+|Prop|Type|Required|Default|
+|----|----|--------|-------|
+|[id](#id)|string|true|n/a|
+|[labelText](#labeltext)|string|true|n/a|
+|[description](#description)|string|false|n/a|
+|[hideLabel](#hidelabel)|bool|false|false|
+|[invalid](#invalid)|bool|false|false|
+|[invalidText](#invalidtext)|string|false|n/a|
+
+**Note:** `TextInput` will pass through HTML input element attributes.
+
+### id
+
+*Type*: string, required
+
+### labelText
+
+*Type*: string, required
+
+### description
+
+*Type*: string, required
+
+Let users know why you're asking for input and what it will be used for with `descriptionText`.
+
+```jsx live
+<TextInput
+  id="email-address"
+  labelText="Email address"
+  descriptionText="We will only use this to send you a confirmation email."
+  type="email"
+  placeholder="uniqname@umich.edu"
+/>
+```
+
+### hideLabel
+
+*Type*: bool
+
+A label is required for accessibility, but if your use case requires it to be hidden visually then use `hideLabel`.
+
+```jsx live
+<TextInput
+  id="search-query"
+  labelText="Search terms"
+  type="search"
+  hideLabel
+  name="query"
+/>
+```
+
+### invalid
+
+*Type*: bool
+
+Use to set if the input is invalid.
+
+### invalidText
+
+*Type*: string
+
+And a descriptive invalid message so that the user can recover more easily.
+
+```jsx live
+<TextInput
+  id="email-address"
+  labelText="Email address"
+  descriptionText="We will only use this to send you a confirmation email."
+  type="email"
+  value="@umich.edu"
+  invalid
+  invalidText="Enter a valid email address."
+/>
+```
