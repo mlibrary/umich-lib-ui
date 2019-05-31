@@ -9,7 +9,8 @@
     "@umich-lib/button": "^1.0.0-alpha.8",
     "@umich-lib/expandable": "^1.0.0-alpha.8",
     "@umich-lib/icon": "^1.0.0-alpha.9",
-    "@umich-lib/styles": "^2.0.0-alpha.8"
+    "@umich-lib/styles": "^2.0.0-alpha.8",
+    "@umich-lib/link": "^0.1.1-alpha.1"
   },
   "peerDependencies": {
     "react": "^16.8.5",

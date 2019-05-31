@@ -13,6 +13,7 @@ import {
   INTENT_COLORS,
   MEDIA_QUERIES
 } from '@umich-lib/styles'
+import Link from '@umich-lib/link'
 import Button from '@umich-lib/button'
 
 const FigureStyled = styled('figure')({
@@ -21,7 +22,7 @@ const FigureStyled = styled('figure')({
   margin: 0,
   padding: 0,
   'tr:not(:last-child)': {
-    borderBottom: `solid 1px ${COLORS.neutral[400]}`
+    borderBottom: `solid 1px ${COLORS.neutral[100]}`
   }
 })
 
@@ -45,9 +46,8 @@ const NotesListStyled = styled('ul')({
 })
 
 const StyledTH = styled('th')({
-  fontSize: '0.875rem',
-  color: COLORS.neutral[400],
-  borderBottom: `solid 2px ${COLORS.neutral[400]}`
+  color: COLORS.neutral[300],
+  borderBottom: `solid 2px ${COLORS.neutral[100]}`
 })
 
 const td_and_th = {
@@ -67,7 +67,7 @@ const TableStyled = styled('table')({
   tableLayout: 'fixed',
   'tbody': {
     'tr:not(:last-child)': {
-      borderBottom: `solid 1px ${COLORS.neutral[400]}`
+      borderBottom: `solid 1px ${COLORS.neutral[100]}`
     }
   },
   'td': td_and_th,
@@ -128,7 +128,7 @@ const Cell = ({
 
       {(() => {
         if (cell.href) {
-          return (<a href={cell.href}>{cell.text}</a>)
+          return (<Link href={cell.href}>{cell.text}</Link>)
         }
         if (cell.to) {
           return (renderAnchor(cell))
@@ -165,9 +165,7 @@ class ResourceAccess extends React.Component {
               <FigCaptionContentStyled className="x-spacing">
                 <span style={{ fontWeight: '600' }}>{caption}</span>
                 {captionLink && (
-                  <a href={captionLink.href} style={{
-                    fontSize: '0.875rem'
-                  }}>{captionLink.text}</a>
+                  <Link href={captionLink.href}>{captionLink.text}</Link>
                 )}
                 {notes && (
                   <NotesListStyled>
