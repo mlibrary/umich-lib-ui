@@ -12,7 +12,7 @@ import {
   LINK_STYLES
 } from '@umich-lib/core'
 import Code from './code'
-import Table from './Table'
+import Table from './table'
 
 /*
   Attempted to use MDX Component Autolink Header,
