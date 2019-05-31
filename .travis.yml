@@ -1,0 +1,27 @@
+language: node_js
+cache:
+  directories:
+    - ~/.npm
+node_js:
+  - "10"
+git:
+  depth: 3
+before_script:
+- npm install
+- npm run bootstrap
+- npm run build
+script:
+- cd packages/docs && npm run build
+deploy:
+  provider: pages
+  skip-cleanup: true
+  keep-history: true
+  github-token: $GITHUB_TOKEN
+  local-dir: packages/docs/public
+  target-branch: gh-pages
+notifications:
+  email:
+    recipients:
+      - earleyj@umich.edu
+    on_success: always
+    on_failure: always
