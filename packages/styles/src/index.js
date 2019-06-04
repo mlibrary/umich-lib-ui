@@ -19,7 +19,7 @@ export const TYPOGRAPHY = {
   '3XL': {
     fontSize: '3.5rem',
     fontFamily: 'Crimson Text',
-    lineHeight: '1.25'
+    lineHeight: '1.125'
   },
   '2XL': {
     fontSize: '2.25rem',
