@@ -20,8 +20,13 @@ const Breadcrumb = ({
 
   return (
     <nav aria-label="Breadcrumb" {...rest} css={{
-      paddingTop: SPACING['2XL'],
-      paddingBottom: SPACING['XL']
+      paddingTop: SPACING['M'],
+      paddingBottom: SPACING['M'],
+      [MEDIA_QUERIES.LARGESCREEN]: {
+
+        paddingTop: SPACING['2XL'],
+        paddingBottom: SPACING['XL']
+      }
     }}>
       <ol css={{
         [MEDIA_QUERIES.LARGESCREEN]: {
