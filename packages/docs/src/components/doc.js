@@ -57,7 +57,6 @@ const StyledNavLink = styled(GatsbyLink)({
   display: 'inline-block',
   padding: `${SPACING['XS']} 0`,
   textDecoration: 'none',
-  ...TYPOGRAPHY['3XS'],
   fontWeight: '600'
 })
 
