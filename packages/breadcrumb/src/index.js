@@ -7,7 +7,6 @@ import {
 import Link from '@umich-lib/link'
 import Icon from '@umich-lib/icon'
 
-
 const Breadcrumb = ({
   children,
   ...rest
@@ -46,7 +45,6 @@ const Breadcrumb = ({
               }}>
                 <Icon
                   icon="navigate_next"
-                  size={14}
                   css={{
                     display: 'none',
                     [MEDIA_QUERIES.LARGESCREEN]: {
@@ -56,7 +54,6 @@ const Breadcrumb = ({
                 />
                 <Icon
                   icon="navigate_before"
-                  size={14}
                   css={{
                     display: 'inline-block',
                     [MEDIA_QUERIES.LARGESCREEN]: {
@@ -88,20 +85,23 @@ const BreadcrumbItem = ({
   isCurrent,
   ...rest
 }) => {
-  const currentLinkProps = isCurrent ? {
-    'aria-current': 'page',
-    'kind': 'subtle'
+  const currentProps = isCurrent ? {
+    'aria-current': 'page'
   } : {}
 
   if (typeof children === 'string' && href) {
     return (
-      <Link href={href} {...rest} {...currentLinkProps}>
+      <Link href={href} {...rest}>
         {children}
       </Link>
     );
   }
 
-  return React.cloneElement(children, currentLinkProps)
+  if (React.isValidElement(children)) {
+    return React.cloneElement(children, currentProps)
+  }
+
+  return children
 }
 
 BreadcrumbItem.propTypes = {

@@ -38,6 +38,10 @@ import {
   Tab,
   TabPanel
 } from "@umich-lib/tabs"
+import {
+  Breadcrumb,
+  BreadcrumbItem
+} from '@umich-lib/breadcrumb'
 
 /*
   All the Design System Components included in core.
@@ -96,4 +100,12 @@ export {
   TabList,
   Tab,
   TabPanel
+}
+
+/*
+  Exports from @umich-lib/breadcrumb
+*/
+export {
+  Breadcrumb,
+  BreadcrumbItem
 }

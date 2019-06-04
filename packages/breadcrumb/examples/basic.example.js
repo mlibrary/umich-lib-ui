@@ -8,6 +8,6 @@ export let Example = () => (
     <BreadcrumbItem href="#">Home</BreadcrumbItem>
     <BreadcrumbItem href="#">Research and Scholarship</BreadcrumbItem>
     <BreadcrumbItem href="#">Funding & Awards</BreadcrumbItem>
-    <BreadcrumbItem href="#">Undergraduate Research Award</BreadcrumbItem>
+    <BreadcrumbItem>Undergraduate Research Award</BreadcrumbItem>
   </Breadcrumb>
 )
