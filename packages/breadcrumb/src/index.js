@@ -16,8 +16,6 @@ const Breadcrumb = ({
   const parentBreadcrumbIndex = numberOfBreadcrumbs > 1 ? numberOfBreadcrumbs - 2 : 0
 
   function isParent(i) {
-    console.log('isParent', i, parentBreadcrumbIndex, parentBreadcrumbIndex === i)
-
     return parentBreadcrumbIndex === i
   }
 
@@ -103,9 +101,7 @@ const BreadcrumbItem = ({
     );
   }
 
-  return (
-    {children}
-  );
+  return React.cloneElement(children, currentLinkProps)
 }
 
 BreadcrumbItem.propTypes = {
