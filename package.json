@@ -10,7 +10,7 @@
     "test:watch": "jest --coverage --watch",
     "build:storybook": "build-storybook -c .storybook -o dist",
     "publish": "lerna publish",
-    "publish:canary": "lerna publish --canary",
+    "publish:canary": "lerna publish --canary --preid beta",
     "sketch": "story2sketch"
   },
   "version": "0.0.0",
