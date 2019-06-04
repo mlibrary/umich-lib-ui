@@ -12,30 +12,67 @@ const Breadcrumb = ({
   children,
   ...rest
 }) => {
+  const numberOfBreadcrumbs = React.Children.count(children)
+  const parentBreadcrumbIndex = numberOfBreadcrumbs > 1 ? numberOfBreadcrumbs - 2 : 0
+
+  function isParent(i) {
+    console.log('isParent', i, parentBreadcrumbIndex, parentBreadcrumbIndex === i)
+
+    return parentBreadcrumbIndex === i
+  }
+
   return (
-    <nav aria-label="breadcrumb" {...rest} css={{
+    <nav aria-label="Breadcrumb" {...rest} css={{
       paddingTop: SPACING['2XL'],
       paddingBottom: SPACING['XL']
     }}>
-      <ul css={{
-        display: 'none',
+      <ol css={{
         [MEDIA_QUERIES.LARGESCREEN]: {
-          display: 'block'
-        },
-        '> li': {
-          display: 'inline-block',
-          marginRight: SPACING['2XS']
+          '> li': {
+            display: 'inline-block',
+            marginRight: SPACING['2XS']
+          }
         }
       }}>
         {React.Children.map(children, (child, i) => (
-          <React.Fragment>
-            {i > 0 && (<span css={{
-              marginRight: SPACING['2XS']
-            }}><Icon icon="navigate_next" size={16} /></span> )}
-            {child}
-          </React.Fragment>
+          <li css={{
+            display: isParent(i) ? 'block' : 'none',
+            [MEDIA_QUERIES.LARGESCREEN]: {
+              display: 'block'
+            }
+          }}>
+            <span
+              aria-hidden="true"
+              css={{
+                marginRight: SPACING['2XS']
+              }}>
+                <Icon
+                  icon="navigate_next"
+                  size={14}
+                  css={{
+                    display: 'none',
+                    [MEDIA_QUERIES.LARGESCREEN]: {
+                      display: i === 0 ? 'none' : 'inline-block'
+                    }
+                  }}
+                />
+                <Icon
+                  icon="navigate_before"
+                  size={14}
+                  css={{
+                    display: 'inline-block',
+                    [MEDIA_QUERIES.LARGESCREEN]: {
+                      display: 'none'
+                    }
+                  }}
+                />
+              </span>
+            {React.cloneElement(child, {
+              isCurrent: i === numberOfBreadcrumbs - 1
+            })}
+          </li>
         ))}
-      </ul>
+      </ol>
     </nav>
   )
 }
@@ -53,20 +90,21 @@ const BreadcrumbItem = ({
   isCurrent,
   ...rest
 }) => {
+  const currentLinkProps = isCurrent ? {
+    'aria-current': 'page',
+    'kind': 'subtle'
+  } : {}
+
   if (typeof children === 'string' && href) {
     return (
-      <li {...rest}>
-        <Link href={href}>
-          {children}
-        </Link>
-      </li>
+      <Link href={href} {...rest} {...currentLinkProps}>
+        {children}
+      </Link>
     );
   }
 
   return (
-    <li {...rest}>
-      {children}
-    </li>
+    {children}
   );
 }
 
