@@ -21,8 +21,8 @@ const alertIntentStyles = {
     borderColor: COLORS.maize[400]
   },
   'error': {
-    background: COLORS.coral[100],
-    borderColor: COLORS.coral[500]
+    background: COLORS.orange[100],
+    borderColor: COLORS.orange[500]
   }
 }
 

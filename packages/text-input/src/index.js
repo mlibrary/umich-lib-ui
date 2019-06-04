@@ -12,7 +12,7 @@ const StyledFormItem = styled('div')(
     boxSizing: 'border-box'
   },
   ({ invalid }) => ({
-    borderLeft: invalid && `solid 4px ${COLORS.coral[400]}`,
+    borderLeft: invalid && `solid 4px ${COLORS.orange[400]}`,
     paddingLeft: invalid && '1rem'
   })
 )
@@ -33,7 +33,7 @@ const StyledFormItemDescription = styled('span')(
 const StyledFormItemErrorMessage = styled('p')(
   {
     marginTop: '0.5rem',
-    color: COLORS.coral[400],
+    color: COLORS.orange[400],
     fontWeight: '600'
   }
 )

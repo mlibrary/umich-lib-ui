@@ -16,7 +16,7 @@ const features = [
     heading: 'Introduction',
     to: '/getting-started/introduction',
     text: 'Onboarding for designers and developers using the design system for the first time.',
-    borderColor: COLORS.coral[200]
+    borderColor: COLORS.orange[200]
   },
   {
     heading: 'Install',
@@ -46,7 +46,7 @@ const features = [
     heading: 'The team',
     to: '/about/design-system-team',
     text: 'Find out who’s responsible for the styles, components, and patterns published in our design system.',
-    borderColor: COLORS.coral[400]
+    borderColor: COLORS.orange[400]
   } 
 ]
 

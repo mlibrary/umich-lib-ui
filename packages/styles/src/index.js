@@ -19,7 +19,7 @@ export const TYPOGRAPHY = {
   '3XL': {
     fontSize: '3.5rem',
     fontFamily: 'Crimson Text',
-    lineHeight: '1.25'
+    lineHeight: '1.125'
   },
   '2XL': {
     fontSize: '2.25rem',
@@ -79,20 +79,12 @@ export const COLORS = {
     '500': '#001324'
   },
   neutral: {
-    '000': '#FFFFFF',
     '100': '#E5E9ED',
     '200': '#8A96A1',
     '300': '#637381',
     '400': '#212B36',
     '500': '#06080A'
-  },
-  coral: {
-    '100': '#FDF0EB',
-    '200': '#F7C3B1',
-    '300': '#F19675',
-    '400': '#EB693B',
-    '500': '#CC4B1D'
-  },
+  }, 
   teal: {
     '100': '#E9F2F5',
     '200': '#A7CDDB',
@@ -100,12 +92,33 @@ export const COLORS = {
     '400': '#1E80A2',
     '500': '#106684'
   },
-  beige: {
-    '100': '#FDFCF8',
-    '200': '#FAF5E6',
-    '300': '#F5EDD3',
-    '400': '#F2E6C1',
-    '500': '#D8CA9E'
+  orange: {
+    '100': '#FFF1EB',
+    '200': '#FFB899',
+    '300': '#FF8A58',
+    '400': '#F25F1F',
+    '500': '#C74E1A'
+  },
+  pink: {
+    '100': '#FCEBEB',
+    '200': '#F29D9D',
+    '300': '#EC6969',
+    '400': '#D93838',
+    '500': '#BF3232'
+  },
+  indigo: {
+    '100': '#EEF1F9',
+    '200': '#AAB9E3',
+    '300': '#7C93D4',
+    '400': '#506FC5',
+    '500': '#274391'
+  },
+  green: {
+    '100': '#EAF8EE',
+    '200': '#96DBAA',
+    '300': '#57BC75',
+    '400': '#20A848',
+    '500': '#198539'
   }
 }
 
@@ -117,7 +130,7 @@ export const INTENT_COLORS = {
   informational: COLORS.blue[400],
   success: COLORS.teal[400],
   warning: COLORS.maize[400],
-  error: COLORS.coral[400]
+  error: COLORS.orange[400]
 }
 
 export const BREAKPOINTS = {
