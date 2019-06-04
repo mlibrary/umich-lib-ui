@@ -9,7 +9,8 @@ navigation:
     to: '/guides/color/code'
 ---
 
-import { Text } from '@umich-lib/core'
+import { Text, COLORS } from '@umich-lib/core'
+import AccessiblePalette from '../../../components/accessible-palette'
 
 <Text lede>Color brings a design to life. Color is versatile; it’s used to express emotion and tone, as well as place emphasis and create associations. Color should always be used in meaningful and intentional ways in order to create patterns and visual cues.</Text>
 
@@ -31,4 +32,4 @@ Pink, orange, and green can be used intentionally to draw attention to error sta
 
 As mentioned above, all color combinations must pass WCAG AA standards of 4.5:1 for normal text and 3:1 for large text. Use these tables to check whether typography colors (neutral-400, neutral-300, or neutral-100) are accessible when paired with each color in our palette.
 
-[**TODO:** Add tables for color contrast here.]
+<AccessiblePalette />

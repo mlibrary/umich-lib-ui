@@ -18,8 +18,7 @@ const ColorPalette = ({ palette }) => (
   }}>
     <ol style={{
       display: 'block',
-      marginBottom: '2rem',
-      border: `solid 1px ${COLORS[palette][200]}`
+      marginBottom: '2rem'
     }}>
       {Object.keys(COLORS[palette]).map((shade, s) => (
         <li
