@@ -1,0 +1,74 @@
+---
+title: Breadcrumb
+navigation:
+  - text: 'Code'
+    to: '/components/breadcrumb/code'
+  - text: 'Usage'
+    to: '/components/breadcrumb/usage'
+---
+
+import { Breadcrumb, BreadcrumbItem, LINK_STYLES } from '@umich-lib/core'
+
+Source: https://github.com/mlibrary/umich-lib-ui/blob/master/packages/breadcrumb/src/index.js
+
+```js
+import { Breadcrumb, BreadcrumbItem } from '@umich-lib/core'
+```
+
+```jsx live=true
+<Breadcrumb>
+  <BreadcrumbItem href="#">Home</BreadcrumbItem>
+  <BreadcrumbItem href="#">Research and Scholarship</BreadcrumbItem>
+  <BreadcrumbItem href="#">Funding & Awards</BreadcrumbItem>
+  <BreadcrumbItem>Undergraduate Research Award</BreadcrumbItem>
+</Breadcrumb>
+```
+
+## Breadcrumb props
+
+|Prop|Type|Required|Default|
+|----|----|--------|-------|
+|[children](#children)|node|true|n/a|
+
+### children
+
+*Type*: node
+
+Must be `BreadcrumbItem` components.
+
+## BreadcrumbItem props
+
+|Prop|Type|Required|Default|
+|----|----|--------|-------|
+|[href](#href)|string|false|n/a|
+|[children](#children)|node|true|n/a|
+
+### href
+
+*Type*: string
+
+Use as the routing destination of the BreadcrumbItem, but **don't use `href` for the last item**.
+
+### children
+
+*Type*: node
+
+Regular React children.
+
+Use this to render your own breadcrumb item component. This might be useful if you need your own link for client side routing.
+
+**Note:** Don't use the `href` prop if you're using your own link component.
+
+```jsx live=true
+<Breadcrumb>
+  <BreadcrumbItem>
+    <a
+      href="/"
+      style={{ ...LINK_STYLES['default'] }}
+    >
+      Home
+    </a>
+  </BreadcrumbItem>
+  <BreadcrumbItem>Research and Scholarship</BreadcrumbItem>
+</Breadcrumb>
+```
