@@ -15,17 +15,32 @@ export const SPACING = {
   '4XL': '6rem'
 }
 
+export const BREAKPOINTS = {
+  SMALLSCREEN: 320,
+  LARGESCREEN: 641,
+};
+
+export const MEDIA_QUERIES = {
+  LARGESCREEN: `@media only screen and (min-width: ${BREAKPOINTS.LARGESCREEN}px)`,
+  PRINT: '@media print',
+};
+
+const TYPE_2XL = {
+  fontSize: '2.25rem',
+  fontFamily: 'Crimson Text',
+  lineHeight: '1.25'
+}
+
 export const TYPOGRAPHY = {
   '3XL': {
-    fontSize: '3.5rem',
-    fontFamily: 'Crimson Text',
-    lineHeight: '1.125'
+    ...TYPE_2XL,
+    [MEDIA_QUERIES.LARGESCREEN]: {
+      fontSize: '3.5rem',
+      fontFamily: 'Crimson Text',
+      lineHeight: '1.125'
+    }
   },
-  '2XL': {
-    fontSize: '2.25rem',
-    fontFamily: 'Crimson Text',
-    lineHeight: '1.25'
-  },
+  '2XL': TYPE_2XL,
   'XL': {
     fontSize: '2rem',
     fontWeight: '800',
@@ -132,16 +147,6 @@ export const INTENT_COLORS = {
   warning: COLORS.maize[400],
   error: COLORS.orange[400]
 }
-
-export const BREAKPOINTS = {
-  SMALLSCREEN: 320,
-  LARGESCREEN: 641,
-};
-
-export const MEDIA_QUERIES = {
-  LARGESCREEN: `@media only screen and (min-width: ${BREAKPOINTS.LARGESCREEN}px)`,
-  PRINT: '@media print',
-};
 
 export function GlobalStyleSheet() {
   /*
