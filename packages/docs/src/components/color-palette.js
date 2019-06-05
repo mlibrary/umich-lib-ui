@@ -1,29 +1,26 @@
 import React from 'react'
-import styled from '@emotion/styled'
 import {
   MEDIA_QUERIES,
-  COLORS
+  COLORS,
+  SPACING
 } from '@umich-lib/core'
 import lightOrDark from '../utilities/light-or-dark'
 
-const StyledContainer = styled('div')({
-  [MEDIA_QUERIES.LARGESCREEN]: {
-    columns: '3'
-  }
-})
-
 const ColorPalette = ({ palette }) => (
-  <section style={{
+  <section css={{
     breakInside: 'avoid'
   }}>
-    <ol style={{
+    <ol css={{
       display: 'block',
-      marginBottom: '2rem'
+      marginBottom: '2rem',
+      [MEDIA_QUERIES.LARGESCREEN]: {
+        marginBottom: '0'
+      }
     }}>
       {Object.keys(COLORS[palette]).map((shade, s) => (
         <li
           key={s}
-          style={{
+          css={{
             background: COLORS[palette][shade],
             color: lightOrDark(COLORS[palette][shade]) === 'dark' ? 'white' : 'inherit',
             width: '100%',
@@ -43,9 +40,15 @@ const ColorPalette = ({ palette }) => (
 )
 
 export default ({ colors }) => (
-  <StyledContainer>
+  <div css={{
+    [MEDIA_QUERIES.LARGESCREEN]: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fill,minmax(200px, 1fr))',
+      gridGap: SPACING['L']
+    }
+  }}>
     {colors.map((palette, p) => (
       <ColorPalette palette={palette} p={p} />
     ))}
-  </StyledContainer>
+  </div>
 )

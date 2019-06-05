@@ -34,8 +34,8 @@ export default function AccessiblePalette() {
     <div css={{
       [MEDIA_QUERIES.LARGESCREEN]: {
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill,minmax(400px, 1fr))',
-        gridGap: SPACING['XL']
+        gridTemplateColumns: 'repeat(auto-fill,minmax(300px, 1fr))',
+        gridGap: SPACING['L']
       }
     }}>
       {Object.keys(COLORS).map(palette => (
