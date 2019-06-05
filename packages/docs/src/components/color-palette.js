@@ -43,7 +43,7 @@ export default ({ colors }) => (
   <div css={{
     [MEDIA_QUERIES.LARGESCREEN]: {
       display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fill,minmax(200px, 1fr))',
+      gridTemplateColumns: 'repeat(auto-fill,minmax(220px, 1fr))',
       gridGap: SPACING['L']
     }
   }}>
