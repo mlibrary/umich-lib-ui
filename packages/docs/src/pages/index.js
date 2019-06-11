@@ -8,7 +8,7 @@ import {
   Margins
 } from '@umich-lib/core'
 import Layout from '../components/layout'
-import AbstractImage from '../components/abstract-image'
+import homeImage from '../images/home.png'
 import SEO from '../components/seo'
 
 const features = [
@@ -139,7 +139,9 @@ export default () => {
         position: 'relative'
       }}>
         <Title>Design System</Title>
-        <AbstractImage />
+        <img src={homeImage} css={{
+          maxWidth: '100%'
+        }} />
       </div>
       <Margins>
         <FeaturesContainer>
