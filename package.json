@@ -10,7 +10,7 @@
     "test:watch": "jest --coverage --watch",
     "build:storybook": "build-storybook -c .storybook -o dist",
     "publish": "lerna publish",
-    "publish:canary": "lerna publish --canary",
+    "publish:canary": "lerna publish --canary --preid beta",
     "sketch": "story2sketch"
   },
   "version": "0.0.0",
@@ -28,7 +28,7 @@
     "@storybook/react": "^5.0.10",
     "babel-preset-gatsby": "^0.1.11",
     "jest": "^24.5.0",
-    "lerna": "^3.13.3",
+    "lerna": "^3.14.1",
     "react-scripts": "^2.1.8",
     "react-test-renderer": "^16.8.5",
     "story2sketch": "^1.5.0"

@@ -34,17 +34,21 @@ export default function AccessiblePalette() {
     <div css={{
       [MEDIA_QUERIES.LARGESCREEN]: {
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill,minmax(400px, 1fr))',
-        gridGap: SPACING['XL']
+        gridTemplateColumns: 'repeat(auto-fill,minmax(300px, 1fr))',
+        gridGap: SPACING['L']
       }
     }}>
       {Object.keys(COLORS).map(palette => (
         <table
           key={palette}
           css={{
-            display: 'block',
+            width: '100%',
             tableLayout: 'fixed',
-            breakInside: 'avoid'
+            breakInside: 'avoid',
+            marginBottom: SPACING['L'],
+            [MEDIA_QUERIES.LARGESCREEN]: {
+              marginBottom: 0
+            }
           }}
         >
           <tbody>
@@ -59,13 +63,13 @@ export default function AccessiblePalette() {
                   }
                 }}
               >
-                <td css={{ fontWeight: '800', width: '100%' }}>{palette}-{shade}</td>
+                <td css={{ fontWeight: '800', width: '50%' }}>{palette}-{shade}</td>
                 {[
                   COLORS.neutral['400'],
                   COLORS.neutral['300'],
                   '#FFFFFF'
                 ].map((color, i) => (
-                  <td key={color + i} css={{ whiteSpace: 'nowrap' }}><TextContrast foreground={color} background={COLORS[palette][shade]} /></td>
+                  <td key={color + i} css={{ whiteSpace: 'nowrap', textAlign: 'right' }}><TextContrast foreground={color} background={COLORS[palette][shade]} /></td>
                 ))}
               </tr>
             ))}
