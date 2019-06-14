@@ -1,7 +1,7 @@
 {
   "name": "@umich-lib/docs",
   "description": "U-M Design System documentation site.",
-  "version": "1.0.0-beta.0",
+  "version": "1.0.0-beta.1",
   "author": "Jon Earley <earleyj@umich.edu>",
   "private": true,
   "dependencies": {
@@ -11,7 +11,7 @@
     "@mdx-js/mdx": "^0.20.3",
     "@mdx-js/react": "^1.0.0-alpha.12",
     "@mdx-js/tag": "^0.20.3",
-    "@umich-lib/core": "^1.0.0-beta.0",
+    "@umich-lib/core": "^1.0.0-beta.1",
     "gatsby": "^2.2.9",
     "gatsby-image": "^2.0.34",
     "gatsby-mdx": "^0.4.4",
