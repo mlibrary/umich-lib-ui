@@ -200,7 +200,7 @@ function Sites() {
   useEffect(() => {
     // Make sure to only run this once.
     if (!data) {
-      axios.get("https://dev.lib.umich.edu/api/universalheader")
+      axios.get("https://cms.dev.lib.umich.edu/api/universalheader")
         .then(result => setData(transformData(result.data)))
         .catch(error => setError(true))
     }

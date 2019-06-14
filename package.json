@@ -1,39 +1,53 @@
 {
-  "name": "umich-lib-ui",
-  "scripts": {
-    "bootstrap": "lerna bootstrap --hoist --force-local",
-    "build": "lerna exec --parallel -- babel src -d lib --config-file ../../babel.config.js",
-    "build:watch": "lerna exec --parallel -- babel src -d lib --config-file ../../babel.config.js -w",
-    "storybook": "start-storybook -p 9001 -c .storybook",
-    "test": "jest",
-    "test:coverage": "jest --coverage",
-    "test:watch": "jest --coverage --watch",
-    "build:storybook": "build-storybook -c .storybook -o dist",
-    "publish": "lerna publish",
-    "publish:canary": "lerna publish --canary --preid beta",
-    "sketch": "story2sketch"
-  },
-  "version": "0.0.0",
-  "dependencies": {
-    "react": "^16.8.5",
-    "react-dom": "^16.8.5"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.4.3",
-    "@babel/plugin-proposal-class-properties": "^7.4.4",
-    "@babel/preset-env": "^7.4.5",
-    "@babel/preset-react": "^7.0.0",
-    "@emotion/babel-preset-css-prop": "^10.0.9",
-    "@storybook/addon-storyshots": "^5.0.10",
-    "@storybook/react": "^5.0.10",
-    "babel-preset-gatsby": "^0.1.11",
-    "jest": "^24.5.0",
-    "lerna": "^3.14.1",
-    "react-scripts": "^2.1.8",
-    "react-test-renderer": "^16.8.5",
-    "story2sketch": "^1.5.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+	"name": "umich-lib-ui",
+	"version": "0.0.0",
+	"dependencies": {
+		"@emotion/core": "^10.0.7",
+		"@emotion/styled": "^10.0.7",
+		"@mdx-js/mdx": "^0.20.3",
+		"@mdx-js/react": "^1.0.0-alpha.12",
+		"@mdx-js/tag": "^0.20.3",
+		"@reach/alert": "^0.1.1",
+		"@reach/visually-hidden": "^0.1.1",
+		"axios": "^0.18.0",
+		"gatsby": "^2.2.9",
+		"gatsby-image": "^2.0.34",
+		"gatsby-mdx": "^0.4.4",
+		"gatsby-plugin-emotion": "^4.0.6",
+		"gatsby-plugin-manifest": "^2.0.24",
+		"gatsby-plugin-offline": "^2.0.25",
+		"gatsby-plugin-react-helmet": "^3.0.10",
+		"gatsby-plugin-sharp": "^2.0.30",
+		"gatsby-source-filesystem": "^2.0.8",
+		"gatsby-transformer-sharp": "^2.1.17",
+		"gh-pages": "^2.0.1",
+		"github-slugger": "^1.2.1",
+		"prettier": "^1.16.4",
+		"prism-react-renderer": "^0.1.6",
+		"prop-types": "^15.7.2",
+		"react": "^16.8.5",
+		"react-dom": "^16.8.5",
+		"react-helmet": "^5.2.0",
+		"react-live": "^2.0.1",
+		"react-tabs": "^2.3.0",
+		"wcag-contrast": "^2.1.1"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.4.3",
+		"@babel/plugin-proposal-class-properties": "^7.4.4",
+		"@babel/preset-env": "^7.4.5",
+		"@babel/preset-react": "^7.0.0",
+		"@emotion/babel-preset-css-prop": "^10.0.9",
+		"@storybook/addon-storyshots": "^5.0.10",
+		"@storybook/react": "^5.0.10",
+		"babel-preset-gatsby": "^0.1.11",
+		"jest": "^24.5.0",
+		"lerna": "^3.14.1",
+		"react-scripts": "^2.1.8",
+		"react-test-renderer": "^16.8.5",
+		"story2sketch": "^1.5.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
 }
