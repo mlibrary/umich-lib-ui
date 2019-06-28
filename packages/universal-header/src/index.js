@@ -80,15 +80,6 @@ const Overlay = styled('div')({
 })
 
 /*
-  The yellow underline/highlight used with the
-  "Explore" lede.
-*/
-const Highlight = styled('span')({
-  fontWeight: '800',
-  boxShadow: `inset 0 -14px ${COLORS.maize[400]}`
-})
-
-/*
   Apply appropriate typography styling
   to the overlay lede line.
 */
@@ -229,7 +220,7 @@ function Sites() {
       
       {open && (
         <Overlay>
-          <SitesLede><Highlight>Explore</Highlight> what the library has to offer.</SitesLede>
+          <SitesLede aria-role="heading">Explore what the library has to offer.</SitesLede>
           {error ? (
             <Alert intent="warning">
               <p style={{ maxWidth: '36rem' }}><strong style={{ fontWeight: '800' }}>Error</strong>: We are temporarily having trouble loading our list of library sites. Please try refreshing your page. You can also contact <Link href="https://www.lib.umich.edu/ask" kind="subtle">Ask a Librarian</Link> for help.</p>
