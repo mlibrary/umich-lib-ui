@@ -24,13 +24,13 @@ import { Link } from '@umich-lib/core'
 
 |Prop|Type|Required|Default|
 |----|----|--------|-------|
-|[kind](#kind)|enum "default", "subtle", "list", "list-strong", "special", "special-subtle"|false|"default"|
+|[kind](#kind)|enum "default", "subtle", "list", "list-strong", "special", "special"|false|"default"|
 |[children](#children)|string|true|n/a|
 |[element props](#element-props)|spread|false|n/a|
 
 ### kind
 
-*Type*: enum "default", "subtle", "list", "list-strong", "special", "special-subtle" default: "primary"
+*Type*: enum "default", "subtle", "light", "special", "list", "list-medium", "list-strong", "description"
 
 Controls how the `Link` is styled.
 
@@ -43,7 +43,20 @@ Controls how the `Link` is styled.
 ```
 
 ```jsx live
+<div style={{
+  background: COLORS.teal['400'],
+  padding: SPACING['M']
+}}>
+  <Link kind="light">Example link</Link>
+</div>
+```
+
+```jsx live
 <Link kind="list">Example link</Link>
+```
+
+```jsx live
+<Link kind="list-medium">Example link</Link>
 ```
 
 ```jsx live
@@ -52,10 +65,6 @@ Controls how the `Link` is styled.
 
 ```jsx live
 <Link kind="special">Example link</Link>
-```
-
-```jsx live
-<Link kind="special-subtle">Example link</Link>
 ```
 
 ### children

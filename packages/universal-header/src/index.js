@@ -45,9 +45,9 @@ const HeaderText = styled('span')({
   semantically a button.
 */
 const SitesButton = styled('button')({
-  ...LINK_STYLES['special-subtle'],
+  ...LINK_STYLES['special'],
   ':hover': {
-    'span': LINK_STYLES['special-subtle'][':hover']
+    'span': LINK_STYLES['special'][':hover']
   }
 })
 
@@ -129,7 +129,11 @@ const LinkItem = styled('li')({
 })
 
 const LinkDescription = styled('p')({
-  color: COLORS.neutral['300']
+  display: 'none',
+  color: COLORS.neutral['300'],
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    display: 'block'
+  }
 })
 
 const LoadingContainer = styled('div')({
@@ -200,7 +204,7 @@ function Sites() {
   useEffect(() => {
     // Make sure to only run this once.
     if (!data) {
-      axios.get("https://dev.lib.umich.edu/api/universalheader")
+      axios.get("https://cms.dev.lib.umich.edu/api/universalheader")
         .then(result => setData(transformData(result.data)))
         .catch(error => setError(true))
     }
@@ -259,12 +263,12 @@ function UniversalHeader() {
       <Margins>
         <HeaderContent>
           <LargeScreen>
-            <Link href="https://www.lib.umich.edu/" kind="special-subtle">
+            <Link href="https://www.lib.umich.edu/" kind="special">
               University of Michigan library
             </Link>
           </LargeScreen>
           <SmallScreen>
-            <Link href="https://www.lib.umich.edu/" kind="special-subtle">
+            <Link href="https://www.lib.umich.edu/" kind="special">
               <abbr title="University of Michigan">U-M</abbr> Library
             </Link>
           </SmallScreen>

@@ -323,14 +323,27 @@ export const LargeScreen = styled('div')({
   }
 })
 
+/*
+  "default",
+  "subtle",
+  "light",
+  "special",
+  "list",
+  "list-medium",
+  "list-strong",
+  "description"
+*/
+
+const DEFAULT_LINK_STYLE = {
+  color: COLORS.teal['400'],
+  boxShadow: `inset 0 -1px ${COLORS.teal[400]}`,
+  ':hover': {
+    boxShadow: `inset 0 -2px ${COLORS.teal[400]}`,
+  }
+}
+
 export const LINK_STYLES = {
-  'default': {
-    color: COLORS.teal['400'],
-    boxShadow: `inset 0 -1px ${COLORS.teal[400]}`,
-    ':hover': {
-      boxShadow: `inset 0 -2px ${COLORS.teal[400]}`,
-    }
-  },
+  'default': DEFAULT_LINK_STYLE,
   'subtle': {
     color: COLORS.neutral['400'],
     boxShadow: `inset 0 -1px ${COLORS.neutral[300]}`,
@@ -338,35 +351,56 @@ export const LINK_STYLES = {
       boxShadow: `inset 0 -2px ${COLORS.neutral[300]}`,
     }
   },
-  'list': {
-    ...TYPOGRAPHY['XS'],
-    color: COLORS.neutral['400'],
+  'light': {
+    color: 'white',
+    boxShadow: `inset 0 -1px white`,
     ':hover': {
-      boxShadow: `inset 0 -2px ${COLORS.teal[400]}`,
-    }
-  },
-  'list-strong': {
-    ...TYPOGRAPHY['XS'],
-    fontWeight: '600',
-    color: COLORS.neutral['400'],
-    ':hover': {
-      boxShadow: `inset 0 -2px ${COLORS.teal[400]}`,
+      boxShadow: `inset 0 -2px white`,
     }
   },
   'special': {
-    ...TYPOGRAPHY['3XS'],
-    color: COLORS.teal['400'],
-    ':hover': {
-      boxShadow: `inset 0 -1px ${COLORS.teal[400]}`,
-    }
-  },
-  'special-subtle': {
     ...TYPOGRAPHY['3XS'],
     color: COLORS.neutral['300'],
     ':hover': {
       boxShadow: `inset 0 -1px ${COLORS.neutral[300]}`,
     }
-  }
+  },
+  'list': {
+    color: COLORS.neutral['400'],
+    ':hover': {
+      boxShadow: `inset 0 -1px ${COLORS.neutral[400]}`,
+    }
+  },
+  'list-medium': {
+    fontWeight: '600',
+    ':hover': {
+      boxShadow: `inset 0 -2px ${COLORS.teal[400]}`,
+    }
+  },
+  'list-strong': {
+    fontWeight: '800',
+    color: COLORS.neutral['400'],
+    ':hover': {
+      boxShadow: `inset 0 -1px ${COLORS.neutral[400]}`,
+    }
+  },
+  'description': {
+    ...TYPOGRAPHY['XS'],
+    fontWeight: '600',
+    color: COLORS.neutral['400'],
+    boxShadow: `inset 0 -1px ${COLORS.teal[400]}`,
+    ':hover': {
+      boxShadow: `inset 0 -2px ${COLORS.teal[400]}`,
+    }
+  },
+
+  /*
+    DEPRECATED kinds
+
+    To prevent a breaking change direct previously supported
+    link kinds to the default link style.
+  */
+  'special-subtle': DEFAULT_LINK_STYLE
 }
 
 export const SmallScreen = styled('div')({

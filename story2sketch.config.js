@@ -55,7 +55,7 @@ module.exports = {
         { name: 'list' },
         { name: 'list-strong' },
         { name: 'special' },
-        { name: 'special-subtle' },
+        { name: 'special' },
       ]
     },
     {

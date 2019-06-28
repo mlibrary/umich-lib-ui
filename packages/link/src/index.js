@@ -7,7 +7,7 @@ import {
 
 const StyledLink = styled('a')(props => LINK_STYLES[props.kind])
 
-function Link({ children, ...other }) {
+export default function Link({ children, ...other }) {
   return (
     <StyledLink {...other}>
       {children}
@@ -19,10 +19,12 @@ Link.propTypes = {
   kind: PropTypes.oneOf([
     "default",
     "subtle",
-    "list",
-    "list-strong",
+    "light",
     "special",
-    "special-subtle"
+    "list",
+    "list-medium",
+    "list-strong",
+    "description"
   ]),
   children: PropTypes.node.isRequired,
   as: PropTypes.node,
@@ -32,6 +34,3 @@ Link.defaultProps = {
   kind: 'default',
   as: 'a'
 };
-
-
-export default Link
