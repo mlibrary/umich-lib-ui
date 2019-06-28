@@ -45,9 +45,9 @@ const HeaderText = styled('span')({
   semantically a button.
 */
 const SitesButton = styled('button')({
-  ...LINK_STYLES['special-subtle'],
+  ...LINK_STYLES['special'],
   ':hover': {
-    'span': LINK_STYLES['special-subtle'][':hover']
+    'span': LINK_STYLES['special'][':hover']
   }
 })
 
@@ -66,16 +66,21 @@ const Overlay = styled('div')({
   position: `absolute`,
   left: `auto`,
   right: `0`,
-  width: `862px`,
   maxWidth: `calc(100vw - ${SPACING['XL']})`,
-  border: `solid 1px ${COLORS.neutral[100]}`,
   boxShadow: `0 4px 8px 0 rgba(0, 0, 0, 0.1)`,
   padding: SPACING['L'],
   marginLeft: SPACING['XL'],
   marginBottom: SPACING['L'],
+  padding: '0',
+  borderRight: '0',
+  width: '20rem',
+  maxWidth: '84vw',
+  marginRight: `-${SPACING['M']}`,
   [MEDIA_QUERIES.LARGESCREEN]: {
+    marginRight: '0',
     padding: SPACING['XL'],
-    maxWidth: `calc(100vw - ${SPACING['2XL']} * 2)` // less the margins
+    width: `862px`,
+    maxWidth: `calc(80vw - ${SPACING['2XL']} * 2)`, // less the margins
   }
 })
 
@@ -84,18 +89,23 @@ const Overlay = styled('div')({
   to the overlay lede line.
 */
 const SitesLede = styled('p')({
-  ...TYPOGRAPHY['L'],
-  marginBottom: SPACING['L']
+  display: 'none',
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    display: 'block',
+    ...TYPOGRAPHY['L'],
+    padding: 0,
+    marginBottom: SPACING['L'],
+  }
 })
 
 /*
   Styling for link items
 */
 const LinksContainer = styled('div')({
-  'ul:first-of-type': {
-    marginBottom: SPACING['M']
-  },
   [MEDIA_QUERIES.LARGESCREEN]: {
+    'ul:first-of-type': {
+      marginBottom: SPACING['M']
+    },
     display: 'flex',
     justifyContent: 'space-between',
     'ul:last-of-type': {
@@ -105,22 +115,33 @@ const LinksContainer = styled('div')({
       paddingLeft: SPACING['XL'],
       borderLeft: `solid 1px ${COLORS.neutral[100]}`,
       'li': {
-        marginBottom: SPACING['S']
+        marginBottom: SPACING['S'],
       }
     }
+  },
+  'ul:last-of-type li:last-of-type': {
+    border: 'none'
   }
 })
 
 const LinkItem = styled('li')({
-  position: 'relative',
-  maxWidth: '32rem',
-  ':not(:last-child)': {
-    marginBottom: '1rem'
+  borderBottom: `solid 1px ${COLORS.neutral[100]}`,
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    border: 'none',
+    position: 'relative',
+    maxWidth: '32rem',
+    ':not(:last-child)': {
+      marginBottom: '1rem'
+    }
   }
 })
 
 const LinkDescription = styled('p')({
-  color: COLORS.neutral['300']
+  display: 'none',
+  color: COLORS.neutral['300'],
+  [MEDIA_QUERIES.LARGESCREEN]: {
+    display: 'block'
+  }
 })
 
 const LoadingContainer = styled('div')({
@@ -151,8 +172,19 @@ function SiteLinks({ data }) {
     <ul>
       {data.map((d, i) => (
         <LinkItem key={i + d.title}>
-          <Link kind="list-strong" href={d.link}>
-            {d.title}
+          <Link kind="list-strong" href={d.link} css={{
+            display: 'block',
+            padding: SPACING['M'],
+            ':hover': {
+              boxShadow: 'none'
+            },
+            ':hover span': LINK_STYLES['list-strong'][':hover'],
+            [MEDIA_QUERIES.LARGESCREEN]: {
+              display: 'inline',
+              padding: '0'
+            }
+          }}>
+            <span>{d.title}</span>
           </Link>
           {d.description && (
             <LinkDescription>
@@ -250,12 +282,12 @@ function UniversalHeader() {
       <Margins>
         <HeaderContent>
           <LargeScreen>
-            <Link href="https://www.lib.umich.edu/" kind="special-subtle">
+            <Link href="https://www.lib.umich.edu/" kind="special">
               University of Michigan library
             </Link>
           </LargeScreen>
           <SmallScreen>
-            <Link href="https://www.lib.umich.edu/" kind="special-subtle">
+            <Link href="https://www.lib.umich.edu/" kind="special">
               <abbr title="University of Michigan">U-M</abbr> Library
             </Link>
           </SmallScreen>
