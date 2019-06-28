@@ -21,13 +21,10 @@ const createButtonStyles = (props) => {
   }
 
   switch (kind) {
-    case 'start':
+    case 'default':
       styles = {
         ...styles,
-        background: COLORS.maize[400],
-        padding: '0.5rem 1.15rem',
-        fontSize: '1.25rem',
-        fontWeight: '600',
+        background: COLORS.neutral[100],
       }
       break;
     case 'primary':
@@ -35,12 +32,6 @@ const createButtonStyles = (props) => {
         ...styles,
         background: COLORS.maize[400],
         fontWeight: '600',
-      }
-      break;
-    case 'secondary':
-      styles = {
-        ...styles,
-        background: COLORS.neutral[100],
       }
       break;
   }
@@ -113,9 +104,8 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   small: PropTypes.bool,
   kind: PropTypes.oneOf([
-    'start',
-    'primary',
-    'secondary',
+    'default',
+    'primary'
   ]).isRequired,
   href: PropTypes.string,
   type: PropTypes.oneOf(['button', 'reset', 'submit']),
@@ -125,7 +115,7 @@ Button.defaultProps = {
   type: 'button',
   disabled: false,
   small: false,
-  kind: 'primary',
+  kind: 'default',
 };
 
 export default Button;

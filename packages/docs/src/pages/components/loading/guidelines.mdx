@@ -9,6 +9,9 @@ navigation:
 
 import { Text } from '@umich-lib/core'
 
-<Text lede>Use Loading component when retrieving data or performing slow computations. It helps to notify users that loading is underway.</Text>
+<Text lede>Use Loading component when retrieving data or performing slow computations. It helps to notify users that lcontent is being loaded and will take an indeterminate amount of time.</Text>
 
-Although it may not be obvious what is occurring on the back-end, we can communicate clearly to reassure the user that progress is happening. It is best practice to use a loading spinner whenever the wait time is anticipated to be longer than three seconds.
+## Guidelines
+- Do not use more than one spinner per page.
+- Place the spinner where you want the users’ attention to be when loading is finished.
+- Only show a spinner if the expected wait time is more than 2 seconds. Avoid using spinners for wait times of over 10 seconds. For longer wait times, you a progress bar may be a better choice.

@@ -12,24 +12,10 @@ import {
 
 import Layout from './layout'
 import SEO from './seo'
+import Prose from './prose'
 
 const ContentContainer = styled('div')({
   maxWidth: '1024px'
-})
-
-const DocContainer = styled('div')({
-  '> div > *:not(:last-child)': {
-    marginBottom: SPACING['M']
-  },
-  'span, p, li, h1, h2, h3, h4, h5, h6': {
-    wordBreak: 'break-word',
-  },
-  'img': {
-    maxWidth: '100%'
-  },
-  'pre': {
-    whiteSpace: 'normal'
-  }
 })
 
 const DocHeaderContainer = styled('div')({
@@ -114,9 +100,9 @@ const Doc = (props) => {
               marginBottom: SPACING['2XL']
             }}
           >
-            <DocContainer>
+            <Prose>
               {props.children}
-            </DocContainer>
+            </Prose>
 
             {github_path && (
               <div style={{
