@@ -19,7 +19,7 @@ export default function Card({
 }) {
   const anchorStyles = {
     display: 'block',
-    maxWidth: '480px',
+    maxWidth: '420px',
     ':hover': {
       ...Z_SPACE[8],
       '.card--title': {
@@ -32,7 +32,6 @@ export default function Card({
 
   const anchorProps = {
     href,
-    anchorStyles,
     ...rest
   }
 
@@ -83,6 +82,7 @@ export default function Card({
   if (renderAnchor) {
     return renderAnchor({
       ...anchorProps,
+      anchorStyles: anchorStyles,
       children: content
     })
   }

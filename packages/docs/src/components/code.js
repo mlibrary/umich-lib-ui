@@ -29,9 +29,10 @@ function CodeEditor({ live }) {
       background: background_color,
       marginBottom: SPACING['L']
     }}>
-      <div style={{
+      <div css={{
         padding: SPACING['M'],
-        borderTop: `solid 1px ${border_color}`
+        borderTop: `solid 1px ${border_color}`,
+        whiteSpace: 'normal'
       }}>
         <LivePreview />
       </div>
