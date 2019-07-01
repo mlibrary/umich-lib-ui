@@ -31,6 +31,15 @@ const TYPE_2XL = {
   lineHeight: '1.25'
 }
 
+export const Z_DEPTH = {
+  1: {
+    boxShadow: `0 2px 8px 0 rgba(0,0,0,0.2)`
+  },
+  2: {
+    boxShadow: `0 4px 16px 0 rgba(0,0,0,0.12)`
+  }
+}
+
 export const TYPOGRAPHY = {
   '3XL': {
     ...TYPE_2XL,

@@ -1,0 +1,52 @@
+---
+title: Layers
+navigation:
+  - text: 'Code'
+    to: '/guides/layers/code'
+  - text: 'Guidelines'
+    to: '/guides/layers/guidelines'
+---
+
+import { Z_DEPTH } from '@umich-lib/core'
+
+Shadows are used to create layers in the interface. The distance from one layer to another is measured along the z-axis. Both the size and softness of a shadow express the distance between two surfaces. For example, a surface with a shadow that is small and sharp, such as the card below with a **z-depth** of 1, indicates a surface’s close proximity to the surface behind it. Larger, softer shadows, such as the card below with a **z-depth** of 2, express more distance.  
+
+```js
+import { Z_DEPTH } from '@umich-lib/core'
+```
+
+## z-depth 1
+
+```js live
+<section
+  style={{
+    ...Z_DEPTH[1],
+    width: '12rem',
+    height: '12rem'
+  }}
+>
+</section>
+```
+
+- **offset x:** 0px
+- **offset y:** 2px
+- **Blue radius:** 8px
+- **Color:** rgba(0, 0, 0, 0.2)
+
+## z-depth 2
+
+```js live
+<section
+  style={{
+    ...Z_DEPTH[2],
+    width: '12rem',
+    height: '12rem'
+  }}
+>
+</section>
+```
+
+- **offset x:** 0px
+- **offset y:** 4px
+- **Blue radius:** 16px
+- **Color:** rgba(0, 0, 0, 0.12)
