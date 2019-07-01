@@ -7,46 +7,43 @@ navigation:
     to: '/guides/layers/guidelines'
 ---
 
-import { Z_DEPTH } from '@umich-lib/core'
+import { Text, Z_SPACE, SPACING } from '@umich-lib/core'
 
-Shadows are used to create layers in the interface. The distance from one layer to another is measured along the z-axis. Both the size and softness of a shadow express the distance between two surfaces. For example, a surface with a shadow that is small and sharp, such as the card below with a **z-depth** of 1, indicates a surface’s close proximity to the surface behind it. Larger, softer shadows, such as the card below with a **z-depth** of 2, express more distance.  
+<Text lede>Use layers to create depth in the interface. The distance from one layer to another is measured along the z-axis.</Text>
+
+Both the size and softness of a shadow express the distance between two surfaces. For example, a surface with a shadow that is small and sharp indicates a surface’s close proximity to the surface behind it. Larger, softer shadows, express more distance.
 
 ```js
-import { Z_DEPTH } from '@umich-lib/core'
+import { Z_SPACE } from '@umich-lib/core'
 ```
 
-## z-depth 1
-
-```js live
-<section
-  style={{
-    ...Z_DEPTH[1],
-    width: '12rem',
-    height: '12rem'
-  }}
->
-</section>
+```jsx live
+  <Alert
+    intent="error"
+    style={{
+      display: 'inline-block',
+      ...Z_SPACE[16]
+    }}
+  >
+    Your list has been deleted.
+  </Alert>
 ```
 
-- **offset x:** 0px
-- **offset y:** 2px
-- **Blue radius:** 8px
-- **Color:** rgba(0, 0, 0, 0.2)
+## Available z-spaces
 
-## z-depth 2
+Distance between surfaces is measured in `z-spaces`. Here is a preview of all shadows by **z-space** units.
 
-```js live
-<section
-  style={{
-    ...Z_DEPTH[2],
-    width: '12rem',
-    height: '12rem'
-  }}
->
-</section>
-```
-
-- **offset x:** 0px
-- **offset y:** 4px
-- **Blue radius:** 16px
-- **Color:** rgba(0, 0, 0, 0.12)
+<ol style={{
+  display: 'grid',
+  gridTemplateColumns: "repeat(auto-fill, minmax(12rem, 1fr))",
+  gridGap: SPACING['L']
+}}>
+  {Object.keys(Z_SPACE).map(z => (
+    <li style={{
+      textAlign: 'center',
+      padding: SPACING['XL'],
+      fontWeight: '600',
+      ...Z_SPACE[z]
+    }}>{z}</li>
+  ))}
+</ol>

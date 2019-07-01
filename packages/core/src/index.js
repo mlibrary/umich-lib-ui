@@ -31,7 +31,7 @@ import {
   Margins,
   SmallScreen,
   LargeScreen,
-  Z_DEPTH
+  Z_SPACE
 } from "@umich-lib/styles"
 import {
   Tabs,
@@ -91,7 +91,7 @@ export {
   Margins,
   SmallScreen,
   LargeScreen,
-  Z_DEPTH
+  Z_SPACE
 }
 
 /*
