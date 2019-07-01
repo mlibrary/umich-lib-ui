@@ -98,19 +98,19 @@ export default function Card({
 
 Card.propTypes = {
   /*
-  * This is a purely decorative image and shouldn't be required
-  * to understand the Card.
+  * Provide a url to an image. This is a purely decorative
+  * and shouldn't be required to understand the Card.
   **/
   image: PropTypes.string.isRequired,
 
   /*
-  * The title should describe where the Card will take
+  * The title should briefly describe where the Card will take
   * the user when they click on it.
   **/
   title: PropTypes.string.isRequired,
 
   /*
-  * Provide descrive text.
+  * An optional addition to the Card heading. Only use if necessary.
   **/
   subtitle: PropTypes.string,
 
