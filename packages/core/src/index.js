@@ -50,6 +50,7 @@ import {
 export {
   Alert,
   Button,
+  Card,
   Chat,
   Header,
   Heading,

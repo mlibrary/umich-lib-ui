@@ -7,6 +7,7 @@
     "@umich-lib/alert": "^1.0.0-beta.2",
     "@umich-lib/breadcrumb": "^0.0.2-beta.2",
     "@umich-lib/button": "^1.0.0-beta.2",
+    "@umich-lib/card": "^1.0.0-beta.2",
     "@umich-lib/chat": "^1.0.0-beta.2",
     "@umich-lib/expandable": "^1.0.0-beta.2",
     "@umich-lib/header": "^1.0.0-beta.2",
