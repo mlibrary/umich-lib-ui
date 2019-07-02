@@ -177,7 +177,6 @@ class Chat extends React.Component {
     return (
       <Button
         onClick={this.handleClick}
-        kind="secondary"
       >
         {this.renderButton()}
       </Button>
