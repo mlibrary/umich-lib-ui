@@ -9,7 +9,8 @@ import {
   Margins,
   LargeScreen,
   SmallScreen,
-  LINK_STYLES
+  LINK_STYLES,
+  Z_SPACE
 } from '@umich-lib/styles'
 import Icon from '@umich-lib/icon'
 import Loading from '@umich-lib/loading'
@@ -66,21 +67,19 @@ const Overlay = styled('div')({
   position: `absolute`,
   left: `auto`,
   right: `0`,
-  maxWidth: `calc(100vw - ${SPACING['XL']})`,
-  boxShadow: `0 4px 8px 0 rgba(0, 0, 0, 0.1)`,
   padding: SPACING['L'],
   marginLeft: SPACING['XL'],
   marginBottom: SPACING['L'],
   padding: '0',
   borderRight: '0',
   width: '20rem',
-  maxWidth: '84vw',
   marginRight: `-${SPACING['M']}`,
+  ...Z_SPACE[8],
   [MEDIA_QUERIES.LARGESCREEN]: {
     marginRight: '0',
     padding: SPACING['XL'],
     width: `862px`,
-    maxWidth: `calc(80vw - ${SPACING['2XL']} * 2)`, // less the margins
+    maxWidth: `calc(100vw - ${SPACING['2XL']} * 2)`, // less the margins
   }
 })
 
