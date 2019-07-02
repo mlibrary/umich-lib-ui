@@ -1,12 +1,12 @@
 {
   "name": "@umich-lib/link",
-  "version": "0.1.1-beta.2",
+  "version": "0.1.1-beta.3",
   "main": "lib/index.js",
   "module": "lib/index.js",
   "dependencies": {
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
-    "@umich-lib/styles": "^2.0.0-beta.2"
+    "@umich-lib/styles": "^2.0.0-beta.3"
   },
   "peerDependencies": {
     "react": "^16.8.5",
