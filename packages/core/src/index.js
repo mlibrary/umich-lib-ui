@@ -30,7 +30,8 @@ import {
   TYPOGRAPHY,
   Margins,
   SmallScreen,
-  LargeScreen
+  LargeScreen,
+  Z_SPACE
 } from "@umich-lib/styles"
 import {
   Tabs,
@@ -89,7 +90,8 @@ export {
   TYPOGRAPHY,
   Margins,
   SmallScreen,
-  LargeScreen
+  LargeScreen,
+  Z_SPACE
 }
 
 /*
