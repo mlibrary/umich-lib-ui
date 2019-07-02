@@ -15,11 +15,12 @@ export default function Card({
   href,
   description,
   renderAnchor,
+  children,
   ...rest
 }) {
   const anchorStyles = {
     display: 'block',
-    maxWidth: '420px',
+    maxWidth: '600px',
     ':hover': {
       ...Z_SPACE[8],
       '.card--title': {
@@ -33,6 +34,27 @@ export default function Card({
   const anchorProps = {
     href,
     ...rest
+  }
+
+  function renderChildren() {
+    const styles = {
+      color: COLORS.neutral[300],
+      marginTop: SPACING['XS']
+    }
+
+    if (typeof children === 'string') {
+      return (
+        <p css={styles}>
+          {children}
+        </p>
+      )
+    }
+
+    return (
+      <div css={styles}>
+        {children}
+      </div>
+    )
   }
 
   const content = (
@@ -68,14 +90,7 @@ export default function Card({
         >{title}</span>
       </p>
 
-      {description && (
-        <p css={{
-          color: COLORS.neutral[300],
-          marginTop: SPACING['XS']
-        }}>
-          {description}
-        </p>
-      )}
+      {renderChildren()}
     </React.Fragment>
   )
 
@@ -98,7 +113,7 @@ export default function Card({
 
 Card.propTypes = {
   /*
-  * Provide a url to an image. This is a purely decorative
+  * Provide a url to an image. This is purely decorative
   * and shouldn't be required to understand the Card.
   **/
   image: PropTypes.string.isRequired,
@@ -110,15 +125,14 @@ Card.propTypes = {
   title: PropTypes.string.isRequired,
 
   /*
+  * Regular React element.
+  **/
+  children: PropTypes.node,
+
+  /*
   * An optional addition to the Card heading. Only use if necessary.
   **/
   subtitle: PropTypes.string,
-
-  /*
-  * An optional parameter to provide descrive text to
-  * supliment the Card.
-  **/
-  description: PropTypes.string,
 
   /*
   * Provide a url for where this card should route to.
@@ -127,7 +141,7 @@ Card.propTypes = {
 
   /*
   * An optional parameter to allow overriding the anchor rendering.
-  * Useful for using Tab along with react-router or other client
+  * Useful for using Card along with react-router or other client
   * side router libraries.
   **/
   renderAnchor: PropTypes.func
