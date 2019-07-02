@@ -1,4 +1,5 @@
 import React from 'react'
+import { jsx } from '@emotion/core'
 import Highlight, {defaultProps} from 'prism-react-renderer'
 import {
   withLive,
@@ -64,7 +65,7 @@ export default ({children, className, live}) => {
       <div>
         <LiveProvider
           code={children.trim()}
-          scope={{ ...core }}
+          scope={{ jsx, ...core }}
           theme={theme}
         >
           <CodeEditorLive />

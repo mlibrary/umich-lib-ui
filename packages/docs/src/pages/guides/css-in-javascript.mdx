@@ -1,0 +1,24 @@
+---
+title: CSS in JavaScript
+---
+
+Use the [Emotion library](https://emotion.sh/) to write your styles in JavaScript. Instead of writing styles in `kebab-case` like regular css, write them in `camelCase` using [Emotion Object Styles](https://emotion.sh/docs/object-styles) with the css prop.
+
+import { COLORS, SPACING } from '@umich-lib/core'
+
+```jsx live
+/** @jsx jsx */
+
+<span
+  css={{
+    display: 'inline-block',
+    padding: SPACING['M'],
+    background: COLORS.blue['100'],
+    'b': {
+      fontWeight: '800'
+    }
+  }}
+>
+  University of Michigan <b>Library</b>
+</span>
+```
