@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   siteMetadata: {
-    title: 'Design System | University of Michigan',
+    title: 'Design System | University of Michigan Library',
     description:
       'Use this design system to make your service consistent with other library services. Learn from the research and experience of other teams and avoid repeating work that has already been done.',
     author: 'Jon Earley <earley@umich.edu>',
