@@ -21,10 +21,55 @@ import { Card } from '@umich-lib/core'
   href="#"
   title="Therapaws"
   subtitle="Thursday, April 4 at 7PM"
-  description="Finals are a stressful time. Relieve some stress by petting dogs on the diag."
-/>
+  style={{ maxWidth: '28rem' }}
+>
+  Finals are a stressful time. Relieve some stress by petting dogs on the diag.
+</Card>
 ```
 
 ## Card props
 
-TODO
+|Prop|Type|Required|Default|
+|----|----|--------|-------|
+|[title](#title)|string|true|n/a|
+|[href](#href)|string|true|n/a|
+|[image](#image)|string|true|n/a|
+|[subtitle](#subtitle)|string|false|n/a|
+|[children](#children)|node|false|n/a|
+|[renderAchor](#node)|node|false|n/a|
+
+### title
+
+*Type*: string
+
+The title should briefly describe where the Card will take the user when they click on it.
+
+### href
+
+*Type*: string
+
+Provide a url for where this card should route to.
+
+### image
+
+*Type*: string
+
+Provide a url to an image. This is purely decorative and shouldn't be required to understand the Card.
+
+### subtitle
+
+*Type*: string
+
+An optional addition to the Card heading. Only use if necessary.
+
+### children
+
+*Type*: node
+
+Regular React children.
+
+### renderAnchor
+
+*Type*: node
+
+An optional parameter to allow overriding the anchor rendering. Useful for using Card along with react-router or other client side router libraries.
