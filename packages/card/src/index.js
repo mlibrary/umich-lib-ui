@@ -37,6 +37,10 @@ export default function Card({
   }
 
   function renderChildren() {
+    if (!children) {
+      return null
+    }
+
     const styles = {
       color: COLORS.neutral[300],
       marginTop: SPACING['XS']
@@ -63,6 +67,7 @@ export default function Card({
         <div
           aria-hidden="true"
           css={{
+            backgroundColor: COLORS.blue['100'],
             backgroundImage: `url(${image})`,
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
