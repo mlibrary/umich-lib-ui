@@ -40,7 +40,7 @@ const maxWidth = {
 const Heading2 = ({ children, ...other }) => (
   <Heading
     level={2}
-    size="XL"
+    size="L"
     id={slug(children)}
     style={{ marginTop: SPACING['2XL'], ...maxWidth }}
     {...other}
@@ -49,7 +49,7 @@ const Heading2 = ({ children, ...other }) => (
 const Heading3 = ({ children, ...other }) => (
   <Heading
     level={3}
-    size="M"
+    size="S"
     id={slug(children)}
     style={{ marginTop: SPACING['XL'], ...maxWidth }}
     {...other}
@@ -58,14 +58,14 @@ const Heading3 = ({ children, ...other }) => (
 const Heading4 = ({ children, ...other }) => (
   <Heading
     level={4}
-    size="S"
+    size="XS"
     id={slug(children)}
     style={maxWidth}
     {...other}
   >{children}</Heading>
 )
 const Heading5 = ({ children, ...other }) => (
-  <Heading level={5} size="XS" id={slug(children)} style={maxWidth} {...other}>{children}</Heading>
+  <Heading level={5} size="2XS" id={slug(children)} style={maxWidth} {...other}>{children}</Heading>
 )
 const Heading6 = ({ children, ...other }) => (
   <Heading level={6} size="2XS" id={slug(children)} style={maxWidth} {...other}>{children}</Heading>

@@ -1,5 +1,6 @@
 import Alert from "@umich-lib/alert"
 import Button from "@umich-lib/button"
+import Card from "@umich-lib/card"
 import Chat from "@umich-lib/chat"
 import Header from "@umich-lib/header"
 import Heading from "@umich-lib/heading"
@@ -50,6 +51,7 @@ import {
 export {
   Alert,
   Button,
+  Card,
   Chat,
   Header,
   Heading,
