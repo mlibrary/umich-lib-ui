@@ -22,13 +22,13 @@ export default function Card({
     display: 'block',
     maxWidth: '600px',
     ':hover': {
-      ...Z_SPACE[8],
+      '[data-card-image]': {
+        ...Z_SPACE[8],
+      },
       '.card--title': {
         ...LINK_STYLES['description'][':hover']
       }
-    },
-    borderRadius: '2px',
-    padding: SPACING['M']
+    }
   }
 
   const anchorProps = {
@@ -66,6 +66,7 @@ export default function Card({
       {image && (
         <div
           aria-hidden="true"
+          data-card-image
           css={{
             backgroundColor: COLORS.blue['100'],
             backgroundImage: `url(${image})`,
