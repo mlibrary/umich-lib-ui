@@ -234,7 +234,7 @@ function Sites() {
 
     return () => {
       document.removeEventListener("mousedown", handleClick);
-      document.addEventListener("keydown", handleKeydown);
+      document.removeEventListener("keydown", handleKeydown);
     };
   }, []);
 
