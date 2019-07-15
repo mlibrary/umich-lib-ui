@@ -25,7 +25,7 @@ export default function Card({
       '[data-card-image]': {
         ...Z_SPACE[8],
       },
-      '.card--title': {
+      '[data-card-title]': {
         ...LINK_STYLES['description'][':hover']
       }
     }
@@ -92,7 +92,7 @@ export default function Card({
           css={{
             ...LINK_STYLES['description'],
           }}
-          className="card--title"
+          data-card-title
         >{title}</span>
       </p>
 
