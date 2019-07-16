@@ -219,6 +219,13 @@ function Sites() {
     }
   };
 
+  const handlePostMessage = e => {
+    if (e.data == "focus") {
+      // any iframe sending a "focus" message will close the header
+      setOpen(false);
+    }
+  };
+
   useEffect(() => {
     // Make sure to only run this once.
     if (!data) {
@@ -231,10 +238,12 @@ function Sites() {
   useEffect(() => {
     document.addEventListener("mousedown", handleClick);
     document.addEventListener("keydown", handleKeydown);
+    window.addEventListener("message", handlePostMessage);
 
     return () => {
       document.removeEventListener("mousedown", handleClick);
       document.removeEventListener("keydown", handleKeydown);
+      window.removeEventListener(handlePostMessage);
     };
   }, []);
 
