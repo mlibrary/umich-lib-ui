@@ -7,18 +7,76 @@ navigation:
     to: '/components/button/guidelines'
 ---
 
-import { Text } from '@umich-lib/core'
+import { Text, Button, Icon, TextInput } from '@umich-lib/core'
 
-<Text lede>Buttons explain what action will occur when the user clicks or touches it. Buttons are used to trigger actions. They contain a clear label and, sometimes, an icon.</Text>
+<Text lede>Buttons are used to make actions visible and easy to perform with one click, tap, or keypress. They contain a clear label and, sometimes, an icon.</Text>
 
-## When to use which button
-- **Primary button**: Use the primary button to call attention to the strongest action on the screen. Primary buttons should only appear once per screen, but not every screen requires a primary button.
-- **Default button**: Use the default button for most use cases.
+## Best practices
 
-## Guidelines
+- Button labels should clearly indicate what will happen when a user clicks or touches it.
+- Use active verbs such as Add, Delete, or Save.
+- Do not use buttons as navigational elements. Instead, use links when the action will take a user to a new page.
+- Button labels should be written in sentence case.
+- Aim for three words or less and never more than five.
+- Avoid vague button labels. For related buttons, use specific labels such as “Save” and “Discard” instead of “Ok” and “Cancel”.
+- Include hover and focus states that are unique from the resting state.
+- Avoid wrapping button labels. For best legibility, a label should remain on a single line.
+- Icons may be used to convey meaning and draw more attention. The icon comes before the text label. Never use more than one icon per button.
 
-- Use buttons when the user is performing an action such as “Save” or “Submit”. If a user is navigating to another place, use a link.
-- Button labels should clearly indicate the action of the button. Use active verbs.
-- Labels should be written in sentence case.
-- Aim for labels of 3 words or less and never more than 5.
-- Avoid vague labels. For sets of buttons, use specific labels such as “Submit” or “Discard” instead of “OK” or “Cancel”.
+## Primary button
+
+Use the primary button to call attention to the strongest action on the screen. The primary button should only appear once per screen, but not every screen requires a primary button.
+
+```jsx live
+<Button kind="primary">Search</Button>
+```
+
+## Primary button
+
+Use secondary for actions.
+
+```jsx live
+<Button kind="secondary">Search</Button>
+```
+
+## Tertiary button
+
+Use this button when less visual weight is appropriate. The tertiary button should also be used alongside the secondary button when one action requires more emphasis than the other. For example, **Save** (more emphasis; secondary style) versus **Cancel** (less emphasis; tertiary style).
+
+```jsx live
+<Button kind="tertiary">Cancel</Button>
+```
+
+## Subtle button
+
+Use this button for less important actions or for several actions that appear next to each other.
+
+```jsx live
+<Button kind="subtle">Cancel</Button>
+```
+
+## Button with Icons
+
+Use icons before the label in any button type to draw more attention to it or to convey meaning.
+
+<div css={{
+  display: 'flex',
+  '& > *': {
+    marginRight: '1rem'
+  }
+}}>
+  <Button kind="primary"><Icon icon="search" style={{ marginRight: '0.25rem' }} />Search</Button>
+  <Button kind="secondary"><Icon icon="star_border" style={{ marginRight: '0.25rem' }} />Save</Button>
+  <Button kind="tertiary"><Icon icon="chat" style={{ marginRight: '0.25rem' }} />Comment</Button>
+  <Button kind="subtle"><Icon icon="filter" style={{ marginRight: '0.25rem' }} />Copy</Button>
+</div>
+
+## Icon-only button
+
+Some buttons may contain only an icon. These should be used sparingly, and only in cases when an icon is very straightforward and easy to understand.
+
+```jsx live
+<Button kind="primary">
+  <Icon icon="search" title="Search" />
+</Button>
+```
