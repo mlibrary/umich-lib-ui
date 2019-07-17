@@ -16,44 +16,37 @@ import { Button } from '@umich-lib/core'
 ```
 
 ```jsx live=true
-<Button>Okay</Button>
+<Button>Continue</Button>
 ```
 
 ## Button props
 
 |Prop|Type|Required|Default|
 |----|----|--------|-------|
-|[kind](#kind)|enum "default" or "primary"|false|"default"|
-|[small](#small)|boolean|false|"false"|
+|[kind](#kind)|enum "primary", "secondary", "tertiary", or "subtle"|false|"secondary"|
 |[children](#children)|node|true|n/a|
 |[element props](#element-props)|spread|false|n/a|
 
 ### kind
 
-*Type*: enum "default" | "primary" default: "primary"
+*Type*: enum "primary", "secondary", "tertiary", or "subtle"
 
 Controls how the `Button` is styled.
 
 ```jsx live=true
-<Button>Okay</Button>
+<Button kind="primary">Search</Button>
 ```
 
 ```jsx live=true
-<Button kind="primary">Okay</Button>
-```
-
-### small
-
-*Type*: boolean default: "false"
-
-Controls if the `Button` is styled smaller.
-
-```jsx live=true
-<Button small>Small</Button>
+<Button kind="secondary">Save</Button>
 ```
 
 ```jsx live=true
-<Button kind="primary" small>Small primary</Button>
+<Button kind="tertiary">Cancel</Button>
+```
+
+```jsx live=true
+<Button kind="subtle">Edit</Button>
 ```
 
 ### children
@@ -64,14 +57,7 @@ Regular React children.
 
 ```jsx live=true
 <Button kind="primary">
-  <Icon icon="search" size={24} /> Search
-</Button>
-```
-
-```jsx live=true
-<Button>
-  <span>Anything can go here.</span>{" "}
-  <span>It's true.</span>
+  <Icon icon="search" style={{ marginRight: '0.25rem' }} />Search
 </Button>
 ```
 
@@ -80,10 +66,7 @@ Regular React children.
 Any props not listed above will be spread onto the underlying element.
 
 ```jsx live=true
-<Button
-  style={{ width: '10rem' }}
-  className="a-custom-class"
->
-  Okay
+<Button disabled>
+  Save
 </Button>
 ```
