@@ -23,6 +23,7 @@ function getButtonKindCSS(kind, color) {
     case 'tertiary':
       return {
         background: 'white',
+        padding: `calc(${SPACING['XS']} - 1px) calc(${SPACING['M']} - 1px)`,
         border: `solid 1px ${color['400']}`,
         color: color['400'],
         ':hover': {
@@ -74,11 +75,11 @@ const Button = ({
       css={{
         display: 'flex',
         alignItems: 'center',
-        lineHeight: '1.25',
         borderRadius: '2px',
-        padding: `${SPACING['S']} ${SPACING['M']}`,
+        minHeight: '2.5rem',
+        padding: `${SPACING['XS']} ${SPACING['M']}`,
         color: lightOrDark(color['400']) === 'light' || kind === 'subtle' ? 'inherit' : 'white',
-        fontWeight: '700',
+        fontWeight: '800',
         ...getButtonKindCSS(kind, color, disabled),
         ':focus': {
           outline: 'none',
