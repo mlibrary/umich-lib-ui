@@ -9,6 +9,8 @@ navigation:
 
 import { Text, Button, Icon, TextInput } from '@umich-lib/core'
 
+import { Dos, Do, DoHeading, DoExample } from '../../../components/dos-and-donts'
+
 <Text lede>Buttons are used to make actions visible and easy to perform with one click, tap, or keypress. They contain a clear label and, sometimes, an icon.</Text>
 
 ## Best practices
@@ -23,6 +25,81 @@ import { Text, Button, Icon, TextInput } from '@umich-lib/core'
 - Avoid wrapping button labels. For best legibility, a label should remain on a single line.
 - Icons may be used to convey meaning and draw more attention. The icon comes before the text label. Never use more than one icon per button.
 
+## Examples
+
+<Dos>
+  <Do>
+    <DoHeading>
+      place a secondary button (less emphasis) next to a secondary button (more emphasis).
+    </DoHeading>
+    <DoExample ySpacing>
+      <Button>Save</Button>
+      <Button kind="tertiary">Cancel</Button>
+    </DoExample>
+  </Do>
+  <Do dont>
+    <DoHeading>
+      place a two secondary buttons or two primary buttons next to each other.
+    </DoHeading>
+    <DoExample ySpacing>
+      <Button css={{ marginRight: '0.75rem' }}>Save</Button>
+      <Button>Cancel</Button>
+    </DoExample>
+  </Do>
+  <Do>
+    <DoHeading>
+      use the subtle button for several actions that appear next to each other.
+    </DoHeading>
+    <DoExample ySpacing>
+      <Button kind="subtle">Edit</Button>
+      <Button kind="subtle">View</Button>
+      <Button kind="subtle">Export</Button>
+    </DoExample>
+  </Do>
+  <Do dont>
+    <DoHeading>
+      use more than one primary action button per screen.
+    </DoHeading>
+    <DoExample ySpacing>
+      <Button kind="primary">Edit</Button>
+      <Button kind="primary">View</Button>
+      <Button kind="primary">Export</Button>
+    </DoExample>
+  </Do>
+  <Do>
+    <DoHeading>
+      use icons that are meaningful and clearly connect with the label.
+    </DoHeading>
+    <DoExample ySpacing>
+      <Button kind="primary"><Icon icon="search" css={{ marginRight: '0.25rem' }} />Search</Button>
+    </DoExample>
+  </Do>
+  <Do dont>
+    <DoHeading>
+      force icons into button labels just for the sake of using an icon.
+    </DoHeading>
+    <DoExample ySpacing>
+      <Button kind="primary"><Icon icon="remove_red_eye" css={{ marginRight: '0.25rem' }} /> Show all holdings</Button>
+    </DoExample>
+  </Do>
+  <Do>
+    <DoHeading>
+      use the icon-only button when space is limited and the icon’s meaning is very straightforward.
+    </DoHeading>
+    <DoExample ySpacing>
+      <Button kind="primary"><Icon icon="search" title="Search" /></Button>
+    </DoExample>
+  </Do>
+  <Do dont>
+    <DoHeading>
+      use the icon-only button if the icon may have multiple meanings. It is better to include a text label whenever space allows.
+    </DoHeading>
+    <DoExample ySpacing>
+      <Button kind="primary"><Icon icon="remove_red_eye"/></Button>
+    </DoExample>
+  </Do>
+</Dos>
+
 ## Primary button
 
 Use the primary button to call attention to the strongest action on the screen. The primary button should only appear once per screen, but not every screen requires a primary button.
@@ -31,7 +108,7 @@ Use the primary button to call attention to the strongest action on the screen. 
 <Button kind="primary">Search</Button>
 ```
 
-## Primary button
+## Secondary button
 
 Use secondary for actions.
 

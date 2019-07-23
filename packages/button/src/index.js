@@ -95,7 +95,7 @@ const Button = ({
 Button.propTypes = {
   kind: PropTypes.oneOf([
     'primary',
-    'seconday',
+    'secondary',
     'tertiary',
     'subtle'
   ]).isRequired,
