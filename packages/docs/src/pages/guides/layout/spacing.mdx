@@ -19,6 +19,7 @@ import Table from '../../../components/table'
     <tr>
       <th>Size</th>
       <th>rem</th>
+      <th>px</th>
       <th>Example</th>
     </tr>
   </thead>
@@ -27,6 +28,7 @@ import Table from '../../../components/table'
       <tr>
         <td>{size}</td>
         <td>{SPACING[size]}</td>
+        <td>{16 * SPACING[size].slice(0, -3)}</td>
         <td><div style={{
           display: 'inline-block',
           height: SPACING[size],
