@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{256:function(e,n,t){"use strict";t.r(n);var i=t(4),a=(t(0),t(1)),b=t(297),o=t(296);n.default=function(){return Object(i.b)(b.a,null,Object(i.b)(o.a,{title:"404: Not found"}),Object(i.b)(a.Margins,null,Object(i.b)("div",{style:{margin:"4rem 0"},className:"y-spacing"},Object(i.b)(a.Heading,{level:1,size:"3XL"},"Page not found - 404"),Object(i.b)(a.Text,{size:"XS"},"What you're looking for isn't here."))))}}}]);
-//# sourceMappingURL=component---src-pages-404-js-f2db14d0801f26aef51a.js.map
