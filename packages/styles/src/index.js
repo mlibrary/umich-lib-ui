@@ -10,9 +10,10 @@ export const SPACING = {
   'M': '1rem',
   'L': '1.5rem',
   'XL': '2rem',
-  '2XL': '3rem',
-  '3XL': '4rem',
-  '4XL': '6rem'
+  '2XL': '2.5rem',
+  '3XL': '3rem',
+  '4XL': '4rem',
+  '5XL': '6rem',
 }
 
 export const BREAKPOINTS = {
