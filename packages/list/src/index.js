@@ -2,11 +2,16 @@ import React from 'react'
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
+import { SPACING } from '@umich-lib/styles'
+
 const baseListStyles = {
   margin: '0',
   padding: '0',
   listStyle: 'none',
-  maxWidth: '38rem'
+  maxWidth: '38rem',
+  'li:not(:last-child)': {
+    marginBottom: SPACING['XS']
+  }
 }
 
 const StyledList = styled('ul')({

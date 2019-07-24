@@ -56,10 +56,11 @@ const SideNav = styled('nav')({
     marginBottom: SPACING['XS']
   },
   'li': {
-    padding: `${SPACING['2XS']} 0`,
     ...TYPOGRAPHY['3XS']
   },
   'ul ul': {
+    marginTop: SPACING['XS'],
+    marginBottom: SPACING['L'],
     marginLeft: SPACING['M']
   },
   'li li': {
