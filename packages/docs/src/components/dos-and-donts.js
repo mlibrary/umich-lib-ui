@@ -74,13 +74,7 @@ export function Do({ dont, children}) {
       paddingTop: SPACING['S'],
       marginBottom: SPACING['L']
     }}>
-      {React.Children.map(children, (child) => {
-        if (child.type.name === 'DoHeading' && dont) {
-          return React.cloneElement(child, { dont })
-        }
-
-        return child
-      })}
+      {children}
     </li>
   )
 }
