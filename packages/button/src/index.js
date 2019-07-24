@@ -1,121 +1,108 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
 import {
-  COLORS
+  COLORS,
+  SPACING,
+  lightOrDark
 } from '@umich-lib/styles'
 
-const createButtonStyles = (props) => {
-  const { kind, small, disabled } = props
-  let styles = {
-    display: 'inline-block',
-    padding: '0.5rem 1rem',
-    borderRadius: '4px',
-    fontSize: '1rem',
-    cursor: disabled ? 'not-allowed' : 'pointer',
-    border: 'none',
-    background: 'none',
-    fontFamily: 'inherit',
-    textDecoration: 'none',
-    opacity: disabled ? '0.6' : ''
-  }
-
+function getButtonColor(kind) {
   switch (kind) {
-    case 'default':
-      styles = {
-        ...styles,
-        background: COLORS.neutral[100],
-      }
-      break;
     case 'primary':
-      styles = {
-        ...styles,
-        background: COLORS.maize[400],
-        fontWeight: '600',
-      }
-      break;
+      return COLORS.maize
+    case 'secondary':
+    case 'tertiary':
+      return COLORS.teal
+    default:
+      return COLORS.blue
   }
+}
 
-  if (small) {
-    styles = {
-      ...styles,
-      fontSize: '0.875rem',
-      padding: '0.25rem 0.5rem'
+function getButtonKindCSS(kind, color) {
+  switch (kind) {
+    case 'tertiary':
+      return {
+        background: 'white',
+        padding: `calc(${SPACING['XS']} - 1px) calc(${SPACING['M']} - 1px)`,
+        border: `solid 1px ${color['400']}`,
+        color: color['400'],
+        ':hover': {
+          outline: `solid 1px ${color['400']}`,
+          outlineOffset: '-2px'
+        }
+      }
+    case 'subtle':
+      return {
+        background: COLORS.neutral['100'],
+        ':hover': {
+          background: COLORS.blue['200']
+        }
+      }
+    default:
+      return {
+        background: color['400'],
+        ':hover': {
+          background: color['500']
+        }
+      }
+  }
+}
+
+function getDisabledCSS(disabled) {
+  if (disabled) {
+    return {
+      opacity: '0.5',
+      ":hover": {},
+      cursor: 'not-allowed'
     }
   }
 
-  return styles
+  return {}
 }
-
-const StyledButton = styled('button')(
-  props => createButtonStyles(props)
-)
-
-const StyledAnchor = styled('a')(
-  props => createButtonStyles(props)
-)
 
 /**
  * Use buttons to move though a transaction, aim to use only one primary button per page.
  */
 const Button = ({
-  children,
-  href,
-  disabled,
-  className,
   kind,
-  type,
-  small,
-  ...other
+  disabled,
+  ...rest
 }) => {
-  const button = (
-    <StyledButton
-      {...other}
-      kind={kind}
-      small={small}
-      disabled={disabled}
-      type={type}
-      className={className}
-    >
-      {children}
-    </StyledButton>
-  );
+  const color = getButtonColor(kind)
 
-  const anchor = (
-    <StyledAnchor
-      href={href}
-      kind={kind}
-      small={small}
-      disabled={disabled}
-      type={type}
-      className={className}
-      {...other}
-    >
-      {children}
-    </StyledAnchor>
-  );
-
-  return href ? anchor : button;
+  return (
+    <button
+      css={{
+        display: 'flex',
+        alignItems: 'center',
+        borderRadius: '2px',
+        minHeight: '2.5rem',
+        padding: `${SPACING['XS']} ${SPACING['M']}`,
+        color: lightOrDark(color['400']) === 'light' || kind === 'subtle' ? 'inherit' : 'white',
+        fontWeight: '800',
+        ...getButtonKindCSS(kind, color, disabled),
+        ':focus': {
+          outline: 'none',
+          boxShadow: `0 0 0 3px #ffffff, 0 0 0 4px ${COLORS.neutral['400']}`
+        },
+        ...getDisabledCSS(disabled)
+      }}
+      {...rest}
+    />
+  )
 }
 
 Button.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string,
-  disabled: PropTypes.bool,
-  small: PropTypes.bool,
   kind: PropTypes.oneOf([
-    'default',
-    'primary'
+    'primary',
+    'secondary',
+    'tertiary',
+    'subtle'
   ]).isRequired,
-  href: PropTypes.string,
-  type: PropTypes.oneOf(['button', 'reset', 'submit']),
 };
 
 Button.defaultProps = {
-  type: 'button',
-  disabled: false,
-  small: false,
-  kind: 'default',
+  kind: 'secondary',
 };
 
 export default Button;

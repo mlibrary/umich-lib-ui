@@ -1,8 +1,8 @@
 import React from "react";
 import Button from "../src";
 
-export let name = "primary with href";
+export let name = "subtle";
 
 export let Example = () => (
-    <Button href="#">Primary</Button>
+  <Button kind="subtle">Subtle</Button>
 )
