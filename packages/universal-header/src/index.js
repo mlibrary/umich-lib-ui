@@ -243,7 +243,7 @@ function Sites() {
     return () => {
       document.removeEventListener("mousedown", handleClick);
       document.removeEventListener("keydown", handleKeydown);
-      window.removeEventListener(handlePostMessage);
+      window.removeEventListener("message", handlePostMessage);
     };
   }, []);
 
