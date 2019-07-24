@@ -1,9 +1,4 @@
 [build]
   base = "/"
   publish = "/packages/docs/public"
-  command = [
-    "npm install",
-    "npm run bootstrap",
-    "npm run build",
-    "cd packages/docs && npm run build"
-  ]
+  command = "npm install && npm run bootstrap && npm run build && cd packages/docs && npm run build"
