@@ -1,15 +1,15 @@
 {
   "name": "@umich-lib/text-input",
-  "version": "1.0.0-beta.5",
+  "version": "1.0.0-beta.6",
   "main": "lib/index.js",
   "module": "lib/index.js",
   "dependencies": {
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
     "@reach/visually-hidden": "^0.1.1",
-    "@umich-lib/icon": "^1.0.0-beta.5",
-    "@umich-lib/input": "^1.0.0-beta.5",
-    "@umich-lib/styles": "^2.0.0-beta.5"
+    "@umich-lib/icon": "^1.0.0-beta.6",
+    "@umich-lib/input": "^1.0.0-beta.6",
+    "@umich-lib/styles": "^2.0.0-beta.6"
   },
   "peerDependencies": {
     "react": "^16.8.5",
