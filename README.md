@@ -1,6 +1,6 @@
 # University of Michigan Library Design System
 
-[![Build Status](https://travis-ci.org/mlibrary/umich-lib-ui.svg?branch=master)](https://travis-ci.org/mlibrary/umich-lib-ui) [![Maintained with Lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/mlibrary/umich-lib-ui/blob/master/CONTRIBUTING.md)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/46fd3abb-e61c-4a7e-b154-c22e375a3345/deploy-status)](https://app.netlify.com/sites/umich-lib-design-system/deploys) [![Maintained with Lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/mlibrary/umich-lib-ui/blob/master/CONTRIBUTING.md) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/mlibrary/umich-lib-ui/blob/master/CONTRIBUTING.md)
 
 A collection of shared design styles, components, and patterns for teams to build quality consistent interfaces. A bit like a LEGO kit.
 
