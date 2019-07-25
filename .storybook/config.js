@@ -6,7 +6,7 @@ import {
   storiesOf
 } from "@storybook/react";
 
-import { GlobalStyleSheet } from '../packages/styles'
+import { GlobalStyleSheet } from '../src/shared/styles'
 
 let getPackageName = filePath =>
   path
@@ -16,11 +16,7 @@ let getPackageName = filePath =>
 
 configure(() => {
   // Import all examples from packages.
-  const req = require.context(
-    "../packages",
-    true,
-    /^((?!node_modules).)*\.example\.js$/
-  );
+  const req = require.context('../src/components', true, /\.example\.js$/);
 
   req.keys().forEach(pathToExample => {
     const { name, Example } = req(pathToExample);
