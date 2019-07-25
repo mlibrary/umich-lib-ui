@@ -1,21 +1,20 @@
 {
   "name": "@umich-lib/core",
-  "main": "dist/bundle.js",
+  "main": "lib/index.js",
   "module": "src/index.js",
   "version": "1.0.0-beta.7",
   "files": [
-    "/dist",
+    "/lib",
     "/src"
   ],
   "scripts": {
-    "clean": "rimraf dist",
-    "build": "npm run clean && webpack",
-    "build:watch": "npm run clean && webpack --watch",
+    "start": "npm run build:watch && npm run storybook & npm run docs",
+    "build": "babel src --out-dir lib",
+    "build:watch": "babel src --out-dir lib",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "develop": "npm run storybook",
-    "develop:docs": "cd docs/ && gatsby develop",
-    "build:docs": "cd docs/ && gatsby build",
-    "build:storybook": "build-storybook -c .storybook -o dist",
+    "storybook:build": "build-storybook -c .storybook -o dist",
+    "docs": "cd docs/ && gatsby develop",
+    "docs:build": "cd docs/ && gatsby build",
     "sketch": "story2sketch"
   },
   "peerDependencies": {
@@ -23,6 +22,7 @@
     "react-dom": "^16.8.5"
   },
   "devDependencies": {
+    "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
@@ -40,6 +40,7 @@
     "@storybook/react": "^5.0.10",
     "axios": "^0.19.0",
     "babel-loader": "^8.0.6",
+    "babel-plugin-module-resolver": "^3.2.0",
     "gatsby": "^2.2.9",
     "gatsby-image": "^2.0.34",
     "gatsby-mdx": "^0.4.4",
@@ -60,8 +61,7 @@
     "react-live": "^2.0.1",
     "react-tabs": "^3.0.0",
     "story2sketch": "^1.5.0",
-    "wcag-contrast": "^2.1.1",
-    "webpack-cli": "^3.3.6"
+    "wcag-contrast": "^2.1.1"
   },
   "publishConfig": {
     "access": "public"
