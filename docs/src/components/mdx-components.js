@@ -122,7 +122,7 @@ export default {
   ol: props => <List type="numbered" {...props} />,
   table: (props) => <TableContainer><Table {...props} /></TableContainer>,
   em: EM,
-  strong: (props) => <strong style={{ fontWeight: '800' }} {...props} />,
+  strong: (props) => <strong style={{ fontWeight: '700' }} {...props} />,
   blockquote: (props) => (
     <blockquote style={{
       fontStyle: 'italic',

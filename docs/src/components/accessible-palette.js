@@ -63,7 +63,7 @@ export default function AccessiblePalette() {
                   }
                 }}
               >
-                <td css={{ fontWeight: '800', width: '50%' }}>{palette}-{shade}</td>
+                <td css={{ fontWeight: '700', width: '50%' }}>{palette}-{shade}</td>
                 {[
                   COLORS.neutral['400'],
                   COLORS.neutral['300'],

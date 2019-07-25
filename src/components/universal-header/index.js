@@ -261,7 +261,7 @@ function Sites() {
           <SitesLede aria-role="heading">Explore what the library has to offer.</SitesLede>
           {error ? (
             <Alert intent="warning">
-              <p style={{ maxWidth: '36rem' }}><strong style={{ fontWeight: '800' }}>Error</strong>: We are temporarily having trouble loading our list of library sites. Please try refreshing your page. You can also contact <Link href="https://www.lib.umich.edu/ask" kind="subtle">Ask a Librarian</Link> for help.</p>
+              <p style={{ maxWidth: '36rem' }}><strong style={{ fontWeight: '700' }}>Error</strong>: We are temporarily having trouble loading our list of library sites. Please try refreshing your page. You can also contact <Link href="https://www.lib.umich.edu/ask" kind="subtle">Ask a Librarian</Link> for help.</p>
             </Alert>
           ) : (
             <React.Fragment>

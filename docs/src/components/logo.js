@@ -50,7 +50,7 @@ function Logo() {
         letterSpacing: `4.3px`,
         lineHeight: `23px`,
         color: COLORS.neutral['300'],
-        fontWeight: '800',
+        fontWeight: '700',
         fontSize: '18px'
       }}>DESIGN SYSTEM</Text>
     </Link>

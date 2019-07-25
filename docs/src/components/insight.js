@@ -11,7 +11,7 @@ function Insight({ kind, children }) {
       return (
         <React.Fragment>
           💡 <strong css={{
-            fontWeight: '800'
+            fontWeight: '700'
           }}>Research insight: </strong>
         </React.Fragment>
       )
@@ -19,7 +19,7 @@ function Insight({ kind, children }) {
       return (
         <React.Fragment>
           ⌨️ <strong css={{
-            fontWeight: '800'
+            fontWeight: '700'
           }}>Accessibility insight: </strong>
         </React.Fragment>
       )
@@ -27,7 +27,7 @@ function Insight({ kind, children }) {
       return (
         <React.Fragment>
           📐 <strong css={{
-            fontWeight: '800'
+            fontWeight: '700'
           }}>Design insight: </strong>
         </React.Fragment>
       )

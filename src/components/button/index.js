@@ -79,7 +79,7 @@ const Button = ({
         minHeight: '2.5rem',
         padding: `${SPACING['XS']} ${SPACING['M']}`,
         color: lightOrDark(color['400']) === 'light' || kind === 'subtle' ? 'inherit' : 'white',
-        fontWeight: '800',
+        fontWeight: '700',
         ...getButtonKindCSS(kind, color, disabled),
         ':focus': {
           outline: 'none',

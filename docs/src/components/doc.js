@@ -27,7 +27,7 @@ const DocHeaderContainer = styled('div')({
 
 const activeStyle={
   borderBottom: `solid 4px ${COLORS.teal[400]}`,
-  fontWeight: '800'
+  fontWeight: '700'
 }
 
 const isActive = ({

@@ -29,7 +29,7 @@ export function DoHeading({ dont, children }) {
     <p>
       <strong css={{
         color: dont ? COLORS.pink['500'] : COLORS.green['500'],
-        fontWeight: '800'
+        fontWeight: '700'
       }}>Do{dont && "n't"}</strong> {children}
     </p>
   )

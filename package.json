@@ -1,6 +1,12 @@
 {
   "name": "@umich-lib/core",
   "main": "dist/bundle.js",
+  "module": "src/index.js",
+  "version": "1.0.0-beta.7",
+  "files": [
+    "/dist",
+    "/src"
+  ],
   "scripts": {
     "clean": "rimraf dist",
     "build": "npm run clean && webpack",
@@ -8,10 +14,10 @@
     "storybook": "start-storybook -p 9001 -c .storybook",
     "develop": "npm run storybook",
     "develop:docs": "cd docs/ && gatsby develop",
+    "build:docs": "cd docs/ && gatsby build",
     "build:storybook": "build-storybook -c .storybook -o dist",
     "sketch": "story2sketch"
   },
-  "version": "0.0.0",
   "peerDependencies": {
     "react": "^16.8.5",
     "react-dom": "^16.8.5"

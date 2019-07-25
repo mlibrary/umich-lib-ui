@@ -5,7 +5,5 @@ node_modules
 package-lock.json
 lerna-debug.log
 *.tgz
-/packages/*/es
-/packages/*/node_modules
-/packages/*/lib
 *.asketch.json
+dist

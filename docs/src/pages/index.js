@@ -98,7 +98,7 @@ const Title = styled('h1')({
   fontSize: '24px',
   letterSpacing: '14px',
   lineHeight: '52px',
-  fontWeight: '800',
+  fontWeight: '700',
   textTransform: 'uppercase',
   color: COLORS.blue[400],
   top: 'calc(50% - 40px)',

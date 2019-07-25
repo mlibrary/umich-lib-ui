@@ -53,7 +53,7 @@ export const TYPOGRAPHY = {
   '2XL': TYPE_2XL,
   'XL': {
     fontSize: '2rem',
-    fontWeight: '800',
+    fontWeight: '700',
     lineHeight: '1.25'
   },
   'L': {
@@ -78,7 +78,7 @@ export const TYPOGRAPHY = {
   },
   '3XS': {
     fontSize: '0.875rem',
-    fontWeight: '800',
+    fontWeight: '700',
     letterSpacing: '1.25px',
     textTransform: 'uppercase'
   }
@@ -388,7 +388,7 @@ export const LINK_STYLES = {
     }
   },
   'list-strong': {
-    fontWeight: '800',
+    fontWeight: '700',
     color: COLORS.neutral['400'],
     ':hover': {
       boxShadow: `inset 0 -1px ${COLORS.neutral[400]}`,
