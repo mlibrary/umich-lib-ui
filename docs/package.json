@@ -1,0 +1,6 @@
+{
+  "name": "@umich-lib/docs",
+  "dependencies": {
+    "gatsby": "*"
+  }
+}
