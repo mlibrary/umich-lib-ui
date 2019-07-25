@@ -6,8 +6,7 @@
     "build": "npm run clean && webpack",
     "build:watch": "npm run clean && webpack --watch",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "develop": "npm run develop:storybook",
-    "develop:storybook": "npm run storybook",
+    "develop": "npm run storybook",
     "develop:docs": "cd docs/ && gatsby develop",
     "build:storybook": "build-storybook -c .storybook -o dist",
     "sketch": "story2sketch"

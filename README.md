@@ -9,16 +9,14 @@ A collection of shared design styles, components, and patterns for teams to buil
 ## Getting started
 
 This project uses:
-- [Lerna](https://lernajs.io/) to manage multiple packages/libraries.
 - [Storybook](https://storybook.js.org/) for a development environment.
-- [Gatsby v2](https://www.gatsbyjs.org/) for a fast website.
+- [Gatsby v2](https://www.gatsbyjs.org/) for a fast documentation website.
 
 Run these commands before doing anything else.
 ```
 git clone https://github.com/mlibrary/umich-lib-ui.git
 cd umich-lib-ui
 npm install
-npm run bootstrap
 ```
 
 ## ⌨️ Development
@@ -27,7 +25,7 @@ Starts the Storybook development environment at `http://localhost:9001` and open
 
 ```sh
 npm run build:watch
-npm run storybook
+npm run develop
 ```
 
 ## Documentation site
@@ -35,8 +33,7 @@ npm run storybook
 Start the doc site locally. Built with [Gatsby v2](https://www.gatsbyjs.org/) for a fast website.
 
 ```sh
-cd packages/docs
-npm run develop
+npm run develop:docs
 ```
 
 Be sure to run commands from the `docs` package directory.
@@ -57,32 +54,6 @@ Make sure you're logged into the NPM registry.
 
 ```
 npm login
-```
-
-### Publish options
-
-#### 1. Canary
-
-To publish a quick canary version
-
-```
-npm run publish:canary
-```
-
-#### 2. Next
-
-To publish a next version.
-
-```
-npm run publish:next
-```
-
-#### 3. Publish
-
-To publish an official version and follow [Lerna publish prompts](https://github.com/lerna/lerna/tree/master/commands/publish).
-
-```
-npm run publish
 ```
 
 ## Export Components to Sketch
