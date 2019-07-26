@@ -8,14 +8,15 @@
     "/src"
   ],
   "scripts": {
-    "start": "npm run build:watch && npm run storybook & npm run docs",
+    "develop": "npm run storybook",
     "build": "babel src --out-dir lib",
     "build:watch": "babel src --out-dir lib --watch",
-    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook": "start-storybook -p 9000 -c .storybook",
     "storybook:build": "build-storybook -c .storybook -o dist",
     "docs": "cd docs/ && gatsby develop",
     "docs:build": "cd docs/ && gatsby build",
-    "sketch": "story2sketch"
+    "sketch": "story2sketch",
+    "publish": "npm publish"
   },
   "peerDependencies": {
     "react": "^16.8.5",

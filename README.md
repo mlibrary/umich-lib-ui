@@ -21,22 +21,31 @@ npm install
 
 ## ⌨️ Development
 
-Starts the Storybook development environment at `http://localhost:9001` and opens the documentation site at `http://localhost:8000`.
+Starts the Storybook development environment.
 
 ```sh
-npm run build:watch
 npm run develop
 ```
 
 ## Documentation site
 
-Start the doc site locally. Built with [Gatsby v2](https://www.gatsbyjs.org/) for a fast website.
+Starts the documentation website built Gatsby.
 
 ```sh
-npm run develop:docs
+npm run docs
 ```
 
-Be sure to run commands from the `docs` package directory.
+## Build
+
+Will run babel and generate files in `lib`.
+
+```sh
+npm run build
+```
+or
+```sh
+npm run build:watch
+```
 
 ## 📦 Publishing
 
