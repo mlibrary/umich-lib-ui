@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled';
-import { INTENT_COLORS } from '@umich-lib/core'
+import { INTENT_COLORS } from '../../../'
 
 const StyledInput = styled('input')(
   {

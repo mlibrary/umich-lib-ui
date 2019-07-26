@@ -4,7 +4,7 @@ import { keyframes } from '@emotion/core'
 import styled from '@emotion/styled'
 import {
   COLORS
-} from '@shared/styles'
+} from '../../shared/styles'
 
 const rotation = keyframes`
   from {

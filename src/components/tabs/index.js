@@ -9,7 +9,7 @@ import {
   COLORS,
   MEDIA_QUERIES,
   SPACING
-} from '@shared/styles'
+} from '../../shared/styles'
 
 const Tabs = styled(UnstyledTabs)({
   width: '100%'

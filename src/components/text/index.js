@@ -2,7 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
-import { TYPOGRAPHY } from '@umich-lib/core'
+import { TYPOGRAPHY } from '../../../'
 
 const StyledText = styled('p')(
   {

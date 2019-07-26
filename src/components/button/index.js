@@ -4,7 +4,7 @@ import {
   COLORS,
   SPACING,
   lightOrDark
-} from '@umich-lib/core'
+} from '../../../'
 
 function getButtonColor(kind) {
   switch (kind) {

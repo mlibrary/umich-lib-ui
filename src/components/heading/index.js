@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from '@emotion/styled'
 import {
   TYPOGRAPHY
-} from '@shared/styles'
+} from '../../shared/styles'
 
 /*
   Start with base styles and then bring in the

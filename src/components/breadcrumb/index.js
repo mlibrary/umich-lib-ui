@@ -5,7 +5,7 @@ import {
   SPACING,
   Link,
   Icon
-} from '@umich-lib/core'
+} from '../../../'
 
 const Breadcrumb = ({
   children,

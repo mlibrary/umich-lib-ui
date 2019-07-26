@@ -4,7 +4,7 @@ import ReachAlert from '@reach/alert';
 import styled from '@emotion/styled'
 import {
   COLORS
-} from '@shared/styles'
+} from '../../shared/styles'
 
 const alertIntentStyles = {
   'informational': {
