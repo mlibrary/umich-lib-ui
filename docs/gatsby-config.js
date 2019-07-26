@@ -1,5 +1,4 @@
 const path = require('path')
-const aliases = require('../webpack.config')
 
 module.exports = {
   siteMetadata: {
@@ -13,9 +12,7 @@ module.exports = {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
-          '@umich-lib/core': '../src',
-          '@shared': '../src/shared',
-          '@components': '../src/components',
+          '@umich-lib/core': '../lib/index',
         },
         extensions: ['js']
       }
