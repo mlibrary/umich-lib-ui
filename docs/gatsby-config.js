@@ -12,7 +12,7 @@ module.exports = {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
-          '@umich-lib/core': '../lib/index',
+          '@umich-lib/core': path.resolve(__dirname, "../src/index")
         },
         extensions: ['js', 'mdx']
       }
@@ -22,7 +22,7 @@ module.exports = {
       options: {
         defaultLayouts: {
           pages: path.resolve('./src/components/doc.js')
-        },
+        }
       },
     },
     'gatsby-plugin-react-helmet',
