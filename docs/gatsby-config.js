@@ -14,7 +14,7 @@ module.exports = {
         alias: {
           '@umich-lib/core': '../lib/index',
         },
-        extensions: ['js']
+        extensions: ['js', 'mdx']
       }
     },
     {
