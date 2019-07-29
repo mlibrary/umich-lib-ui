@@ -6,7 +6,7 @@ import {
   Loading,
   Alert,
   Link
-} from '@umich-lib/core'
+} from '../../../'
 import {
   COLORS,
   TYPOGRAPHY,
@@ -17,7 +17,7 @@ import {
   SmallScreen,
   LINK_STYLES,
   Z_SPACE,
-} from '@shared/styles'
+} from '../../shared/styles'
 
 /*
   Add background color and flex the title

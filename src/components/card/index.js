@@ -6,7 +6,7 @@ import {
   Z_SPACE,
   LINK_STYLES,
   TYPOGRAPHY
-} from '@umich-lib/core'
+} from '../../../'
 
 export default function Card({
   title,

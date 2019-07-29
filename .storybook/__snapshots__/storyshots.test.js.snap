@@ -1,0 +1,2996 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots alert default 1`] = `
+.emotion-2 {
+  margin: 0;
+  padding: 0.5rem 0;
+  border-bottom: solid 1px transparent;
+  background: #F7F8F9;
+  border-color: #00274C;
+}
+
+.emotion-0 {
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+<div
+  className="emotion-2 emotion-3"
+  data-reach-alert={true}
+  intent="informational"
+>
+  <div
+    className="emotion-0 emotion-1"
+    data-inner-container={true}
+  >
+    A default Alert.
+  </div>
+</div>
+`;
+
+exports[`Storyshots alert error 1`] = `
+.emotion-0 {
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.emotion-2 {
+  margin: 0;
+  padding: 0.5rem 0;
+  border-bottom: solid 1px transparent;
+  background: #FFF1EB;
+  border-color: #C74E1A;
+}
+
+<div
+  className="emotion-2 emotion-3"
+  data-reach-alert={true}
+  intent="error"
+>
+  <div
+    className="emotion-0 emotion-1"
+    data-inner-container={true}
+  >
+    It's too late.
+  </div>
+</div>
+`;
+
+exports[`Storyshots alert informational 1`] = `
+.emotion-2 {
+  margin: 0;
+  padding: 0.5rem 0;
+  border-bottom: solid 1px transparent;
+  background: #F7F8F9;
+  border-color: #00274C;
+}
+
+.emotion-0 {
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+<div
+  className="emotion-2 emotion-3"
+  data-reach-alert={true}
+  intent="informational"
+>
+  <div
+    className="emotion-0 emotion-1"
+    data-inner-container={true}
+  >
+    Hello there.
+  </div>
+</div>
+`;
+
+exports[`Storyshots alert success 1`] = `
+.emotion-0 {
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.emotion-2 {
+  margin: 0;
+  padding: 0.5rem 0;
+  border-bottom: solid 1px transparent;
+  background: #E9F2F5;
+  border-color: #1E80A2;
+}
+
+<div
+  className="emotion-2 emotion-3"
+  data-reach-alert={true}
+  intent="success"
+>
+  <div
+    className="emotion-0 emotion-1"
+    data-inner-container={true}
+  >
+    You did it!
+  </div>
+</div>
+`;
+
+exports[`Storyshots alert warning 1`] = `
+.emotion-0 {
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.emotion-2 {
+  margin: 0;
+  padding: 0.5rem 0;
+  border-bottom: solid 1px transparent;
+  background: #FFF9E6;
+  border-color: #FFCB05;
+}
+
+<div
+  className="emotion-2 emotion-3"
+  data-reach-alert={true}
+  intent="warning"
+>
+  <div
+    className="emotion-0 emotion-1"
+    data-inner-container={true}
+  >
+    Don't do it!
+  </div>
+</div>
+`;
+
+exports[`Storyshots breadcrumb basic 1`] = `
+.emotion-31 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-31 {
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-30 > li {
+    display: inline-block;
+    margin-right: 0.25rem;
+  }
+}
+
+.emotion-7 {
+  display: none;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-7 {
+    display: block;
+  }
+}
+
+.emotion-4 {
+  margin-right: 0.25rem;
+}
+
+.emotion-0 {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+  display: none;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+.emotion-2 {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+  display: inline-block;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-2 {
+    display: none;
+  }
+}
+
+.emotion-5 {
+  color: #1E80A2;
+  box-shadow: inset 0 -1px #1E80A2;
+}
+
+.emotion-5:hover {
+  box-shadow: inset 0 -2px #1E80A2;
+}
+
+.emotion-8 {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+  display: none;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-8 {
+    display: inline-block;
+  }
+}
+
+.emotion-23 {
+  display: block;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-23 {
+    display: block;
+  }
+}
+
+<nav
+  aria-label="Breadcrumb"
+  className="emotion-31"
+>
+  <ol
+    className="emotion-30"
+  >
+    <li
+      className="emotion-7"
+    >
+      <span
+        aria-hidden="true"
+        className="emotion-4"
+      >
+        <svg
+          aria-hidden={true}
+          className="emotion-0 emotion-1"
+          height="16px"
+          viewBox="0 0 24 24"
+          width="16px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+        <svg
+          aria-hidden={true}
+          className="emotion-2 emotion-1"
+          height="16px"
+          viewBox="0 0 24 24"
+          width="16px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+      </span>
+      <a
+        className="emotion-5 emotion-6"
+        href="#"
+        kind="default"
+      >
+        Home
+      </a>
+    </li>
+    <li
+      className="emotion-7"
+    >
+      <span
+        aria-hidden="true"
+        className="emotion-4"
+      >
+        <svg
+          aria-hidden={true}
+          className="emotion-8 emotion-1"
+          height="16px"
+          viewBox="0 0 24 24"
+          width="16px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+        <svg
+          aria-hidden={true}
+          className="emotion-2 emotion-1"
+          height="16px"
+          viewBox="0 0 24 24"
+          width="16px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+      </span>
+      <a
+        className="emotion-5 emotion-6"
+        href="#"
+        kind="default"
+      >
+        Research and Scholarship
+      </a>
+    </li>
+    <li
+      className="emotion-23"
+    >
+      <span
+        aria-hidden="true"
+        className="emotion-4"
+      >
+        <svg
+          aria-hidden={true}
+          className="emotion-8 emotion-1"
+          height="16px"
+          viewBox="0 0 24 24"
+          width="16px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+        <svg
+          aria-hidden={true}
+          className="emotion-2 emotion-1"
+          height="16px"
+          viewBox="0 0 24 24"
+          width="16px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+      </span>
+      <a
+        className="emotion-5 emotion-6"
+        href="#"
+        kind="default"
+      >
+        Funding & Awards
+      </a>
+    </li>
+    <li
+      className="emotion-7"
+    >
+      <span
+        aria-hidden="true"
+        className="emotion-4"
+      >
+        <svg
+          aria-hidden={true}
+          className="emotion-8 emotion-1"
+          height="16px"
+          viewBox="0 0 24 24"
+          width="16px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+        <svg
+          aria-hidden={true}
+          className="emotion-2 emotion-1"
+          height="16px"
+          viewBox="0 0 24 24"
+          width="16px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+      </span>
+      Undergraduate Research Award
+    </li>
+  </ol>
+</nav>
+`;
+
+exports[`Storyshots breadcrumb custom anchor 1`] = `
+.emotion-15 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-15 {
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-14 > li {
+    display: inline-block;
+    margin-right: 0.25rem;
+  }
+}
+
+.emotion-13 {
+  display: none;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-13 {
+    display: block;
+  }
+}
+
+.emotion-4 {
+  margin-right: 0.25rem;
+}
+
+.emotion-0 {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+  display: none;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+.emotion-2 {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+  display: inline-block;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-2 {
+    display: none;
+  }
+}
+
+.emotion-5 {
+  color: #1E80A2;
+  box-shadow: inset 0 -1px #1E80A2;
+}
+
+.emotion-5:hover {
+  box-shadow: inset 0 -2px #1E80A2;
+}
+
+.emotion-8 {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+  display: none;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-8 {
+    display: inline-block;
+  }
+}
+
+.emotion-7 {
+  display: block;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-7 {
+    display: block;
+  }
+}
+
+<nav
+  aria-label="Breadcrumb"
+  className="emotion-15"
+>
+  <ol
+    className="emotion-14"
+  >
+    <li
+      className="emotion-7"
+    >
+      <span
+        aria-hidden="true"
+        className="emotion-4"
+      >
+        <svg
+          aria-hidden={true}
+          className="emotion-0 emotion-1"
+          height="16px"
+          viewBox="0 0 24 24"
+          width="16px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+        <svg
+          aria-hidden={true}
+          className="emotion-2 emotion-1"
+          height="16px"
+          viewBox="0 0 24 24"
+          width="16px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+      </span>
+      <a
+        className="emotion-5 emotion-6"
+        href="#"
+        kind="default"
+      >
+        Home
+      </a>
+    </li>
+    <li
+      className="emotion-13"
+    >
+      <span
+        aria-hidden="true"
+        className="emotion-4"
+      >
+        <svg
+          aria-hidden={true}
+          className="emotion-8 emotion-1"
+          height="16px"
+          viewBox="0 0 24 24"
+          width="16px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+        <svg
+          aria-hidden={true}
+          className="emotion-2 emotion-1"
+          height="16px"
+          viewBox="0 0 24 24"
+          width="16px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+      </span>
+      <a
+        aria-current="page"
+        href="#"
+      >
+        Research and Scholarship!
+      </a>
+    </li>
+  </ol>
+</nav>
+`;
+
+exports[`Storyshots breadcrumb home 1`] = `
+.emotion-15 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-15 {
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-14 > li {
+    display: inline-block;
+    margin-right: 0.25rem;
+  }
+}
+
+.emotion-13 {
+  display: none;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-13 {
+    display: block;
+  }
+}
+
+.emotion-4 {
+  margin-right: 0.25rem;
+}
+
+.emotion-0 {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+  display: none;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+.emotion-2 {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+  display: inline-block;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-2 {
+    display: none;
+  }
+}
+
+.emotion-5 {
+  color: #1E80A2;
+  box-shadow: inset 0 -1px #1E80A2;
+}
+
+.emotion-5:hover {
+  box-shadow: inset 0 -2px #1E80A2;
+}
+
+.emotion-8 {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+  display: none;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-8 {
+    display: inline-block;
+  }
+}
+
+.emotion-7 {
+  display: block;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-7 {
+    display: block;
+  }
+}
+
+<nav
+  aria-label="Breadcrumb"
+  className="emotion-15"
+>
+  <ol
+    className="emotion-14"
+  >
+    <li
+      className="emotion-7"
+    >
+      <span
+        aria-hidden="true"
+        className="emotion-4"
+      >
+        <svg
+          aria-hidden={true}
+          className="emotion-0 emotion-1"
+          height="16px"
+          viewBox="0 0 24 24"
+          width="16px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+        <svg
+          aria-hidden={true}
+          className="emotion-2 emotion-1"
+          height="16px"
+          viewBox="0 0 24 24"
+          width="16px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+      </span>
+      <a
+        className="emotion-5 emotion-6"
+        href="#"
+        kind="default"
+      >
+        Home
+      </a>
+    </li>
+    <li
+      className="emotion-13"
+    >
+      <span
+        aria-hidden="true"
+        className="emotion-4"
+      >
+        <svg
+          aria-hidden={true}
+          className="emotion-8 emotion-1"
+          height="16px"
+          viewBox="0 0 24 24"
+          width="16px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+        <svg
+          aria-hidden={true}
+          className="emotion-2 emotion-1"
+          height="16px"
+          viewBox="0 0 24 24"
+          width="16px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+      </span>
+      Research and Scholarship
+    </li>
+  </ol>
+</nav>
+`;
+
+exports[`Storyshots button primary 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 2px;
+  min-height: 2.5rem;
+  padding: 0.5rem 1rem;
+  color: inherit;
+  font-weight: 700;
+  background: #FFCB05;
+}
+
+.emotion-0:hover {
+  background: #EABA02;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #ffffff,0 0 0 4px #212B36;
+}
+
+<button
+  className="emotion-0"
+>
+  Primary
+</button>
+`;
+
+exports[`Storyshots button primary disabled 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 2px;
+  min-height: 2.5rem;
+  padding: 0.5rem 1rem;
+  color: inherit;
+  font-weight: 700;
+  background: #FFCB05;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #ffffff,0 0 0 4px #212B36;
+}
+
+<button
+  className="emotion-0"
+>
+  Primary
+</button>
+`;
+
+exports[`Storyshots button secondary 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 2px;
+  min-height: 2.5rem;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: 700;
+  background: #1E80A2;
+}
+
+.emotion-0:hover {
+  background: #106684;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #ffffff,0 0 0 4px #212B36;
+}
+
+<button
+  className="emotion-0"
+>
+  Secondary
+</button>
+`;
+
+exports[`Storyshots button secondary disabled 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 2px;
+  min-height: 2.5rem;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: 700;
+  background: #1E80A2;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #ffffff,0 0 0 4px #212B36;
+}
+
+<button
+  className="emotion-0"
+>
+  Secondary
+</button>
+`;
+
+exports[`Storyshots button subtle 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 2px;
+  min-height: 2.5rem;
+  padding: 0.5rem 1rem;
+  color: inherit;
+  font-weight: 700;
+  background: #E5E9ED;
+}
+
+.emotion-0:hover {
+  background: #B2BEC9;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #ffffff,0 0 0 4px #212B36;
+}
+
+<button
+  className="emotion-0"
+>
+  Subtle
+</button>
+`;
+
+exports[`Storyshots button tertiary 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 2px;
+  min-height: 2.5rem;
+  padding: calc(0.5rem - 1px) calc(1rem - 1px);
+  color: #1E80A2;
+  font-weight: 700;
+  background: white;
+  border: solid 1px #1E80A2;
+}
+
+.emotion-0:hover {
+  outline: solid 1px #1E80A2;
+  outline-offset: -2px;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #ffffff,0 0 0 4px #212B36;
+}
+
+<button
+  className="emotion-0"
+>
+  Tertiary
+</button>
+`;
+
+exports[`Storyshots button tertiary disabled 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 2px;
+  min-height: 2.5rem;
+  padding: calc(0.5rem - 1px) calc(1rem - 1px);
+  color: #1E80A2;
+  font-weight: 700;
+  background: white;
+  border: solid 1px #1E80A2;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #ffffff,0 0 0 4px #212B36;
+}
+
+<button
+  className="emotion-0"
+>
+  Tertiary
+</button>
+`;
+
+exports[`Storyshots card children 1`] = `
+.emotion-5 {
+  display: block;
+  max-width: 600px;
+}
+
+.emotion-5:hover [data-card-image] {
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
+}
+
+.emotion-5:hover [data-card-title] {
+  box-shadow: inset 0 -2px #1E80A2;
+}
+
+.emotion-0 {
+  background-color: #F7F8F9;
+  background-image: url(https://cms.dev.lib.umich.edu/sites/default/files/2019-06/Bitmap.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  padding-top: 55%;
+  margin-bottom: 0.75rem;
+  border-radius: 2px;
+}
+
+.emotion-1 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #212B36;
+  box-shadow: inset 0 -1px #1E80A2;
+}
+
+.emotion-1:hover {
+  box-shadow: inset 0 -2px #1E80A2;
+}
+
+.emotion-4 {
+  color: #637381;
+  margin-top: 0.5rem;
+}
+
+.emotion-2 {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+<a
+  className="emotion-5"
+  href="#"
+>
+  <div
+    aria-hidden="true"
+    className="emotion-0"
+    data-card-image={true}
+  />
+  <p
+    role="heading"
+  >
+    <span
+      className="emotion-1"
+      data-card-title={true}
+    >
+      This is the card title
+    </span>
+  </p>
+  <div
+    className="emotion-4"
+  >
+    <svg
+      aria-hidden={true}
+      className="emotion-2 emotion-3"
+      height="16px"
+      viewBox="0 0 24 24"
+      width="16px"
+    >
+      <path
+        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+      />
+    </svg>
+     All 
+    <span
+      style={
+        Object {
+          "fontWeight": "700",
+        }
+      }
+    >
+      content
+    </span>
+     in a card should relate to one single idea and could standalone.
+  </div>
+</a>
+`;
+
+exports[`Storyshots card default 1`] = `
+.emotion-4 {
+  display: block;
+  max-width: 600px;
+}
+
+.emotion-4:hover [data-card-image] {
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
+}
+
+.emotion-4:hover [data-card-title] {
+  box-shadow: inset 0 -2px #1E80A2;
+}
+
+.emotion-0 {
+  background-color: #F7F8F9;
+  background-image: url(https://cms.dev.lib.umich.edu/sites/default/files/2019-06/Bitmap.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  padding-top: 55%;
+  margin-bottom: 0.75rem;
+  border-radius: 2px;
+}
+
+.emotion-2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #212B36;
+  box-shadow: inset 0 -1px #1E80A2;
+}
+
+.emotion-2:hover {
+  box-shadow: inset 0 -2px #1E80A2;
+}
+
+.emotion-3 {
+  color: #637381;
+  margin-top: 0.5rem;
+}
+
+.emotion-1 {
+  display: block;
+  color: #637381;
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  -webkit-letter-spacing: 1.25px;
+  -moz-letter-spacing: 1.25px;
+  -ms-letter-spacing: 1.25px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+}
+
+<a
+  className="emotion-4"
+  href="#"
+>
+  <div
+    aria-hidden="true"
+    className="emotion-0"
+    data-card-image={true}
+  />
+  <p
+    role="heading"
+  >
+    <span
+      className="emotion-1"
+    >
+      Optional details line
+    </span>
+    <span
+      className="emotion-2"
+      data-card-title={true}
+    >
+      This is the card title
+    </span>
+  </p>
+  <p
+    className="emotion-3"
+  >
+    All content in a card should relate to one single idea and could standalone.
+  </p>
+</a>
+`;
+
+exports[`Storyshots card renderAnchor 1`] = `
+.emotion-0 {
+  background-color: #F7F8F9;
+  background-image: url(https://cms.dev.lib.umich.edu/sites/default/files/2019-06/Bitmap.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  padding-top: 55%;
+  margin-bottom: 0.75rem;
+  border-radius: 2px;
+}
+
+.emotion-2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #212B36;
+  box-shadow: inset 0 -1px #1E80A2;
+}
+
+.emotion-2:hover {
+  box-shadow: inset 0 -2px #1E80A2;
+}
+
+.emotion-3 {
+  color: #637381;
+  margin-top: 0.5rem;
+}
+
+.emotion-1 {
+  display: block;
+  color: #637381;
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  -webkit-letter-spacing: 1.25px;
+  -moz-letter-spacing: 1.25px;
+  -ms-letter-spacing: 1.25px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+}
+
+.emotion-4 {
+  display: block;
+  max-width: 600px;
+}
+
+.emotion-4:hover [data-card-image] {
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
+}
+
+.emotion-4:hover [data-card-title] {
+  box-shadow: inset 0 -2px #1E80A2;
+}
+
+<a
+  className="emotion-4"
+  href="#"
+>
+  <div
+    aria-hidden="true"
+    className="emotion-0"
+    data-card-image={true}
+  />
+  <p
+    role="heading"
+  >
+    <span
+      className="emotion-1"
+    >
+      Optional details line
+    </span>
+    <span
+      className="emotion-2"
+      data-card-title={true}
+    >
+      This is the card title
+    </span>
+  </p>
+  <p
+    className="emotion-3"
+  >
+    All content in a card should relate to one single idea and could standalone.
+  </p>
+</a>
+`;
+
+exports[`Storyshots chat basic button 1`] = `
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 2px;
+  min-height: 2.5rem;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: 700;
+  background: #1E80A2;
+}
+
+.emotion-4:hover {
+  background: #106684;
+}
+
+.emotion-4:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #ffffff,0 0 0 4px #212B36;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 {
+  width: 2.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+<button
+  className="emotion-4"
+  onClick={[Function]}
+>
+  <span
+    className="x-spacing emotion-2 emotion-3"
+  >
+    <svg
+      className="emotion-0 emotion-1"
+      height="130.146"
+      viewBox="0 0 282.682 130.146"
+      width="282.682"
+    >
+      <path
+        d="M179.486,29.948c-41.058-21.774-107.634-21.774-148.689,0 c-41.062,21.773-41.062,57.076,0,78.851c3.595,1.905,7.393,3.639,11.354,5.209c-5.937,9.262-14.562,16.14-14.562,16.14 s18.048-0.609,32.208-10.465c39.087,9.902,87.309,6.283,119.689-10.884C220.548,87.023,220.548,51.721,179.486,29.948z"
+        fill="#FFCF01"
+        id="bubble_3_"
+      />
+      <path
+        d="M268.192,0H110.389c-8.005,0-14.491,6.488-14.491,14.487v65.787 c0,8.005,6.486,14.489,14.491,14.489h60.09c13.492,16.812,41.679,20.023,41.679,20.023s-9.593-9.021-14.533-20.023h70.567 c8.009,0,14.489-6.484,14.489-14.489V14.487C282.682,6.488,276.2,0,268.192,0z"
+        fill="#064473"
+        id="bubble_2_"
+      />
+      <g
+        fill="#FFF"
+      >
+        <path
+          d="M140.418,59.408l-3.94,14.202h-12.971l16.911-55.33h16.418l17.157,55.33h-13.463l-4.27-14.202H140.418z M154.455,50.05l-3.448-11.739c-0.984-3.283-1.97-7.388-2.791-10.672h-0.164c-0.82,3.284-1.642,7.471-2.545,10.672l-3.283,11.739 H154.455z"
+        />
+        <path
+          d="M181.628,62.692c2.299,1.396,7.061,3.037,10.754,3.037c3.777,0,5.336-1.313,5.336-3.366 c0-2.052-1.23-3.037-5.91-4.597c-8.291-2.791-11.492-7.307-11.41-12.067c0-7.471,6.402-13.135,16.336-13.135 c4.68,0,8.865,1.067,11.328,2.298l-2.217,8.62c-1.805-0.985-5.254-2.299-8.701-2.299c-3.037,0-4.762,1.231-4.762,3.284 c0,1.888,1.561,2.873,6.486,4.597c7.634,2.627,10.836,6.485,10.918,12.396c0,7.47-5.911,12.971-17.404,12.971 c-5.254,0-9.933-1.149-12.971-2.792L181.628,62.692z"
+        />
+      </g>
+      <path
+        d="M232.064,50.378h0.164c0.902-1.642,1.888-3.283,2.873-4.843l8.127-12.068h15.022l-14.366,16.255 l16.419,23.889h-15.352l-9.687-16.501l-3.201,3.94V73.61h-12.479V15.325h12.479V50.378z"
+        fill="#FFF"
+      />
+    </svg>
+    <span>
+      Ask a Librarian
+    </span>
+  </span>
+</button>
+`;
+
+exports[`Storyshots chat fixed to viewport on large screens 1`] = `
+.emotion-4 {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 {
+  width: 2.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.emotion-12 {
+  position: fixed;
+  right: 1rem;
+  bottom: 0;
+  max-width: 22rem;
+  background: white;
+  z-index: 100;
+  border-radius: 4px 4px 0 0;
+  box-shadow: rgba(0,0,0,0.4) 0px 0px 3px 1px;
+}
+
+.emotion-8 {
+  border-radius: 4px 4px 0 0;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  background: white;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.emotion-10 {
+  width: 100%;
+  height: 100%;
+  border: none;
+  max-height: 25rem;
+  min-height: 24rem;
+}
+
+<div
+  className="emotion-12 emotion-13"
+>
+  <button
+    className="emotion-8 emotion-9"
+    onClick={[Function]}
+  >
+    <span
+      className="x-spacing emotion-6 emotion-7"
+    >
+      <span
+        className="x-spacing emotion-2 emotion-3"
+      >
+        <svg
+          className="emotion-0 emotion-1"
+          height="130.146"
+          viewBox="0 0 282.682 130.146"
+          width="282.682"
+        >
+          <path
+            d="M179.486,29.948c-41.058-21.774-107.634-21.774-148.689,0 c-41.062,21.773-41.062,57.076,0,78.851c3.595,1.905,7.393,3.639,11.354,5.209c-5.937,9.262-14.562,16.14-14.562,16.14 s18.048-0.609,32.208-10.465c39.087,9.902,87.309,6.283,119.689-10.884C220.548,87.023,220.548,51.721,179.486,29.948z"
+            fill="#FFCF01"
+            id="bubble_3_"
+          />
+          <path
+            d="M268.192,0H110.389c-8.005,0-14.491,6.488-14.491,14.487v65.787 c0,8.005,6.486,14.489,14.491,14.489h60.09c13.492,16.812,41.679,20.023,41.679,20.023s-9.593-9.021-14.533-20.023h70.567 c8.009,0,14.489-6.484,14.489-14.489V14.487C282.682,6.488,276.2,0,268.192,0z"
+            fill="#064473"
+            id="bubble_2_"
+          />
+          <g
+            fill="#FFF"
+          >
+            <path
+              d="M140.418,59.408l-3.94,14.202h-12.971l16.911-55.33h16.418l17.157,55.33h-13.463l-4.27-14.202H140.418z M154.455,50.05l-3.448-11.739c-0.984-3.283-1.97-7.388-2.791-10.672h-0.164c-0.82,3.284-1.642,7.471-2.545,10.672l-3.283,11.739 H154.455z"
+            />
+            <path
+              d="M181.628,62.692c2.299,1.396,7.061,3.037,10.754,3.037c3.777,0,5.336-1.313,5.336-3.366 c0-2.052-1.23-3.037-5.91-4.597c-8.291-2.791-11.492-7.307-11.41-12.067c0-7.471,6.402-13.135,16.336-13.135 c4.68,0,8.865,1.067,11.328,2.298l-2.217,8.62c-1.805-0.985-5.254-2.299-8.701-2.299c-3.037,0-4.762,1.231-4.762,3.284 c0,1.888,1.561,2.873,6.486,4.597c7.634,2.627,10.836,6.485,10.918,12.396c0,7.47-5.911,12.971-17.404,12.971 c-5.254,0-9.933-1.149-12.971-2.792L181.628,62.692z"
+            />
+          </g>
+          <path
+            d="M232.064,50.378h0.164c0.902-1.642,1.888-3.283,2.873-4.843l8.127-12.068h15.022l-14.366,16.255 l16.419,23.889h-15.352l-9.687-16.501l-3.201,3.94V73.61h-12.479V15.325h12.479V50.378z"
+            fill="#FFF"
+          />
+        </svg>
+        <span>
+          Ask a Librarian
+        </span>
+      </span>
+      <svg
+        aria-hidden={true}
+        className="emotion-4 emotion-5"
+        height="28px"
+        viewBox="0 0 24 24"
+        width="28px"
+      >
+        <path
+          d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
+        />
+      </svg>
+    </span>
+  </button>
+  <iframe
+    className="emotion-10 emotion-11"
+    hidden={true}
+    src="https://libraryh3lp.com/chat/umlibraryaskalibrarian@chat.libraryh3lp.com?skin=27279"
+    title="Chat with Ask a Librarian"
+  />
+</div>
+`;
+
+exports[`Storyshots heading 2XL 1`] = `
+.emotion-0 {
+  font-size: 2.25rem;
+  font-family: Crimson Text;
+  line-height: 1.25;
+}
+
+<h1
+  className="emotion-0 emotion-1"
+  size="2XL"
+>
+  Page title
+</h1>
+`;
+
+exports[`Storyshots heading 2XS 1`] = `
+.emotion-0 {
+  font-size: 1rem;
+}
+
+<h1
+  className="emotion-0 emotion-1"
+  size="2XS"
+>
+  Sub section
+</h1>
+`;
+
+exports[`Storyshots heading 3XL 1`] = `
+.emotion-0 {
+  font-size: 2.25rem;
+  font-family: Crimson Text;
+  line-height: 1.25;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    font-size: 3.5rem;
+    font-family: Crimson Text;
+    line-height: 1.125;
+  }
+}
+
+<h1
+  className="emotion-0 emotion-1"
+  size="3XL"
+>
+  Page title
+</h1>
+`;
+
+exports[`Storyshots heading 3XS 1`] = `
+.emotion-0 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  -webkit-letter-spacing: 1.25px;
+  -moz-letter-spacing: 1.25px;
+  -ms-letter-spacing: 1.25px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+}
+
+<h1
+  className="emotion-0 emotion-1"
+  size="3XS"
+>
+  Sub section
+</h1>
+`;
+
+exports[`Storyshots heading L 1`] = `
+.emotion-0 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+<h1
+  className="emotion-0 emotion-1"
+  size="M"
+>
+  Sub section
+</h1>
+`;
+
+exports[`Storyshots heading M 1`] = `
+.emotion-0 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+<h5
+  className="emotion-0 emotion-1"
+  size="M"
+>
+  Sub section
+</h5>
+`;
+
+exports[`Storyshots heading S 1`] = `
+.emotion-0 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+<h1
+  className="emotion-0 emotion-1"
+  size="S"
+>
+  Sub section
+</h1>
+`;
+
+exports[`Storyshots heading XL 1`] = `
+.emotion-0 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+<h1
+  className="emotion-0 emotion-1"
+  size="XL"
+>
+  Sub section
+</h1>
+`;
+
+exports[`Storyshots heading XS 1`] = `
+.emotion-0 {
+  font-size: 1.125rem;
+}
+
+<h1
+  className="emotion-0 emotion-1"
+  size="XS"
+>
+  Sub section
+</h1>
+`;
+
+exports[`Storyshots icon Pass in a path to be drawn. 1`] = `
+.emotion-0 {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+<svg
+  aria-hidden={true}
+  className="emotion-0 emotion-1"
+  height="16px"
+  viewBox="0 0 24 24"
+  width="16px"
+>
+  <path
+    d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7l-2 3v1h8v-1l-2-3h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 12H3V4h18v10z"
+  />
+</svg>
+`;
+
+exports[`Storyshots icon all 1`] = `
+.emotion-0 {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+<ul
+  className="y-spacing"
+>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M3,3H21V7H3V3M4,8H20V21H4V8M9.5,11A0.5,0.5 0 0,0 9,11.5V13H15V11.5A0.5,0.5 0 0,0 14.5,11H9.5Z"
+      />
+    </svg>
+    archive
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"
+      />
+    </svg>
+    book
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"
+      />
+    </svg>
+    chat
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+      />
+    </svg>
+    check_circle
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+      />
+    </svg>
+    close
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"
+      />
+    </svg>
+    code
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 10l-2.5-1.5L15 12V4h5v8z"
+      />
+    </svg>
+    collection_bookmark
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M14,17H7V15H14M17,13H7V11H17M17,9H7V7H17M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3Z"
+      />
+    </svg>
+    document
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+      />
+    </svg>
+    email
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+      />
+    </svg>
+    error
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+      />
+    </svg>
+    expand_more
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
+      />
+    </svg>
+    expand_less
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M3 5H1v16c0 1.1.9 2 2 2h16v-2H3V5zm18-4H7c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm0 16H7V3h14v14z"
+      />
+    </svg>
+    filter
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M20 19.59V8l-6-6H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c.45 0 .85-.15 1.19-.4l-4.43-4.43c-.8.52-1.74.83-2.76.83-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5c0 1.02-.31 1.96-.83 2.75L20 19.59zM9 13c0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3-3 1.34-3 3z"
+      />
+    </svg>
+    find_in_page
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"
+      />
+    </svg>
+    format_quote
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"
+      />
+    </svg>
+    insert_drive_file
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"
+      />
+    </svg>
+    library_books
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"
+      />
+    </svg>
+    map
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"
+      />
+    </svg>
+    music_note
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+      />
+    </svg>
+    navigate_next
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+      />
+    </svg>
+    navigate_before
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M20,11H4V8H20M20,15H13V13H20M20,19H13V17H20M11,19H4V13H11M20.33,4.67L18.67,3L17,4.67L15.33,3L13.67,4.67L12,3L10.33,4.67L8.67,3L7,4.67L5.33,3L3.67,4.67L2,3V19A2,2 0 0,0 4,21H20A2,2 0 0,0 22,19V3L20.33,4.67Z"
+      />
+    </svg>
+    newspaper
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M3 18h12v-2H3v2zM3 6v2h18V6H3zm0 7h18v-2H3v2z"
+      />
+    </svg>
+    notes
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+      />
+    </svg>
+    person
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"
+      />
+    </svg>
+    photo
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M22 16V4c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2zm-11-4l2.03 2.71L16 11l4 5H8l3-4zM2 6v14c0 1.1.9 2 2 2h14v-2H4V6H2z"
+      />
+    </svg>
+    photo_library
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"
+      />
+    </svg>
+    play_circle
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
+      />
+    </svg>
+    remove_red_eye
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+      />
+    </svg>
+    search
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
+      />
+    </svg>
+    star_border
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+      />
+    </svg>
+    star
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M18 3v2h-2V3H8v2H6V3H4v18h2v-2h2v2h8v-2h2v2h2V3h-2zM8 17H6v-2h2v2zm0-4H6v-2h2v2zm0-4H6V7h2v2zm10 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2z"
+      />
+    </svg>
+    theaters
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M23 8c0 1.1-.9 2-2 2-.18 0-.35-.02-.51-.07l-3.56 3.55c.05.16.07.34.07.52 0 1.1-.9 2-2 2s-2-.9-2-2c0-.18.02-.36.07-.52l-2.55-2.55c-.16.05-.34.07-.52.07s-.36-.02-.52-.07l-4.55 4.56c.05.16.07.33.07.51 0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2c.18 0 .35.02.51.07l4.56-4.55C8.02 9.36 8 9.18 8 9c0-1.1.9-2 2-2s2 .9 2 2c0 .18-.02.36-.07.52l2.55 2.55c.16-.05.34-.07.52-.07s.36.02.52.07l3.55-3.56C19.02 8.35 19 8.18 19 8c0-1.1.9-2 2-2s2 .9 2 2z"
+      />
+    </svg>
+    timeline
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"
+      />
+    </svg>
+    today
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"
+      />
+    </svg>
+    video_library
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"
+      />
+    </svg>
+    videogame_asset
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
+      />
+    </svg>
+    volume_up
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
+      />
+    </svg>
+    warning
+  </li>
+  <li>
+    <svg
+      aria-hidden={true}
+      className="emotion-0 emotion-1"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+    >
+      <path
+        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"
+      />
+    </svg>
+    web
+  </li>
+</ul>
+`;
+
+exports[`Storyshots input basic 1`] = `
+.emotion-0 {
+  font-size: 1rem;
+  margin: 0;
+  border: solid 1px rgba(0,0,0,0.5);
+  box-shadow: inset 0 1px 4px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+<input
+  className="emotion-0 emotion-1"
+/>
+`;
+
+exports[`Storyshots link default 1`] = `
+.emotion-0 {
+  color: #1E80A2;
+  box-shadow: inset 0 -1px #1E80A2;
+}
+
+.emotion-0:hover {
+  box-shadow: inset 0 -2px #1E80A2;
+}
+
+<a
+  className="emotion-0 emotion-1"
+  href="#"
+  kind="default"
+>
+  Default link
+</a>
+`;
+
+exports[`Storyshots link description 1`] = `
+.emotion-0 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #212B36;
+  box-shadow: inset 0 -1px #1E80A2;
+}
+
+.emotion-0:hover {
+  box-shadow: inset 0 -2px #1E80A2;
+}
+
+<a
+  className="emotion-0 emotion-1"
+  href="#"
+  kind="description"
+>
+  Description link
+</a>
+`;
+
+exports[`Storyshots link light 1`] = `
+.emotion-0 {
+  color: white;
+  box-shadow: inset 0 -1px white;
+}
+
+.emotion-0:hover {
+  box-shadow: inset 0 -2px white;
+}
+
+<a
+  className="emotion-0 emotion-1"
+  href="#"
+  kind="light"
+>
+  Light link
+</a>
+`;
+
+exports[`Storyshots link list 1`] = `
+.emotion-0 {
+  color: #212B36;
+}
+
+.emotion-0:hover {
+  box-shadow: inset 0 -1px #212B36;
+}
+
+<a
+  className="emotion-0 emotion-1"
+  href="#"
+  kind="list"
+>
+  List link
+</a>
+`;
+
+exports[`Storyshots link list-medium 1`] = `
+.emotion-0 {
+  font-weight: 600;
+}
+
+.emotion-0:hover {
+  box-shadow: inset 0 -2px #1E80A2;
+}
+
+<a
+  className="emotion-0 emotion-1"
+  href="#"
+  kind="list-medium"
+>
+  List medium link
+</a>
+`;
+
+exports[`Storyshots link list-strong 1`] = `
+.emotion-0 {
+  font-weight: 700;
+  color: #212B36;
+}
+
+.emotion-0:hover {
+  box-shadow: inset 0 -1px #212B36;
+}
+
+<a
+  className="emotion-0 emotion-1"
+  href="#"
+  kind="list-strong"
+>
+  List strong link
+</a>
+`;
+
+exports[`Storyshots link special 1`] = `
+.emotion-0 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  -webkit-letter-spacing: 1.25px;
+  -moz-letter-spacing: 1.25px;
+  -ms-letter-spacing: 1.25px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  color: #637381;
+}
+
+.emotion-0:hover {
+  box-shadow: inset 0 -1px #637381;
+}
+
+<a
+  className="emotion-0 emotion-1"
+  href="#"
+  kind="special"
+>
+  Special link
+</a>
+`;
+
+exports[`Storyshots link subtle 1`] = `
+.emotion-0 {
+  color: #212B36;
+  box-shadow: inset 0 -1px #637381;
+}
+
+.emotion-0:hover {
+  box-shadow: inset 0 -2px #637381;
+}
+
+<a
+  className="emotion-0 emotion-1"
+  href="#"
+  kind="subtle"
+>
+  Subtle link
+</a>
+`;
+
+exports[`Storyshots list bulleted list 1`] = `
+.emotion-0 {
+  margin: 0;
+  padding: 0;
+  list-style: disc;
+  max-width: 38rem;
+  margin-left: 1.5rem;
+}
+
+.emotion-0 li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+<ul
+  className="emotion-0 emotion-1"
+>
+  <li>
+    here is a bulleted list
+  </li>
+  <li>
+    this is another item in the list
+  </li>
+  <li>
+    and another item with a bit more text
+  </li>
+</ul>
+`;
+
+exports[`Storyshots list numbered list 1`] = `
+.emotion-0 {
+  margin: 0;
+  padding: 0;
+  list-style: decimal;
+  max-width: 38rem;
+  margin-left: 1.5rem;
+}
+
+.emotion-0 li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+<ol
+  className="emotion-0 emotion-1"
+>
+  <li>
+    Understand that this is a numbered list.
+  </li>
+  <li>
+    Follow the second step in this numbered list.
+  </li>
+  <li>
+    Make sure each item is a full sentence ending with a full stop.
+  </li>
+</ol>
+`;
+
+exports[`Storyshots loading default 1`] = `
+@keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(359deg);
+    -ms-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+.emotion-4 {
+  width: 10rem;
+  height: 10rem;
+  -webkit-animation: animation-0 .8s infinite linear;
+  animation: animation-0 .8s infinite linear;
+}
+
+.emotion-2 {
+  fill: transparent;
+}
+
+.emotion-0 {
+  stroke: #1E80A2;
+  stroke-dasharray: 240;
+  stroke-width: 8;
+  stroke-dashoffset: 40;
+}
+
+<div
+  className="emotion-4 emotion-5"
+>
+  <svg
+    className="emotion-2 emotion-3"
+    viewBox="-75 -75 150 150"
+  >
+    <title>
+      Loading
+    </title>
+    <circle
+      className="emotion-0 emotion-1"
+      cx="0"
+      cy="0"
+      r="37.5"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Storyshots loading small 1`] = `
+@keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(359deg);
+    -ms-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(359deg);
+    -ms-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+.emotion-2 {
+  fill: transparent;
+}
+
+.emotion-0 {
+  stroke: #1E80A2;
+  stroke-dasharray: 240;
+  stroke-width: 8;
+  stroke-dashoffset: 40;
+}
+
+.emotion-4 {
+  width: 10rem;
+  height: 10rem;
+  width: 2rem;
+  height: 2rem;
+  -webkit-animation: animation-0 .8s infinite linear;
+  animation: animation-0 .8s infinite linear;
+}
+
+.emotion-4 circle {
+  stroke-width: 12;
+}
+
+<div
+  className="emotion-4 emotion-5"
+>
+  <svg
+    className="emotion-2 emotion-3"
+    viewBox="-75 -75 150 150"
+  >
+    <title>
+      Loading
+    </title>
+    <circle
+      className="emotion-0 emotion-1"
+      cx="0"
+      cy="0"
+      r="37.5"
+    />
+  </svg>
+</div>
+`;
+
+exports[`Storyshots tabs basic 1`] = `
+.emotion-14 {
+  width: 100%;
+}
+
+.emotion-6 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: solid 1px #E5E9ED;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-6 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: baseline;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    border-left: none;
+    border-bottom: solid 1px #E5E9ED;
+  }
+}
+
+.emotion-0 {
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  border-left: solid 4px transparent;
+  font-weight: 600;
+  color: #001324;
+  border-left: solid 4px #1E80A2;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    padding: 0.5rem 0;
+    border-left: none;
+  }
+
+  .emotion-0:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-0 {
+    border-left: none;
+    border-bottom: solid 4px #1E80A2;
+  }
+}
+
+.emotion-2 {
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  border-left: solid 4px transparent;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-2 {
+    padding: 0.5rem 0;
+    border-left: none;
+  }
+
+  .emotion-2:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+}
+
+.emotion-8:empty {
+  display: none;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-8 {
+    padding: 0.5rem 0;
+  }
+}
+
+<div
+  className="emotion-14 emotion-15"
+  data-tabs={true}
+  onClick={[Function]}
+  onKeyDown={[Function]}
+>
+  <ul
+    className="react-tabs__tab-list emotion-6 emotion-7"
+    role="tablist"
+  >
+    <li
+      aria-controls="react-tabs-1"
+      aria-disabled="false"
+      aria-selected="true"
+      className="react-tabs__tab emotion-0 emotion-1 react-tabs__tab--selected"
+      id="react-tabs-0"
+      role="tab"
+      tabIndex="0"
+    >
+      Section 1
+    </li>
+    <li
+      aria-controls="react-tabs-3"
+      aria-disabled="false"
+      aria-selected="false"
+      className="react-tabs__tab emotion-2 emotion-1"
+      id="react-tabs-2"
+      role="tab"
+      tabIndex={null}
+    >
+      Section 2
+    </li>
+    <li
+      aria-controls="react-tabs-5"
+      aria-disabled="false"
+      aria-selected="false"
+      className="react-tabs__tab emotion-2 emotion-1"
+      id="react-tabs-4"
+      role="tab"
+      tabIndex={null}
+    >
+      Section 3
+    </li>
+  </ul>
+  <div
+    aria-labelledby="react-tabs-0"
+    className="react-tabs__tab-panel emotion-8 emotion-9 react-tabs__tab-panel--selected"
+    id="react-tabs-1"
+    role="tabpanel"
+  >
+    <p>
+      Section 1 panel.
+    </p>
+    <a
+      href="#"
+    >
+      A link
+    </a>
+  </div>
+  <div
+    aria-labelledby="react-tabs-2"
+    className="react-tabs__tab-panel emotion-8 emotion-9"
+    id="react-tabs-3"
+    role="tabpanel"
+  />
+  <div
+    aria-labelledby="react-tabs-4"
+    className="react-tabs__tab-panel emotion-8 emotion-9"
+    id="react-tabs-5"
+    role="tabpanel"
+  />
+</div>
+`;
+
+exports[`Storyshots text basic 1`] = `
+.emotion-0 {
+  max-width: 38rem;
+}
+
+<p
+  className="emotion-0 emotion-1"
+>
+  A regular font sized body copy paragraph. This includes even more text to give a good representation of a more average length paragraph. That way you can see more than one line wrapping.
+</p>
+`;
+
+exports[`Storyshots text inline 1`] = `
+.emotion-0 {
+  max-width: 38rem;
+  display: inline;
+}
+
+<p
+  className="emotion-0 emotion-1"
+>
+  Some inline text.
+</p>
+`;
+
+exports[`Storyshots text lede 1`] = `
+.emotion-0 {
+  max-width: 38rem;
+  font-size: 1.125rem;
+}
+
+<p
+  className="emotion-0 emotion-1"
+>
+  Some lede sized text body copy paragraph. This includes even more text to give a good representation of a more average length paragraph. That way you can see more than one line wrapping.
+</p>
+`;
+
+exports[`Storyshots text small 1`] = `
+.emotion-0 {
+  max-width: 38rem;
+}
+
+<p
+  className="emotion-0 emotion-1"
+>
+  A regular font sized body copy paragraph. This includes even more text to give a good representation of a more average length paragraph. That way you can see more than one line wrapping.
+</p>
+`;
+
+exports[`Storyshots text-input all 1`] = `
+.emotion-4 {
+  font-size: 1rem;
+  margin: 0;
+  border: solid 1px rgba(0,0,0,0.5);
+  box-shadow: inset 0 1px 4px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.emotion-6 {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-2 {
+  display: block;
+  margin-bottom: 0.5rem;
+  box-sizing: border-box;
+}
+
+.emotion-0 {
+  display: block;
+  color: #212B36;
+}
+
+<div
+  className="emotion-6 emotion-7"
+>
+  <label
+    className="emotion-2 emotion-3"
+    htmlFor="email-address"
+  >
+    <span>
+      Email address
+    </span>
+    <span
+      className="emotion-0 emotion-1"
+    >
+      We will only use this to send you a confirmation email.
+    </span>
+  </label>
+  <input
+    className="emotion-4 emotion-5"
+    disabled={false}
+    id="email-address"
+    onChange={[Function]}
+    onClick={[Function]}
+    placeholder="uniqname@umich.edu"
+    type="email"
+  />
+</div>
+`;
+
+exports[`Storyshots universal-header default 1`] = `
+.emotion-10 {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.emotion-0 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  -webkit-letter-spacing: 1.25px;
+  -moz-letter-spacing: 1.25px;
+  -ms-letter-spacing: 1.25px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  color: #637381;
+}
+
+.emotion-0:hover {
+  box-shadow: inset 0 -1px #637381;
+}
+
+.emotion-20 {
+  background: #F7F8F9;
+}
+
+.emotion-18 {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 1rem;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-18 {
+    padding: 0 2.5rem;
+  }
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0.25rem 0;
+}
+
+.emotion-2 {
+  display: none;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-2 {
+    display: block;
+  }
+}
+
+.emotion-6 {
+  display: block;
+}
+
+@media only screen and (min-width:641px) {
+  .emotion-6 {
+    display: none;
+  }
+}
+
+.emotion-14 {
+  display: inline-block;
+  position: relative;
+}
+
+.emotion-12 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  -webkit-letter-spacing: 1.25px;
+  -moz-letter-spacing: 1.25px;
+  -ms-letter-spacing: 1.25px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  color: #637381;
+}
+
+.emotion-12:hover span {
+  box-shadow: inset 0 -1px #637381;
+}
+
+.emotion-8 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  -webkit-letter-spacing: 1.25px;
+  -moz-letter-spacing: 1.25px;
+  -ms-letter-spacing: 1.25px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  color: #637381;
+}
+
+<header
+  aria-label="View our other U-M Library sites"
+  className="emotion-20 emotion-21"
+>
+  <div
+    className="emotion-18 emotion-19"
+  >
+    <div
+      className="emotion-16 emotion-17"
+    >
+      <div
+        className="emotion-2 emotion-3"
+      >
+        <a
+          className="emotion-0 emotion-1"
+          href="https://www.lib.umich.edu/"
+          kind="special"
+        >
+          University of Michigan library
+        </a>
+      </div>
+      <div
+        className="emotion-6 emotion-7"
+      >
+        <a
+          className="emotion-0 emotion-1"
+          href="https://www.lib.umich.edu/"
+          kind="special"
+        >
+          <abbr
+            title="University of Michigan"
+          >
+            U-M
+          </abbr>
+           Library
+        </a>
+      </div>
+      <div
+        className="emotion-14 emotion-15"
+      >
+        <button
+          aria-expanded={false}
+          className="emotion-12 emotion-13"
+          onClick={[Function]}
+        >
+          <span
+            className="emotion-8 emotion-9"
+          >
+            Explore
+          </span>
+           
+          <svg
+            aria-hidden={true}
+            className="emotion-10 emotion-11"
+            height="16px"
+            viewBox="0 0 24 24"
+            width="16px"
+          >
+            <path
+              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+`;

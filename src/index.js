@@ -1,32 +1,32 @@
-import Alert from "@components/alert"
-import Button from "@components/button"
-import Card from "@components/card"
-import Chat from "@components/chat"
-import Heading from "@components/heading"
-import Icon, { icons } from "@components/icon"
-import Input from "@components/input"
-import List from "@components/list"
-import Text from "@components/text"
-import TextInput from "@components/text-input"
-import UniversalHeader from '@components/universal-header'
-import Link from '@components/link'
-import Loading from '@components/loading'
+import Alert from "./components/alert"
+import Button from "./components/button"
+import Card from "./components/card"
+import Chat from "./components/chat"
+import Heading from "./components/heading"
+import Icon, { icons } from "./components/icon"
+import Input from "./components/input"
+import List from "./components/list"
+import Text from "./components/text"
+import TextInput from "./components/text-input"
+import UniversalHeader from "./components/universal-header"
+import Link from "./components/link"
+import Loading from "./components/loading"
 import {
   Expandable,
   ExpandableButton,
   ExpandableChildren,
   ExpandableProvider
-} from "@components/expandable"
+} from "./components/expandable"
 import {
   Tabs,
   TabList,
   Tab,
   TabPanel
-} from "@components/tabs"
+} from "./components/tabs"
 import {
   Breadcrumb,
   BreadcrumbItem
-} from '@components/breadcrumb'
+} from "./components/breadcrumb"
 import {
   COLORS,
   INTENT_COLORS,
@@ -41,7 +41,7 @@ import {
   LargeScreen,
   Z_SPACE,
   lightOrDark
-} from "@shared/styles"
+} from "./shared/styles"
 
 /*
   All the Design System Components included in core.
@@ -64,7 +64,7 @@ export {
 }
 
 /*
-  Exports from @components/expandable
+  Exports from components/expandable
 */
 export {
   Expandable,
@@ -74,7 +74,7 @@ export {
 }
 
 /*
-  Exports from @components/tabs
+  Exports from components/tabs
 */
 export {
   Tabs,
@@ -84,7 +84,7 @@ export {
 }
 
 /*
-  Exports from @components/breadcrumb
+  Exports from components/breadcrumb
 */
 export {
   Breadcrumb,

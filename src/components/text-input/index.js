@@ -5,10 +5,10 @@ import VisuallyHidden from "@reach/visually-hidden";
 import {
   Input,
   Icon,
-} from '@umich-lib/core'
+} from '../../../'
 import {
   COLORS
-} from '@shared/styles'
+} from '../../shared/styles'
 
 const StyledFormItem = styled('div')(
   {

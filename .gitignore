@@ -6,4 +6,4 @@ package-lock.json
 lerna-debug.log
 *.tgz
 *.asketch.json
-dist
+lib

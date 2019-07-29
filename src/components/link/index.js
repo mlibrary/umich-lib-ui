@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from '@emotion/styled'
 import {
   LINK_STYLES
-} from '@umich-lib/core'
+} from '../../../'
 
 const StyledLink = styled('a')(props => LINK_STYLES[props.kind])
 

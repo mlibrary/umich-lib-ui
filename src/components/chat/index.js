@@ -6,7 +6,7 @@ import {
   Button,
   Icon,
   BREAKPOINTS
-} from '@umich-lib/core'
+} from '../../../'
 
 const AskUsSVG = ({ className }) => (
   <svg className={className} width="282.682" height="130.146" viewBox="0 0 282.682 130.146">
