@@ -24,6 +24,7 @@ npm install
 Starts the Storybook development environment.
 
 ```sh
+npm run build:watch
 npm run develop
 ```
 
@@ -37,7 +38,7 @@ npm run docs
 
 ## Build
 
-Will run babel and generate files in `lib`.
+Will run babel and generate files in `lib`. Storybook and docs use the built library, not `src`.
 
 ```sh
 npm run build
