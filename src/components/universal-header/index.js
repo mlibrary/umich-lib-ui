@@ -69,7 +69,6 @@ const Overlay = styled('div')({
   position: `absolute`,
   left: `auto`,
   right: `0`,
-  padding: SPACING['L'],
   marginLeft: SPACING['XL'],
   marginBottom: SPACING['L'],
   padding: '0',
@@ -222,7 +221,7 @@ function Sites() {
   };
 
   const handlePostMessage = e => {
-    if (e.data == "focus") {
+    if (e.data === "focus") {
       // any iframe sending a "focus" message will close the header
       setOpen(false);
     }
@@ -235,7 +234,7 @@ function Sites() {
         .then(result => setData(transformData(result.data)))
         .catch(error => setError(true))
     }
-  }, []);
+  }, [data]);
 
   useEffect(() => {
     document.addEventListener("mousedown", handleClick);
@@ -258,7 +257,7 @@ function Sites() {
       
       {open && (
         <Overlay>
-          <SitesLede aria-role="heading">Explore what the library has to offer.</SitesLede>
+          <SitesLede role="heading">Explore what the library has to offer.</SitesLede>
           {error ? (
             <Alert intent="warning">
               <p style={{ maxWidth: '36rem' }}><strong style={{ fontWeight: '700' }}>Error</strong>: We are temporarily having trouble loading our list of library sites. Please try refreshing your page. You can also contact <Link href="https://www.lib.umich.edu/ask" kind="subtle">Ask a Librarian</Link> for help.</p>

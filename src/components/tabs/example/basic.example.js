@@ -18,15 +18,15 @@ export let Example = () => (
 
     <TabPanel>
       <p>Section 1 panel.</p>
-      <a href="#">A link</a>
+      <a href="/">A link</a>
     </TabPanel>
     <TabPanel>
       <p>Section 2 panel.</p>
-      <a href="#">A link</a>
+      <a href="/">A link</a>
     </TabPanel>
     <TabPanel>
       <p>Section 3 panel.</p>
-      <a href="#">A link</a>
+      <a href="/">A link</a>
     </TabPanel>
   </Tabs>
 )

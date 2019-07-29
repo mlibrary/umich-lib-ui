@@ -5,10 +5,10 @@ export let name = "renderAnchor";
 
 export let Example = () => (
   <Card
-    renderAnchor={({ anchorStyles, ...rest }) => (
-        <a {...rest} css={anchorStyles} />
+    renderAnchor={({ href, children, anchorStyles, ...rest }) => (
+      <a href={href} {...rest} css={anchorStyles}>{children}</a>
     )}
-    href="#"
+    href="/"
     image="https://cms.dev.lib.umich.edu/sites/default/files/2019-06/Bitmap.png"
     title="This is the card title"
     subtitle="Optional details line"
