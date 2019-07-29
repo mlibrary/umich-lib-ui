@@ -66,6 +66,7 @@
     "react-dom": "^16.8.5",
     "react-helmet": "^5.2.0",
     "react-live": "^2.0.1",
+    "react-scripts": "^3.0.1",
     "react-tabs": "^3.0.0",
     "react-test-renderer": "^16.8.6",
     "story2sketch": "^1.5.0",
