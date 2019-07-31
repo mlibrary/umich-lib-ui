@@ -1,11 +1,9 @@
 {
   "name": "@umich-lib/core",
   "main": "lib/index.js",
-  "module": "src/index.js",
   "version": "1.0.0-beta.7",
   "files": [
-    "/lib",
-    "/src"
+    "/lib"
   ],
   "scripts": {
     "develop": "npm run storybook",
@@ -40,7 +38,7 @@
     "@mdx-js/tag": "^0.20.3",
     "@reach/alert": "^0.1.5",
     "@reach/visually-hidden": "^0.1.4",
-    "@storybook/addon-storyshots": "^5.0.10",
+    "@storybook/addon-storyshots": "^5.1.10",
     "@storybook/react": "^5.0.10",
     "axios": "^0.19.0",
     "babel-loader": "^8.0.6",
@@ -66,7 +64,6 @@
     "react-dom": "^16.8.5",
     "react-helmet": "^5.2.0",
     "react-live": "^2.0.1",
-    "react-scripts": "^3.0.1",
     "react-tabs": "^3.0.0",
     "react-test-renderer": "^16.8.6",
     "story2sketch": "^1.5.0",
@@ -74,5 +71,9 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/mlibrary/umich-lib-ui.git"
+  }  
 }
