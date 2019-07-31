@@ -12,7 +12,7 @@
     "storybook": "start-storybook -p 9000 -c .storybook",
     "storybook:build": "build-storybook -c .storybook -o dist",
     "docs": "cd docs/ && gatsby develop",
-    "docs:build": "cd docs/ && gatsby build",
+    "docs:build": "npm run build && cd docs/ && gatsby build",
     "sketch": "story2sketch",
     "publish": "npm publish",
     "test": "jest",
