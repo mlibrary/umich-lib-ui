@@ -39,10 +39,16 @@ function CodeEditor({ live }) {
       </div>
       <div style={{
         position: 'relative',
-        padding: `calc(${SPACING['M']} - 10px)`,
         borderTop: `solid 1px ${border_color}`
       }}>
-        <label><VisuallyHidden>Live JSX editor</VisuallyHidden>
+        <label><span css={{
+          float: 'right',
+          border: `solid 1px ${COLORS.neutral['100']}`,
+          borderTop: '0',
+          borderRight: '0',
+          padding: `0 ${SPACING['XS']}`,
+          background: COLORS.neutral['100'],
+        }}>Live JSX editor</span>
           <LiveEditor ignoreTabKey={true} />
         </label>
       </div>
