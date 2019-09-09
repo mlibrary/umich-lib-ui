@@ -30,33 +30,48 @@ function CodeEditor({ live }) {
       background: background_color,
       marginBottom: SPACING['L']
     }}>
-      <div css={{
-        padding: SPACING['M'],
-        borderTop: `solid 1px ${border_color}`,
-        whiteSpace: 'normal'
-      }}>
-        <LivePreview />
-      </div>
-      <div style={{
-        position: 'relative',
-        borderTop: `solid 1px ${border_color}`
-      }}>
-        <label><span css={{
-          float: 'right',
-          border: `solid 1px ${COLORS.neutral['100']}`,
-          borderTop: '0',
-          borderRight: '0',
-          padding: `0 ${SPACING['XS']}`,
-          background: COLORS.neutral['100'],
-        }}>Live JSX editor</span>
-          <LiveEditor ignoreTabKey={true} />
-        </label>
-      </div>
+      <CodeWindow
+        css={{
+          whiteSpace: 'normal'
+        }}
+      >
+        <div css={{ padding: SPACING['M'] }}>
+          <LivePreview />
+        </div>
+      </CodeWindow>
+      <CodeWindow label="Live JSX editor">
+        <LiveEditor ignoreTabKey={true} />
+      </CodeWindow>
       {live.error && (
         <Alert intent="error">
           <LiveError />
         </Alert>
       )}
+    </div>
+  )
+}
+
+function CodeWindow({ label, children, ...rest }) {
+  return (
+    <div css={{
+      position: 'relative',
+      borderTop: `solid 1px ${COLORS.neutral['100']}`,
+    }} {...rest}>
+      <label><span css={{
+        position: 'absolute',
+        right: '0',
+        border: `solid 1px ${COLORS.neutral['100']}`,
+        borderTop: '0',
+        borderRight: '0',
+        padding: `0 ${SPACING['XS']}`,
+        background: COLORS.blue['100'],
+        borderRadius: `0 0 0 2px`,
+        zIndex: '1',
+        lineHeight: '1.2',
+        fontSize: '0.9rem'
+      }}>{label}</span>
+        {children}
+      </label>
     </div>
   )
 }
