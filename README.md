@@ -18,7 +18,6 @@ Run these commands before doing anything else.
 git clone https://github.com/mlibrary/umich-lib-ui.git
 cd umich-lib-ui
 npm install
-npm run bootstrap
 ```
 
 ## ⌨️ Development
@@ -26,9 +25,16 @@ npm run bootstrap
 Starts the Storybook development environment at `http://localhost:9001` and opens the documentation site at `http://localhost:8000`.
 
 ```sh
+npm run bootstrap
 npm run build:watch
 npm run storybook
 ```
+
+### What's going on with these commands?
+
+- `npm run bootstrap` tells Lerna to optimize package dependencies and hoists common packages to the root. It will also symlink local packages that depend on each other.
+- `npm run build:watch` builds the packages with babel so that they can be consumed by the documentation website and published to NPM.
+- `npm run storybook` Starts the Storybook development environment.
 
 ## Documentation site
 
