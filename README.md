@@ -113,6 +113,6 @@ This enables designers to use Design System components in Sketch.
 
 Open a GitHub issue.
 
-## Contributing
+## PRs and contribution guidelines
 
 [See guidelines for contributing](https://github.com/mlibrary/umich-lib-components-react/blob/master/CONTRIBUTING.md)
