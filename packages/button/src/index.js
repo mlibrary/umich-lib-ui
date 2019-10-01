@@ -38,6 +38,10 @@ function getButtonKindCSS(kind, color) {
           background: COLORS.blue['200']
         }
       }
+    case 'reset':
+      return {
+
+      }
     default:
       return {
         background: color['400'],
@@ -60,6 +64,30 @@ function getDisabledCSS(disabled) {
   return {}
 }
 
+function getButtonCSS(kind, disabled) {
+  const color = getButtonColor(kind)
+
+  if (kind === 'reset') {
+    return {}
+  }
+
+  return {
+    display: 'flex',
+    alignItems: 'center',
+    borderRadius: '2px',
+    minHeight: '2.5rem',
+    padding: `${SPACING['XS']} ${SPACING['M']}`,
+    color: lightOrDark(color['400']) === 'light' || kind === 'subtle' ? 'inherit' : 'white',
+    fontWeight: '800',
+    ...getButtonKindCSS(kind, color, disabled),
+    ':focus': {
+      outline: 'none',
+      boxShadow: `0 0 0 3px #ffffff, 0 0 0 4px ${COLORS.neutral['400']}`
+    },
+    ...getDisabledCSS(disabled)
+  }
+}
+
 /**
  * Use buttons to move though a transaction, aim to use only one primary button per page.
  */
@@ -68,25 +96,9 @@ const Button = ({
   disabled,
   ...rest
 }) => {
-  const color = getButtonColor(kind)
-
   return (
     <button
-      css={{
-        display: 'flex',
-        alignItems: 'center',
-        borderRadius: '2px',
-        minHeight: '2.5rem',
-        padding: `${SPACING['XS']} ${SPACING['M']}`,
-        color: lightOrDark(color['400']) === 'light' || kind === 'subtle' ? 'inherit' : 'white',
-        fontWeight: '800',
-        ...getButtonKindCSS(kind, color, disabled),
-        ':focus': {
-          outline: 'none',
-          boxShadow: `0 0 0 3px #ffffff, 0 0 0 4px ${COLORS.neutral['400']}`
-        },
-        ...getDisabledCSS(disabled)
-      }}
+      css={getButtonCSS(kind, disabled)}
       {...rest}
     />
   )
@@ -97,7 +109,8 @@ Button.propTypes = {
     'primary',
     'secondary',
     'tertiary',
-    'subtle'
+    'subtle',
+    'reset'
   ]).isRequired,
 };
 

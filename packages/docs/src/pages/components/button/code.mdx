@@ -23,7 +23,7 @@ import { Button } from '@umich-lib/core'
 
 |Prop|Type|Required|Default|
 |----|----|--------|-------|
-|[kind](#kind)|enum "primary", "secondary", "tertiary", or "subtle"|false|"secondary"|
+|[kind](#kind)|enum "primary", "secondary", "tertiary", "subtle", or "reset"|false|"secondary"|
 |[children](#children)|node|true|n/a|
 |[element props](#element-props)|spread|false|n/a|
 
@@ -47,6 +47,10 @@ Controls how the `Button` is styled.
 
 ```jsx live=true
 <Button kind="subtle">Edit</Button>
+```
+
+```jsx live=true
+<Button kind="reset">Show all</Button>
 ```
 
 ### children
