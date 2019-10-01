@@ -1,6 +1,6 @@
 {
   "name": "@umich-lib/core",
-  "version": "1.0.0-beta.6",
+  "version": "1.0.0-beta.7",
   "main": "lib/index.js",
   "module": "lib/index.js",
   "dependencies": {
@@ -23,7 +23,7 @@
     "@umich-lib/tabs": "^1.0.0-beta.6",
     "@umich-lib/text": "^1.0.0-beta.6",
     "@umich-lib/text-input": "^1.0.0-beta.6",
-    "@umich-lib/universal-header": "^1.0.0-beta.6"
+    "@umich-lib/universal-header": "^1.0.0-beta.7"
   },
   "files": [
     "lib"
