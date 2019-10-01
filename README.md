@@ -4,6 +4,10 @@
 
 A collection of shared design styles, components, and patterns for teams to build quality consistent interfaces. A bit like a LEGO kit.
 
+```
+npm install @umich-lib/core
+```
+
 [View the documentation site](https://design-system.lib.umich.edu/)
 
 ## Getting started
