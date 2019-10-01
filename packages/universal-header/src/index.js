@@ -29,7 +29,6 @@ const HeaderContainer = styled('header')({
 const HeaderContent = styled('div')({
   display: 'flex',
   justifyContent: 'space-between',
-  padding: `${SPACING['2XS']} 0`
 })
 
 /*
@@ -49,7 +48,8 @@ const SitesButton = styled('button')({
   ...LINK_STYLES['special'],
   ':hover': {
     'span': LINK_STYLES['special'][':hover']
-  }
+  },
+  padding: `${SPACING['XS']} 0`
 })
 
 /*
@@ -92,6 +92,7 @@ const SitesLede = styled('p')({
   [MEDIA_QUERIES.LARGESCREEN]: {
     display: 'block',
     ...TYPOGRAPHY['L'],
+    fontWeight: '700',
     padding: 0,
     marginBottom: SPACING['L'],
   }
@@ -171,13 +172,13 @@ function SiteLinks({ data }) {
     <ul>
       {data.map((d, i) => (
         <LinkItem key={i + d.title}>
-          <Link kind="list-strong" href={d.link} css={{
+          <Link kind="list-medium" href={d.link} css={{
             display: 'block',
             padding: SPACING['M'],
             ':hover': {
               boxShadow: 'none'
             },
-            ':hover span': LINK_STYLES['list-strong'][':hover'],
+            ':hover span': LINK_STYLES['list-medium'][':hover'],
             [MEDIA_QUERIES.LARGESCREEN]: {
               display: 'inline',
               padding: '0'
@@ -282,6 +283,38 @@ function Sites() {
   )
 }
 
+function HomeLink({ children }) {
+  return (
+    <a
+      href="https://www.lib.umich.edu/"
+      css={{
+        display: 'inline-block',
+        ...LINK_STYLES['special'],
+        padding: `${SPACING['XS']} 0`,
+        ':hover': {},
+        ':hover > span': LINK_STYLES['special'][':hover']
+      }}
+    >
+      <span>{children}</span>
+    </a>
+  )
+}
+
+function UMichLibraryLink() {
+  //LINK_STYLES
+  return (
+    <React.Fragment>
+      <LargeScreen>
+        <HomeLink>University of Michigan Library</HomeLink>
+      </LargeScreen>
+      <SmallScreen>
+        <HomeLink><abbr title="University of Michigan">U-M</abbr> Library</HomeLink>
+      </SmallScreen>
+    </React.Fragment>
+    
+  )
+}
+
 function UniversalHeader() {
   return (
     <HeaderContainer
@@ -289,16 +322,7 @@ function UniversalHeader() {
     >
       <Margins>
         <HeaderContent>
-          <LargeScreen>
-            <Link href="https://www.lib.umich.edu/" kind="special">
-              University of Michigan library
-            </Link>
-          </LargeScreen>
-          <SmallScreen>
-            <Link href="https://www.lib.umich.edu/" kind="special">
-              <abbr title="University of Michigan">U-M</abbr> Library
-            </Link>
-          </SmallScreen>
+          <UMichLibraryLink />
           <Sites />
         </HeaderContent>
       </Margins>
