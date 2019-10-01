@@ -10,7 +10,9 @@ npm install @umich-lib/core
 
 [View the documentation site](https://design-system.lib.umich.edu/)
 
-## Getting started
+## Contributing
+
+### Getting started
 
 This project uses:
 - [Lerna](https://lernajs.io/) to manage multiple packages/libraries.
@@ -24,7 +26,7 @@ cd umich-lib-ui
 npm install
 ```
 
-## ⌨️ Development
+### ⌨️ Development
 
 Starts the Storybook development environment at `http://localhost:9001` and opens the documentation site at `http://localhost:8000`.
 
@@ -34,13 +36,13 @@ npm run build:watch
 npm run storybook
 ```
 
-### What's going on with these commands?
+#### What's going on with these commands?
 
 - `npm run bootstrap` tells Lerna to optimize package dependencies and hoists common packages to the root. It will also symlink local packages that depend on each other.
 - `npm run build:watch` builds the packages with babel so that they can be consumed by the documentation website and published to NPM.
 - `npm run storybook` Starts the Storybook development environment.
 
-## Documentation site
+### Documentation site
 
 Start the doc site locally. Built with [Gatsby v2](https://www.gatsbyjs.org/) for a fast website.
 
@@ -51,11 +53,11 @@ npm run develop
 
 Be sure to run commands from the `docs` package directory.
 
-## 📦 Publishing
+### 📦 Publishing
 
 ❗ An NPM account with the [umich-lib-ui organization](https://www.npmjs.com/org/umich-lib-ui) is required to publish. Only core-contributors are able to publish versions. Contact the core team to get help setting this up.
 
-### Before anything else
+#### Before anything else
 
 Create a build to be published
 
@@ -69,9 +71,9 @@ Make sure you're logged into the NPM registry.
 npm login
 ```
 
-### Publish options
+#### Publish options
 
-#### 1. Canary
+##### 1. Canary
 
 To publish a quick canary version
 
@@ -79,7 +81,7 @@ To publish a quick canary version
 npm run publish:canary
 ```
 
-#### 2. Next
+##### 2. Next
 
 To publish a next version.
 
@@ -87,7 +89,7 @@ To publish a next version.
 npm run publish:next
 ```
 
-#### 3. Publish
+##### 3. Publish
 
 To publish an official version and follow [Lerna publish prompts](https://github.com/lerna/lerna/tree/master/commands/publish).
 
