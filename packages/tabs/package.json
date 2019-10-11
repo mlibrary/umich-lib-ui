@@ -1,12 +1,12 @@
 {
   "name": "@umich-lib/tabs",
-  "version": "1.0.0-beta.6",
+  "version": "1.0.0",
   "main": "lib/index.js",
   "module": "lib/index.js",
   "dependencies": {
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
-    "@umich-lib/styles": "^2.0.0-beta.6",
+    "@umich-lib/styles": "^1.0.0",
     "react-tabs": "^2.3.0"
   },
   "peerDependencies": {
