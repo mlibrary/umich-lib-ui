@@ -1,14 +1,14 @@
 {
   "name": "@umich-lib/breadcrumb",
-  "version": "0.0.2-beta.6",
+  "version": "1.0.0",
   "main": "lib/index.js",
   "module": "lib/index.js",
   "dependencies": {
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
     "@umich-lib/icon": "1.0.0-alpha.9",
-    "@umich-lib/link": "^0.1.1-beta.6",
-    "@umich-lib/styles": "^2.0.0-beta.6"
+    "@umich-lib/link": "^1.0.0",
+    "@umich-lib/styles": "^1.0.0"
   },
   "peerDependencies": {
     "react": "^16.8.5",
