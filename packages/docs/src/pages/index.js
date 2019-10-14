@@ -139,7 +139,7 @@ export default () => {
         position: 'relative'
       }}>
         <Title>Design System</Title>
-        <img src={homeImage} css={{
+        <img src={homeImage} alt="" role="presentation" css={{
           maxWidth: '100%'
         }} />
       </div>
