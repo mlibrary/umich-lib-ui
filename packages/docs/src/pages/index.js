@@ -47,6 +47,12 @@ const features = [
     to: '/about/design-system-team',
     text: 'Find out who’s responsible for the styles, components, and patterns published in our design system.',
     borderColor: COLORS.orange[400]
+  },
+  { 
+    heading: 'Office hours',
+    to: '/about/design-system-team#office-hours',
+    text: 'Drop-in, meet the team, and ask questions. We are in ScholarSpace the first Monday of each month from 11 to 1pm.',
+    borderColor: COLORS.blue[200]
   } 
 ]
 
