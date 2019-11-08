@@ -1,14 +1,14 @@
 {
   "name": "@umich-lib/chat",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "lib/index.js",
   "module": "lib/index.js",
   "dependencies": {
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
-    "@umich-lib/button": "^2.0.0",
-    "@umich-lib/icon": "^2.0.0",
-    "@umich-lib/styles": "^2.0.0",
+    "@umich-lib/button": "^2.0.1",
+    "@umich-lib/icon": "^2.0.1",
+    "@umich-lib/styles": "^2.0.1",
     "axios": "^0.18.0"
   },
   "peerDependencies": {
