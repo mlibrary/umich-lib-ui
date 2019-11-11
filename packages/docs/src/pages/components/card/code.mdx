@@ -32,9 +32,10 @@ import { Card } from '@umich-lib/core'
 |Prop|Type|Required|Default|
 |----|----|--------|-------|
 |[title](#title)|string|true|n/a|
+|[subtitle](#subtitle)|string|false|n/a|
+|[headingLevel](#heading-level)|int|false|3|
 |[href](#href)|string|true|n/a|
 |[image](#image)|string|true|n/a|
-|[subtitle](#subtitle)|string|false|n/a|
 |[children](#children)|node|false|n/a|
 |[renderAnchor](#renderanchor)|node|false|n/a|
 
@@ -43,6 +44,18 @@ import { Card } from '@umich-lib/core'
 *Type*: string
 
 The title should briefly describe where the Card will take the user when they click on it.
+
+### subtitle
+
+*Type*: string
+
+An optional addition to the Card heading. Only use if necessary.
+
+### headingLevel
+
+*Type*: int
+
+The heading level used for the title.
 
 ### href
 
@@ -55,12 +68,6 @@ Provide a url for where this card should route to.
 *Type*: string
 
 Provide a url to an image. This is purely decorative and shouldn't be required to understand the Card.
-
-### subtitle
-
-*Type*: string
-
-An optional addition to the Card heading. Only use if necessary.
 
 ### children
 

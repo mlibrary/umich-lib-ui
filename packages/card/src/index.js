@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types';
+import styled from '@emotion/styled'
 import {
   COLORS,
   SPACING,
@@ -8,9 +9,16 @@ import {
   TYPOGRAPHY
 } from '@umich-lib/styles'
 
+/*
+  Start with base styles and then bring in the
+  styles specific to the size of the heading.
+*/
+const StyledHeading = styled.h3({ margin: 0 })
+
 export default function Card({
   title,
   subtitle,
+  headingLevel,
   image,
   href,
   description,
@@ -81,7 +89,7 @@ export default function Card({
         </div>
       )}
 
-      <p role="heading">
+      <StyledHeading as={'h' + headingLevel}>
         {subtitle && (<span css={{
           display: 'block',
           color: COLORS.neutral[300],
@@ -94,7 +102,7 @@ export default function Card({
           }}
           data-card-title
         >{title}</span>
-      </p>
+      </StyledHeading>
 
       {renderChildren()}
     </React.Fragment>
@@ -141,6 +149,11 @@ Card.propTypes = {
   subtitle: PropTypes.string,
 
   /*
+  * 
+  **/
+  headingLevel: PropTypes.oneOf([2,3,4,5,6]),
+
+  /*
   * Provide a url for where this card should route to.
   **/
   href: PropTypes.string.isRequired,
@@ -151,4 +164,8 @@ Card.propTypes = {
   * side router libraries.
   **/
   renderAnchor: PropTypes.func
+};
+
+Card.defaultProps = {
+  headingLevel: 3
 };
