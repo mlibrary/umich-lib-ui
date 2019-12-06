@@ -51,7 +51,7 @@ const features = [
   { 
     heading: 'Office hours',
     to: '/about/design-system-team#office-hours',
-    text: 'Drop-in, meet the team, and ask questions. We are in ScholarSpace the first Monday of each month from 11 to 1pm.',
+    text: 'Contact us for an appointment, meet the team, and ask questions. We are in ScholarSpace every other Monday from 12 to 1pm.',
     borderColor: COLORS.blue[200]
   } 
 ]
