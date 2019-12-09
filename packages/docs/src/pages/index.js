@@ -49,9 +49,9 @@ const features = [
     borderColor: COLORS.orange[400]
   },
   { 
-    heading: 'Office hours',
-    to: '/about/design-system-team#office-hours',
-    text: 'Contact us for an appointment, meet the team, and ask questions. We are in ScholarSpace every other Monday from 12 to 1pm.',
+    heading: 'Contact us',
+    to: '/about/design-system-team#contact-us',
+    text: 'Contact us for an appointment, meet the team, ask questions, and become a Design System contributor.',
     borderColor: COLORS.blue[200]
   } 
 ]
