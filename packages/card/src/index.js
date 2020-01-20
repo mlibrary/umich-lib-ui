@@ -81,7 +81,7 @@ export default function Card({
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: '50% 50%',
-            paddingTop: '55%',
+            paddingTop: '66.6667%',
             marginBottom: SPACING['S'],
             borderRadius: '2px'
           }}
