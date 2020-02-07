@@ -1,13 +1,13 @@
 {
   "name": "@umich-lib/text-input",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "main": "lib/index.js",
   "module": "lib/index.js",
   "dependencies": {
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
     "@reach/visually-hidden": "^0.1.1",
-    "@umich-lib/icon": "^2.0.1",
+    "@umich-lib/icon": "^2.0.2",
     "@umich-lib/input": "^2.0.1",
     "@umich-lib/styles": "^2.0.1"
   },
