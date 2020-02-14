@@ -1,6 +1,6 @@
 {
   "name": "@umich-lib/core",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "main": "lib/index.js",
   "module": "lib/index.js",
   "dependencies": {
@@ -8,22 +8,22 @@
     "@umich-lib/breadcrumb": "^2.0.1",
     "@umich-lib/button": "^2.0.1",
     "@umich-lib/card": "^2.0.3",
-    "@umich-lib/chat": "^2.0.2",
+    "@umich-lib/chat": "^2.0.3",
     "@umich-lib/expandable": "^2.0.1",
-    "@umich-lib/header": "^2.0.2",
+    "@umich-lib/header": "^2.0.3",
     "@umich-lib/heading": "^2.0.1",
-    "@umich-lib/icon": "^2.0.2",
+    "@umich-lib/icon": "^2.0.3",
     "@umich-lib/input": "^2.0.1",
     "@umich-lib/link": "^2.0.1",
     "@umich-lib/list": "^2.0.1",
     "@umich-lib/loading": "^2.0.1",
     "@umich-lib/metadata": "^2.0.1",
-    "@umich-lib/resource-access": "^2.0.2",
+    "@umich-lib/resource-access": "^2.0.3",
     "@umich-lib/styles": "^2.0.1",
     "@umich-lib/tabs": "^2.0.1",
     "@umich-lib/text": "^2.0.1",
-    "@umich-lib/text-input": "^2.0.2",
-    "@umich-lib/universal-header": "^2.0.2"
+    "@umich-lib/text-input": "^2.0.3",
+    "@umich-lib/universal-header": "^2.0.3"
   },
   "files": [
     "lib"

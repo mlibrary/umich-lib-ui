@@ -1,12 +1,12 @@
 {
   "name": "@umich-lib/header",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "main": "lib/index.js",
   "module": "lib/index.js",
   "dependencies": {
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
-    "@umich-lib/icon": "^2.0.2",
+    "@umich-lib/icon": "^2.0.3",
     "@umich-lib/styles": "^2.0.1"
   },
   "peerDependencies": {

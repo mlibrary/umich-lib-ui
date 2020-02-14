@@ -1,6 +1,6 @@
 {
   "name": "@umich-lib/resource-access",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "main": "lib/index.js",
   "module": "lib/index.js",
   "dependencies": {
@@ -8,7 +8,7 @@
     "@emotion/styled": "^10.0.7",
     "@umich-lib/button": "^2.0.1",
     "@umich-lib/expandable": "^2.0.1",
-    "@umich-lib/icon": "^2.0.2",
+    "@umich-lib/icon": "^2.0.3",
     "@umich-lib/link": "^2.0.1",
     "@umich-lib/styles": "^2.0.1"
   },
