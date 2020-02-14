@@ -1,6 +1,6 @@
 {
   "name": "@umich-lib/icon",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "main": "lib/index.js",
   "module": "lib/index.js",
   "dependencies": {
