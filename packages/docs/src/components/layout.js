@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled from '@emotion/styled'
-import {MDXProvider} from '@mdx-js/tag'
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "@emotion/styled";
+import { MDXProvider } from "@mdx-js/react";
 import {
   GlobalStyleSheet,
   COLORS,
@@ -9,82 +9,82 @@ import {
   MEDIA_QUERIES,
   TYPOGRAPHY,
   UniversalHeader,
-  LINK_STYLES
-} from '@umich-lib/core'
-import components from './mdx-components'
-import Logo from './logo'
-import NavigationContent from './navigation.mdx'
+  LINK_STYLES,
+} from "@umich-lib/core";
+import components from "./mdx-components";
+import Logo from "./logo";
+import NavigationContent from "./navigation.mdx";
 
-const Root = styled('div')({
+const Root = styled("div")({
   [MEDIA_QUERIES.LARGESCREEN]: {
-    minHeight: '100vh'
-  }
-})
+    minHeight: "100vh",
+  },
+});
 
-const SiteWrapper = styled('div')({
+const SiteWrapper = styled("div")({
   [MEDIA_QUERIES.LARGESCREEN]: {
-    display: 'flex'
-  }
-})
+    display: "flex",
+  },
+});
 
-const Side = styled('div')({
+const Side = styled("div")({
   background: COLORS.blue[100],
-  padding: `${SPACING['XL']} 0`,
+  padding: `${SPACING["XL"]} 0`,
   [MEDIA_QUERIES.LARGESCREEN]: {
-    background: 'white',
-    display: 'block',
-    minHeight: '100vh',
-    minWidth: '280px',
-    order: '-1',
-    borderRight: `solid 1px ${COLORS.neutral['100']}`
-  }
-})
+    background: "white",
+    display: "block",
+    minHeight: "100vh",
+    minWidth: "280px",
+    order: "-1",
+    borderRight: `solid 1px ${COLORS.neutral["100"]}`,
+  },
+});
 
-const Main = styled('main')({
-  width: '100%'
-})
+const Main = styled("main")({
+  width: "100%",
+});
 
 /*
   A bunch of selectors to override
   MDX component styles.
 */
-const SideNav = styled('nav')({
+const SideNav = styled("nav")({
   padding: `0 3vw`,
-  'ul': {
-    listStyle: 'none',
-    marginLeft: '0',
-    marginBottom: SPACING['XS']
+  ul: {
+    listStyle: "none",
+    marginLeft: "0",
+    marginBottom: SPACING["XS"],
   },
-  'li': {
-    ...TYPOGRAPHY['3XS']
+  li: {
+    ...TYPOGRAPHY["3XS"],
   },
-  'ul ul': {
-    marginTop: SPACING['XS'],
-    marginBottom: SPACING['L'],
-    marginLeft: SPACING['M']
+  "ul ul": {
+    marginTop: SPACING["XS"],
+    marginBottom: SPACING["L"],
+    marginLeft: SPACING["M"],
   },
-  'li li': {
-    textTransform: 'initial',
-    fontWeight: '400',
-    letterSpacing: '0',
-    fontSize: '16px'
+  "li li": {
+    textTransform: "initial",
+    fontWeight: "400",
+    letterSpacing: "0",
+    fontSize: "16px",
   },
-  'a': {
-    color: COLORS.neutral['400'],
-    boxShadow: 'none'
+  a: {
+    color: COLORS.neutral["400"],
+    boxShadow: "none",
   },
   [MEDIA_QUERIES.LARGESCREEN]: {
-    padding: `0 ${SPACING['XL']}`
-  }
-})
+    padding: `0 ${SPACING["XL"]}`,
+  },
+});
 
-const LogoContainer = styled('div')({
-  marginBottom: SPACING['L'],
+const LogoContainer = styled("div")({
+  marginBottom: SPACING["L"],
   padding: `0 3vw`,
   [MEDIA_QUERIES.LARGESCREEN]: {
-    padding: `0 ${SPACING['XL']}`
-  }
-})
+    padding: `0 ${SPACING["XL"]}`,
+  },
+});
 
 const Layout = (props) => (
   <MDXProvider components={components}>
@@ -92,9 +92,7 @@ const Layout = (props) => (
     <Root>
       <UniversalHeader />
       <SiteWrapper>
-        <Main>
-          {props.children}
-        </Main>
+        <Main>{props.children}</Main>
         <Side>
           <LogoContainer>
             <Logo />
@@ -106,10 +104,10 @@ const Layout = (props) => (
       </SiteWrapper>
     </Root>
   </MDXProvider>
-)
+);
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;
