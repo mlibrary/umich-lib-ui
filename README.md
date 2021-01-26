@@ -1,4 +1,6 @@
-# University of Michigan Library Design System
+# [deprecated] University of Michigan Library (React) Design System
+
+> **Note about depreciation**: We've moved our focus to web standards (Web Components, CSS Custom Variables). [Learn more in our design system updates](https://design-system.lib.umich.edu/updates/#july-2020).
 
 [![Build Status](https://travis-ci.org/mlibrary/umich-lib-ui.svg?branch=master)](https://travis-ci.org/mlibrary/umich-lib-ui) [![Maintained with Lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/mlibrary/umich-lib-ui/blob/master/CONTRIBUTING.md)
 
